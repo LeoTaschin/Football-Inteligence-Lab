@@ -102,10 +102,11 @@ export const match = {
     const withSubs = teams.filter((t) => t.minutes.length > 0);
     const without = teams.filter((t) => t.minutes.length === 0);
     const parts = withSubs.map(
-      (t) => `${capitalize(withArticle(t.article, t.name))} fez ${t.minutes.length === 1 ? "uma substituição" : `${COUNT[t.minutes.length] ?? t.minutes.length} substituições`} (${listPt(t.minutes.map((m) => `${m}′`))}), então sua rede inclui jogadores que não estiveram em campo ao mesmo tempo`,
+      (t) => `${withArticle(t.article, t.name)} fez ${t.minutes.length === 1 ? "uma substituição" : `${COUNT[t.minutes.length] ?? t.minutes.length} substituições`} (${listPt(t.minutes.map((m) => `${m}′`))}), então sua rede inclui jogadores que não estiveram em campo ao mesmo tempo`,
     );
     const rest = without.map((t) => `${withArticle(t.article, t.name)} jogou com os mesmos 11`);
-    return parts.length ? `${parts.join("; ")}${rest.length ? `; ${rest.join("; ")}` : ""}.` : "Nenhuma das equipes fez substituições.";
+    // only the start of the sentence is capitalized: "O Brasil fez …; o Peru fez …"
+    return parts.length ? capitalize(`${parts.join("; ")}${rest.length ? `; ${rest.join("; ")}` : ""}.`) : "Nenhuma das equipes fez substituições.";
   },
 };
 

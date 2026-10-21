@@ -139,9 +139,10 @@ def _subs_line(teams: list[dict]) -> str:
         if minutes:
             n = COUNT.get(len(minutes), str(len(minutes))) if len(minutes) > 1 else "uma"
             noun = "substituições" if len(minutes) > 1 else "substituição"
-            parts.append(f"{who[0].upper() + who[1:]} fez {n} {noun} ({' e '.join(f'{m}′' for m in minutes)})")
+            parts.append(f"{who} fez {n} {noun} ({' e '.join(f'{m}′' for m in minutes)})")
         else:
             same.append(f"{who} jogou com os mesmos 11")
     if not parts:
         return "Nenhuma das equipes fez substituições."
-    return "; ".join(parts + same) + "."
+    sentence = "; ".join(parts + same) + "."
+    return sentence[0].upper() + sentence[1:]  # only the start of the sentence is capitalized

@@ -34,3 +34,11 @@ def test_post_texts_come_from_the_data(final_data):
 def test_post_is_1080_by_1350(final_data, tmp_path):
     out = render_post(final_data, tmp_path / "post.png")
     assert imread(out).shape[:2] == (1350, 1080)
+
+
+def test_subs_line_capitalizes_only_the_sentence_start():
+    teams = [
+        {"article": "o", "displayName": "Brasil", "substitutions": [{"minute": 66}, {"minute": 79}]},
+        {"article": "o", "displayName": "Peru", "substitutions": [{"minute": 52}, {"minute": 59}]},
+    ]
+    assert _subs_line(teams) == "O Brasil fez duas substituições (66′ e 79′); o Peru fez duas substituições (52′ e 59′)."
