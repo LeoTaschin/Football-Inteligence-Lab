@@ -358,7 +358,7 @@ Links do post do LinkedIn apontam para `/pnsm/1970` ou direto para uma partida.
 - Hero: "Dados e IA para entender como o futebol é jogado." + subtítulo + CTAs ("Ver o projeto 01", "Todos os projetos").
 - Destaque do PNSM: cartão com título "Como o Brasil de 1970 trocava a bola", números (6 partidas, 2.490 passes completos, 19 gols) e mini-rede da final.
 - Lista de projetos 01–06 com status.
-- Sobre: bio curta + links (LinkedIn: https://www.linkedin.com/in/leonardo-taschin/, GitHub e e-mail **pendentes**).
+- Sobre: bio curta + links (LinkedIn: https://br.linkedin.com/in/leonardo-taschin, GitHub: https://github.com/LeoTaschin/, e-mail **pendente**).
 
 **Campanha 1970**
 - Breadcrumb, título, achado principal (Carlos Alberto: 367 passes completos, presente nas duas duplas mais usadas).
@@ -566,7 +566,8 @@ output_dir: ../../site/public/data  # relative to this file
 
 ## 11. Pendências e decisões em aberto
 
-- [ ] Link do GitHub, e-mail e domínio (placeholders `[SEU LINK]`, `[SEU E-MAIL]` no design).
+- [x] Link do GitHub (https://github.com/LeoTaschin/) e repositório (https://github.com/LeoTaschin/Football-Inteligence-Lab).
+- [ ] E-mail e domínio próprio (hoje: "em breve" no Sobre; deploy na Vercel).
 - [ ] Conferir condições de uso/atribuição do StatsBomb Open Data para publicar dados derivados e o nome da marca.
 - [ ] Datas das partidas: usar `match_date` do StatsBomb, mas conferir com fontes históricas antes de exibir (há divergência possível de um dia em jogos de 1970).
 - [ ] Estádio: disponível em `matches/{c}/{s}.json` (`stadium.name`) quando houver.

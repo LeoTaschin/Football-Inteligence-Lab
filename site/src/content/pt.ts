@@ -2,8 +2,9 @@
 // version only needs a second file with the same shape.
 
 export const links = {
-  linkedin: "https://www.linkedin.com/in/leonardo-taschin/",
-  github: null as string | null, // [SEU LINK]
+  linkedin: "https://br.linkedin.com/in/leonardo-taschin",
+  github: "https://github.com/LeoTaschin/" as string | null,
+  repo: "https://github.com/LeoTaschin/Football-Inteligence-Lab" as string | null,
   email: null as string | null, // [SEU E-MAIL]
   statsbomb: "https://github.com/statsbomb/open-data",
 };

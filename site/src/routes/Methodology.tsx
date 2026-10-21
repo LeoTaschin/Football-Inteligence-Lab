@@ -142,9 +142,9 @@ export function Methodology() {
               ))}
               <span className={`${styles.step} ${styles.stepEnd}`}>{copy.pipelineEnd}</span>
             </div>
-            <pre className={styles.code}>{copy.commands(links.github ?? copy.repoPlaceholder)}</pre>
-            {links.github && (
-              <a href={links.github} className="button button--secondary button--small" target="_blank" rel="noopener">
+            <pre className={styles.code}>{copy.commands(links.repo ?? copy.repoPlaceholder)}</pre>
+            {links.repo && (
+              <a href={links.repo} className="button button--secondary button--small" target="_blank" rel="noopener">
                 {copy.codeLink}
               </a>
             )}
