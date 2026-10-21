@@ -115,7 +115,7 @@ fil/
 
 **Site:** Vite + React + TypeScript + React Router. Campo e redes desenhados em **SVG** (não em divs como no protótipo do canvas). Sem biblioteca de gráficos na Etapa 1; barras simples em CSS. Fonte Inter (Google Fonts).
 
-**Deploy:** Vercel ou Netlify (build estático). GitHub Actions roda os testes do engine, regera os dados e faz o build.
+**Deploy:** Vercel (build estático), com *Root Directory* = `site` no painel e a configuração em `site/vercel.json` (Vite + rewrite das rotas para `index.html`). Os JSONs de `site/public/data` são commitados, então a Vercel não roda Python. GitHub Actions roda os testes do engine, regera os dados e faz o build.
 
 ---
 
