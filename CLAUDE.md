@@ -305,6 +305,14 @@ Tipos devem existir em `engine` (pydantic/dataclasses) e espelhados em `site/src
 
 `label` ∈ `below | above | left | right`, decidido pelo motor (ver 7.4).
 
+Campos a mais que o export gera (o exemplo acima é o mínimo; a fonte de verdade é `engine/src/pnsm/export.py`):
+
+- `match.stadium`; `scale` = `{maxPasses, maxPair, maxDirected}` da partida (mesma escala para as duas equipes).
+- Por equipe: `teamId`; `passes.excluded.period`; `pairs` = `[{a, b, forward, backward, n}]` ordenados por `n` (`a` é quem passou mais; usado nas linhas não dirigidas e no Top 10, para o site não somar nada); `phase` = `{ballHeight, defHeight, shiftMeters}` (sem o goleiro).
+- Por nó: `positionFrom` (`passes` | `received`, ver 5.2); `def.lowSample` (menos de 5 ações); `shift` em metros (`def.x − ball.x`); `sub` = `{type: "in" | "out", minute, with: playerId}` ou `null`.
+- Por gol: `teamId`, `scorerId`, `passes`, `players`; `touches[].playerId`. O replay começa depois do último toque do adversário com a bola na posse (o `possession` do StatsBomb nem sempre muda quando a bola troca de dono).
+- Coordenadas exportadas com 2 casas; o site arredonda para exibir.
+
 ### `data/collections/wc1970-brazil.json` — tela da Campanha
 
 ```json
@@ -350,7 +358,7 @@ Links do post do LinkedIn apontam para `/pnsm/1970` ou direto para uma partida.
 - Hero: "Dados e IA para entender como o futebol é jogado." + subtítulo + CTAs ("Ver o projeto 01", "Todos os projetos").
 - Destaque do PNSM: cartão com título "Como o Brasil de 1970 trocava a bola", números (6 partidas, 2.490 passes completos, 19 gols) e mini-rede da final.
 - Lista de projetos 01–06 com status.
-- Sobre: bio curta + links (LinkedIn: https://www.linkedin.com/in/leonardo-taschin/, GitHub e e-mail **pendentes**).
+- Sobre: bio curta + links (LinkedIn: https://br.linkedin.com/in/leonardo-taschin, GitHub: https://github.com/LeoTaschin/, e-mail **pendente**).
 
 **Campanha 1970**
 - Breadcrumb, título, achado principal (Carlos Alberto: 367 passes completos, presente nas duas duplas mais usadas).
@@ -515,13 +523,14 @@ pytest engine/tests
 
 ```yaml
 collection: wc1970-brazil
+title: Campanha do Brasil · Copa de 1970
 competition_id: 43
 season_id: 272
 team: Brazil
 periods: [1, 2]
 min_pair_passes: 3
 defensive_actions: [Pressure, Ball Recovery, Interception, Duel, Clearance, Block]
-output_dir: ../site/public/data
+output_dir: ../../site/public/data  # relative to this file
 ```
 
 ---
@@ -557,7 +566,8 @@ output_dir: ../site/public/data
 
 ## 11. Pendências e decisões em aberto
 
-- [ ] Link do GitHub, e-mail e domínio (placeholders `[SEU LINK]`, `[SEU E-MAIL]` no design).
+- [x] Link do GitHub (https://github.com/LeoTaschin/) e repositório (https://github.com/LeoTaschin/Football-Inteligence-Lab).
+- [ ] E-mail e domínio próprio (hoje: "em breve" no Sobre; deploy na Vercel).
 - [ ] Conferir condições de uso/atribuição do StatsBomb Open Data para publicar dados derivados e o nome da marca.
 - [ ] Datas das partidas: usar `match_date` do StatsBomb, mas conferir com fontes históricas antes de exibir (há divergência possível de um dia em jogos de 1970).
 - [ ] Estádio: disponível em `matches/{c}/{s}.json` (`stadium.name`) quando houver.

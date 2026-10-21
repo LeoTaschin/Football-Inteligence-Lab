@@ -1,0 +1,135 @@
+@import "./tokens.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--text);
+}
+a:hover {
+  color: var(--bra-line);
+}
+
+button {
+  font-family: inherit;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
+}
+
+/* --page-max is the content width; the gutter is added outside it */
+.container {
+  max-width: calc(var(--page-max) + 2 * var(--gutter));
+  margin: 0 auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+.eyebrow {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.mono {
+  font-family: var(--mono);
+  font-size: 0.9em;
+}
+
+/* pill buttons (filtros, modos) */
+.pill {
+  min-height: 44px;
+  min-width: 56px;
+  padding: 0 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--bg);
+  color: var(--text-2);
+  border: 1px solid var(--line);
+}
+.pill:hover {
+  border-color: var(--text);
+}
+.pill[aria-pressed="true"] {
+  background: var(--text);
+  color: #ffffff;
+  border-color: var(--text);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 0 22px;
+  border-radius: var(--radius-md);
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+.button--primary {
+  background: var(--text);
+  color: #ffffff;
+  border: none;
+}
+.button--primary:hover {
+  color: #ffffff;
+  background: #27272a;
+}
+.button--secondary {
+  border: 1px solid var(--line);
+  color: var(--text);
+  background: var(--bg);
+  font-weight: 600;
+}
+.button--secondary:hover {
+  color: var(--text);
+  border-color: var(--text);
+}
+.button--small {
+  min-height: 44px;
+  padding: 0 16px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

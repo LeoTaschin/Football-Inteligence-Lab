@@ -1,0 +1,3027 @@
+{
+ "match": {
+  "id": 3888701,
+  "date": "1970-06-17",
+  "stage": "Semifinal",
+  "competition": "FIFA World Cup",
+  "season": "1970",
+  "stadium": "Estádio Jalisco",
+  "country": "México",
+  "home": "Brazil",
+  "away": "Uruguay",
+  "score": [
+   3,
+   1
+  ]
+ },
+ "periods": [
+  1,
+  2
+ ],
+ "scale": {
+  "maxPasses": 61,
+  "maxPair": 37,
+  "maxDirected": 22
+ },
+ "teams": [
+  {
+   "teamId": 781,
+   "name": "Brazil",
+   "displayName": "Brasil",
+   "article": "o",
+   "colors": {
+    "fill": "#FFD500",
+    "line": "#009C3B",
+    "ink": "#0A0A0B"
+   },
+   "passes": {
+    "attempted": 478,
+    "completed": 413,
+    "excluded": {
+     "period": 0,
+     "incomplete": 65,
+     "noRecipient": 0,
+     "noLocation": 0
+    }
+   },
+   "nodes": [
+    {
+     "playerId": 397620,
+     "num": 5,
+     "name": "Clodoaldo",
+     "position": "Volante (dir.)",
+     "ball": {
+      "x": 60.5,
+      "y": 50.6
+     },
+     "positionFrom": "passes",
+     "def": {
+      "x": 42.6,
+      "y": 54.2,
+      "n": 35,
+      "lowSample": false
+     },
+     "shift": -16.4,
+     "passes": 61,
+     "received": 65,
+     "sub": null,
+     "label": "below"
+    },
+    {
+     "playerId": 39708,
+     "num": 4,
+     "name": "Carlos Alberto",
+     "position": "Lateral-direito",
+     "ball": {
+      "x": 54.45,
+      "y": 67.95
+     },
+     "positionFrom": "passes",
+     "def": {
+      "x": 28.2,
+      "y": 62.4,
+      "n": 17,
+      "lowSample": false
+     },
+     "shift": -24.0,
+     "passes": 58,
+     "received": 55,
+     "sub": null,
+     "label": "below"
+    },
+    {
+     "playerId": 397629,
+     "num": 16,
+     "name": "Everaldo",
+     "position": "Lateral-esquerdo",
+     "ball": {
+      "x": 45.6,
+      "y": 9.4
+     },
+     "positionFrom": "passes",
+     "def": {
+      "x": 33.3,
+      "y": 11.0,
+      "n": 29,
+      "lowSample": false
+     },
+     "shift": -11.2,
+     "passes": 55,
+     "received": 37,
+     "sub": null,
+     "label": "below"
+    },
+    {
+     "playerId": 397630,
+     "num": 11,
+     "name": "Rivellino",
+     "position": "Meio-campo (esq.)",
+     "ball": {
+      "x": 65.75,
+      "y": 19.8
+     },
+     "positionFrom": "passes",
+     "def": {
+      "x": 67.4,
+      "y": 9.6,
+      "n": 21,
+      "lowSample": false
+     },
+     "shift": 1.5,
+     "passes": 48,
+     "received": 52,
+     "sub": null,
+     "label": "below"
+    },
+    {
+     "playerId": 397621,
+     "num": 8,
+     "name": "Gérson",
+     "position": "Volante (esq.)",
+     "ball": {
+      "x": 56.7,
+      "y": 35.5
+     },
+     "positionFrom": "passes",
+     "def": {
+      "x": 38.4,
+      "y": 42.0,
+      "n": 21,
+      "lowSample": false
+     },
+     "shift": -16.7,
+     "passes": 47,
+     "received": 48,
+     "sub": null,
+     "label": "below"
+    },
+    {
+     "playerId": 397627,
+     "num": 3,
+     "name": "Piazza",
+     "position": "Zagueiro (esq.)",
+     "ball": {
+      "x": 38.85,
+      "y": 26.35
+     },
+     "positionFrom": "passes",
+     "def": {
+      "x": 22.5,
+      "y": 29.2,
+      "n": 26,
+      "lowSample": false
+     },
+     "shift": -15.0,
+     "passes": 36,
+     "received": 29,
+     "sub": null,
+     "label": "below"
+    },
+    {
+     "playerId": 397622,
+     "num": 7,
+     "name": "Jairzinho",
+     "position": "Meio-campo (dir.)",
+     "ball": {
+      "x": 76.2,
+      "y": 69.25
+     },
+     "positionFrom": "passes",
+     "def": {
+      "x": 66.4,
+      "y": 66.5,
+      "n": 21,
+      "lowSample": false
+     },
+     "shift": -9.0,
+     "passes": 26,
+     "received": 42,
+     "sub": null,
+     "label": "below"
+    },
+    {
+     "playerId": 397626,
+     "num": 1,
+     "name": "Félix",
+     "position": "Goleiro",
+     "ball": {
+      "x": 7.0,
+      "y": 41.8
+     },
+     "positionFrom": "passes",
+     "def": {
+      "x": 2.7,
+      "y": 45.8,
+      "n": 1,
+      "lowSample": true
+     },
+     "shift": -3.9,
+     "passes": 23,
+     "received": 7,
+     "sub": null,
+     "label": "below"
+    },
+    {
+     "playerId": 397628,
+     "num": 2,
+     "name": "Brito",
+     "position": "Zagueiro (dir.)",
+     "ball": {
+      "x": 33.95,
+      "y": 56.7
+     },
+     "positionFrom": "passes",
+     "def": {
+      "x": 20.8,
+      "y": 54.3,
+      "n": 20,
+      "lowSample": false
+     },
+     "shift": -12.0,
+     "passes": 22,
+     "received": 13,
+     "sub": null,
+     "label": "below"
+    },
+    {
+     "playerId": 39712,
+     "num": 10,
+     "name": "Pelé",
+     "position": "Atacante (esq.)",
+     "ball": {
+      "x": 70.5,
+      "y": 48.5
+     },
+     "positionFrom": "passes",
+     "def": {
+      "x": 78.8,
+      "y": 42.4,
+      "n": 23,
+      "lowSample": false
+     },
+     "shift": 7.6,
+     "passes": 19,
+     "received": 37,
+     "sub": null,
+     "label": "below"
+    },
+    {
+     "playerId": 397637,
+     "num": 9,
+     "name": "Tostão",
+     "position": "Atacante (dir.)",
+     "ball": {
+      "x": 74.15,
+      "y": 40.0
+     },
+     "positionFrom": "passes",
+     "def": {
+      "x": 64.2,
+      "y": 18.2,
+      "n": 21,
+      "lowSample": false
+     },
+     "shift": -9.1,
+     "passes": 18,
+     "received": 28,
+     "sub": null,
+     "label": "above"
+    }
+   ],
+   "edges": [
+    {
+     "from": 397629,
+     "to": 397630,
+     "n": 22
+    },
+    {
+     "from": 39708,
+     "to": 397620,
+     "n": 19
+    },
+    {
+     "from": 397620,
+     "to": 39708,
+     "n": 18
+    },
+    {
+     "from": 39708,
+     "to": 397622,
+     "n": 17
+    },
+    {
+     "from": 397620,
+     "to": 397621,
+     "n": 14
+    },
+    {
+     "from": 397621,
+     "to": 397620,
+     "n": 11
+    },
+    {
+     "from": 397620,
+     "to": 397630,
+     "n": 10
+    },
+    {
+     "from": 397627,
+     "to": 397629,
+     "n": 10
+    },
+    {
+     "from": 397626,
+     "to": 39708,
+     "n": 9
+    },
+    {
+     "from": 397629,
+     "to": 397627,
+     "n": 9
+    },
+    {
+     "from": 397630,
+     "to": 39708,
+     "n": 9
+    },
+    {
+     "from": 397630,
+     "to": 39712,
+     "n": 9
+    },
+    {
+     "from": 397630,
+     "to": 397629,
+     "n": 9
+    },
+    {
+     "from": 397622,
+     "to": 39708,
+     "n": 8
+    },
+    {
+     "from": 397627,
+     "to": 397620,
+     "n": 8
+    },
+    {
+     "from": 39708,
+     "to": 397621,
+     "n": 7
+    },
+    {
+     "from": 397621,
+     "to": 397622,
+     "n": 7
+    },
+    {
+     "from": 397621,
+     "to": 397630,
+     "n": 7
+    },
+    {
+     "from": 397622,
+     "to": 39712,
+     "n": 7
+    },
+    {
+     "from": 397629,
+     "to": 397620,
+     "n": 7
+    },
+    {
+     "from": 397630,
+     "to": 397620,
+     "n": 7
+    },
+    {
+     "from": 397637,
+     "to": 39712,
+     "n": 7
+    },
+    {
+     "from": 397620,
+     "to": 397622,
+     "n": 6
+    },
+    {
+     "from": 397621,
+     "to": 397629,
+     "n": 6
+    },
+    {
+     "from": 397627,
+     "to": 397621,
+     "n": 6
+    },
+    {
+     "from": 397628,
+     "to": 397620,
+     "n": 6
+    },
+    {
+     "from": 397629,
+     "to": 397621,
+     "n": 6
+    },
+    {
+     "from": 39712,
+     "to": 397637,
+     "n": 5
+    },
+    {
+     "from": 397620,
+     "to": 397627,
+     "n": 5
+    },
+    {
+     "from": 397626,
+     "to": 397629,
+     "n": 5
+    },
+    {
+     "from": 397629,
+     "to": 397637,
+     "n": 5
+    },
+    {
+     "from": 397630,
+     "to": 397621,
+     "n": 5
+    },
+    {
+     "from": 397637,
+     "to": 397620,
+     "n": 5
+    },
+    {
+     "from": 39708,
+     "to": 39712,
+     "n": 4
+    },
+    {
+     "from": 39708,
+     "to": 397630,
+     "n": 4
+    },
+    {
+     "from": 39712,
+     "to": 397622,
+     "n": 4
+    },
+    {
+     "from": 397620,
+     "to": 397637,
+     "n": 4
+    },
+    {
+     "from": 397621,
+     "to": 397627,
+     "n": 4
+    },
+    {
+     "from": 397621,
+     "to": 397637,
+     "n": 4
+    },
+    {
+     "from": 397622,
+     "to": 397637,
+     "n": 4
+    },
+    {
+     "from": 397626,
+     "to": 397627,
+     "n": 4
+    },
+    {
+     "from": 397626,
+     "to": 397628,
+     "n": 4
+    },
+    {
+     "from": 397627,
+     "to": 397630,
+     "n": 4
+    },
+    {
+     "from": 397629,
+     "to": 39712,
+     "n": 4
+    },
+    {
+     "from": 39712,
+     "to": 397621,
+     "n": 3
+    },
+    {
+     "from": 397621,
+     "to": 39708,
+     "n": 3
+    },
+    {
+     "from": 397621,
+     "to": 39712,
+     "n": 3
+    },
+    {
+     "from": 397622,
+     "to": 397621,
+     "n": 3
+    },
+    {
+     "from": 397627,
+     "to": 397626,
+     "n": 3
+    },
+    {
+     "from": 397628,
+     "to": 397622,
+     "n": 3
+    },
+    {
+     "from": 397630,
+     "to": 397622,
+     "n": 3
+    },
+    {
+     "from": 397630,
+     "to": 397637,
+     "n": 3
+    },
+    {
+     "from": 39708,
+     "to": 397627,
+     "n": 2
+    },
+    {
+     "from": 39708,
+     "to": 397628,
+     "n": 2
+    },
+    {
+     "from": 39712,
+     "to": 39708,
+     "n": 2
+    },
+    {
+     "from": 39712,
+     "to": 397629,
+     "n": 2
+    },
+    {
+     "from": 39712,
+     "to": 397630,
+     "n": 2
+    },
+    {
+     "from": 397620,
+     "to": 39712,
+     "n": 2
+    },
+    {
+     "from": 397621,
+     "to": 397628,
+     "n": 2
+    },
+    {
+     "from": 397622,
+     "to": 397630,
+     "n": 2
+    },
+    {
+     "from": 397627,
+     "to": 39708,
+     "n": 2
+    },
+    {
+     "from": 397628,
+     "to": 39708,
+     "n": 2
+    },
+    {
+     "from": 397628,
+     "to": 397621,
+     "n": 2
+    },
+    {
+     "from": 397628,
+     "to": 397626,
+     "n": 2
+    },
+    {
+     "from": 397628,
+     "to": 397627,
+     "n": 2
+    },
+    {
+     "from": 397628,
+     "to": 397629,
+     "n": 2
+    },
+    {
+     "from": 397630,
+     "to": 397627,
+     "n": 2
+    },
+    {
+     "from": 397637,
+     "to": 39708,
+     "n": 2
+    },
+    {
+     "from": 397637,
+     "to": 397621,
+     "n": 2
+    },
+    {
+     "from": 39708,
+     "to": 397626,
+     "n": 1
+    },
+    {
+     "from": 39708,
+     "to": 397629,
+     "n": 1
+    },
+    {
+     "from": 39708,
+     "to": 397637,
+     "n": 1
+    },
+    {
+     "from": 39712,
+     "to": 397628,
+     "n": 1
+    },
+    {
+     "from": 397620,
+     "to": 397628,
+     "n": 1
+    },
+    {
+     "from": 397620,
+     "to": 397629,
+     "n": 1
+    },
+    {
+     "from": 397622,
+     "to": 397620,
+     "n": 1
+    },
+    {
+     "from": 397622,
+     "to": 397629,
+     "n": 1
+    },
+    {
+     "from": 397626,
+     "to": 397620,
+     "n": 1
+    },
+    {
+     "from": 397627,
+     "to": 397622,
+     "n": 1
+    },
+    {
+     "from": 397627,
+     "to": 397628,
+     "n": 1
+    },
+    {
+     "from": 397627,
+     "to": 397637,
+     "n": 1
+    },
+    {
+     "from": 397628,
+     "to": 39712,
+     "n": 1
+    },
+    {
+     "from": 397628,
+     "to": 397630,
+     "n": 1
+    },
+    {
+     "from": 397628,
+     "to": 397637,
+     "n": 1
+    },
+    {
+     "from": 397629,
+     "to": 397626,
+     "n": 1
+    },
+    {
+     "from": 397629,
+     "to": 397628,
+     "n": 1
+    },
+    {
+     "from": 397630,
+     "to": 397628,
+     "n": 1
+    },
+    {
+     "from": 397637,
+     "to": 397622,
+     "n": 1
+    },
+    {
+     "from": 397637,
+     "to": 397627,
+     "n": 1
+    }
+   ],
+   "pairs": [
+    {
+     "a": 39708,
+     "b": 397620,
+     "forward": 19,
+     "backward": 18,
+     "n": 37
+    },
+    {
+     "a": 397629,
+     "b": 397630,
+     "forward": 22,
+     "backward": 9,
+     "n": 31
+    },
+    {
+     "a": 39708,
+     "b": 397622,
+     "forward": 17,
+     "backward": 8,
+     "n": 25
+    },
+    {
+     "a": 397620,
+     "b": 397621,
+     "forward": 14,
+     "backward": 11,
+     "n": 25
+    },
+    {
+     "a": 397627,
+     "b": 397629,
+     "forward": 10,
+     "backward": 9,
+     "n": 19
+    },
+    {
+     "a": 397620,
+     "b": 397630,
+     "forward": 10,
+     "backward": 7,
+     "n": 17
+    },
+    {
+     "a": 397630,
+     "b": 39708,
+     "forward": 9,
+     "backward": 4,
+     "n": 13
+    },
+    {
+     "a": 397627,
+     "b": 397620,
+     "forward": 8,
+     "backward": 5,
+     "n": 13
+    },
+    {
+     "a": 397621,
+     "b": 397630,
+     "forward": 7,
+     "backward": 5,
+     "n": 12
+    },
+    {
+     "a": 397637,
+     "b": 39712,
+     "forward": 7,
+     "backward": 5,
+     "n": 12
+    },
+    {
+     "a": 397621,
+     "b": 397629,
+     "forward": 6,
+     "backward": 6,
+     "n": 12
+    },
+    {
+     "a": 397630,
+     "b": 39712,
+     "forward": 9,
+     "backward": 2,
+     "n": 11
+    },
+    {
+     "a": 397622,
+     "b": 39712,
+     "forward": 7,
+     "backward": 4,
+     "n": 11
+    },
+    {
+     "a": 397626,
+     "b": 39708,
+     "forward": 9,
+     "backward": 1,
+     "n": 10
+    },
+    {
+     "a": 39708,
+     "b": 397621,
+     "forward": 7,
+     "backward": 3,
+     "n": 10
+    },
+    {
+     "a": 397621,
+     "b": 397622,
+     "forward": 7,
+     "backward": 3,
+     "n": 10
+    },
+    {
+     "a": 397627,
+     "b": 397621,
+     "forward": 6,
+     "backward": 4,
+     "n": 10
+    },
+    {
+     "a": 397637,
+     "b": 397620,
+     "forward": 5,
+     "backward": 4,
+     "n": 9
+    },
+    {
+     "a": 397629,
+     "b": 397620,
+     "forward": 7,
+     "backward": 1,
+     "n": 8
+    },
+    {
+     "a": 397620,
+     "b": 397622,
+     "forward": 6,
+     "backward": 1,
+     "n": 7
+    },
+    {
+     "a": 397628,
+     "b": 397620,
+     "forward": 6,
+     "backward": 1,
+     "n": 7
+    },
+    {
+     "a": 397626,
+     "b": 397627,
+     "forward": 4,
+     "backward": 3,
+     "n": 7
+    },
+    {
+     "a": 397626,
+     "b": 397629,
+     "forward": 5,
+     "backward": 1,
+     "n": 6
+    },
+    {
+     "a": 39708,
+     "b": 39712,
+     "forward": 4,
+     "backward": 2,
+     "n": 6
+    },
+    {
+     "a": 397621,
+     "b": 397637,
+     "forward": 4,
+     "backward": 2,
+     "n": 6
+    },
+    {
+     "a": 397626,
+     "b": 397628,
+     "forward": 4,
+     "backward": 2,
+     "n": 6
+    },
+    {
+     "a": 397627,
+     "b": 397630,
+     "forward": 4,
+     "backward": 2,
+     "n": 6
+    },
+    {
+     "a": 397629,
+     "b": 39712,
+     "forward": 4,
+     "backward": 2,
+     "n": 6
+    },
+    {
+     "a": 39712,
+     "b": 397621,
+     "forward": 3,
+     "backward": 3,
+     "n": 6
+    },
+    {
+     "a": 397629,
+     "b": 397637,
+     "forward": 5,
+     "backward": 0,
+     "n": 5
+    },
+    {
+     "a": 397622,
+     "b": 397637,
+     "forward": 4,
+     "backward": 1,
+     "n": 5
+    },
+    {
+     "a": 397630,
+     "b": 397622,
+     "forward": 3,
+     "backward": 2,
+     "n": 5
+    },
+    {
+     "a": 39708,
+     "b": 397627,
+     "forward": 2,
+     "backward": 2,
+     "n": 4
+    },
+    {
+     "a": 39708,
+     "b": 397628,
+     "forward": 2,
+     "backward": 2,
+     "n": 4
+    },
+    {
+     "a": 397621,
+     "b": 397628,
+     "forward": 2,
+     "backward": 2,
+     "n": 4
+    },
+    {
+     "a": 397628,
+     "b": 397622,
+     "forward": 3,
+     "backward": 0,
+     "n": 3
+    },
+    {
+     "a": 397630,
+     "b": 397637,
+     "forward": 3,
+     "backward": 0,
+     "n": 3
+    },
+    {
+     "a": 397628,
+     "b": 397627,
+     "forward": 2,
+     "backward": 1,
+     "n": 3
+    },
+    {
+     "a": 397628,
+     "b": 397629,
+     "forward": 2,
+     "backward": 1,
+     "n": 3
+    },
+    {
+     "a": 397637,
+     "b": 39708,
+     "forward": 2,
+     "backward": 1,
+     "n": 3
+    },
+    {
+     "a": 397620,
+     "b": 39712,
+     "forward": 2,
+     "backward": 0,
+     "n": 2
+    },
+    {
+     "a": 39712,
+     "b": 397628,
+     "forward": 1,
+     "backward": 1,
+     "n": 2
+    },
+    {
+     "a": 397627,
+     "b": 397637,
+     "forward": 1,
+     "backward": 1,
+     "n": 2
+    },
+    {
+     "a": 397628,
+     "b": 397630,
+     "forward": 1,
+     "backward": 1,
+     "n": 2
+    },
+    {
+     "a": 39708,
+     "b": 397629,
+     "forward": 1,
+     "backward": 0,
+     "n": 1
+    },
+    {
+     "a": 397622,
+     "b": 397629,
+     "forward": 1,
+     "backward": 0,
+     "n": 1
+    },
+    {
+     "a": 397626,
+     "b": 397620,
+     "forward": 1,
+     "backward": 0,
+     "n": 1
+    },
+    {
+     "a": 397627,
+     "b": 397622,
+     "forward": 1,
+     "backward": 0,
+     "n": 1
+    },
+    {
+     "a": 397628,
+     "b": 397637,
+     "forward": 1,
+     "backward": 0,
+     "n": 1
+    }
+   ],
+   "substitutions": [],
+   "shots": {
+    "count": 23,
+    "goals": 3,
+    "xg": 1.42,
+    "xgCoverage": [
+     23,
+     23
+    ]
+   },
+   "phase": {
+    "ballHeight": 57.66,
+    "defHeight": 46.26,
+    "shiftMeters": -10.4
+   }
+  },
+  {
+   "teamId": 783,
+   "name": "Uruguay",
+   "displayName": "Uruguai",
+   "article": "o",
+   "colors": {
+    "fill": "#7BAFD4",
+    "line": "#1F5F99",
+    "ink": "#0A0A0B"
+   },
+   "passes": {
+    "attempted": 359,
+    "completed": 273,
+    "excluded": {
+     "period": 0,
+     "incomplete": 86,
+     "noRecipient": 0,
+     "noLocation": 0
+    }
+   },
+   "nodes": [
+    {
+     "playerId": 397643,
+     "num": 4,
+     "name": "Ubiña",
+     "position": "Lateral-direito",
+     "ball": {
+      "x": 55.25,
+      "y": 72.35
+     },
+     "positionFrom": "passes",
+     "def": {
+      "x": 35.4,
+      "y": 68.9,
+      "n": 31,
+      "lowSample": false
+     },
+     "shift": -18.2,
+     "passes": 48,
+     "received": 51,
+     "sub": null,
+     "label": "below"
+    },
+    {
+     "playerId": 397644,
+     "num": 6,
+     "name": "Mujica",
+     "position": "Lateral-esquerdo",
+     "ball": {
+      "x": 53.6,
+      "y": 5.9
+     },
+     "positionFrom": "passes",
+     "def": {
+      "x": 29.0,
+      "y": 11.2,
+      "n": 33,
+      "lowSample": false
+     },
+     "shift": -22.5,
+     "passes": 33,
+     "received": 28,
+     "sub": null,
+     "label": "below"
+    },
+    {
+     "playerId": 397660,
+     "num": 10,
+     "name": "Ghezzi",
+     "position": "Meia (esq.)",
+     "ball": {
+      "x": 54.2,
+      "y": 33.6
+     },
+     "positionFrom": "passes",
+     "def": {
+      "x": 50.05,
+      "y": 27.75,
+      "n": 32,
+      "lowSample": false
+     },
+     "shift": -3.8,
+     "passes": 27,
+     "received": 29,
+     "sub": {
+      "type": "out",
+      "minute": 69,
+      "with": 397657
+     },
+     "label": "right"
+    },
+    {
+     "playerId": 397639,
+     "num": 1,
+     "name": "Iglesias",
+     "position": "Goleiro",
+     "ball": {
+      "x": 7.6,
+      "y": 37.7
+     },
+     "positionFrom": "passes",
+     "def": {
+      "x": 10.4,
+      "y": 31.6,
+      "n": 5,
+      "lowSample": false
+     },
+     "shift": 2.6,
+     "passes": 27,
+     "received": 6,
+     "sub": null,
+     "label": "below"
+    },
+    {
+     "playerId": 397645,
+     "num": 15,
+     "name": "Fontes",
+     "position": "Centroavante",
+     "ball": {
+      "x": 62.5,
+      "y": 57.9
+     },
+     "positionFrom": "passes",
+     "def": {
+      "x": 68.95,
+      "y": 55.05,
+      "n": 24,
+      "lowSample": false
+     },
+     "shift": 5.9,
+     "passes": 26,
+     "received": 27,
+     "sub": null,
+     "label": "below"
+    },
+    {
+     "playerId": 397640,
+     "num": 5,
+     "name": "Castillo",
+     "position": "Volante",
+     "ball": {
+      "x": 51.9,
+      "y": 30.0
+     },
+     "positionFrom": "passes",
+     "def": {
+      "x": 28.7,
+      "y": 32.3,
+      "n": 37,
+      "lowSample": false
+     },
+     "shift": -21.2,
+     "passes": 23,
+     "received": 18,
+     "sub": null,
+     "label": "above"
+    },
+    {
+     "playerId": 397659,
+     "num": 20,
+     "name": "Lagos",
+     "position": "Meia (dir.)",
+     "ball": {
+      "x": 50.2,
+      "y": 34.05
+     },
+     "positionFrom": "passes",
+     "def": {
+      "x": 42.55,
+      "y": 42.4,
+      "n": 22,
+      "lowSample": false
+     },
+     "shift": -7.0,
+     "passes": 20,
+     "received": 25,
+     "sub": null,
+     "label": "below"
+    },
+    {
+     "playerId": 397655,
+     "num": 11,
+     "name": "Araújo",
+     "position": "Ponta-esquerda",
+     "ball": {
+      "x": 64.1,
+      "y": 19.6
+     },
+     "positionFrom": "passes",
+     "def": {
+      "x": 70.3,
+      "y": 26.6,
+      "n": 19,
+      "lowSample": false
+     },
+     "shift": 5.7,
+     "passes": 19,
+     "received": 24,
+     "sub": null,
+     "label": "above"
+    },
+    {
+     "playerId": 397642,
+     "num": 3,
+     "name": "Matosas",
+     "position": "Zagueiro (esq.)",
+     "ball": {
+      "x": 34.8,
+      "y": 32.0
+     },
+     "positionFrom": "passes",
+     "def": {
+      "x": 27.7,
+      "y": 26.45,
+      "n": 32,
+      "lowSample": false
+     },
+     "shift": -6.5,
+     "passes": 17,
+     "received": 9,
+     "sub": null,
+     "label": "below"
+    },
+    {
+     "playerId": 397641,
+     "num": 2,
+     "name": "Weigel",
+     "position": "Zagueiro (dir.)",
+     "ball": {
+      "x": 34.65,
+      "y": 55.8
+     },
+     "positionFrom": "passes",
+     "def": {
+      "x": 22.9,
+      "y": 47.9,
+      "n": 23,
+      "lowSample": false
+     },
+     "shift": -10.7,
+     "passes": 16,
+     "received": 11,
+     "sub": null,
+     "label": "below"
+    },
+    {
+     "playerId": 397658,
+     "num": 7,
+     "name": "Almeida",
+     "position": "Ponta-direita",
+     "ball": {
+      "x": 64.7,
+      "y": 22.4
+     },
+     "positionFrom": "passes",
+     "def": {
+      "x": 83.6,
+      "y": 47.8,
+      "n": 12,
+      "lowSample": false
+     },
+     "shift": 17.3,
+     "passes": 15,
+     "received": 44,
+     "sub": null,
+     "label": "below"
+    },
+    {
+     "playerId": 397657,
+     "num": 9,
+     "name": "Videla",
+     "position": "Meia (esq.)",
+     "ball": {
+      "x": 60.0,
+      "y": 40.0
+     },
+     "positionFrom": "passes",
+     "def": null,
+     "shift": null,
+     "passes": 2,
+     "received": 1,
+     "sub": {
+      "type": "in",
+      "minute": 69,
+      "with": 397660
+     },
+     "label": "below"
+    }
+   ],
+   "edges": [
+    {
+     "from": 397645,
+     "to": 397643,
+     "n": 15
+    },
+    {
+     "from": 397643,
+     "to": 397658,
+     "n": 14
+    },
+    {
+     "from": 397643,
+     "to": 397645,
+     "n": 10
+    },
+    {
+     "from": 397639,
+     "to": 397643,
+     "n": 9
+    },
+    {
+     "from": 397644,
+     "to": 397658,
+     "n": 9
+    },
+    {
+     "from": 397641,
+     "to": 397643,
+     "n": 8
+    },
+    {
+     "from": 397643,
+     "to": 397641,
+     "n": 6
+    },
+    {
+     "from": 397643,
+     "to": 397660,
+     "n": 6
+    },
+    {
+     "from": 397644,
+     "to": 397659,
+     "n": 6
+    },
+    {
+     "from": 397660,
+     "to": 397655,
+     "n": 6
+    },
+    {
+     "from": 397660,
+     "to": 397658,
+     "n": 6
+    },
+    {
+     "from": 397639,
+     "to": 397644,
+     "n": 5
+    },
+    {
+     "from": 397640,
+     "to": 397660,
+     "n": 5
+    },
+    {
+     "from": 397644,
+     "to": 397655,
+     "n": 5
+    },
+    {
+     "from": 397655,
+     "to": 397640,
+     "n": 5
+    },
+    {
+     "from": 397659,
+     "to": 397658,
+     "n": 5
+    },
+    {
+     "from": 397659,
+     "to": 397660,
+     "n": 5
+    },
+    {
+     "from": 397660,
+     "to": 397643,
+     "n": 5
+    },
+    {
+     "from": 397639,
+     "to": 397642,
+     "n": 4
+    },
+    {
+     "from": 397639,
+     "to": 397660,
+     "n": 4
+    },
+    {
+     "from": 397640,
+     "to": 397644,
+     "n": 4
+    },
+    {
+     "from": 397643,
+     "to": 397659,
+     "n": 4
+    },
+    {
+     "from": 397644,
+     "to": 397640,
+     "n": 4
+    },
+    {
+     "from": 397655,
+     "to": 397644,
+     "n": 4
+    },
+    {
+     "from": 397658,
+     "to": 397644,
+     "n": 4
+    },
+    {
+     "from": 397658,
+     "to": 397645,
+     "n": 4
+    },
+    {
+     "from": 397659,
+     "to": 397644,
+     "n": 4
+    },
+    {
+     "from": 397640,
+     "to": 397643,
+     "n": 3
+    },
+    {
+     "from": 397640,
+     "to": 397658,
+     "n": 3
+    },
+    {
+     "from": 397640,
+     "to": 397659,
+     "n": 3
+    },
+    {
+     "from": 397641,
+     "to": 397645,
+     "n": 3
+    },
+    {
+     "from": 397642,
+     "to": 397639,
+     "n": 3
+    },
+    {
+     "from": 397642,
+     "to": 397643,
+     "n": 3
+    },
+    {
+     "from": 397643,
+     "to": 397655,
+     "n": 3
+    },
+    {
+     "from": 397644,
+     "to": 397643,
+     "n": 3
+    },
+    {
+     "from": 397645,
+     "to": 397655,
+     "n": 3
+    },
+    {
+     "from": 397655,
+     "to": 397659,
+     "n": 3
+    },
+    {
+     "from": 397655,
+     "to": 397660,
+     "n": 3
+    },
+    {
+     "from": 397659,
+     "to": 397643,
+     "n": 3
+    },
+    {
+     "from": 397659,
+     "to": 397645,
+     "n": 3
+    },
+    {
+     "from": 397660,
+     "to": 397644,
+     "n": 3
+    },
+    {
+     "from": 397660,
+     "to": 397645,
+     "n": 3
+    },
+    {
+     "from": 397639,
+     "to": 397658,
+     "n": 2
+    },
+    {
+     "from": 397640,
+     "to": 397641,
+     "n": 2
+    },
+    {
+     "from": 397640,
+     "to": 397655,
+     "n": 2
+    },
+    {
+     "from": 397641,
+     "to": 397642,
+     "n": 2
+    },
+    {
+     "from": 397642,
+     "to": 397640,
+     "n": 2
+    },
+    {
+     "from": 397642,
+     "to": 397644,
+     "n": 2
+    },
+    {
+     "from": 397642,
+     "to": 397655,
+     "n": 2
+    },
+    {
+     "from": 397642,
+     "to": 397659,
+     "n": 2
+    },
+    {
+     "from": 397643,
+     "to": 397640,
+     "n": 2
+    },
+    {
+     "from": 397644,
+     "to": 397660,
+     "n": 2
+    },
+    {
+     "from": 397645,
+     "to": 397658,
+     "n": 2
+    },
+    {
+     "from": 397645,
+     "to": 397659,
+     "n": 2
+    },
+    {
+     "from": 397655,
+     "to": 397658,
+     "n": 2
+    },
+    {
+     "from": 397658,
+     "to": 397659,
+     "n": 2
+    },
+    {
+     "from": 397658,
+     "to": 397660,
+     "n": 2
+    },
+    {
+     "from": 397639,
+     "to": 397640,
+     "n": 1
+    },
+    {
+     "from": 397639,
+     "to": 397641,
+     "n": 1
+    },
+    {
+     "from": 397639,
+     "to": 397659,
+     "n": 1
+    },
+    {
+     "from": 397640,
+     "to": 397642,
+     "n": 1
+    },
+    {
+     "from": 397641,
+     "to": 397640,
+     "n": 1
+    },
+    {
+     "from": 397641,
+     "to": 397655,
+     "n": 1
+    },
+    {
+     "from": 397641,
+     "to": 397659,
+     "n": 1
+    },
+    {
+     "from": 397642,
+     "to": 397645,
+     "n": 1
+    },
+    {
+     "from": 397642,
+     "to": 397658,
+     "n": 1
+    },
+    {
+     "from": 397642,
+     "to": 397660,
+     "n": 1
+    },
+    {
+     "from": 397643,
+     "to": 397639,
+     "n": 1
+    },
+    {
+     "from": 397643,
+     "to": 397644,
+     "n": 1
+    },
+    {
+     "from": 397643,
+     "to": 397657,
+     "n": 1
+    },
+    {
+     "from": 397644,
+     "to": 397639,
+     "n": 1
+    },
+    {
+     "from": 397644,
+     "to": 397641,
+     "n": 1
+    },
+    {
+     "from": 397644,
+     "to": 397642,
+     "n": 1
+    },
+    {
+     "from": 397644,
+     "to": 397645,
+     "n": 1
+    },
+    {
+     "from": 397645,
+     "to": 397640,
+     "n": 1
+    },
+    {
+     "from": 397645,
+     "to": 397641,
+     "n": 1
+    },
+    {
+     "from": 397645,
+     "to": 397644,
+     "n": 1
+    },
+    {
+     "from": 397645,
+     "to": 397660,
+     "n": 1
+    },
+    {
+     "from": 397655,
+     "to": 397643,
+     "n": 1
+    },
+    {
+     "from": 397655,
+     "to": 397645,
+     "n": 1
+    },
+    {
+     "from": 397657,
+     "to": 397645,
+     "n": 1
+    },
+    {
+     "from": 397657,
+     "to": 397655,
+     "n": 1
+    },
+    {
+     "from": 397658,
+     "to": 397640,
+     "n": 1
+    },
+    {
+     "from": 397658,
+     "to": 397643,
+     "n": 1
+    },
+    {
+     "from": 397658,
+     "to": 397655,
+     "n": 1
+    },
+    {
+     "from": 397660,
+     "to": 397639,
+     "n": 1
+    },
+    {
+     "from": 397660,
+     "to": 397640,
+     "n": 1
+    },
+    {
+     "from": 397660,
+     "to": 397642,
+     "n": 1
+    },
+    {
+     "from": 397660,
+     "to": 397659,
+     "n": 1
+    }
+   ],
+   "pairs": [
+    {
+     "a": 397645,
+     "b": 397643,
+     "forward": 15,
+     "backward": 10,
+     "n": 25
+    },
+    {
+     "a": 397643,
+     "b": 397658,
+     "forward": 14,
+     "backward": 1,
+     "n": 15
+    },
+    {
+     "a": 397641,
+     "b": 397643,
+     "forward": 8,
+     "backward": 6,
+     "n": 14
+    },
+    {
+     "a": 397644,
+     "b": 397658,
+     "forward": 9,
+     "backward": 4,
+     "n": 13
+    },
+    {
+     "a": 397643,
+     "b": 397660,
+     "forward": 6,
+     "backward": 5,
+     "n": 11
+    },
+    {
+     "a": 397639,
+     "b": 397643,
+     "forward": 9,
+     "backward": 1,
+     "n": 10
+    },
+    {
+     "a": 397644,
+     "b": 397659,
+     "forward": 6,
+     "backward": 4,
+     "n": 10
+    },
+    {
+     "a": 397660,
+     "b": 397655,
+     "forward": 6,
+     "backward": 3,
+     "n": 9
+    },
+    {
+     "a": 397644,
+     "b": 397655,
+     "forward": 5,
+     "backward": 4,
+     "n": 9
+    },
+    {
+     "a": 397660,
+     "b": 397658,
+     "forward": 6,
+     "backward": 2,
+     "n": 8
+    },
+    {
+     "a": 397640,
+     "b": 397644,
+     "forward": 4,
+     "backward": 4,
+     "n": 8
+    },
+    {
+     "a": 397655,
+     "b": 397640,
+     "forward": 5,
+     "backward": 2,
+     "n": 7
+    },
+    {
+     "a": 397659,
+     "b": 397658,
+     "forward": 5,
+     "backward": 2,
+     "n": 7
+    },
+    {
+     "a": 397639,
+     "b": 397642,
+     "forward": 4,
+     "backward": 3,
+     "n": 7
+    },
+    {
+     "a": 397643,
+     "b": 397659,
+     "forward": 4,
+     "backward": 3,
+     "n": 7
+    },
+    {
+     "a": 397639,
+     "b": 397644,
+     "forward": 5,
+     "backward": 1,
+     "n": 6
+    },
+    {
+     "a": 397640,
+     "b": 397660,
+     "forward": 5,
+     "backward": 1,
+     "n": 6
+    },
+    {
+     "a": 397659,
+     "b": 397660,
+     "forward": 5,
+     "backward": 1,
+     "n": 6
+    },
+    {
+     "a": 397658,
+     "b": 397645,
+     "forward": 4,
+     "backward": 2,
+     "n": 6
+    },
+    {
+     "a": 397639,
+     "b": 397660,
+     "forward": 4,
+     "backward": 1,
+     "n": 5
+    },
+    {
+     "a": 397640,
+     "b": 397643,
+     "forward": 3,
+     "backward": 2,
+     "n": 5
+    },
+    {
+     "a": 397659,
+     "b": 397645,
+     "forward": 3,
+     "backward": 2,
+     "n": 5
+    },
+    {
+     "a": 397660,
+     "b": 397644,
+     "forward": 3,
+     "backward": 2,
+     "n": 5
+    },
+    {
+     "a": 397640,
+     "b": 397658,
+     "forward": 3,
+     "backward": 1,
+     "n": 4
+    },
+    {
+     "a": 397641,
+     "b": 397645,
+     "forward": 3,
+     "backward": 1,
+     "n": 4
+    },
+    {
+     "a": 397643,
+     "b": 397655,
+     "forward": 3,
+     "backward": 1,
+     "n": 4
+    },
+    {
+     "a": 397644,
+     "b": 397643,
+     "forward": 3,
+     "backward": 1,
+     "n": 4
+    },
+    {
+     "a": 397645,
+     "b": 397655,
+     "forward": 3,
+     "backward": 1,
+     "n": 4
+    },
+    {
+     "a": 397660,
+     "b": 397645,
+     "forward": 3,
+     "backward": 1,
+     "n": 4
+    },
+    {
+     "a": 397640,
+     "b": 397659,
+     "forward": 3,
+     "backward": 0,
+     "n": 3
+    },
+    {
+     "a": 397642,
+     "b": 397643,
+     "forward": 3,
+     "backward": 0,
+     "n": 3
+    },
+    {
+     "a": 397655,
+     "b": 397659,
+     "forward": 3,
+     "backward": 0,
+     "n": 3
+    },
+    {
+     "a": 397640,
+     "b": 397641,
+     "forward": 2,
+     "backward": 1,
+     "n": 3
+    },
+    {
+     "a": 397642,
+     "b": 397640,
+     "forward": 2,
+     "backward": 1,
+     "n": 3
+    },
+    {
+     "a": 397642,
+     "b": 397644,
+     "forward": 2,
+     "backward": 1,
+     "n": 3
+    },
+    {
+     "a": 397655,
+     "b": 397658,
+     "forward": 2,
+     "backward": 1,
+     "n": 3
+    },
+    {
+     "a": 397639,
+     "b": 397658,
+     "forward": 2,
+     "backward": 0,
+     "n": 2
+    },
+    {
+     "a": 397641,
+     "b": 397642,
+     "forward": 2,
+     "backward": 0,
+     "n": 2
+    },
+    {
+     "a": 397642,
+     "b": 397655,
+     "forward": 2,
+     "backward": 0,
+     "n": 2
+    },
+    {
+     "a": 397642,
+     "b": 397659,
+     "forward": 2,
+     "backward": 0,
+     "n": 2
+    },
+    {
+     "a": 397642,
+     "b": 397660,
+     "forward": 1,
+     "backward": 1,
+     "n": 2
+    },
+    {
+     "a": 397644,
+     "b": 397645,
+     "forward": 1,
+     "backward": 1,
+     "n": 2
+    },
+    {
+     "a": 397639,
+     "b": 397640,
+     "forward": 1,
+     "backward": 0,
+     "n": 1
+    },
+    {
+     "a": 397639,
+     "b": 397641,
+     "forward": 1,
+     "backward": 0,
+     "n": 1
+    },
+    {
+     "a": 397639,
+     "b": 397659,
+     "forward": 1,
+     "backward": 0,
+     "n": 1
+    },
+    {
+     "a": 397641,
+     "b": 397655,
+     "forward": 1,
+     "backward": 0,
+     "n": 1
+    },
+    {
+     "a": 397641,
+     "b": 397659,
+     "forward": 1,
+     "backward": 0,
+     "n": 1
+    },
+    {
+     "a": 397642,
+     "b": 397645,
+     "forward": 1,
+     "backward": 0,
+     "n": 1
+    },
+    {
+     "a": 397642,
+     "b": 397658,
+     "forward": 1,
+     "backward": 0,
+     "n": 1
+    },
+    {
+     "a": 397643,
+     "b": 397657,
+     "forward": 1,
+     "backward": 0,
+     "n": 1
+    },
+    {
+     "a": 397644,
+     "b": 397641,
+     "forward": 1,
+     "backward": 0,
+     "n": 1
+    },
+    {
+     "a": 397645,
+     "b": 397640,
+     "forward": 1,
+     "backward": 0,
+     "n": 1
+    },
+    {
+     "a": 397657,
+     "b": 397645,
+     "forward": 1,
+     "backward": 0,
+     "n": 1
+    },
+    {
+     "a": 397657,
+     "b": 397655,
+     "forward": 1,
+     "backward": 0,
+     "n": 1
+    }
+   ],
+   "substitutions": [
+    {
+     "minute": 69,
+     "out": 397660,
+     "in": 397657,
+     "reason": "Tactical"
+    }
+   ],
+   "shots": {
+    "count": 18,
+    "goals": 1,
+    "xg": 0.84,
+    "xgCoverage": [
+     18,
+     18
+    ]
+   },
+   "phase": {
+    "ballHeight": 52.59,
+    "defHeight": 45.91,
+    "shiftMeters": -6.1
+   }
+  }
+ ],
+ "goals": [
+  {
+   "teamId": 783,
+   "team": "Uruguay",
+   "minute": 17,
+   "scorerId": 397658,
+   "scorer": "Almeida",
+   "duration": 8.03,
+   "passes": 1,
+   "players": 2,
+   "segments": [
+    {
+     "t": 0.0,
+     "d": 3.68,
+     "from": [
+      67.1,
+      18.3
+     ],
+     "to": [
+      88.6,
+      23.5
+     ],
+     "kind": "carry"
+    },
+    {
+     "t": 3.68,
+     "d": 2.18,
+     "from": [
+      88.6,
+      23.5
+     ],
+     "to": [
+      108.9,
+      48.1
+     ],
+     "kind": "pass"
+    },
+    {
+     "t": 5.85,
+     "d": 0.73,
+     "from": [
+      108.9,
+      48.1
+     ],
+     "to": [
+      113.9,
+      52.1
+     ],
+     "kind": "carry"
+    },
+    {
+     "t": 6.58,
+     "d": 1.45,
+     "from": [
+      113.9,
+      52.1
+     ],
+     "to": [
+      120.0,
+      37.8
+     ],
+     "kind": "shot"
+    }
+   ],
+   "touches": [
+    {
+     "t": 0.0,
+     "playerId": 397655,
+     "num": 11,
+     "name": "Araújo",
+     "at": [
+      67.1,
+      18.3
+     ],
+     "label": "below"
+    },
+    {
+     "t": 5.85,
+     "playerId": 397658,
+     "num": 7,
+     "name": "Almeida",
+     "at": [
+      108.9,
+      48.1
+     ],
+     "label": "below"
+    }
+   ],
+   "steps": [
+    {
+     "t": 0.0,
+     "text": "Araújo recupera a bola no campo de ataque"
+    },
+    {
+     "t": 0.0,
+     "text": "Araújo conduz para o meio"
+    },
+    {
+     "t": 3.68,
+     "text": "Araújo lança Almeida pelo meio"
+    },
+    {
+     "t": 6.58,
+     "text": "Almeida finaliza: gol"
+    }
+   ]
+  },
+  {
+   "teamId": 781,
+   "team": "Brazil",
+   "minute": 45,
+   "scorerId": 397620,
+   "scorer": "Clodoaldo",
+   "duration": 24.64,
+   "passes": 7,
+   "players": 7,
+   "segments": [
+    {
+     "t": 0.0,
+     "d": 2.55,
+     "from": [
+      34.7,
+      46.1
+     ],
+     "to": [
+      28.9,
+      47.7
+     ],
+     "kind": "carry"
+    },
+    {
+     "t": 3.66,
+     "d": 0.46,
+     "from": [
+      25.7,
+      52.8
+     ],
+     "to": [
+      25.4,
+      59.1
+     ],
+     "kind": "carry"
+    },
+    {
+     "t": 4.13,
+     "d": 1.19,
+     "from": [
+      25.4,
+      59.1
+     ],
+     "to": [
+      34.2,
+      48.3
+     ],
+     "kind": "pass"
+    },
+    {
+     "t": 5.32,
+     "d": 1.37,
+     "from": [
+      34.2,
+      48.3
+     ],
+     "to": [
+      36.7,
+      47.7
+     ],
+     "kind": "carry"
+    },
+    {
+     "t": 6.68,
+     "d": 0.73,
+     "from": [
+      36.7,
+      47.7
+     ],
+     "to": [
+      36.2,
+      31.1
+     ],
+     "kind": "pass"
+    },
+    {
+     "t": 9.02,
+     "d": 1.27,
+     "from": [
+      36.2,
+      31.1
+     ],
+     "to": [
+      43.1,
+      20.5
+     ],
+     "kind": "pass"
+    },
+    {
+     "t": 10.28,
+     "d": 3.09,
+     "from": [
+      43.1,
+      20.5
+     ],
+     "to": [
+      46.5,
+      20.6
+     ],
+     "kind": "carry"
+    },
+    {
+     "t": 13.37,
+     "d": 1.04,
+     "from": [
+      46.5,
+      20.6
+     ],
+     "to": [
+      56.2,
+      4.5
+     ],
+     "kind": "pass"
+    },
+    {
+     "t": 14.41,
+     "d": 3.2,
+     "from": [
+      56.2,
+      4.5
+     ],
+     "to": [
+      63.1,
+      7.5
+     ],
+     "kind": "carry"
+    },
+    {
+     "t": 17.61,
+     "d": 1.67,
+     "from": [
+      63.1,
+      7.5
+     ],
+     "to": [
+      76.7,
+      15.0
+     ],
+     "kind": "pass"
+    },
+    {
+     "t": 19.7,
+     "d": 0.95,
+     "from": [
+      76.7,
+      15.3
+     ],
+     "to": [
+      85.6,
+      3.8
+     ],
+     "kind": "pass"
+    },
+    {
+     "t": 20.65,
+     "d": 1.63,
+     "from": [
+      85.6,
+      3.8
+     ],
+     "to": [
+      87.0,
+      4.5
+     ],
+     "kind": "carry"
+    },
+    {
+     "t": 22.28,
+     "d": 1.54,
+     "from": [
+      87.0,
+      4.5
+     ],
+     "to": [
+      107.9,
+      31.7
+     ],
+     "kind": "pass"
+    },
+    {
+     "t": 23.97,
+     "d": 0.67,
+     "from": [
+      107.9,
+      31.7
+     ],
+     "to": [
+      120.0,
+      43.1
+     ],
+     "kind": "shot"
+    }
+   ],
+   "touches": [
+    {
+     "t": 0.0,
+     "playerId": 397620,
+     "num": 5,
+     "name": "Clodoaldo",
+     "at": [
+      34.7,
+      46.1
+     ],
+     "label": "above"
+    },
+    {
+     "t": 3.66,
+     "playerId": 39708,
+     "num": 4,
+     "name": "Carlos Alberto",
+     "at": [
+      25.7,
+      52.8
+     ],
+     "label": "below"
+    },
+    {
+     "t": 5.32,
+     "playerId": 397621,
+     "num": 8,
+     "name": "Gérson",
+     "at": [
+      34.2,
+      48.3
+     ],
+     "label": "below"
+    },
+    {
+     "t": 7.42,
+     "playerId": 397627,
+     "num": 3,
+     "name": "Piazza",
+     "at": [
+      36.2,
+      31.1
+     ],
+     "label": "below"
+    },
+    {
+     "t": 10.28,
+     "playerId": 397630,
+     "num": 11,
+     "name": "Rivellino",
+     "at": [
+      43.1,
+      20.5
+     ],
+     "label": "below"
+    },
+    {
+     "t": 14.41,
+     "playerId": 397629,
+     "num": 16,
+     "name": "Everaldo",
+     "at": [
+      56.2,
+      4.5
+     ],
+     "label": "below"
+    },
+    {
+     "t": 19.28,
+     "playerId": 397620,
+     "num": 5,
+     "name": "Clodoaldo",
+     "at": [
+      76.7,
+      15.0
+     ],
+     "label": "below"
+    },
+    {
+     "t": 20.65,
+     "playerId": 397637,
+     "num": 9,
+     "name": "Tostão",
+     "at": [
+      85.6,
+      3.8
+     ],
+     "label": "below"
+    },
+    {
+     "t": 23.82,
+     "playerId": 397620,
+     "num": 5,
+     "name": "Clodoaldo",
+     "at": [
+      107.9,
+      31.7
+     ],
+     "label": "below"
+    }
+   ],
+   "steps": [
+    {
+     "t": 0.0,
+     "text": "Clodoaldo recupera a bola no próprio campo"
+    },
+    {
+     "t": 3.66,
+     "text": "Carlos Alberto recupera a bola no próprio campo"
+    },
+    {
+     "t": 4.13,
+     "text": "Carlos Alberto → Gérson"
+    },
+    {
+     "t": 6.68,
+     "text": "Gérson → Piazza"
+    },
+    {
+     "t": 9.02,
+     "text": "Piazza → Rivellino"
+    },
+    {
+     "t": 13.37,
+     "text": "Rivellino → Everaldo"
+    },
+    {
+     "t": 17.61,
+     "text": "Everaldo → Clodoaldo"
+    },
+    {
+     "t": 19.7,
+     "text": "Clodoaldo → Tostão"
+    },
+    {
+     "t": 22.28,
+     "text": "Tostão lança Clodoaldo pelo meio"
+    },
+    {
+     "t": 23.97,
+     "text": "Clodoaldo finaliza: gol"
+    }
+   ]
+  },
+  {
+   "teamId": 781,
+   "team": "Brazil",
+   "minute": 71,
+   "scorerId": 397622,
+   "scorer": "Jairzinho",
+   "duration": 11.3,
+   "passes": 3,
+   "players": 3,
+   "segments": [
+    {
+     "t": 0.0,
+     "d": 3.01,
+     "from": [
+      34.2,
+      49.2
+     ],
+     "to": [
+      49.1,
+      52.4
+     ],
+     "kind": "carry"
+    },
+    {
+     "t": 3.01,
+     "d": 0.7,
+     "from": [
+      49.1,
+      52.4
+     ],
+     "to": [
+      55.9,
+      46.9
+     ],
+     "kind": "pass"
+    },
+    {
+     "t": 3.71,
+     "d": 0.15,
+     "from": [
+      55.9,
+      46.9
+     ],
+     "to": [
+      56.4,
+      45.2
+     ],
+     "kind": "carry"
+    },
+    {
+     "t": 3.86,
+     "d": 0.63,
+     "from": [
+      56.4,
+      45.2
+     ],
+     "to": [
+      61.9,
+      40.6
+     ],
+     "kind": "pass"
+    },
+    {
+     "t": 4.49,
+     "d": 1.65,
+     "from": [
+      61.9,
+      40.6
+     ],
+     "to": [
+      66.8,
+      46.3
+     ],
+     "kind": "carry"
+    },
+    {
+     "t": 6.14,
+     "d": 1.27,
+     "from": [
+      66.8,
+      46.3
+     ],
+     "to": [
+      84.5,
+      60.9
+     ],
+     "kind": "pass"
+    },
+    {
+     "t": 7.41,
+     "d": 2.58,
+     "from": [
+      84.5,
+      60.9
+     ],
+     "to": [
+      108.3,
+      47.4
+     ],
+     "kind": "carry"
+    },
+    {
+     "t": 9.99,
+     "d": 1.31,
+     "from": [
+      108.3,
+      47.4
+     ],
+     "to": [
+      120.0,
+      37.9
+     ],
+     "kind": "shot"
+    }
+   ],
+   "touches": [
+    {
+     "t": 0.0,
+     "playerId": 397622,
+     "num": 7,
+     "name": "Jairzinho",
+     "at": [
+      34.2,
+      49.2
+     ],
+     "label": "below"
+    },
+    {
+     "t": 3.71,
+     "playerId": 39712,
+     "num": 10,
+     "name": "Pelé",
+     "at": [
+      55.9,
+      46.9
+     ],
+     "label": "below"
+    },
+    {
+     "t": 4.49,
+     "playerId": 397637,
+     "num": 9,
+     "name": "Tostão",
+     "at": [
+      61.9,
+      40.6
+     ],
+     "label": "below"
+    },
+    {
+     "t": 7.41,
+     "playerId": 397622,
+     "num": 7,
+     "name": "Jairzinho",
+     "at": [
+      84.5,
+      60.9
+     ],
+     "label": "below"
+    }
+   ],
+   "steps": [
+    {
+     "t": 0.0,
+     "text": "Jairzinho recupera a bola no próprio campo"
+    },
+    {
+     "t": 0.0,
+     "text": "Jairzinho conduz pelo meio"
+    },
+    {
+     "t": 3.01,
+     "text": "Jairzinho → Pelé"
+    },
+    {
+     "t": 3.86,
+     "text": "Pelé → Tostão"
+    },
+    {
+     "t": 6.14,
+     "text": "Tostão → Jairzinho"
+    },
+    {
+     "t": 7.41,
+     "text": "Jairzinho conduz para o meio"
+    },
+    {
+     "t": 9.99,
+     "text": "Jairzinho finaliza: gol"
+    }
+   ]
+  },
+  {
+   "teamId": 781,
+   "team": "Brazil",
+   "minute": 85,
+   "scorerId": 397630,
+   "scorer": "Rivellino",
+   "duration": 15.16,
+   "passes": 3,
+   "players": 3,
+   "segments": [
+    {
+     "t": 0.71,
+     "d": 3.17,
+     "from": [
+      15.8,
+      69.5
+     ],
+     "to": [
+      65.1,
+      42.9
+     ],
+     "kind": "pass"
+    },
+    {
+     "t": 4.96,
+     "d": 1.74,
+     "from": [
+      55.4,
+      47.2
+     ],
+     "to": [
+      70.8,
+      32.6
+     ],
+     "kind": "pass"
+    },
+    {
+     "t": 6.71,
+     "d": 6.71,
+     "from": [
+      70.8,
+      32.6
+     ],
+     "to": [
+      105.4,
+      30.0
+     ],
+     "kind": "carry"
+    },
+    {
+     "t": 13.41,
+     "d": 0.82,
+     "from": [
+      105.4,
+      30.0
+     ],
+     "to": [
+      101.2,
+      34.6
+     ],
+     "kind": "pass"
+    },
+    {
+     "t": 14.32,
+     "d": 0.84,
+     "from": [
+      101.2,
+      34.6
+     ],
+     "to": [
+      120.0,
+      42.9
+     ],
+     "kind": "shot"
+    }
+   ],
+   "touches": [
+    {
+     "t": 0.0,
+     "playerId": 397637,
+     "num": 9,
+     "name": "Tostão",
+     "at": [
+      15.8,
+      69.5
+     ],
+     "label": "below"
+    },
+    {
+     "t": 3.88,
+     "playerId": 39712,
+     "num": 10,
+     "name": "Pelé",
+     "at": [
+      58.5,
+      32.6
+     ],
+     "label": "below"
+    },
+    {
+     "t": 14.23,
+     "playerId": 397630,
+     "num": 11,
+     "name": "Rivellino",
+     "at": [
+      101.2,
+      34.6
+     ],
+     "label": "below"
+    }
+   ],
+   "steps": [
+    {
+     "t": 0.0,
+     "text": "Tostão recupera a bola no próprio campo"
+    },
+    {
+     "t": 0.71,
+     "text": "Tostão lança Pelé pelo meio"
+    },
+    {
+     "t": 4.96,
+     "text": "Rivellino → Pelé"
+    },
+    {
+     "t": 6.71,
+     "text": "Pelé conduz pelo meio"
+    },
+    {
+     "t": 13.41,
+     "text": "Pelé → Rivellino"
+    },
+    {
+     "t": 14.32,
+     "text": "Rivellino finaliza: gol"
+    }
+   ]
+  }
+ ],
+ "validation": {
+  "edgeSumEqualsCompleted": true,
+  "nodeSumEqualsCompleted": true,
+  "excludedAddUp": true,
+  "edgesHaveNodes": true,
+  "pairSumEqualsCompleted": true,
+  "shotCount": true,
+  "shotGoals": true,
+  "scoreMatchesEvents": true,
+  "replayOrdered": true,
+  "replayEndsWithShot": true,
+  "noForeignEvents": true
+ }
+}

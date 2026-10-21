@@ -18,3 +18,4 @@ site/dist/
 .ipynb_checkpoints/
 .vscode/
 .idea/
+*.tsbuildinfo

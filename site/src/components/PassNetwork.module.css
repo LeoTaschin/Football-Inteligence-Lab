@@ -1,0 +1,54 @@
+.line,
+.arrow {
+  transition: stroke-opacity 0.2s ease, fill-opacity 0.2s ease;
+}
+
+.node {
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  outline: none;
+}
+
+.hit {
+  fill: transparent;
+}
+
+.halo {
+  fill: var(--surface);
+}
+
+.node:hover .disc,
+.node:focus-visible .disc {
+  filter: drop-shadow(0 0 1px var(--text));
+}
+
+.node:focus-visible .hit {
+  fill: none;
+  stroke: var(--text);
+  stroke-width: 2px;
+  vector-effect: non-scaling-stroke;
+  stroke-dasharray: 3 2;
+}
+
+.ring {
+  fill: none;
+  stroke: var(--text);
+  stroke-width: 2px;
+  vector-effect: non-scaling-stroke;
+}
+
+.num {
+  font-weight: 800;
+  pointer-events: none;
+}
+
+.label {
+  fill: var(--text);
+  font-weight: 600;
+  pointer-events: none;
+  paint-order: stroke;
+  stroke: var(--surface);
+  stroke-width: 3px;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}

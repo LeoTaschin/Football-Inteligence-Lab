@@ -1,0 +1,251 @@
+.page {
+  padding-top: 32px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px 24px;
+  font-size: 14px;
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: var(--text-muted);
+}
+.breadcrumb a {
+  color: var(--text-muted);
+}
+
+.pager {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.eyebrowRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 16px;
+}
+
+.project {
+  color: var(--text);
+  font-weight: 800;
+}
+
+.title {
+  font-size: clamp(40px, 6vw, 64px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.times {
+  color: var(--text-faint);
+  font-weight: 500;
+}
+
+.finding {
+  font-size: 20px;
+  line-height: 1.45;
+  color: var(--text-2);
+  max-width: 860px;
+}
+.finding strong {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 0;
+}
+
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  font-size: 14px;
+  color: var(--text-2);
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  align-items: center;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.legendItem {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.dotBig,
+.dotSmall {
+  border-radius: 50%;
+  background: var(--text-faint);
+}
+.dotBig {
+  width: 18px;
+  height: 18px;
+}
+.dotSmall {
+  width: 10px;
+  height: 10px;
+}
+
+.bar {
+  width: 28px;
+  height: 5px;
+  border-radius: 3px;
+  background: var(--text-faint);
+}
+
+.networks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 520px), 1fr));
+  gap: 32px;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+
+.teamHead {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 4px 12px;
+}
+
+.teamName {
+  font-size: 22px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.teamDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid;
+}
+
+.teamStats {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* on phones the pitch keeps a readable size and scrolls sideways */
+.pitchScroll {
+  overflow-x: auto;
+}
+
+.pitchBox {
+  min-width: 480px;
+  border: 1px solid var(--line);
+}
+
+.teamNote {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.hint {
+  border: 1px dashed var(--line);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  align-items: center;
+  justify-content: space-between;
+}
+.hint p {
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--text-2);
+  max-width: 760px;
+}
+
+.tables {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+  gap: 32px;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px 32px;
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+.footer p:first-child {
+  max-width: 720px;
+}
+
+.credit {
+  text-align: right;
+}
+
+.goalList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.goalList :global(.pill) {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.goalDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid;
+}
+
+.empty {
+  color: var(--text-muted);
+}

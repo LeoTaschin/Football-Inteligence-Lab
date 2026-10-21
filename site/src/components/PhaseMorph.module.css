@@ -1,0 +1,237 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px 24px;
+}
+
+.title {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+
+.group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.auto[aria-pressed="false"] {
+  color: var(--bra-text);
+  border-color: var(--bra-line);
+}
+.auto[aria-pressed="true"] {
+  background: var(--bra-line);
+  border-color: var(--bra-line);
+}
+
+.body {
+  display: grid;
+  grid-template-columns: minmax(0, 2.6fr) minmax(260px, 1fr);
+  gap: 32px;
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .body {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+
+.pitchScroll {
+  overflow-x: auto;
+}
+
+.pitchBox {
+  min-width: 520px;
+  border: 1px solid var(--line);
+}
+
+.move {
+  transition: transform 1.1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .move {
+    transition: none;
+  }
+}
+
+.block {
+  stroke: var(--text);
+  stroke-opacity: 0.35;
+  stroke-width: 2px;
+  stroke-dasharray: 6 5;
+  vector-effect: non-scaling-stroke;
+}
+
+.blockTag {
+  fill: var(--text);
+}
+
+.blockText {
+  fill: #ffffff;
+  font-weight: 700;
+}
+
+.ghost {
+  fill: none;
+  stroke: var(--text-faint);
+  stroke-width: 1.5px;
+  stroke-dasharray: 4 3;
+  vector-effect: non-scaling-stroke;
+}
+
+.ghostLine {
+  stroke: var(--text-faint);
+  stroke-width: 1.5px;
+  stroke-dasharray: 4 3;
+  vector-effect: non-scaling-stroke;
+}
+
+.halo {
+  fill: var(--surface);
+}
+
+.num {
+  font-weight: 800;
+}
+
+.label {
+  fill: var(--text);
+  font-weight: 600;
+  paint-order: stroke;
+  stroke: var(--surface);
+  stroke-width: 3px;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.caption {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  min-width: 0;
+}
+
+.big {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.bigNumber {
+  font-size: 44px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.bigText {
+  font-size: 15px;
+  line-height: 1.45;
+  color: var(--text-2);
+}
+
+.shifts {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sectionTitle {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.shiftList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.shiftRow {
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr) 54px;
+  gap: 10px;
+  align-items: center;
+  min-height: 24px;
+}
+
+.shiftName {
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.track {
+  height: 8px;
+  background: var(--row);
+  border-radius: 4px;
+}
+
+.bar {
+  display: block;
+  height: 8px;
+  border-radius: 4px;
+}
+
+.shiftValue {
+  font-size: 14px;
+  font-weight: 700;
+  text-align: right;
+}
+
+.facts {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-2);
+}
+.facts strong {
+  color: var(--text);
+}
+
+.method {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
