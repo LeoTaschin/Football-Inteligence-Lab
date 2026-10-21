@@ -111,7 +111,7 @@ fil/
 
 ### Stack
 
-**Engine:** Python 3.11+, `pandas`, `requests` (ou `statsbombpy`), `pyyaml`, `matplotlib`, `mplsoccer`, `pytest`. Opcional: `pydantic` para validar o schema de saída.
+**Engine:** Python 3.11+, `pandas`, `requests`, `pyyaml`, `matplotlib` (post; o campo é desenhado com as mesmas marcações do site, sem `mplsoccer`), `pytest`. A fonte Inter (SIL OFL) é baixada uma vez para `engine/.cache/fonts`. Opcional: `pydantic` para validar o schema de saída.
 
 **Site:** Vite + React + TypeScript + React Router. Campo e redes desenhados em **SVG** (não em divs como no protótipo do canvas). Sem biblioteca de gráficos na Etapa 1; barras simples em CSS. Fonte Inter (Google Fonts).
 
@@ -458,7 +458,7 @@ Todo o SVG usa o sistema de coordenadas StatsBomb no `viewBox` (`0 0 120 80`), c
 - legenda (tamanho = passes completos; espessura = passes da dupla, mín. 3);
 - duas tabelas Top 10 combinações com ida/volta;
 - rodapé com recorte, substituições, "Dados: StatsBomb Open Data" e "Leonardo Taschin · F.I.L".
-Layout com `GridSpec`; tokens de cor iguais aos do site em `report/theme.py`.
+Layout em px como no design (um eixo transparente do tamanho da imagem + um eixo por campo); tokens de cor iguais aos do site em `report/theme.py`. O post usa o mesmo `export.build_match` do site, então os números são os mesmos. Requer `pip install -e "engine[report]"`.
 
 ---
 

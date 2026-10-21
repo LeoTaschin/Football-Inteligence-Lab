@@ -14,7 +14,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-report = ["matplotlib>=3.8", "mplsoccer>=1.2"]
+report = ["matplotlib>=3.8"]
 dev = ["pytest>=8.0"]
 
 [tool.setuptools.packages.find]
