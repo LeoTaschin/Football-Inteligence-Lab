@@ -286,19 +286,45 @@ def build_index(cfg: CollectionConfig, match_ids: list[int]) -> dict:
 
 # --- write --------------------------------------------------------------------------
 
-def export_collection(cfg: CollectionConfig, cache_dir: Path = load.DEFAULT_CACHE_DIR) -> list[Path]:
+def build_files(cfg: CollectionConfig, cache_dir: Path = load.DEFAULT_CACHE_DIR) -> dict[Path, dict]:
+    """Every site JSON of the collection, validated, keyed by its path relative to ``output_dir``."""
     match_ids = load.fetch_season(cfg.competition_id, cfg.season_id, team=cfg.team, cache_dir=cache_dir)
     matches = []
     for match_id in match_ids:
         meta = load.find_match(match_id, cfg.competition_id, cfg.season_id, cache_dir)
         matches.append(build_match(meta, load.load_events(match_id, cache_dir), load.load_lineups(match_id, cache_dir), cfg))
 
+    files = {Path("matches") / f"{m['match']['id']}.json": m for m in matches}
+    files[Path("collections") / f"{cfg.collection}.json"] = build_collection(cfg, matches)
+    files[Path("index.json")] = build_index(cfg, match_ids)
+    return files
+
+
+def export_collection(cfg: CollectionConfig, cache_dir: Path = load.DEFAULT_CACHE_DIR) -> list[Path]:
+    files = build_files(cfg, cache_dir)
     # everything validated: only now touch the output directory
-    out = cfg.output_dir
-    written = [_write(out / "matches" / f"{m['match']['id']}.json", m) for m in matches]
-    written.append(_write(out / "collections" / f"{cfg.collection}.json", build_collection(cfg, matches)))
-    written.append(_write(out / "index.json", build_index(cfg, match_ids)))
-    return written
+    return [_write(cfg.output_dir / rel, data) for rel, data in files.items()]
+
+
+VOLATILE_KEYS = {"generatedAt"}  # change on every run; not part of the data
+
+
+def stale_files(cfg: CollectionConfig, cache_dir: Path = load.DEFAULT_CACHE_DIR) -> list[str]:
+    """Committed JSON that differs from a fresh export (ignoring ``generatedAt``). Empty = up to date."""
+    stale = []
+    for rel, data in build_files(cfg, cache_dir).items():
+        path = cfg.output_dir / rel
+        if not path.exists():
+            stale.append(f"{rel} (ausente)")
+            continue
+        committed = json.loads(path.read_text(encoding="utf-8"))
+        if _strip(committed) != _strip(json.loads(json.dumps(data, ensure_ascii=False))):
+            stale.append(str(rel))
+    return stale
+
+
+def _strip(data: dict) -> dict:
+    return {k: v for k, v in data.items() if k not in VOLATILE_KEYS}
 
 
 def _write(path: Path, data: dict) -> Path:
