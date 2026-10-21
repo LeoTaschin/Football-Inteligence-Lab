@@ -1,16 +1,25 @@
 import { Link, useParams, useSearchParams } from "react-router-dom";
 
 import { CombinationTable } from "../components/CombinationTable";
+import { GoalReplay } from "../components/GoalReplay";
 import { PassNetwork } from "../components/PassNetwork";
+import { PhaseMorph } from "../components/PhaseMorph";
 import { PlayerPanel } from "../components/PlayerPanel";
 import { NotFound, Status } from "../components/Status";
-import { competitionPt, match as copy, site } from "../content/pt";
+import { TabPanel, Tabs } from "../components/Tabs";
+import { competitionPt, match as copy, goals as goalsCopy, site, tabs as tabsCopy } from "../content/pt";
 import { useCollection, useMatch } from "../lib/data";
 import { formatDate, formatPercent } from "../lib/format";
 import type { CampaignMatch, MatchData, TeamData } from "../types/data";
 import styles from "./Match.module.css";
 
 const MIN_OPTIONS = [3, 5, 8];
+const TABS = [
+  { key: "rede", label: tabsCopy.network },
+  { key: "fases", label: tabsCopy.phases },
+  { key: "gols", label: tabsCopy.goals },
+] as const;
+type TabKey = (typeof TABS)[number]["key"];
 
 export function Match() {
   const { matchId } = useParams();
@@ -30,7 +39,7 @@ interface Selection {
   playerId: number;
 }
 
-/** Selection and filter live in the URL (?jogador=397621&min=5) so a post can link straight to them. */
+/** Tab, selection, filter and goal live in the URL (?aba=gols&gol=4, ?jogador=397621&min=5) so a post can link straight to them. */
 function useMatchParams(data: MatchData) {
   const [params, setParams] = useSearchParams();
   const min = Number(params.get("min"));
@@ -38,6 +47,10 @@ function useMatchParams(data: MatchData) {
   const pid = Number(params.get("jogador"));
   const team = data.teams.findIndex((t) => t.nodes.some((n) => n.playerId === pid));
   const selection: Selection | null = team >= 0 ? { team, playerId: pid } : null;
+  const tabParam = params.get("aba");
+  const tab: TabKey = TABS.some((t) => t.key === tabParam) ? (tabParam as TabKey) : "rede";
+  const goalParam = Number(params.get("gol"));
+  const goal = Number.isInteger(goalParam) && goalParam >= 1 && goalParam <= data.goals.length ? goalParam - 1 : 0;
 
   const update = (changes: Record<string, string | null>) =>
     setParams(
@@ -58,11 +71,15 @@ function useMatchParams(data: MatchData) {
     setMinPasses: (m: number) => update({ min: m === MIN_OPTIONS[0] ? null : String(m) }),
     toggle: (playerId: number) => update({ jogador: selection?.playerId === playerId ? null : String(playerId) }),
     clear: () => update({ jogador: null }),
+    tab,
+    setTab: (k: TabKey) => update({ aba: k === "rede" ? null : k }),
+    goal,
+    setGoal: (i: number) => update({ gol: String(i + 1) }),
   };
 }
 
 function MatchView({ data, campaign }: { data: MatchData; campaign: CampaignMatch[] }) {
-  const { minPasses, selection, setMinPasses, toggle, clear } = useMatchParams(data);
+  const { minPasses, selection, setMinPasses, toggle, clear, tab, setTab, goal, setGoal } = useMatchParams(data);
   const { match, teams } = data;
 
   const pos = campaign.findIndex((m) => m.id === match.id);
@@ -129,67 +146,107 @@ function MatchView({ data, campaign }: { data: MatchData; campaign: CampaignMatc
         )}
       </header>
 
-      <div className={styles.controls}>
-        <div className={styles.filter} role="group" aria-label={copy.minPasses}>
-          <span>{copy.minPasses}</span>
-          {MIN_OPTIONS.map((m) => (
-            <button key={m} type="button" className="pill" aria-pressed={m === minPasses} onClick={() => setMinPasses(m)}>
-              {m}+
-            </button>
-          ))}
-        </div>
-        <div className={styles.legend} aria-hidden="true">
-          <span className={styles.legendItem}>
-            <span className={styles.dotBig} />
-            <span className={styles.dotSmall} />
-            {copy.legendSize}
-          </span>
-          <span className={styles.legendItem}>
-            <span className={styles.bar} />
-            {copy.legendWidth}
-          </span>
-        </div>
-      </div>
+      <Tabs items={[...TABS]} current={tab} onChange={setTab} label={tabsCopy.label} idPrefix="partida" />
 
-      <div className={styles.networks}>
-        {teams.map((team, ti) => (
-          <section key={team.teamId} className={styles.team}>
-            <div className={styles.teamHead}>
-              <h2 className={styles.teamName}>
-                <span className={styles.teamDot} style={{ background: team.colors.fill, borderColor: team.colors.line }} />
-                {team.displayName}
-              </h2>
-              <span className={styles.teamStats}>
-                {copy.teamSummary(team.passes.completed, formatPercent(team.passes.completed, team.passes.attempted))}
+      {tab === "rede" && (
+        <TabPanel idPrefix="partida" tab="rede">
+          <div className={styles.controls}>
+            <div className={styles.filter} role="group" aria-label={copy.minPasses}>
+              <span>{copy.minPasses}</span>
+              {MIN_OPTIONS.map((m) => (
+                <button key={m} type="button" className="pill" aria-pressed={m === minPasses} onClick={() => setMinPasses(m)}>
+                  {m}+
+                </button>
+              ))}
+            </div>
+            <div className={styles.legend} aria-hidden="true">
+              <span className={styles.legendItem}>
+                <span className={styles.dotBig} />
+                <span className={styles.dotSmall} />
+                {copy.legendSize}
+              </span>
+              <span className={styles.legendItem}>
+                <span className={styles.bar} />
+                {copy.legendWidth}
               </span>
             </div>
-            <div className={styles.pitchScroll}>
-              <div className={styles.pitchBox}>
-                <PassNetwork
-                  team={team}
-                  scale={data.scale}
-                  minPasses={minPasses}
-                  selectedId={selection?.team === ti ? selection.playerId : null}
-                  onSelect={toggle}
-                />
-              </div>
-            </div>
-            <p className={styles.teamNote}>{subsNote(team)}</p>
-          </section>
-        ))}
-      </div>
+          </div>
 
-      {selection ? (
-        <PlayerPanel team={teams[selection.team]} playerId={selection.playerId} onClear={clear} />
-      ) : (
-        <section className={styles.hint}>
-          <p>{copy.hint}</p>
-          {topPasser && (
-            <button type="button" className="button button--primary button--small" onClick={() => toggle(topPasser.playerId)}>
-              {copy.hintButton(topPasser.name)}
-            </button>
+          <div className={styles.networks}>
+            {teams.map((team, ti) => (
+              <section key={team.teamId} className={styles.team}>
+                <div className={styles.teamHead}>
+                  <h2 className={styles.teamName}>
+                    <span className={styles.teamDot} style={{ background: team.colors.fill, borderColor: team.colors.line }} />
+                    {team.displayName}
+                  </h2>
+                  <span className={styles.teamStats}>
+                    {copy.teamSummary(team.passes.completed, formatPercent(team.passes.completed, team.passes.attempted))}
+                  </span>
+                </div>
+                <div className={styles.pitchScroll}>
+                  <div className={styles.pitchBox}>
+                    <PassNetwork
+                      team={team}
+                      scale={data.scale}
+                      minPasses={minPasses}
+                      selectedId={selection?.team === ti ? selection.playerId : null}
+                      onSelect={toggle}
+                    />
+                  </div>
+                </div>
+                <p className={styles.teamNote}>{subsNote(team)}</p>
+              </section>
+            ))}
+          </div>
+
+          {selection ? (
+            <PlayerPanel team={teams[selection.team]} playerId={selection.playerId} onClear={clear} />
+          ) : (
+            <section className={styles.hint}>
+              <p>{copy.hint}</p>
+              {topPasser && (
+                <button type="button" className="button button--primary button--small" onClick={() => toggle(topPasser.playerId)}>
+                  {copy.hintButton(topPasser.name)}
+                </button>
+              )}
+            </section>
           )}
-        </section>
+        </TabPanel>
+      )}
+
+      {tab === "fases" && (
+        <TabPanel idPrefix="partida" tab="fases">
+          <PhaseMorph teams={teams} />
+        </TabPanel>
+      )}
+
+      {tab === "gols" && (
+        <TabPanel idPrefix="partida" tab="gols">
+          {data.goals.length === 0 ? (
+            <p className={styles.empty}>{goalsCopy.none}</p>
+          ) : (
+            <>
+              <div className={styles.goalList} role="group" aria-label={goalsCopy.listTitle}>
+                {data.goals.map((g, i) => {
+                  const t = teams.find((x) => x.teamId === g.teamId)!;
+                  return (
+                    <button key={`${g.minute}-${g.scorerId}`} type="button" className="pill" aria-pressed={i === goal} onClick={() => setGoal(i)}>
+                      <span className={styles.goalDot} style={{ background: t.colors.fill, borderColor: t.colors.line }} />
+                      {goalsCopy.item(g.minute, g.scorer)}
+                    </button>
+                  );
+                })}
+              </div>
+              <GoalReplay
+                key={goal}
+                goal={data.goals[goal]}
+                team={teams.find((x) => x.teamId === data.goals[goal].teamId)!}
+                context={`${match.stage} · ${home.displayName} ${match.score[0]} × ${match.score[1]} ${away.displayName} · ${data.goals[goal].minute}′`}
+              />
+            </>
+          )}
+        </TabPanel>
       )}
 
       <div className={styles.tables}>

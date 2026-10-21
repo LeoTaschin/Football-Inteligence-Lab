@@ -107,3 +107,62 @@ export const match = {
     return parts.length ? `${parts.join("; ")}${rest.length ? `; ${rest.join("; ")}` : ""}.` : "Nenhuma das equipes fez substituições.";
   },
 };
+
+export const tabs = {
+  label: "Visualizações da partida",
+  network: "Rede de passes",
+  phases: "Com bola × sem bola",
+  goals: "Gols",
+};
+
+export const phases = {
+  title: (article: "o" | "a", team: string) => `${capitalize(withArticle(article, team))} com e sem a bola`,
+  withBall: "Com bola",
+  withoutBall: "Sem bola",
+  animate: "Animar",
+  pause: "Pausar animação",
+  teamPicker: "Equipe",
+  blockLine: "Altura média do time",
+  attack: (article: "o" | "a", team: string) => `ATAQUE ${ofTeam(article, team).toUpperCase()} →`,
+  captionWith: "Com bola: cada círculo está na mediana de onde o jogador completou passes. O tracejado mostra para onde ele vai sem a bola.",
+  captionWithout: "Sem bola: cada círculo está na mediana das ações defensivas do jogador. O tracejado mostra onde ele estava com a bola.",
+  bigNumber: (meters: number) => `${Math.abs(meters).toFixed(1).replace(".", ",")} m`,
+  bigText: (meters: number) =>
+    `é quanto o time ${meters <= 0 ? "recua" : "avança"}, em média, entre as ações com bola e as ações sem bola.`,
+  shiftsTitle: "Quanto cada um se desloca",
+  shift: (meters: number) => `${meters > 0 ? "+" : "−"}${Math.round(Math.abs(meters))} m`,
+  mostShift: (name: string, meters: number) => ({ name, text: ` é quem mais muda: cerca de ${Math.round(Math.abs(meters))} m entre atacar e defender.` }),
+  forward: (names: string[]) =>
+    names.length === 1
+      ? { name: names[0], text: " é o único cujas ações sem bola acontecem mais à frente que as com bola." }
+      : { name: listPt(names), text: " têm ações sem bola mais à frente que as com bola." },
+  lowSample: "* poucas ações defensivas (menos de 5): posição sem bola pouco confiável.",
+  noDefense: (names: string[]) => `Sem ações defensivas registradas: ${listPt(names)}.`,
+  method:
+    "Com bola: mediana de onde o jogador completou passes. Sem bola: mediana das suas ações defensivas (pressões, recuperações, duelos, interceptações, cortes e bloqueios). São posições médias das ações, não a posição real sem a bola. Goleiro fora da altura média.",
+};
+
+export const goals = {
+  listTitle: "Gols da partida",
+  none: "Nenhum gol de jogada nesta partida.",
+  item: (minute: number, scorer: string) => `${minute}′ · ${scorer}`,
+  title: (scorer: string) => `O gol de ${scorer}, passe a passe`,
+  context: (team: string, score: string, minute: number) => `${team} · ${score} · ${minute}′`,
+  passes: "passes",
+  players: "jogadores",
+  // truncated like the replay clock (29.86 s -> "29 s", clock 0:29)
+  seconds: (s: number) => `${Math.floor(s)} s`,
+  duration: "do início da jogada ao gol",
+  play: "Reproduzir",
+  pause: "Pausar",
+  restart: "Recomeçar",
+  timeline: "Linha do tempo da jogada",
+  speed: "Velocidade",
+  speedLabel: (v: number) => `${String(v).replace(".", ",")}×`,
+  stepsTitle: "A jogada",
+  goal: (scorer: string) => `GOL · ${scorer}`,
+  attack: "ATAQUE →",
+  method:
+    "Cada círculo marca onde o jogador tocou na bola; linha cheia é passe, tracejada é condução. Os dados de eventos não registram onde os jogadores estavam sem a bola.",
+  ownGoalNote: "Gols contra não são chutes e não têm replay.",
+};

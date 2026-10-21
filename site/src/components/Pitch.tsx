@@ -9,10 +9,14 @@ interface PitchProps {
   /** text in the bottom-right corner, e.g. "ATAQUE →" */
   corner?: string;
   className?: string;
+  /** one design px in pitch units; defaults to the 560 px reference pitch */
+  unit?: number;
+  /** draw the goal mouth on the right (replay) */
+  goal?: boolean;
 }
 
 /** Horizontal StatsBomb pitch (viewBox 0 0 120 80), attack to the right. */
-export function Pitch({ label, children, corner, className }: PitchProps) {
+export function Pitch({ label, children, corner, className, unit = PX, goal = false }: PitchProps) {
   return (
     <svg
       className={`${styles.pitch} ${className ?? ""}`}
@@ -22,8 +26,9 @@ export function Pitch({ label, children, corner, className }: PitchProps) {
       aria-label={label}
     >
       <PitchMarkings />
+      {goal && <rect x={PITCH_W - 5 * unit} y={36} width={5 * unit} height={8} className={styles.goal} aria-hidden="true" />}
       {corner && (
-        <text x={PITCH_W - 10 * PX} y={PITCH_H - 8 * PX} className={styles.corner} fontSize={11 * PX} textAnchor="end" aria-hidden="true">
+        <text x={PITCH_W - 10 * unit} y={PITCH_H - 8 * unit} className={styles.corner} fontSize={11 * unit} textAnchor="end" aria-hidden="true">
           {corner}
         </text>
       )}

@@ -226,3 +226,26 @@
 .credit {
   text-align: right;
 }
+
+.goalList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.goalList :global(.pill) {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.goalDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid;
+}
+
+.empty {
+  color: var(--text-muted);
+}

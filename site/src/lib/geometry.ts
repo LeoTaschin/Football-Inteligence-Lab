@@ -82,17 +82,17 @@ export interface LabelPlacement {
   baseline: "hanging" | "auto" | "central";
 }
 
-/** Where to draw a node label for the side chosen by the engine (radius in px). */
-export function labelPlacement(center: XY, radiusPx: number, side: LabelSide): LabelPlacement {
+/** Where to draw a node label for the side chosen by the engine (radius in px, `unit` = one px in pitch units). */
+export function labelPlacement(center: XY, radiusPx: number, side: LabelSide, unit: number = PX): LabelPlacement {
   switch (side) {
     case "above":
-      return { x: center.x, y: center.y - (radiusPx + 3) * PX, anchor: "middle", baseline: "auto" };
+      return { x: center.x, y: center.y - (radiusPx + 3) * unit, anchor: "middle", baseline: "auto" };
     case "left":
-      return { x: center.x - (radiusPx + 5) * PX, y: center.y, anchor: "end", baseline: "central" };
+      return { x: center.x - (radiusPx + 5) * unit, y: center.y, anchor: "end", baseline: "central" };
     case "right":
-      return { x: center.x + (radiusPx + 5) * PX, y: center.y, anchor: "start", baseline: "central" };
+      return { x: center.x + (radiusPx + 5) * unit, y: center.y, anchor: "start", baseline: "central" };
     default:
-      return { x: center.x, y: center.y + (radiusPx + 2) * PX, anchor: "middle", baseline: "hanging" };
+      return { x: center.x, y: center.y + (radiusPx + 2) * unit, anchor: "middle", baseline: "hanging" };
   }
 }
 
