@@ -130,3 +130,25 @@ def test_player_names_are_stable_across_matches(cfg):
         for team in load.load_lineups(match_id):
             for pid, player in names.players_from_lineup(team).items():
                 assert seen.setdefault(pid, player.name) == player.name, (pid, seen[pid], player.name)
+
+
+@pytest.mark.regression
+def test_committed_site_data_is_fresh(cfg):
+    assert export.stale_files(cfg) == []
+
+
+@pytest.mark.regression
+def test_stale_detection_ignores_generated_at(tmp_path, cfg):
+    from dataclasses import replace
+
+    out = replace(cfg, output_dir=tmp_path)
+    export.export_collection(out)
+    assert export.stale_files(out) == []
+    index = tmp_path / "index.json"
+    data = json.loads(index.read_text(encoding="utf-8"))
+    data["generatedAt"] = "1970-06-21T00:00:00Z"
+    index.write_text(json.dumps(data), encoding="utf-8")
+    assert export.stale_files(out) == []
+    data["source"] = "outra fonte"
+    index.write_text(json.dumps(data), encoding="utf-8")
+    assert export.stale_files(out) == ["index.json"]

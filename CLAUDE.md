@@ -105,8 +105,7 @@ fil/
 │       ├── styles/tokens.css
 │       └── types/data.ts      # tipos espelhando o schema JSON
 └── .github/workflows/
-    ├── engine-tests.yml
-    └── build-deploy.yml
+    └── ci.yml                 # testes do engine, dados em dia, testes e build do site
 ```
 
 ### Stack
@@ -515,6 +514,7 @@ pip install -e engine
 
 python -m pnsm fetch  --competition 43 --season 272          # baixa e cacheia
 python -m pnsm export --config config/wc1970_brazil.yaml     # gera site/public/data
+python -m pnsm check  --config config/wc1970_brazil.yaml     # confere se site/public/data bate com um export novo
 python -m pnsm post   --match 3888702                        # gera o PNG do post
 pytest engine/tests
 ```
@@ -546,7 +546,7 @@ output_dir: ../../site/public/data  # relative to this file
 5. **Site: animações** — `PhaseMorph` e `GoalReplay` nas abas da Partida.
 6. **Site: Campanha, Home, Metodologia.**
 7. **Post** — gerador do PNG 1080×1350.
-8. **Deploy** — GitHub Actions (testes → export → build) + Vercel/Netlify + domínio.
+8. **Deploy** — GitHub Actions (`ci.yml`: testes do engine → `pnsm check` → testes e build do site, em todo PR) + Vercel (publica a `main`) + domínio.
 
 ### Etapa 2 — Aprofundar
 - Shot map na Partida (aba "Finalizações").

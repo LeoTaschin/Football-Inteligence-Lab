@@ -33,6 +33,22 @@ def cmd_export(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_check(args: argparse.Namespace) -> int:
+    cfg = CollectionConfig.from_yaml(args.config)
+    try:
+        stale = export.stale_files(cfg)
+    except export.validate.ValidationError as err:
+        print(f"Validação falhou:\n{err}", file=sys.stderr)
+        return 1
+    if stale:
+        print("Dados do site desatualizados. Rode `python -m pnsm export` e commite:", file=sys.stderr)
+        for path in stale:
+            print(f"  {path}", file=sys.stderr)
+        return 1
+    print(f"Dados do site em dia com o engine ({cfg.output_dir})")
+    return 0
+
+
 def cmd_post(args: argparse.Namespace) -> int:
     from pnsm.report.post import render_post  # matplotlib only needed here
 
@@ -57,6 +73,10 @@ def build_parser() -> argparse.ArgumentParser:
     exp = sub.add_parser("export", help="valida e gera os JSONs do site")
     exp.add_argument("--config", required=True, help="ex.: config/wc1970_brazil.yaml")
     exp.set_defaults(func=cmd_export)
+
+    check = sub.add_parser("check", help="confere se os JSONs commitados batem com um export novo")
+    check.add_argument("--config", default=str(DEFAULT_CONFIG))
+    check.set_defaults(func=cmd_check)
 
     post = sub.add_parser("post", help="gera o PNG 1080×1350 do post do LinkedIn")
     post.add_argument("--match", type=int, required=True)
