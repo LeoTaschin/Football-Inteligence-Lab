@@ -27,6 +27,7 @@
    "teamId": 781,
    "name": "Brazil",
    "displayName": "Brasil",
+   "article": "o",
    "colors": {
     "fill": "#FFD500",
     "line": "#009C3B",
@@ -1139,6 +1140,7 @@
    "teamId": 768,
    "name": "England",
    "displayName": "Inglaterra",
+   "article": "a",
    "colors": {
     "fill": "#FFFFFF",
     "line": "#1D2B5C",

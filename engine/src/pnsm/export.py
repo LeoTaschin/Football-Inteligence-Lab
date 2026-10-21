@@ -134,6 +134,7 @@ def _build_team(team_id: int, team_name: str, result: transform.PassFilterResult
         "teamId": team_id,
         "name": team_name,
         "displayName": names.team_pt(team_name),
+        "article": names.team_article(team_name),
         "colors": names.team_colors(team_name),
         "passes": {
             "attempted": result.attempted,

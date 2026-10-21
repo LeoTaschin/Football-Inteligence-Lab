@@ -27,6 +27,7 @@
    "teamId": 781,
    "name": "Brazil",
    "displayName": "Brasil",
+   "article": "o",
    "colors": {
     "fill": "#FFD500",
     "line": "#009C3B",
@@ -1085,6 +1086,7 @@
    "teamId": 914,
    "name": "Italy",
    "displayName": "Itália",
+   "article": "a",
    "colors": {
     "fill": "#0066CC",
     "line": "#0066CC",

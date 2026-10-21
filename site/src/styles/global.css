@@ -45,8 +45,9 @@ p {
   outline-offset: 2px;
 }
 
+/* --page-max is the content width; the gutter is added outside it */
 .container {
-  max-width: var(--page-max);
+  max-width: calc(var(--page-max) + 2 * var(--gutter));
   margin: 0 auto;
   padding-left: var(--gutter);
   padding-right: var(--gutter);

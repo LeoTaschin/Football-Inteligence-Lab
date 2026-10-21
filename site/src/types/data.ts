@@ -87,6 +87,7 @@ export interface TeamData {
   teamId: number;
   name: string;
   displayName: string;
+  article: "o" | "a";
   colors: TeamColors;
   passes: {
     attempted: number;
