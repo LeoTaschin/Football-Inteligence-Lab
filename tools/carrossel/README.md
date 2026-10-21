@@ -19,6 +19,13 @@ python -m venv .venv-carrossel
     engine/outputs/post_3888702.png engine/outputs/carrossel
 ```
 
+Story do Instagram (1080×1920, com a base livre para o sticker de link):
+
+```bash
+.venv-carrossel/bin/python tools/carrossel/story.py engine/outputs/carrossel/raw engine/.cache/fonts \
+    engine/outputs/carrossel/story_instagram.png
+```
+
 Saída em `engine/outputs/carrossel/` (fora do git): `slide_1.png` … `slide_7.png`, `mapas_da_final.png` (todos os mapas da final numa imagem) e `carrossel_PNSM.pdf` (para o post em carrossel).
 
 Os textos dos slides em `compose.py` citam números da final e da campanha; se os dados mudarem, confira-os com o site.
