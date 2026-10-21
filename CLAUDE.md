@@ -104,6 +104,8 @@ fil/
 │       ├── lib/               # geometria, formatação
 │       ├── styles/tokens.css
 │       └── types/data.ts      # tipos espelhando o schema JSON
+├── docs/etapa-2.md          # estado da Etapa 2: design, achados, decisões em aberto
+├── tools/carrossel/         # imagens do LinkedIn a partir das telas do site (Playwright + Pillow)
 └── .github/workflows/
     └── ci.yml                 # testes do engine, dados em dia, testes e build do site
 ```
@@ -548,7 +550,7 @@ output_dir: ../../site/public/data  # relative to this file
 7. **Post** — gerador do PNG 1080×1350.
 8. **Deploy** — GitHub Actions (`ci.yml`: testes do engine → `pnsm check` → testes e build do site, em todo PR) + Vercel (publica a `main`) + domínio.
 
-### Etapa 2 — Aprofundar
+### Etapa 2 — Aprofundar (em pausa: design proposto, decisões em aberto — ver `docs/etapa-2.md`)
 - Shot map na Partida (aba "Finalizações").
 - Opção "até a 1ª substituição".
 - Página do jogador na campanha.
