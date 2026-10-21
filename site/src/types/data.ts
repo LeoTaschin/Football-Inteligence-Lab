@@ -36,6 +36,7 @@ export interface MatchInfo {
   competition: string;
   season: string;
   stadium: string | null;
+  country: string | null;
   home: string;
   away: string;
   score: [number, number];
@@ -169,8 +170,12 @@ export interface CampaignMatch {
 export interface CollectionData {
   id: string;
   title: string;
+  competition: string;
+  season: string;
+  country: string | null;
   team: string;
   displayName: string;
+  article: "o" | "a";
   colors: TeamColors;
   summary: {
     played: number;
@@ -186,7 +191,8 @@ export interface CollectionData {
     xgAgainst: number;
     morePassesThanOpponent: number;
   };
+  scale: { maxPasses: number; maxPair: number };
   matches: CampaignMatch[];
-  topPassers: { playerId: number; name: string; n: number }[];
+  topPassers: { playerId: number; name: string; n: number; position: string | null; missed: string[] }[];
   topPairs: { ids: [number, number]; names: [string, string]; n: number }[];
 }

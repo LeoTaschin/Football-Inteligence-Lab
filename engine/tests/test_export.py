@@ -116,6 +116,10 @@ def test_campaign_matches_design(cfg, all_matches):
         assert (got["note"] is not None) == exp["hasNote"]
 
     assert [[p["name"], p["n"]] for p in c["topPassers"]] == design["topPassers"]
+    missed = {p["name"]: p["missed"] for p in c["topPassers"]}
+    assert missed["Gérson"] == ["Inglaterra", "Romênia"] and missed["Carlos Alberto"] == []
+    assert c["scale"] == {"maxPasses": 74, "maxPair": 44}
+    assert (c["country"], c["season"]) == ("México", "1970")
     assert [[sorted(p["names"]), p["n"]] for p in c["topPairs"]] == design["topPairs"]
 
 

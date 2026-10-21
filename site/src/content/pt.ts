@@ -166,3 +166,165 @@ export const goals = {
     "Cada círculo marca onde o jogador tocou na bola; linha cheia é passe, tracejada é condução. Os dados de eventos não registram onde os jogadores estavam sem a bola.",
   ownGoalNote: "Gols contra não são chutes e não têm replay.",
 };
+
+export const campaign = {
+  breadcrumbProjects: "Projetos",
+  breadcrumbProject: "01 · PNSM",
+  eyebrow: (competition: string, season: string, country: string | null) =>
+    `${competition} de ${season}${country ? ` · ${country}` : ""}`,
+  title: (article: "o" | "a", team: string, season: string) => `Como ${withArticle(article, team)} de ${season} trocava a bola`,
+  // "O lateral Carlos Alberto foi quem mais passou na Copa, 367 passes completos, e está nas duas duplas mais usadas do time."
+  finding: (p: { role: string | null; name: string; n: number; inTopPairs: number; matches: number }) => ({
+    lead: `Redes de passes dos ${COUNT_WORDS_M[p.matches] ?? p.matches} jogos da campanha. ${p.role ? `O ${p.role.toLowerCase()} ` : ""}`,
+    name: p.name,
+    tail: ` foi quem mais passou, ${formatThousands(p.n)} passes completos${
+      p.inTopPairs >= 2 ? `, e está nas ${COUNT_WORDS_F[p.inTopPairs] ?? p.inTopPairs} duplas mais usadas do time` : p.inTopPairs === 1 ? ", e está na dupla mais usada do time" : ""
+    }.`,
+  }),
+  summaryLabel: "Resumo da campanha",
+  wins: "vitórias",
+  goals: "gols marcados e sofridos",
+  passes: (accuracy: string) => `passes completos · ${accuracy} de acerto`,
+  xg: "xG a favor e contra",
+  morePasses: "jogos com mais passes que o adversário",
+  outOf: (a: number, b: number) => `${a} de ${b}`,
+  gamesTitle: (n: number) => `Os ${COUNT_WORDS_M[n] ?? n} jogos`,
+  gamesHint: "Selecione um jogo para ver a rede completa",
+  gameLabel: (order: number, stage: string) => `Jogo ${order} · ${stage}`,
+  champion: "Campeão",
+  win: "Vitória",
+  draw: "Empate",
+  loss: "Derrota",
+  cardCompleted: "Passes completos",
+  cardXg: "xG",
+  cardPair: "Dupla mais usada",
+  cardPairValue: (a: string, b: string, n: number) => `${a} – ${b} · ${n} passes`,
+  seeMatch: "Ver partida →",
+  numbersTitle: "A campanha em números",
+  passersTitle: "Quem mais passou",
+  passersNote: (n: number, missed: { name: string; games: string[] }[]) =>
+    `Passes completos somando os ${COUNT_WORDS_M[n] ?? n} jogos.${
+      missed.length ? ` ${missed.map((m, i) => `${m.name} ${i === 0 ? "não jogou contra" : "contra"} ${listPt(m.games)}`).join("; ")}.` : ""
+    }`,
+  pairsTitle: "Duplas mais usadas",
+  pairsNote: (n: number) => `Passes completos entre os dois, nas duas direções, somando os ${COUNT_WORDS_M[n] ?? n} jogos.`,
+  perGameTitle: "Passes completos por jogo",
+  opponent: "Adversário",
+  methodText:
+    "Todos os números consideram passes completos com destinatário nos 90 minutos. Veja quais eventos entram, como a rede é construída e quais são as limitações.",
+  methodLink: "Ler a metodologia",
+};
+
+const COUNT_WORDS_M: Record<number, string> = { 2: "dois", 3: "três", 4: "quatro", 5: "cinco", 6: "seis", 7: "sete" };
+const COUNT_WORDS_F: Record<number, string> = { 2: "duas", 3: "três", 4: "quatro", 5: "cinco" };
+const formatThousands = (n: number) => new Intl.NumberFormat("pt-BR").format(n);
+
+export const home = {
+  eyebrow: "Football Intelligence Lab · por Leonardo Taschin",
+  title: "Dados e IA para entender como o futebol é jogado.",
+  lead: "Uma série de projetos com dados reais de partidas: cada um parte de uma pergunta de futebol, mostra o método e termina numa ferramenta que um analista usaria.",
+  ctaProject: "Ver o projeto 01",
+  ctaAll: "Todos os projetos",
+  featured: "Em destaque",
+  live: "No ar",
+  featuredKicker: "Projeto 01 · PNSM",
+  featuredTitle: (article: "o" | "a", team: string, season: string) => `Como ${withArticle(article, team)} de ${season} trocava a bola`,
+  featuredText: (matches: number) =>
+    `Redes de passes dos ${COUNT_WORDS_M[matches] ?? matches} jogos da campanha do tri, com dados do StatsBomb Open Data. Selecione um jogador e veja para quem ele passou e de quem recebeu.`,
+  statMatches: "partidas",
+  statPasses: "passes completos",
+  statGoals: "gols",
+  explore: "Explorar a campanha →",
+  projectsTitle: "Projetos",
+  projectsLead:
+    "Seis projetos, do event data à visão computacional. Cada um responde uma pergunta e é publicado com código, método e limitações.",
+  projects: [
+    { num: "01", title: "Passing Network + Shot Map", desc: "Como uma equipe conecta seus jogadores por passes e de onde vêm suas finalizações.", live: true },
+    { num: "02", title: "Expected Goals (xG)", desc: "Um modelo próprio de qualidade de chance, com calibração e explicabilidade.", live: false },
+    { num: "03", title: "Expected Threat (xT)", desc: "Quanto cada passe e condução aumenta a chance de gol.", live: false },
+    { num: "04", title: "Player Similarity", desc: "Encontrar jogadores parecidos para recrutamento e reposição.", live: false },
+    { num: "05", title: "Tracking + Pitch Control", desc: "Quem controla cada espaço do campo a cada instante.", live: false },
+    { num: "06", title: "AI Video Analysis", desc: "Da transmissão às coordenadas dos jogadores com visão computacional.", live: false },
+  ],
+  soon: "Em breve",
+  aboutTitle: "Sobre",
+  about:
+    "Sou Leonardo Taschin, estudante da FIAP em São Paulo. Junto engenharia de software, ciência de dados e IA para construir ferramentas de análise de futebol: não só o modelo, mas o produto que um departamento de análise usaria.",
+  linkedin: "LinkedIn",
+  github: "GitHub",
+  email: "E-mail",
+  pending: "em breve",
+};
+
+export const methodology = {
+  breadcrumb: "Metodologia",
+  title: "Como as redes são construídas",
+  lead: "Quais dados foram usados, quais passes entram em cada rede, como os números são conferidos e o que a rede não consegue mostrar.",
+  toc: "Nesta página",
+  sections: {
+    question: "A pergunta",
+    data: "Dados",
+    passes: "Quais passes entram",
+    network: "Como a rede é desenhada",
+    validation: "Validação",
+    limits: "Limitações",
+    reproduce: "Reproduzir",
+    attribution: "Atribuição",
+  },
+  question:
+    "Como uma equipe conectou seus jogadores por passes em uma partida? A rede resume os passes completos observados: quem participou mais, quais duplas mais trocaram a bola e em que regiões do campo isso aconteceu. Ela ajuda a levantar hipóteses sobre o jogo, mas não comprova sozinha a organização tática.",
+  dataText: (competition: string, season: string) =>
+    `Os eventos vêm do StatsBomb Open Data, que publica dados de partidas selecionadas. A ${competition} de ${season} tem `,
+  dataIds: (c: number, s: number) => [`competition_id ${c}`, `season_id ${s}`] as const,
+  dataTail: ". Cada partida usa dois arquivos: os eventos e as escalações.",
+  tableMatch: "Partida",
+  tableAttempted: (team: string) => `Passes ${team}`,
+  tableCompleted: "Completos",
+  tableNote: (team: string) => `Passes ${team} nos 1º e 2º tempos. "Completos" são os que entram na rede.`,
+  matchName: (home: string, a: number, b: number, away: string) => `${home} ${a} × ${b} ${away}`,
+  passesIntro:
+    "Um evento do tipo Pass entra na rede quando cumpre todas as regras abaixo. No esquema do StatsBomb, um passe completo é aquele sem o campo pass.outcome.",
+  passesRules: [
+    "É da equipe analisada e aconteceu no 1º ou no 2º tempo, com acréscimos. Prorrogação e pênaltis ficam de fora.",
+    "Foi completo: não tem pass.outcome.",
+    "Tem destinatário identificado (pass.recipient) e localização inicial dentro do campo.",
+    "Laterais, faltas e escanteios entram quando são passes completos.",
+  ],
+  passesOutro:
+    "Os passes excluídos são contados por motivo, e cada passe conta em um único motivo, para que a diferença entre tentados e completos sempre feche.",
+  networkCards: [
+    ["Posição do jogador", "Mediana das localizações de onde ele completou passes. Quem só recebeu fica na mediana de onde recebeu, e isso é sinalizado."],
+    ["Tamanho do círculo", "Número de passes completos que o jogador deu."],
+    ["Espessura da linha", "Passes completos entre a dupla, somando as duas direções."],
+    ["Setas", "Ao selecionar um jogador, cada direção vira uma seta: quem passou e quem recebeu."],
+    ["Mínimo de passes", "Só duplas com pelo menos 3 passes aparecem por padrão. O limite é ajustável."],
+    ["Orientação", "Cada equipe ataca da esquerda para a direita, como no padrão do StatsBomb."],
+  ],
+  validationIntro: "Antes de publicar, o pipeline confere automaticamente e não gera nada se alguma checagem falhar:",
+  validationItems: (completed: number) => [
+    `A soma de todas as conexões é igual ao número de passes completos elegíveis. Na final, ${completed} = ${completed}.`,
+    "Tentados menos excluídos é igual a completos, e todo jogador de uma conexão tem um círculo.",
+    "Não há eventos de outra equipe nem de períodos excluídos.",
+    "Chutes e gols exportados batem com os eventos, e os gols batem com o placar.",
+    "No replay, os trechos da jogada estão em ordem e o último é o chute do gol.",
+  ],
+  validationTests:
+    "Os testes automáticos cobrem passe sem outcome, passe sem destinatário, coordenada ausente, passes da mesma dupla em direções opostas, partidas com prorrogação e chute sem xG, além de conferir os números da final e da campanha.",
+  limits: [
+    ["A posição não é tática.", "A mediana resume onde o jogador agiu com a bola, não onde ele ficou posicionado sem ela."],
+    ["Substituições misturam formações.", "A rede da partida inteira pode juntar jogadores que nunca estiveram em campo ao mesmo tempo."],
+    ["Dados históricos.", "Os eventos de 1970 foram registrados a partir de vídeo da época, então localizações e xG têm mais incerteza que em jogos modernos."],
+    ["Volume não é qualidade.", "Muitos passes entre dois jogadores não significam que essa conexão criou chances. Para isso é preciso seguir a sequência dos eventos."],
+    ["Sem bola é aproximação.", "A posição sem bola é a mediana das ações defensivas, não a posição real do jogador sem a bola."],
+  ],
+  reproduceText:
+    "O mesmo motor em Python gera o JSON que o site desenha e a imagem dos posts, então os números são sempre os mesmos.",
+  pipeline: ["load", "transform", "metrics", "validate", "export"],
+  pipelineEnd: "site · post",
+  commands: (repo: string) =>
+    `git clone ${repo}\npip install -e "engine[dev]"\npython -m pnsm export --config engine/config/wc1970_brazil.yaml\npytest engine/tests`,
+  repoPlaceholder: "[SEU REPOSITÓRIO]",
+  codeLink: "Ver o código no GitHub",
+  attribution:
+    "Dados: StatsBomb Open Data, usados conforme as condições de atribuição do repositório oficial. Visualizações e análise: Leonardo Taschin.",
+};

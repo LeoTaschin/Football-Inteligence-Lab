@@ -1,8 +1,12 @@
 {
  "id": "wc1970-brazil",
  "title": "Campanha do Brasil · Copa de 1970",
+ "competition": "FIFA World Cup",
+ "season": "1970",
+ "country": "México",
  "team": "Brazil",
  "displayName": "Brasil",
+ "article": "o",
  "colors": {
   "fill": "#FFD500",
   "line": "#009C3B",
@@ -21,6 +25,10 @@
   "xgFor": 14.75,
   "xgAgainst": 8.53,
   "morePassesThanOpponent": 6
+ },
+ "scale": {
+  "maxPasses": 74,
+  "maxPair": 44
  },
  "matches": [
   {
@@ -1921,32 +1929,49 @@
   {
    "playerId": 39708,
    "name": "Carlos Alberto",
-   "n": 367
+   "n": 367,
+   "position": "Lateral-direito",
+   "missed": []
   },
   {
    "playerId": 397620,
    "name": "Clodoaldo",
-   "n": 321
+   "n": 321,
+   "position": "Volante (dir.)",
+   "missed": []
   },
   {
    "playerId": 397630,
    "name": "Rivellino",
-   "n": 225
+   "n": 225,
+   "position": "Meio-campo (esq.)",
+   "missed": [
+    "Romênia"
+   ]
   },
   {
    "playerId": 39712,
    "name": "Pelé",
-   "n": 211
+   "n": 211,
+   "position": "Atacante (dir.)",
+   "missed": []
   },
   {
    "playerId": 397621,
    "name": "Gérson",
-   "n": 195
+   "n": 195,
+   "position": "Volante (esq.)",
+   "missed": [
+    "Inglaterra",
+    "Romênia"
+   ]
   },
   {
    "playerId": 397622,
    "name": "Jairzinho",
-   "n": 193
+   "n": 193,
+   "position": "Meio-campo (dir.)",
+   "missed": []
   }
  ],
  "topPairs": [

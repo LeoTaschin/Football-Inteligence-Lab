@@ -68,6 +68,7 @@ def build_match(meta: dict, events: list[dict], lineups: list[dict], cfg: Collec
             "competition": meta["competition"]["competition_name"],
             "season": meta["season"]["season_name"],
             "stadium": names.stadium_pt((meta.get("stadium") or {}).get("name")),
+            "country": names.country_pt(((meta.get("stadium") or {}).get("country") or {}).get("name")),
             "home": sides[0][1],
             "away": sides[1][1],
             "score": [meta["home_score"], meta["away_score"]],
@@ -166,8 +167,11 @@ def build_collection(cfg: CollectionConfig, matches: list[dict]) -> dict:
         by_id = {n["playerId"]: n for n in team["nodes"]}
 
         for n in team["nodes"]:
-            entry = passers.setdefault(n["playerId"], {"name": n["name"], "n": 0})
+            entry = passers.setdefault(n["playerId"], {"name": n["name"], "n": 0, "played": set(), "positions": []})
             entry["n"] += n["passes"]
+            entry["played"].add(data["match"]["id"])
+            if n["position"]:
+                entry["positions"].append(n["position"])
         campaign_edges.append(pd.DataFrame(team["edges"]).rename(columns={"from": "from_id", "to": "to_id"}))
 
         top = team["pairs"][0]
@@ -200,11 +204,16 @@ def build_collection(cfg: CollectionConfig, matches: list[dict]) -> dict:
 
     completed = sum(r["completed"] for r in rows)
     attempted = sum(r["attempted"] for r in rows)
+    countries = {m["match"]["country"] for m in matches if m["match"]["country"]}
     return {
         "id": cfg.collection,
         "title": cfg.title,
+        "competition": matches[0]["match"]["competition"],
+        "season": matches[0]["match"]["season"],
+        "country": countries.pop() if len(countries) == 1 else None,
         "team": cfg.team,
         "displayName": names.team_pt(cfg.team),
+        "article": names.team_article(cfg.team),
         "colors": names.team_colors(cfg.team),
         "summary": {
             "played": len(rows),
@@ -220,8 +229,16 @@ def build_collection(cfg: CollectionConfig, matches: list[dict]) -> dict:
             "xgAgainst": _r(sum(r["opponentXg"] for r in rows)),
             "morePassesThanOpponent": sum(r["completed"] > r["opponentCompleted"] for r in rows),
         },
+        "scale": {
+            "maxPasses": max(n["passes"] for r in rows for n in r["mini"]["nodes"]),
+            "maxPair": max((e["n"] for r in rows for e in r["mini"]["edges"]), default=1),
+        },
         "matches": rows,
-        "topPassers": [{"playerId": pid, "name": p["name"], "n": p["n"]} for pid, p in top_passers],
+        # "missed": matches (opponent names) in which the player did not appear in the network
+        "topPassers": [{"playerId": pid, "name": p["name"], "n": p["n"],
+                        "position": max(set(p["positions"]), key=p["positions"].count) if p["positions"] else None,
+                        "missed": [r["opponent"] for r in rows if r["id"] not in p["played"]]}
+                       for pid, p in top_passers],
         "topPairs": [{"ids": [int(p.first_id), int(p.second_id)],
                       "names": [passers[p.first_id]["name"], passers[p.second_id]["name"]], "n": int(p.n)}
                      for p in pairs.itertuples()],

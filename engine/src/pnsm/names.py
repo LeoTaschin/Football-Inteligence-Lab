@@ -75,6 +75,8 @@ TEAM_COLORS = {
 }
 NEUTRAL_COLORS = {"fill": "#71717A", "line": "#52525B", "ink": "#FFFFFF"}
 
+COUNTRIES = {"Mexico": "México"}
+
 STAGES = {
     "Group Stage": "Fase de grupos",
     "Quarter-finals": "Quartas de final",
@@ -112,6 +114,10 @@ def team_pt(team: str) -> str:
 
 def stage_pt(stage: str) -> str:
     return STAGES.get(stage, stage)
+
+
+def country_pt(country: str | None) -> str | None:
+    return COUNTRIES.get(country, country) if country else None
 
 
 def team_article(team: str) -> str:
