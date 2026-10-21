@@ -14,6 +14,7 @@ NAME_OVERRIDES = {
     "Eduardo Gonçalves de Andrade": "Tostão",  # StatsBomb nickname is "Tostao"
     "Wilson da Silva Piazza": "Piazza",  # StatsBomb nickname is "Wilson Piazza"
     "Giancarlo De Sisti": "De Sisti",
+    "Marco Antônio Feliciano": "Marco Antônio",  # "Marco Feliciano" in 5 of the 6 lineups
 }
 
 PARTICLES = {"de", "da", "do", "dos", "das", "del", "della", "di", "van", "von", "der", "den", "ter", "le", "la"}
@@ -56,6 +57,24 @@ TEAMS = {
     "Uruguay": "Uruguai",
 }
 
+# article used in generated sentences ("157 a mais que a Itália")
+TEAM_ARTICLES = {
+    "Brazil": "o", "Italy": "a", "Czechoslovakia": "a", "England": "a",
+    "Romania": "a", "Peru": "o", "Uruguay": "o",
+}
+
+# node fill, line/edge color and text color on the fill
+TEAM_COLORS = {
+    "Brazil": {"fill": "#FFD500", "line": "#009C3B", "ink": "#0A0A0B"},
+    "Italy": {"fill": "#0066CC", "line": "#0066CC", "ink": "#FFFFFF"},
+    "Czechoslovakia": {"fill": "#D7141A", "line": "#D7141A", "ink": "#FFFFFF"},
+    "England": {"fill": "#FFFFFF", "line": "#1D2B5C", "ink": "#1D2B5C"},
+    "Romania": {"fill": "#002B7F", "line": "#002B7F", "ink": "#FFFFFF"},
+    "Peru": {"fill": "#FFFFFF", "line": "#C8102E", "ink": "#0A0A0B"},
+    "Uruguay": {"fill": "#7BAFD4", "line": "#1F5F99", "ink": "#0A0A0B"},
+}
+NEUTRAL_COLORS = {"fill": "#71717A", "line": "#52525B", "ink": "#FFFFFF"}
+
 STAGES = {
     "Group Stage": "Fase de grupos",
     "Quarter-finals": "Quartas de final",
@@ -93,6 +112,20 @@ def team_pt(team: str) -> str:
 
 def stage_pt(stage: str) -> str:
     return STAGES.get(stage, stage)
+
+
+def team_article(team: str) -> str:
+    return TEAM_ARTICLES.get(team, "o")
+
+
+def team_colors(team: str) -> dict[str, str]:
+    return TEAM_COLORS.get(team, NEUTRAL_COLORS)
+
+
+def stadium_pt(stadium: str | None) -> str | None:
+    if stadium is None:
+        return None
+    return stadium.replace("Estadio ", "Estádio ", 1)
 
 
 @dataclass(frozen=True)

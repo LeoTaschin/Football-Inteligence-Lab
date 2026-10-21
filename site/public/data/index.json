@@ -1,0 +1,21 @@
+{
+ "generatedAt": "2026-10-21T18:41:30Z",
+ "source": "StatsBomb Open Data",
+ "collections": [
+  {
+   "id": "wc1970-brazil",
+   "title": "Campanha do Brasil · Copa de 1970",
+   "competitionId": 43,
+   "seasonId": 272,
+   "team": "Brazil",
+   "matches": [
+    3888699,
+    3888700,
+    3889217,
+    3889218,
+    3888701,
+    3888702
+   ]
+  }
+ ]
+}

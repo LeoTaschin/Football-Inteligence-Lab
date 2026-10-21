@@ -305,6 +305,14 @@ Tipos devem existir em `engine` (pydantic/dataclasses) e espelhados em `site/src
 
 `label` ∈ `below | above | left | right`, decidido pelo motor (ver 7.4).
 
+Campos a mais que o export gera (o exemplo acima é o mínimo; a fonte de verdade é `engine/src/pnsm/export.py`):
+
+- `match.stadium`; `scale` = `{maxPasses, maxPair, maxDirected}` da partida (mesma escala para as duas equipes).
+- Por equipe: `teamId`; `passes.excluded.period`; `pairs` = `[{a, b, forward, backward, n}]` ordenados por `n` (`a` é quem passou mais; usado nas linhas não dirigidas e no Top 10, para o site não somar nada); `phase` = `{ballHeight, defHeight, shiftMeters}` (sem o goleiro).
+- Por nó: `positionFrom` (`passes` | `received`, ver 5.2); `def.lowSample` (menos de 5 ações); `shift` em metros (`def.x − ball.x`); `sub` = `{type: "in" | "out", minute, with: playerId}` ou `null`.
+- Por gol: `teamId`, `scorerId`, `passes`, `players`; `touches[].playerId`. O replay começa depois do último toque do adversário com a bola na posse (o `possession` do StatsBomb nem sempre muda quando a bola troca de dono).
+- Coordenadas exportadas com 2 casas; o site arredonda para exibir.
+
 ### `data/collections/wc1970-brazil.json` — tela da Campanha
 
 ```json
@@ -515,13 +523,14 @@ pytest engine/tests
 
 ```yaml
 collection: wc1970-brazil
+title: Campanha do Brasil · Copa de 1970
 competition_id: 43
 season_id: 272
 team: Brazil
 periods: [1, 2]
 min_pair_passes: 3
 defensive_actions: [Pressure, Ball Recovery, Interception, Duel, Clearance, Block]
-output_dir: ../site/public/data
+output_dir: ../../site/public/data  # relative to this file
 ```
 
 ---

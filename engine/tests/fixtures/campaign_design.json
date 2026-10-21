@@ -1,0 +1,182 @@
+{
+ "_source": "Design canvas, artboard Campanha 1970.",
+ "matches": [
+  {
+   "opponent": "Tchecoslováquia",
+   "score": [
+    4,
+    1
+   ],
+   "completed": 406,
+   "opponentCompleted": 359,
+   "xg": 3.81,
+   "opponentXg": 2.42,
+   "topPair": [
+    "Carlos Alberto",
+    "Clodoaldo"
+   ],
+   "topPairN": 30,
+   "hasNote": false,
+   "miniNodes": 12,
+   "miniEdges": 42
+  },
+  {
+   "opponent": "Inglaterra",
+   "score": [
+    1,
+    0
+   ],
+   "completed": 423,
+   "opponentCompleted": 392,
+   "xg": 0.87,
+   "opponentXg": 1.54,
+   "topPair": [
+    "Carlos Alberto",
+    "Jairzinho"
+   ],
+   "topPairN": 29,
+   "hasNote": true,
+   "miniNodes": 12,
+   "miniEdges": 35
+  },
+  {
+   "opponent": "Romênia",
+   "score": [
+    3,
+    2
+   ],
+   "completed": 418,
+   "opponentCompleted": 307,
+   "xg": 2.22,
+   "opponentXg": 1.17,
+   "topPair": [
+    "Carlos Alberto",
+    "Jairzinho"
+   ],
+   "topPairN": 42,
+   "hasNote": false,
+   "miniNodes": 13,
+   "miniEdges": 38
+  },
+  {
+   "opponent": "Peru",
+   "score": [
+    4,
+    2
+   ],
+   "completed": 430,
+   "opponentCompleted": 397,
+   "xg": 3.66,
+   "opponentXg": 0.92,
+   "topPair": [
+    "Jairzinho",
+    "Pelé"
+   ],
+   "topPairN": 28,
+   "hasNote": true,
+   "miniNodes": 13,
+   "miniEdges": 45
+  },
+  {
+   "opponent": "Uruguai",
+   "score": [
+    3,
+    1
+   ],
+   "completed": 413,
+   "opponentCompleted": 273,
+   "xg": 1.42,
+   "opponentXg": 0.84,
+   "topPair": [
+    "Carlos Alberto",
+    "Clodoaldo"
+   ],
+   "topPairN": 37,
+   "hasNote": false,
+   "miniNodes": 11,
+   "miniEdges": 40
+  },
+  {
+   "opponent": "Itália",
+   "score": [
+    4,
+    1
+   ],
+   "completed": 400,
+   "opponentCompleted": 243,
+   "xg": 2.77,
+   "opponentXg": 1.64,
+   "topPair": [
+    "Carlos Alberto",
+    "Gérson"
+   ],
+   "topPairN": 44,
+   "hasNote": true,
+   "miniNodes": 11,
+   "miniEdges": 37
+  }
+ ],
+ "topPassers": [
+  [
+   "Carlos Alberto",
+   367
+  ],
+  [
+   "Clodoaldo",
+   321
+  ],
+  [
+   "Rivellino",
+   225
+  ],
+  [
+   "Pelé",
+   211
+  ],
+  [
+   "Gérson",
+   195
+  ],
+  [
+   "Jairzinho",
+   193
+  ]
+ ],
+ "topPairs": [
+  [
+   [
+    "Carlos Alberto",
+    "Clodoaldo"
+   ],
+   164
+  ],
+  [
+   [
+    "Carlos Alberto",
+    "Jairzinho"
+   ],
+   157
+  ],
+  [
+   [
+    "Pelé",
+    "Tostão"
+   ],
+   99
+  ],
+  [
+   [
+    "Jairzinho",
+    "Pelé"
+   ],
+   96
+  ],
+  [
+   [
+    "Everaldo",
+    "Rivellino"
+   ],
+   87
+  ]
+ ]
+}

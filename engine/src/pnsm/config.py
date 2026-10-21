@@ -11,6 +11,7 @@ import yaml
 @dataclass(frozen=True)
 class CollectionConfig:
     collection: str
+    title: str
     competition_id: int
     season_id: int
     team: str
@@ -25,6 +26,7 @@ class CollectionConfig:
         raw = yaml.safe_load(path.read_text(encoding="utf-8"))
         return cls(
             collection=raw["collection"],
+            title=raw["title"],
             competition_id=int(raw["competition_id"]),
             season_id=int(raw["season_id"]),
             team=raw["team"],
