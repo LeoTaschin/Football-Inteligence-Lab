@@ -19,7 +19,7 @@ python -m venv .venv-carrossel
     engine/outputs/post_3888702.png engine/outputs/carrossel
 ```
 
-Story do Instagram (1080×1920, com a base livre para o sticker de link):
+Story do Instagram (1080×1920): título, rede de passes, movimentação com bola × sem bola e números da campanha, dentro da área que o Instagram não cobre:
 
 ```bash
 .venv-carrossel/bin/python tools/carrossel/story.py engine/outputs/carrossel/raw engine/.cache/fonts \

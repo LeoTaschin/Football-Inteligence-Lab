@@ -1,4 +1,9 @@
-"""Instagram story (1080x1920 drawn at 2x). Usage: story.py <raw> <fonts> <out_png>"""
+"""Instagram story (1080x1920 drawn at 2x). Usage: story.py <raw> <fonts> <out_png>
+
+Title, subtitle, the final's pass network (Gérson selected), the players' movement
+(with × without the ball) and the campaign numbers. Top ~150 px and bottom ~160 px
+stay free for Instagram's header and reply bar.
+"""
 
 import sys
 from pathlib import Path
@@ -8,8 +13,8 @@ from PIL import Image, ImageDraw, ImageFont
 RAW, FONTS, OUT = Path(sys.argv[1]), Path(sys.argv[2]), Path(sys.argv[3])
 X = 2
 W, H, PAD = 1080 * X, 1920 * X, 72 * X
-TEXT, TEXT2, MUTED, BORDER = "#0A0A0B", "#3F3F46", "#6B6B73", "#E4E4E7"
-YELLOW, GREEN = "#FFD500", "#009C3B"
+TEXT, TEXT2, MUTED, BORDER, GREEN = "#0A0A0B", "#3F3F46", "#6B6B73", "#E4E4E7", "#009C3B"
+SAFE_TOP, SAFE_BOTTOM = 160 * X, H - 160 * X
 
 
 def font(weight, px):
@@ -35,54 +40,51 @@ def paragraph(d, x, y, text, fnt, width, color, lh):
     return y
 
 
+def pitch(im, d, name, y, title, caption, width):
+    img = Image.open(RAW / name).convert("RGB")
+    img = img.resize((width, round(img.height * width / img.width)), Image.LANCZOS)
+    x = (W - width) // 2
+    im.paste(img, (x, y))
+    d.rectangle([x - X, y - X, x + img.width, y + img.height], outline=BORDER, width=X)
+    y += img.height + 14 * X
+    d.text((x, y), title, font=font("Bold", 25), fill=TEXT)
+    d.text((x, y + 34 * X), caption, font=font("Regular", 22), fill=MUTED)
+    return y + 66 * X
+
+
 im = Image.new("RGB", (W, H), "white")
 d = ImageDraw.Draw(im)
 
-# top ~170 px is covered by the story header: start below it
-y = 190 * X
-d.rounded_rectangle([PAD, y, PAD + 14 * X, y + 14 * X], radius=7 * X, fill=GREEN)
-d.text((PAD + 26 * X, y - 6 * X), "NO AR · F.I.L · PROJETO 01", font=font("Bold", 22), fill=MUTED)
-y += 50 * X
-y = paragraph(d, PAD, y, "Como o Brasil de 1970 trocava a bola", font("ExtraBold", 78), W - 2 * PAD, TEXT, 84)
-y += 18 * X
-y = paragraph(d, PAD, y, "Redes de passes, posições com e sem bola e o replay dos gols da campanha do tri. Com dados reais.",
-              font("Regular", 30), W - 2 * PAD, TEXT2, 41)
+y = SAFE_TOP + 10 * X
+d.rounded_rectangle([PAD, y + 6 * X, PAD + 14 * X, y + 20 * X], radius=7 * X, fill=GREEN)
+d.text((PAD + 26 * X, y), "F.I.L · FOOTBALL INTELLIGENCE LAB", font=font("Bold", 21), fill=MUTED)
+y += 46 * X
+y = paragraph(d, PAD, y, "Como o Brasil de 1970 trocava a bola", font("ExtraBold", 66), W - 2 * PAD, TEXT, 72)
+y += 14 * X
+y = paragraph(d, PAD, y, "Redes de passes e movimentação dos jogadores na campanha do tri, com dados reais de cada partida.",
+              font("Regular", 28), W - 2 * PAD, TEXT2, 38)
 
-# main visual: Gérson selected in the final
-y += 34 * X
-net = Image.open(RAW / "net_gerson.png").convert("RGB")
-k = (W - 2 * PAD) / net.width
-net = net.resize((W - 2 * PAD, round(net.height * k)), Image.LANCZOS)
-im.paste(net, (PAD, y))
-d.rectangle([PAD - X, y - X, PAD + net.width, y + net.height], outline=BORDER, width=X)
-y += net.height + 18 * X
-d.text((PAD, y), "Final de 1970 · clique em um jogador", font=font("Bold", 26), fill=TEXT)
-d.text((PAD, y + 36 * X), "Gérson: 70 passes, 26 para Carlos Alberto", font=font("Regular", 23), fill=MUTED)
-d.text((W - PAD, y + 36 * X), "Dados: StatsBomb Open Data", font=font("Regular", 20), fill=MUTED, anchor="ra")
+MAP_W = 720 * X
+y += 22 * X
+y = pitch(im, d, "net_gerson.png", y, "Rede de passes · final de 1970",
+          "Gérson: 70 passes completos, 26 para Carlos Alberto", MAP_W)
+y += 4 * X
+y = pitch(im, d, "phases_def.png", y, "Movimentação · com bola × sem bola",
+          "sem a bola, o time recua 16,5 m; Carlos Alberto, 34 m", MAP_W)
 
-# numbers
-y += 96 * X
+# campaign numbers
+y += 8 * X
 d.line([(PAD, y), (W - PAD, y)], fill=BORDER, width=X)
-stats = [("6", "jogos"), ("2.490", "passes completos"), ("19", "gols")]
+stats = [("6 de 6", "vitórias"), ("2.490", "passes completos"), ("19", "gols")]
 col = (W - 2 * PAD) // 3
 for i, (value, label) in enumerate(stats):
     x = PAD + i * col
-    d.text((x, y + 22 * X), value, font=font("ExtraBold", 58), fill=TEXT)
-    d.text((x, y + 94 * X), label, font=font("Regular", 23), fill=MUTED)
-y += 140 * X
-d.line([(PAD, y), (W - PAD, y)], fill=BORDER, width=X)
+    d.text((x, y + 18 * X), value, font=font("ExtraBold", 46), fill=TEXT)
+    d.text((x, y + 76 * X), label, font=font("Regular", 21), fill=MUTED)
+y += 116 * X
+d.text((W - PAD, y), "Dados: StatsBomb Open Data · Leonardo Taschin", font=font("Regular", 19), fill=MUTED, anchor="ra")
+y += 26 * X
 
-# call to action, pointing at the link sticker area just below
-y += 36 * X
-box_h = 108 * X
-d.rounded_rectangle([PAD, y, W - PAD, y + box_h], radius=20 * X, fill=TEXT)
-d.text((PAD + 40 * X, y + box_h // 2), "Explore o site", font=font("ExtraBold", 44), fill="white", anchor="lm")
-d.ellipse([W - PAD - 36 * X - 68 * X, y + 20 * X, W - PAD - 36 * X, y + 88 * X], fill=YELLOW)
-d.text((W - PAD - 36 * X - 34 * X, y + box_h // 2 + 2 * X), "↓", font=font("ExtraBold", 40), fill=TEXT, anchor="mm")
-y += box_h + 18 * X
-d.text((W // 2, y), "toque no link abaixo", font=font("SemiBold", 24), fill=MUTED, anchor="ma")
-y += 34 * X  # below this: free space for the Instagram link sticker
-
-
+assert y <= SAFE_BOTTOM, f"content ends at {y // X}px, below the safe area ({SAFE_BOTTOM // X}px)"
 im.save(OUT, optimize=True)
-print(OUT, "content ends at", y // X, "px")
+print(OUT, "content ends at", y // X, "px of", H // X)
