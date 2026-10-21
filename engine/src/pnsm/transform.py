@@ -117,3 +117,65 @@ def eligible_passes(passes: pd.DataFrame, team_id: int, periods: tuple[int, ...]
         period=excluded_period,
         **excluded,
     )
+
+
+SHOT_COLUMNS = [
+    "event_id", "index", "period", "minute", "second", "possession",
+    "team_id", "team", "player_id", "player",
+    "x", "y", "end_x", "end_y", "end_z",
+    "outcome", "xg", "shot_type", "body_part",
+]
+
+
+def shots_table(events: list[dict], team_id: int, periods: tuple[int, ...] = (1, 2)) -> pd.DataFrame:
+    """``Shot`` events of ``team_id`` inside ``periods``.
+
+    ``xg`` stays missing when the provider has no value: it is never replaced by 0.
+    Own goals are not shots and are not created here.
+    """
+    rows = []
+    for e in events:
+        if e["type"]["name"] != "Shot" or e["team"]["id"] != team_id or e["period"] not in periods:
+            continue
+        s = e["shot"]
+        x, y = _xy(e.get("location"))
+        end = s.get("end_location") or []
+        rows.append({
+            "event_id": e["id"],
+            "index": e["index"],
+            "period": e["period"],
+            "minute": e["minute"],
+            "second": e["second"],
+            "possession": e.get("possession"),
+            "team_id": e["team"]["id"],
+            "team": e["team"]["name"],
+            "player_id": e["player"]["id"],
+            "player": e["player"]["name"],
+            "x": x, "y": y,
+            "end_x": end[0] if len(end) > 0 else None,
+            "end_y": end[1] if len(end) > 1 else None,
+            "end_z": end[2] if len(end) > 2 else None,
+            "outcome": _name(s.get("outcome")),
+            "xg": s.get("statsbomb_xg"),
+            "shot_type": _name(s.get("type")),
+            "body_part": _name(s.get("body_part")),
+        })
+    return pd.DataFrame(rows, columns=SHOT_COLUMNS).astype({"xg": "float64"})
+
+
+def defensive_actions_table(
+    events: list[dict],
+    team_id: int,
+    action_types: tuple[str, ...],
+    periods: tuple[int, ...] = (1, 2),
+) -> pd.DataFrame:
+    """Defensive actions (CLAUDE.md 5.6) of ``team_id`` with a valid location, in the team's own frame."""
+    rows = []
+    for e in events:
+        if e["type"]["name"] not in action_types or e["team"]["id"] != team_id or e["period"] not in periods:
+            continue
+        x, y = _xy(e.get("location"))
+        if x is None or not (0 <= x <= PITCH_LENGTH and 0 <= y <= PITCH_WIDTH) or not e.get("player"):
+            continue
+        rows.append({"event_id": e["id"], "type": e["type"]["name"], "player_id": e["player"]["id"], "x": x, "y": y})
+    return pd.DataFrame(rows, columns=["event_id", "type", "player_id", "x", "y"])

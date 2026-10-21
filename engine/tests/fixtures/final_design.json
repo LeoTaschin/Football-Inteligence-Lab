@@ -1,0 +1,1196 @@
+{
+ "_source": "Design canvas 'F.I.L Passing Network' (artboards Partida and Com bola x sem bola), final 3888702. Values rounded to 0.1 by the design (float noise at .x5).",
+ "teams": {
+  "781": {
+   "nodes": [
+    {
+     "num": 8,
+     "name": "Gérson",
+     "position": "Right Defensive Midfield",
+     "x": 65.7,
+     "y": 38.6,
+     "passes": 70,
+     "received": 77
+    },
+    {
+     "num": 4,
+     "name": "Carlos Alberto",
+     "position": "Right Back",
+     "x": 60.8,
+     "y": 69.3,
+     "passes": 62,
+     "received": 70
+    },
+    {
+     "num": 5,
+     "name": "Clodoaldo",
+     "position": "Left Defensive Midfield",
+     "x": 66.0,
+     "y": 51.6,
+     "passes": 52,
+     "received": 54
+    },
+    {
+     "num": 16,
+     "name": "Everaldo",
+     "position": "Left Back",
+     "x": 55.1,
+     "y": 13.8,
+     "passes": 41,
+     "received": 38
+    },
+    {
+     "num": 11,
+     "name": "Rivellino",
+     "position": "Left Midfield",
+     "x": 63.1,
+     "y": 17.3,
+     "passes": 32,
+     "received": 39
+    },
+    {
+     "num": 1,
+     "name": "Félix",
+     "position": "Goalkeeper",
+     "x": 7.1,
+     "y": 38.5,
+     "passes": 31,
+     "received": 11
+    },
+    {
+     "num": 3,
+     "name": "Piazza",
+     "position": "Left Center Back",
+     "x": 31.8,
+     "y": 23.7,
+     "passes": 27,
+     "received": 21
+    },
+    {
+     "num": 10,
+     "name": "Pelé",
+     "position": "Right Center Forward",
+     "x": 78.1,
+     "y": 43.9,
+     "passes": 24,
+     "received": 30
+    },
+    {
+     "num": 9,
+     "name": "Tostão",
+     "position": "Left Center Forward",
+     "x": 79.6,
+     "y": 40.0,
+     "passes": 22,
+     "received": 23
+    },
+    {
+     "num": 7,
+     "name": "Jairzinho",
+     "position": "Right Midfield",
+     "x": 89.3,
+     "y": 61.1,
+     "passes": 20,
+     "received": 27
+    },
+    {
+     "num": 2,
+     "name": "Brito",
+     "position": "Right Center Back",
+     "x": 34.7,
+     "y": 52.8,
+     "passes": 19,
+     "received": 10
+    }
+   ],
+   "edges": [
+    [
+     "Clodoaldo",
+     "Tostão",
+     2
+    ],
+    [
+     "Tostão",
+     "Clodoaldo",
+     4
+    ],
+    [
+     "Clodoaldo",
+     "Gérson",
+     18
+    ],
+    [
+     "Gérson",
+     "Carlos Alberto",
+     26
+    ],
+    [
+     "Carlos Alberto",
+     "Jairzinho",
+     9
+    ],
+    [
+     "Jairzinho",
+     "Gérson",
+     4
+    ],
+    [
+     "Gérson",
+     "Clodoaldo",
+     11
+    ],
+    [
+     "Tostão",
+     "Pelé",
+     6
+    ],
+    [
+     "Pelé",
+     "Tostão",
+     3
+    ],
+    [
+     "Félix",
+     "Carlos Alberto",
+     12
+    ],
+    [
+     "Carlos Alberto",
+     "Gérson",
+     18
+    ],
+    [
+     "Gérson",
+     "Pelé",
+     5
+    ],
+    [
+     "Pelé",
+     "Clodoaldo",
+     3
+    ],
+    [
+     "Clodoaldo",
+     "Carlos Alberto",
+     16
+    ],
+    [
+     "Piazza",
+     "Everaldo",
+     6
+    ],
+    [
+     "Everaldo",
+     "Rivellino",
+     14
+    ],
+    [
+     "Rivellino",
+     "Everaldo",
+     9
+    ],
+    [
+     "Everaldo",
+     "Gérson",
+     9
+    ],
+    [
+     "Brito",
+     "Everaldo",
+     2
+    ],
+    [
+     "Everaldo",
+     "Clodoaldo",
+     5
+    ],
+    [
+     "Piazza",
+     "Carlos Alberto",
+     1
+    ],
+    [
+     "Brito",
+     "Clodoaldo",
+     4
+    ],
+    [
+     "Tostão",
+     "Rivellino",
+     5
+    ],
+    [
+     "Carlos Alberto",
+     "Clodoaldo",
+     14
+    ],
+    [
+     "Tostão",
+     "Jairzinho",
+     4
+    ],
+    [
+     "Pelé",
+     "Brito",
+     1
+    ],
+    [
+     "Brito",
+     "Rivellino",
+     3
+    ],
+    [
+     "Rivellino",
+     "Clodoaldo",
+     7
+    ],
+    [
+     "Gérson",
+     "Tostão",
+     3
+    ],
+    [
+     "Clodoaldo",
+     "Rivellino",
+     4
+    ],
+    [
+     "Rivellino",
+     "Carlos Alberto",
+     3
+    ],
+    [
+     "Gérson",
+     "Everaldo",
+     12
+    ],
+    [
+     "Rivellino",
+     "Gérson",
+     7
+    ],
+    [
+     "Félix",
+     "Gérson",
+     4
+    ],
+    [
+     "Carlos Alberto",
+     "Tostão",
+     7
+    ],
+    [
+     "Jairzinho",
+     "Tostão",
+     3
+    ],
+    [
+     "Félix",
+     "Piazza",
+     8
+    ],
+    [
+     "Piazza",
+     "Rivellino",
+     4
+    ],
+    [
+     "Gérson",
+     "Rivellino",
+     6
+    ],
+    [
+     "Everaldo",
+     "Tostão",
+     3
+    ],
+    [
+     "Tostão",
+     "Everaldo",
+     1
+    ],
+    [
+     "Gérson",
+     "Félix",
+     3
+    ],
+    [
+     "Félix",
+     "Everaldo",
+     5
+    ],
+    [
+     "Rivellino",
+     "Pelé",
+     1
+    ],
+    [
+     "Félix",
+     "Clodoaldo",
+     1
+    ],
+    [
+     "Carlos Alberto",
+     "Brito",
+     3
+    ],
+    [
+     "Brito",
+     "Carlos Alberto",
+     4
+    ],
+    [
+     "Gérson",
+     "Jairzinho",
+     1
+    ],
+    [
+     "Jairzinho",
+     "Pelé",
+     6
+    ],
+    [
+     "Pelé",
+     "Gérson",
+     7
+    ],
+    [
+     "Gérson",
+     "Piazza",
+     1
+    ],
+    [
+     "Everaldo",
+     "Piazza",
+     7
+    ],
+    [
+     "Piazza",
+     "Brito",
+     2
+    ],
+    [
+     "Carlos Alberto",
+     "Pelé",
+     7
+    ],
+    [
+     "Brito",
+     "Gérson",
+     2
+    ],
+    [
+     "Piazza",
+     "Clodoaldo",
+     3
+    ],
+    [
+     "Piazza",
+     "Félix",
+     3
+    ],
+    [
+     "Jairzinho",
+     "Carlos Alberto",
+     5
+    ],
+    [
+     "Clodoaldo",
+     "Jairzinho",
+     6
+    ],
+    [
+     "Carlos Alberto",
+     "Rivellino",
+     1
+    ],
+    [
+     "Gérson",
+     "Brito",
+     2
+    ],
+    [
+     "Pelé",
+     "Rivellino",
+     2
+    ],
+    [
+     "Rivellino",
+     "Piazza",
+     2
+    ],
+    [
+     "Piazza",
+     "Gérson",
+     7
+    ],
+    [
+     "Jairzinho",
+     "Clodoaldo",
+     2
+    ],
+    [
+     "Clodoaldo",
+     "Brito",
+     1
+    ],
+    [
+     "Brito",
+     "Tostão",
+     1
+    ],
+    [
+     "Rivellino",
+     "Tostão",
+     1
+    ],
+    [
+     "Everaldo",
+     "Félix",
+     1
+    ],
+    [
+     "Clodoaldo",
+     "Pelé",
+     4
+    ],
+    [
+     "Everaldo",
+     "Jairzinho",
+     2
+    ],
+    [
+     "Pelé",
+     "Jairzinho",
+     3
+    ],
+    [
+     "Brito",
+     "Piazza",
+     2
+    ],
+    [
+     "Tostão",
+     "Gérson",
+     1
+    ],
+    [
+     "Carlos Alberto",
+     "Félix",
+     2
+    ],
+    [
+     "Clodoaldo",
+     "Everaldo",
+     1
+    ],
+    [
+     "Pelé",
+     "Carlos Alberto",
+     3
+    ],
+    [
+     "Carlos Alberto",
+     "Everaldo",
+     1
+    ],
+    [
+     "Pelé",
+     "Everaldo",
+     1
+    ],
+    [
+     "Félix",
+     "Brito",
+     1
+    ],
+    [
+     "Brito",
+     "Félix",
+     1
+    ],
+    [
+     "Tostão",
+     "Piazza",
+     1
+    ],
+    [
+     "Rivellino",
+     "Jairzinho",
+     2
+    ],
+    [
+     "Pelé",
+     "Félix",
+     1
+    ],
+    [
+     "Piazza",
+     "Pelé",
+     1
+    ]
+   ],
+   "defensive": [
+    {
+     "name": "Clodoaldo",
+     "x": 38.9,
+     "y": 45.9,
+     "n": 22
+    },
+    {
+     "name": "Tostão",
+     "x": 57.2,
+     "y": 30.8,
+     "n": 17
+    },
+    {
+     "name": "Gérson",
+     "x": 37.6,
+     "y": 41.8,
+     "n": 23
+    },
+    {
+     "name": "Carlos Alberto",
+     "x": 23.3,
+     "y": 57.9,
+     "n": 17
+    },
+    {
+     "name": "Jairzinho",
+     "x": 81.5,
+     "y": 63.5,
+     "n": 11
+    },
+    {
+     "name": "Pelé",
+     "x": 84.1,
+     "y": 44.6,
+     "n": 17
+    },
+    {
+     "name": "Félix",
+     "x": 6.5,
+     "y": 41.3,
+     "n": 4
+    },
+    {
+     "name": "Piazza",
+     "x": 19.7,
+     "y": 34.0,
+     "n": 24
+    },
+    {
+     "name": "Everaldo",
+     "x": 38.0,
+     "y": 16.3,
+     "n": 32
+    },
+    {
+     "name": "Rivellino",
+     "x": 39.4,
+     "y": 32.0,
+     "n": 8
+    },
+    {
+     "name": "Brito",
+     "x": 24.1,
+     "y": 45.5,
+     "n": 22
+    }
+   ]
+  },
+  "914": {
+   "nodes": [
+    {
+     "num": 15,
+     "name": "Mazzola",
+     "position": "Left Center Midfield",
+     "x": 69.6,
+     "y": 37.4,
+     "passes": 38,
+     "received": 42
+    },
+    {
+     "num": 5,
+     "name": "Cera",
+     "position": "Left Center Back",
+     "x": 33.4,
+     "y": 32.8,
+     "passes": 33,
+     "received": 24
+    },
+    {
+     "num": 1,
+     "name": "Albertosi",
+     "position": "Goalkeeper",
+     "x": 7.0,
+     "y": 40.5,
+     "passes": 32,
+     "received": 7
+    },
+    {
+     "num": 13,
+     "name": "Domenghini",
+     "position": "Right Wing Back",
+     "x": 63.4,
+     "y": 63.6,
+     "passes": 29,
+     "received": 40
+    },
+    {
+     "num": 16,
+     "name": "De Sisti",
+     "position": "Right Center Midfield",
+     "x": 64.9,
+     "y": 44.9,
+     "passes": 25,
+     "received": 28
+    },
+    {
+     "num": 10,
+     "name": "Bertini",
+     "position": "Center Defensive Midfield",
+     "x": 44.5,
+     "y": 54.9,
+     "passes": 23,
+     "received": 25
+    },
+    {
+     "num": 3,
+     "name": "Facchetti",
+     "position": "Left Wing Back",
+     "x": 40.5,
+     "y": 13.2,
+     "passes": 15,
+     "received": 11
+    },
+    {
+     "num": 8,
+     "name": "Rosato",
+     "position": "Center Back",
+     "x": 28.3,
+     "y": 51.9,
+     "passes": 11,
+     "received": 10
+    },
+    {
+     "num": 20,
+     "name": "Boninsegna",
+     "position": "Right Center Forward",
+     "x": 65.7,
+     "y": 36.7,
+     "passes": 10,
+     "received": 16
+    },
+    {
+     "num": 11,
+     "name": "Riva",
+     "position": "Left Center Forward",
+     "x": 80.3,
+     "y": 38.3,
+     "passes": 9,
+     "received": 22
+    },
+    {
+     "num": 18,
+     "name": "Juliano",
+     "position": "Center Defensive Midfield",
+     "x": 60.7,
+     "y": 61.2,
+     "passes": 9,
+     "received": 7
+    },
+    {
+     "num": 2,
+     "name": "Burgnich",
+     "position": "Right Center Back",
+     "x": 49.1,
+     "y": 63.7,
+     "passes": 7,
+     "received": 7
+    },
+    {
+     "num": 14,
+     "name": "Rivera",
+     "position": "Right Center Forward",
+     "x": 81.7,
+     "y": 47.0,
+     "passes": 2,
+     "received": 4
+    }
+   ],
+   "edges": [
+    [
+     "Boninsegna",
+     "Mazzola",
+     3
+    ],
+    [
+     "Mazzola",
+     "Bertini",
+     3
+    ],
+    [
+     "Bertini",
+     "Riva",
+     2
+    ],
+    [
+     "Riva",
+     "Mazzola",
+     3
+    ],
+    [
+     "Domenghini",
+     "Boninsegna",
+     5
+    ],
+    [
+     "Bertini",
+     "Albertosi",
+     1
+    ],
+    [
+     "Albertosi",
+     "Burgnich",
+     2
+    ],
+    [
+     "Burgnich",
+     "Domenghini",
+     2
+    ],
+    [
+     "Domenghini",
+     "De Sisti",
+     6
+    ],
+    [
+     "De Sisti",
+     "Burgnich",
+     1
+    ],
+    [
+     "Burgnich",
+     "Mazzola",
+     1
+    ],
+    [
+     "Mazzola",
+     "Riva",
+     8
+    ],
+    [
+     "Burgnich",
+     "Albertosi",
+     1
+    ],
+    [
+     "Bertini",
+     "Mazzola",
+     7
+    ],
+    [
+     "Albertosi",
+     "Bertini",
+     3
+    ],
+    [
+     "Bertini",
+     "Cera",
+     3
+    ],
+    [
+     "Cera",
+     "Bertini",
+     7
+    ],
+    [
+     "Facchetti",
+     "Mazzola",
+     5
+    ],
+    [
+     "Mazzola",
+     "Boninsegna",
+     3
+    ],
+    [
+     "Albertosi",
+     "Cera",
+     12
+    ],
+    [
+     "Bertini",
+     "Facchetti",
+     1
+    ],
+    [
+     "Domenghini",
+     "Mazzola",
+     6
+    ],
+    [
+     "Mazzola",
+     "Domenghini",
+     10
+    ],
+    [
+     "Albertosi",
+     "Domenghini",
+     4
+    ],
+    [
+     "Cera",
+     "De Sisti",
+     4
+    ],
+    [
+     "Boninsegna",
+     "Riva",
+     3
+    ],
+    [
+     "Cera",
+     "Albertosi",
+     3
+    ],
+    [
+     "De Sisti",
+     "Domenghini",
+     2
+    ],
+    [
+     "De Sisti",
+     "Riva",
+     4
+    ],
+    [
+     "Mazzola",
+     "Cera",
+     3
+    ],
+    [
+     "Cera",
+     "Mazzola",
+     5
+    ],
+    [
+     "Rosato",
+     "De Sisti",
+     3
+    ],
+    [
+     "De Sisti",
+     "Boninsegna",
+     2
+    ],
+    [
+     "De Sisti",
+     "Bertini",
+     4
+    ],
+    [
+     "Bertini",
+     "Domenghini",
+     7
+    ],
+    [
+     "Mazzola",
+     "Facchetti",
+     5
+    ],
+    [
+     "Riva",
+     "Albertosi",
+     1
+    ],
+    [
+     "Bertini",
+     "Burgnich",
+     1
+    ],
+    [
+     "Burgnich",
+     "Bertini",
+     2
+    ],
+    [
+     "Facchetti",
+     "Domenghini",
+     2
+    ],
+    [
+     "Domenghini",
+     "Cera",
+     1
+    ],
+    [
+     "Cera",
+     "Domenghini",
+     7
+    ],
+    [
+     "Cera",
+     "Riva",
+     2
+    ],
+    [
+     "Rosato",
+     "Cera",
+     2
+    ],
+    [
+     "Facchetti",
+     "Bertini",
+     1
+    ],
+    [
+     "Bertini",
+     "De Sisti",
+     1
+    ],
+    [
+     "De Sisti",
+     "Rosato",
+     2
+    ],
+    [
+     "Albertosi",
+     "Rosato",
+     2
+    ],
+    [
+     "Rosato",
+     "Bertini",
+     2
+    ],
+    [
+     "Domenghini",
+     "Riva",
+     2
+    ],
+    [
+     "Rosato",
+     "Domenghini",
+     1
+    ],
+    [
+     "Domenghini",
+     "Rosato",
+     2
+    ],
+    [
+     "Riva",
+     "Boninsegna",
+     2
+    ],
+    [
+     "De Sisti",
+     "Mazzola",
+     7
+    ],
+    [
+     "Mazzola",
+     "De Sisti",
+     3
+    ],
+    [
+     "Albertosi",
+     "Mazzola",
+     3
+    ],
+    [
+     "Facchetti",
+     "Boninsegna",
+     2
+    ],
+    [
+     "Boninsegna",
+     "De Sisti",
+     1
+    ],
+    [
+     "Facchetti",
+     "De Sisti",
+     2
+    ],
+    [
+     "Domenghini",
+     "Bertini",
+     2
+    ],
+    [
+     "Boninsegna",
+     "Domenghini",
+     2
+    ],
+    [
+     "Domenghini",
+     "Burgnich",
+     2
+    ],
+    [
+     "Rosato",
+     "Boninsegna",
+     1
+    ],
+    [
+     "Albertosi",
+     "Facchetti",
+     1
+    ],
+    [
+     "Facchetti",
+     "Albertosi",
+     1
+    ],
+    [
+     "Albertosi",
+     "De Sisti",
+     4
+    ],
+    [
+     "De Sisti",
+     "Facchetti",
+     1
+    ],
+    [
+     "Domenghini",
+     "Facchetti",
+     2
+    ],
+    [
+     "Burgnich",
+     "Facchetti",
+     1
+    ],
+    [
+     "Mazzola",
+     "Rosato",
+     1
+    ],
+    [
+     "Boninsegna",
+     "Bertini",
+     1
+    ],
+    [
+     "De Sisti",
+     "Cera",
+     1
+    ],
+    [
+     "Cera",
+     "Rosato",
+     2
+    ],
+    [
+     "Cera",
+     "Juliano",
+     2
+    ],
+    [
+     "Cera",
+     "Burgnich",
+     1
+    ],
+    [
+     "Facchetti",
+     "Rosato",
+     1
+    ],
+    [
+     "Rosato",
+     "Juliano",
+     2
+    ],
+    [
+     "Juliano",
+     "Boninsegna",
+     1
+    ],
+    [
+     "Juliano",
+     "Mazzola",
+     2
+    ],
+    [
+     "Albertosi",
+     "Juliano",
+     1
+    ],
+    [
+     "Juliano",
+     "Domenghini",
+     2
+    ],
+    [
+     "Juliano",
+     "De Sisti",
+     2
+    ],
+    [
+     "De Sisti",
+     "Juliano",
+     1
+    ],
+    [
+     "Riva",
+     "Domenghini",
+     1
+    ],
+    [
+     "Facchetti",
+     "Cera",
+     1
+    ],
+    [
+     "Riva",
+     "De Sisti",
+     1
+    ],
+    [
+     "Domenghini",
+     "Rivera",
+     1
+    ],
+    [
+     "Rivera",
+     "De Sisti",
+     1
+    ],
+    [
+     "Mazzola",
+     "Juliano",
+     1
+    ],
+    [
+     "Juliano",
+     "Rivera",
+     1
+    ],
+    [
+     "Rivera",
+     "Riva",
+     1
+    ],
+    [
+     "Juliano",
+     "Cera",
+     1
+    ],
+    [
+     "Mazzola",
+     "Rivera",
+     1
+    ],
+    [
+     "Riva",
+     "Rivera",
+     1
+    ]
+   ]
+  }
+ }
+}
