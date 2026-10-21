@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pnsm"
+version = "0.1.0"
+description = "F.I.L · Passing Network + Shot Map engine (StatsBomb Open Data)"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas>=2.2",
+    "pyyaml>=6.0",
+    "requests>=2.31",
+]
+
+[project.optional-dependencies]
+report = ["matplotlib>=3.8", "mplsoccer>=1.2"]
+dev = ["pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "regression: uses real StatsBomb data (downloads into engine/.cache on first run)",
+]

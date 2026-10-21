@@ -1,0 +1,8 @@
+collection: wc1970-brazil
+competition_id: 43
+season_id: 272
+team: Brazil
+periods: [1, 2]
+min_pair_passes: 3
+defensive_actions: [Pressure, Ball Recovery, Interception, Duel, Clearance, Block]
+output_dir: ../site/public/data
