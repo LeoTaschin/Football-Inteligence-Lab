@@ -2,15 +2,12 @@ import { useState } from "react";
 
 import { shots as copy } from "../content/pt";
 import { formatDecimal } from "../lib/format";
-import { SHOT_XG_REF, shotRadius } from "../lib/geometry";
-import type { MatchData, Shot, ShotResult, TeamData } from "../types/data";
-import { Marker, markerLook, ShotMap } from "./ShotMap";
+import { SHOT_XG_REF } from "../lib/geometry";
+import type { MatchData, Shot, TeamData } from "../types/data";
+import { ShotIconSvg, ShotMap } from "./ShotMap";
+import { TeamSwitch } from "./TeamSwitch";
+import layout from "./SplitLayout.module.css";
 import styles from "./ShotsPanel.module.css";
-
-export interface ShotRef {
-  team: number; // index in data.teams
-  index: number; // index in team.shots.items
-}
 
 type Filter = keyof typeof copy.filters;
 const FILTERS: Filter[] = ["all", "open", "goals"];
@@ -20,184 +17,132 @@ const KEEP: Record<Filter, (s: Shot) => boolean> = {
   goals: (s) => s.result === "goal",
 };
 const LEGEND = ["goal", "saved", "post", "blocked", "off"] as const;
-const SIZE_LEGEND = [0.05, 0.2, 0.5];
 const NEUTRAL = "#52525B";
+const BAR_Z = 2.67; // crossbar, yards: the goal view is drawn in StatsBomb units
+const dec1 = (n: number) => formatDecimal(n, 1);
 
 interface ShotsPanelProps {
   data: MatchData;
-  selected: ShotRef | null;
-  onSelect: (ref: ShotRef) => void;
+  team: number;
+  onTeam: (index: number) => void;
+  /** index in the team's shots.items */
+  selected: number | null;
+  onSelect: (index: number) => void;
 }
 
-/** "Finalizações" tab: one vertical shot map per team, the selected shot's detail and the biggest chances. */
-export function ShotsPanel({ data, selected, onSelect }: ShotsPanelProps) {
+/** "Finalizações": one team at a time; the pitch with every shot on the left, the selected shot and the biggest chances on the right. */
+export function ShotsPanel({ data, team: ti, onTeam, selected, onSelect }: ShotsPanelProps) {
   const [filter, setFilter] = useState<Filter>("all");
-  const { teams } = data;
-  const outcomeOf = (s: Shot) => copy.outcome[s.outcome] ?? copy.result[s.result];
+  const team = data.teams[ti];
+  const s = team.shots;
+  const shot = selected !== null ? s.items[selected] : null;
+  const noLocation = s.items.filter((x) => x.x === null || x.y === null).length;
+  const outcomeOf = (x: Shot) => copy.outcome[x.outcome] ?? copy.result[x.result];
 
   return (
-    <div className={styles.panel}>
-      <p className={styles.summary}>
-        {copy.summary(
-          teams.map((t) => ({ article: t.article, name: t.displayName, xg: formatDecimal(t.shots.xg), count: t.shots.count, goals: t.shots.goals })),
-        )}
-      </p>
-
-      <div className={styles.controls}>
-        <div className={styles.filter} role="group" aria-label={copy.filterLabel}>
-          <span>{copy.show}</span>
-          {FILTERS.map((f) => (
-            <button key={f} type="button" className="pill" aria-pressed={f === filter} onClick={() => setFilter(f)}>
-              {copy.filters[f]}
-            </button>
-          ))}
-        </div>
-        <ul className={styles.legend} aria-label={copy.legendLabel}>
-          {LEGEND.map((r) => (
-            <li key={r}>
-              <LegendIcon result={r} square={false} />
-              {copy.legend[r]}
-            </li>
-          ))}
-          <li>
-            <LegendIcon result="off" square />
-            {copy.legend.setPiece}
-          </li>
-        </ul>
+    <div className={layout.tab}>
+      <div className={layout.head}>
+        <h2 className={layout.title}>{copy.title(team.article, team.displayName)}</h2>
+        <TeamSwitch teams={data.teams} current={ti} onChange={onTeam} label={copy.teamLabel} />
       </div>
 
-      <div className={styles.maps}>
-        {teams.map((team, ti) => {
-          const noLocation = team.shots.items.filter((s) => s.x === null || s.y === null).length;
-          return (
-            <section key={team.teamId} className={styles.team}>
-              <div className={styles.teamHead}>
-                <h2 className={styles.teamName}>
-                  <span className={styles.teamDot} style={{ background: team.colors.fill, borderColor: team.colors.line }} />
-                  {team.displayName}
-                </h2>
-                <span className={styles.muted}>{copy.attackUp}</span>
-              </div>
-              <div className={styles.pitchBox}>
-                <ShotMap
-                  team={team}
-                  fromX={data.scale.shotsFromX}
-                  selected={selected?.team === ti ? selected.index : null}
-                  visible={KEEP[filter]}
-                  onSelect={(index) => onSelect({ team: ti, index })}
-                />
-              </div>
-              {noLocation > 0 && <p className={styles.muted}>{copy.noLocation(noLocation)}</p>}
-              <TeamStats team={team} />
-            </section>
-          );
-        })}
-      </div>
+      <div className={layout.body}>
+        <div className={layout.main}>
+          <div className={styles.filter} role="group" aria-label={copy.filterLabel}>
+            <span>{copy.show}</span>
+            {FILTERS.map((f) => (
+              <button key={f} type="button" className="pill" aria-pressed={f === filter} onClick={() => setFilter(f)}>
+                {copy.filters[f]}
+              </button>
+            ))}
+          </div>
 
-      {selected ? (
-        <ShotDetail team={teams[selected.team]} shot={teams[selected.team].shots.items[selected.index]} outcome={outcomeOf} />
-      ) : (
-        <p className={styles.hint}>{copy.hint}</p>
-      )}
-
-      <section className={styles.top}>
-        <div className={styles.topHead}>
-          <h3 className={styles.topTitle}>{copy.topTitle}</h3>
-          <span className={styles.muted}>{copy.topLegend}</span>
-        </div>
-        <div className={styles.topLists}>
-          {teams.map((team, ti) => (
-            <div key={team.teamId}>
-              <div className={styles.topListHead}>
-                <span>{team.displayName}</span>
-                <span>xG</span>
-              </div>
-              {team.shots.top.map((index) => {
-                const s = team.shots.items[index];
-                const on = selected?.team === ti && selected.index === index;
-                return (
-                  <button
-                    key={index}
-                    type="button"
-                    className={styles.topRow}
-                    aria-pressed={on}
-                    onClick={() => onSelect({ team: ti, index })}
-                  >
-                    <span className={styles.muted}>{s.minute}′</span>
-                    <span className={styles.player}>{s.name}</span>
-                    <span className={styles.outcome}>{outcomeOf(s)}</span>
-                    <span className={styles.xg}>
-                      <span className={styles.track}>
-                        <span
-                          className={styles.fill}
-                          style={{ width: `${Math.min(100, (100 * (s.xg ?? 0)) / SHOT_XG_REF)}%`, background: team.colors.line }}
-                        />
-                      </span>
-                      <span className={styles.xgValue}>{formatDecimal(s.xg ?? 0)}</span>
-                    </span>
-                  </button>
-                );
-              })}
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <div className={styles.sizeLegend}>
-        <strong>{copy.sizeTitle}</strong>
-        {SIZE_LEGEND.map((xg) => {
-          const r = shotRadius(xg);
-          return (
-            <span key={xg} className={styles.sizeItem}>
-              <span className={styles.sizeDot} style={{ width: 2 * r, height: 2 * r }} />
-              {formatDecimal(xg)}
+          <div className={styles.pitchBox}>
+            <ShotMap team={team} fromX={data.scale.shotsFromX} selected={selected} visible={KEEP[filter]} onSelect={onSelect} />
+            <span className={styles.attack} aria-hidden="true">
+              {copy.attackUp(team.article, team.displayName)}
             </span>
-          );
-        })}
-        <span>{copy.sizeNote}</span>
+          </div>
+
+          <ul className={layout.legend} aria-label={copy.legendLabel}>
+            {LEGEND.map((r) => (
+              <li key={r}>
+                <ShotIconSvg size={22} result={r} color={NEUTRAL} badge={null} />
+                {copy.legend[r]}
+              </li>
+            ))}
+            <li>
+              <span className={styles.badge}>F</span>
+              {copy.legend.setPiece}
+            </li>
+            <li>
+              <span className={styles.halo} />
+              {copy.legend.halo}
+            </li>
+          </ul>
+          {noLocation > 0 && <p className={layout.caption}>{copy.noLocation(noLocation)}</p>}
+          <p className={layout.caption}>{copy.hint}</p>
+        </div>
+
+        <aside className={layout.aside}>
+          <div className={layout.summary}>
+            <span className={layout.big}>{copy.summaryXg(formatDecimal(s.xg))}</span>
+            <span className={layout.summaryText}>
+              {copy.summary({
+                count: s.count,
+                goals: s.goals,
+                perShot: s.xgPerShot === null ? null : formatDecimal(s.xgPerShot),
+                withXg: s.xgCoverage[0],
+              })}
+            </span>
+          </div>
+
+          {shot ? <ShotDetail team={team} shot={shot} outcome={outcomeOf(shot)} /> : <p className={layout.hint}>{copy.hint}</p>}
+
+          <section className={styles.top}>
+            <h3 className={styles.topTitle}>{copy.topTitle}</h3>
+            {s.top.map((index) => {
+              const x = s.items[index];
+              return (
+                <button key={index} type="button" className={styles.topRow} aria-pressed={index === selected} onClick={() => onSelect(index)}>
+                  <span className={styles.minute}>{x.minute}′</span>
+                  <span className={styles.who}>
+                    <span className={styles.player}>{x.name}</span>
+                    <span className={styles.outcome}>{outcomeOf(x)}</span>
+                  </span>
+                  <span className={styles.track}>
+                    <span style={{ width: `${Math.min(100, (100 * (x.xg ?? 0)) / SHOT_XG_REF)}%`, background: team.colors.line }} />
+                  </span>
+                  <span className={styles.xg}>{formatDecimal(x.xg ?? 0)}</span>
+                </button>
+              );
+            })}
+          </section>
+        </aside>
       </div>
 
-      <p className={styles.note}>{copy.footer}</p>
+      <p className={layout.caption}>{copy.footer}</p>
     </div>
   );
 }
 
-function TeamStats({ team }: { team: TeamData }) {
-  const s = team.shots;
-  const items = [
-    { value: String(s.count), label: copy.stats.count },
-    { value: String(s.goals), label: copy.stats.goals },
-    { value: formatDecimal(s.xg), label: copy.stats.xg },
-    { value: s.xgPerShot === null ? "–" : formatDecimal(s.xgPerShot), label: copy.stats.xgPerShot },
-    { value: `${s.xgCoverage[0]}/${s.xgCoverage[1]}`, label: copy.stats.coverage },
-  ];
-  return (
-    <dl className={styles.stats}>
-      {items.map((it) => (
-        <div key={it.label}>
-          <dt>{it.label}</dt>
-          <dd>{it.value}</dd>
-        </div>
-      ))}
-    </dl>
-  );
-}
-
-function ShotDetail({ team, shot, outcome }: { team: TeamData; shot: Shot; outcome: (s: Shot) => string }) {
-  const r = 11;
+function ShotDetail({ team, shot, outcome }: { team: TeamData; shot: Shot; outcome: string }) {
+  const f = shot.finish;
+  // the goal view needs the height where the ball crossed the line
+  const crossed = shot.end && shot.end.length > 2 && (f.kind === "goal" || f.kind === "saved" || f.kind === "post" || f.kind === "over" || f.kind === "wide" || f.kind === "overWide");
   return (
     <section className={styles.detail} aria-live="polite">
-      <svg width={2 * r + 4} height={2 * r + 4} viewBox={`${-r - 2} ${-r - 2} ${2 * r + 4} ${2 * r + 4}`} aria-hidden="true">
-        <Marker cx={0} cy={0} r={r} square={shot.setPiece} look={markerLook(shot.result, team.colors.line)} unit={1} />
-      </svg>
-      <div className={styles.who}>
-        <span className="eyebrow">{`${team.displayName} · ${shot.minute}′ · ${outcome(shot)}`}</span>
-        <span className={styles.detailName}>{shot.name}</span>
+      <div className={styles.detailHead}>
+        <ShotIconSvg size={34} result={shot.result} color={team.colors.line} badge={shot.setPiece ? (copy.badge[shot.shotType] ?? null) : null} />
+        <div className={styles.detailWho}>
+          <span className="eyebrow">{`${team.displayName} · ${shot.minute}′ · ${outcome}`}</span>
+          <span className={styles.detailName}>{shot.name}</span>
+        </div>
       </div>
       <dl className={styles.detailStats}>
         <div>
           <dt>{copy.detail.xg}</dt>
-          <dd className={styles.big}>{shot.xg === null ? copy.detail.noXg : formatDecimal(shot.xg)}</dd>
+          <dd className={styles.bigStat}>{shot.xg === null ? copy.detail.noXg : formatDecimal(shot.xg)}</dd>
         </div>
         <div>
           <dt>{copy.detail.body}</dt>
@@ -214,14 +159,24 @@ function ShotDetail({ team, shot, outcome }: { team: TeamData; shot: Shot; outco
           </div>
         )}
       </dl>
+      {crossed && <GoalView y={shot.end![1]} z={shot.end![2]} goal={shot.result === "goal"} color={team.colors.line} />}
+      <p className={styles.finish}>{copy.finish(f, dec1)}</p>
     </section>
   );
 }
 
-function LegendIcon({ result, square }: { result: ShotResult; square: boolean }) {
+/** Front view of the goal (y 30–50, height 0–7 yd), seen from behind the shooter: where the ball crossed the line. */
+function GoalView({ y, z, goal, color }: { y: number; z: number; goal: boolean; color: string }) {
+  const bx = Math.min(49.4, Math.max(30.6, y));
+  const bz = Math.min(6.1, Math.max(0, z));
   return (
-    <svg width={16} height={16} viewBox="-8 -8 16 16" aria-hidden="true">
-      <Marker cx={0} cy={0} r={6.5} square={square} look={markerLook(result, NEUTRAL)} unit={1} />
-    </svg>
+    <figure className={styles.goalView}>
+      <svg viewBox="30 -6.5 20 7" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+        <line x1={30} y1={0} x2={50} y2={0} className={styles.ground} />
+        <rect x={36} y={-BAR_Z} width={8} height={BAR_Z} className={styles.frame} />
+        <circle cx={bx} cy={-bz} r={0.42} fill={goal ? color : "#FFFFFF"} className={styles.ball} />
+      </svg>
+      <figcaption>{copy.frameCaption}</figcaption>
+    </figure>
   );
 }

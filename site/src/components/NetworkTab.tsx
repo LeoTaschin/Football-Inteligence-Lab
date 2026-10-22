@@ -5,6 +5,7 @@ import type { MatchData, TeamData } from "../types/data";
 import { PassNetwork } from "./PassNetwork";
 import { PlayerPanel } from "./PlayerPanel";
 import { TeamSwitch } from "./TeamSwitch";
+import layout from "./SplitLayout.module.css";
 import styles from "./NetworkTab.module.css";
 
 const MIN_OPTIONS = [3, 5, 8];
@@ -36,14 +37,14 @@ export function NetworkTab(p: NetworkTabProps) {
   const missing = p.selectedId !== null && selected === null ? nameOf(p.selectedId) : null;
 
   return (
-    <div className={styles.tab}>
-      <div className={styles.head}>
-        <h2 className={styles.title}>{copy.title(team.article, team.displayName)}</h2>
+    <div className={layout.tab}>
+      <div className={layout.head}>
+        <h2 className={layout.title}>{copy.title(team.article, team.displayName)}</h2>
         <TeamSwitch teams={p.data.teams} current={p.team} onChange={p.onTeam} label={copy.teamLabel} />
       </div>
 
-      <div className={styles.body}>
-        <div className={styles.main}>
+      <div className={layout.body}>
+        <div className={layout.main}>
           <div className={styles.controls}>
             <div className={styles.group} role="group" aria-label={copy.periodLabel}>
               {([false, true] as const).map((until) => (
@@ -74,7 +75,7 @@ export function NetworkTab(p: NetworkTabProps) {
             </div>
           </div>
 
-          <ul className={styles.legend} aria-label="Legenda">
+          <ul className={layout.legend} aria-label="Legenda">
             <li>
               <span className={styles.dotBig} />
               <span className={styles.dotSmall} />
@@ -93,13 +94,13 @@ export function NetworkTab(p: NetworkTabProps) {
               {copy.legendReceived}
             </li>
           </ul>
-          <p className={styles.caption}>{selected !== null ? copy.captionSelected(nameOf(selected)) : copy.captionAll(p.minPasses)}</p>
+          <p className={layout.caption}>{selected !== null ? copy.captionSelected(nameOf(selected)) : copy.captionAll(p.minPasses)}</p>
         </div>
 
-        <aside className={styles.aside}>
-          <div className={styles.summary}>
-            <span className={styles.big}>{net.completed}</span>
-            <span className={styles.summaryText}>
+        <aside className={layout.aside}>
+          <div className={layout.summary}>
+            <span className={layout.big}>{net.completed}</span>
+            <span className={layout.summaryText}>
               {key === "full"
                 ? copy.summaryFull(team.passes.attempted, formatPercent(team.passes.completed, team.passes.attempted))
                 : copy.summaryCut(team.passes.completed - net.completed, team.passes.completed)}
@@ -117,7 +118,7 @@ export function NetworkTab(p: NetworkTabProps) {
           {selected !== null ? (
             <PlayerPanel team={team} net={net} playerId={selected} onClear={p.onClear} />
           ) : (
-            <p className={styles.hint}>{missing ? `${copy.notInCut(missing)} ${copy.hint}` : copy.hint}</p>
+            <p className={layout.hint}>{missing ? `${copy.notInCut(missing)} ${copy.hint}` : copy.hint}</p>
           )}
 
           <section className={styles.pairs}>

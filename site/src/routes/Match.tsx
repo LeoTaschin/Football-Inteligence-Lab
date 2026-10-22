@@ -4,7 +4,7 @@ import { CombinationTable } from "../components/CombinationTable";
 import { GoalReplay } from "../components/GoalReplay";
 import { NetworkTab } from "../components/NetworkTab";
 import { PhaseMorph } from "../components/PhaseMorph";
-import { ShotsPanel, type ShotRef } from "../components/ShotsPanel";
+import { ShotsPanel } from "../components/ShotsPanel";
 import { NotFound, Status } from "../components/Status";
 import { TabPanel, Tabs } from "../components/Tabs";
 import { competitionPt, match as copy, goals as goalsCopy, site, tabs as tabsCopy } from "../content/pt";
@@ -53,7 +53,9 @@ function useMatchParams(data: MatchData) {
   const tab: TabKey = TABS.some((t) => t.key === tabParam) ? (tabParam as TabKey) : "rede";
   const goalParam = Number(params.get("gol"));
   const goal = Number.isInteger(goalParam) && goalParam >= 1 && goalParam <= data.goals.length ? goalParam - 1 : 0;
-  const shot = parseShot(params.get("chute"), data) ?? defaultShot(data);
+  // ?chute=1-27: team and shot; only kept when it is a shot of the team on screen
+  const parsed = parseShot(params.get("chute"), data);
+  const shot = parsed && parsed.team === team ? parsed.index : defaultShot(data.teams[team]);
 
   const update = (changes: Record<string, string | null>) =>
     setParams(
@@ -72,7 +74,7 @@ function useMatchParams(data: MatchData) {
     minPasses,
     setMinPasses: (m: number) => update({ min: m === MIN_OPTIONS[0] ? null : String(m) }),
     team,
-    setTeam: (i: number) => update({ equipe: i === 0 ? null : String(i + 1), jogador: null }),
+    setTeam: (i: number) => update({ equipe: i === 0 ? null : String(i + 1), jogador: null, chute: null }),
     untilFirstSub,
     setUntilFirstSub: (on: boolean) => update({ periodo: on ? "1sub" : null }),
     openPlay,
@@ -85,7 +87,7 @@ function useMatchParams(data: MatchData) {
     goal,
     setGoal: (i: number) => update({ gol: String(i + 1) }),
     shot,
-    setShot: (ref: ShotRef) => update({ chute: `${ref.team + 1}-${ref.index + 1}` }),
+    setShot: (index: number) => update({ chute: `${team + 1}-${index + 1}` }),
   };
 }
 
@@ -214,7 +216,7 @@ function MatchView({ data, campaign }: { data: MatchData; campaign: CampaignMatc
 
       {tab === "finalizacoes" && (
         <TabPanel idPrefix="partida" tab="finalizacoes">
-          <ShotsPanel data={data} selected={shot} onSelect={setShot} />
+          <ShotsPanel data={data} team={params.team} onTeam={params.setTeam} selected={shot} onSelect={setShot} />
         </TabPanel>
       )}
 
@@ -244,7 +246,7 @@ function MatchView({ data, campaign }: { data: MatchData; campaign: CampaignMatc
 }
 
 /** "1-27" → first team, 27th shot (both 1-based in the URL). */
-function parseShot(param: string | null, data: MatchData): ShotRef | null {
+function parseShot(param: string | null, data: MatchData): { team: number; index: number } | null {
   const m = /^(\d+)-(\d+)$/.exec(param ?? "");
   if (!m) return null;
   const team = Number(m[1]) - 1;
@@ -252,10 +254,9 @@ function parseShot(param: string | null, data: MatchData): ShotRef | null {
   return data.teams[team]?.shots.items[index] ? { team, index } : null;
 }
 
-/** Without ?chute: the analysed team's last goal, else its biggest chance. */
-function defaultShot(data: MatchData): ShotRef | null {
-  const items = data.teams[0].shots.items;
-  for (let i = items.length - 1; i >= 0; i--) if (items[i].result === "goal") return { team: 0, index: i };
-  const best = data.teams[0].shots.top[0];
-  return best === undefined ? null : { team: 0, index: best };
+/** Without ?chute: the team's last goal, else its biggest chance. */
+function defaultShot(team: TeamData): number | null {
+  const items = team.shots.items;
+  for (let i = items.length - 1; i >= 0; i--) if (items[i].result === "goal") return i;
+  return team.shots.top[0] ?? null;
 }
