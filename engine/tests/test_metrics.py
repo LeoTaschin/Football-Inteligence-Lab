@@ -121,6 +121,48 @@ def test_shot_list_is_chronological_and_keeps_missing_xg():
     assert math.isnan(shots.xg.iloc[0])
 
 
+# --- cuts (CLAUDE.md 5.9) -------------------------------------------------------------
+
+def test_first_sub_cut_is_by_event_index():
+    events = [make_pass(), make_pass(), make_pass()]
+    sub = {"index": events[1]["index"] + 0.5, "type": {"name": "Substitution"}, "team": {"id": BRAZIL}}
+    passes = transform.eligible_passes(transform.passes_table(events), BRAZIL).passes
+    cuts = transform.network_cuts(passes, transform.first_substitution_index([*events, sub], BRAZIL))
+    assert list(cuts["firstSub"]["index"]) == [events[0]["index"], events[1]["index"]]
+
+
+def test_team_without_subs_keeps_everything():
+    passes = transform.eligible_passes(transform.passes_table([make_pass(), make_pass()]), BRAZIL).passes
+    assert transform.first_substitution_index([], BRAZIL) is None
+    assert len(transform.network_cuts(passes, None)["firstSub"]) == 2
+
+
+def test_open_play_drops_set_pieces_but_keeps_recoveries():
+    events = [make_pass(pass_type=t) for t in ("Free Kick", "Throw-in", "Goal Kick", "Corner", "Kick Off", "Recovery", "Interception")]
+    events.append(make_pass())  # no pass.type: open play
+    passes = transform.eligible_passes(transform.passes_table(events), BRAZIL).passes
+    cuts = transform.network_cuts(passes, None)
+    assert list(cuts["openPlay"].pass_type.fillna("-")) == ["Recovery", "Interception", "-"]
+    assert transform.removed_set_pieces(passes) == {"Corner": 1, "Free Kick": 1, "Throw-in": 1, "Goal Kick": 1, "Kick Off": 1}
+
+
+def test_cut_highlights_find_shift_and_drop():
+    # player 1: 6 passes at x=60 in full, 5 at x=40 in the cut; player 2 loses 3 of 4 passes
+    full_events = [make_pass(player_id=1, recipient_id=2, location=(60, 40)) for _ in range(6)]
+    full_events += [make_pass(player_id=2, recipient_id=1, location=(50, 40)) for _ in range(4)]
+    cut_events = [make_pass(player_id=1, recipient_id=2, location=(40, 40)) for _ in range(5)]
+    cut_events += [make_pass(player_id=2, recipient_id=1, location=(50, 40))]
+    full, cut = (metrics.network_nodes(network(e)) for e in (full_events, cut_events))
+    h = metrics.cut_highlights(full, cut)
+    assert (h.shift_id, h.shift_m) == (1, 18.3)  # 20 yd
+    assert (h.drop_id, h.drop_from, h.drop_to) == (2, 4, 1)
+
+
+def test_identical_cut_has_no_highlights():
+    nodes = metrics.network_nodes(network([make_pass(player_id=1, recipient_id=2) for _ in range(5)]))
+    assert metrics.cut_highlights(nodes, nodes) == metrics.CutHighlights(None, None, None, None, None)
+
+
 # --- substitutions -------------------------------------------------------------------
 
 def test_substitute_with_few_passes_keeps_node():

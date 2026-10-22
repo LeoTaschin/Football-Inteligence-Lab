@@ -84,6 +84,28 @@ export interface Substitution {
   reason: string | null;
 }
 
+export type CutKey = "firstSub" | "openPlay" | "firstSubOpen";
+
+/** A node of a cut: same as the full network's, without the "sem bola" fields. */
+export type CutNode = Omit<NetworkNode, "def" | "shift">;
+
+/** One of the network cuts of CLAUDE.md 5.9, compared with the full network. */
+export interface NetworkCut {
+  completed: number;
+  sameAsFull: boolean;
+  /** the team's first substitution, for the cuts "até a 1ª substituição" */
+  cutAt: { minute: number; out: number; in: number } | null;
+  /** set-piece passes removed by "só jogo aberto", by StatsBomb pass.type */
+  removed: Record<"Corner" | "Free Kick" | "Throw-in" | "Goal Kick" | "Kick Off", number> | null;
+  highlights: {
+    shift: { playerId: number; meters: number } | null;
+    drop: { playerId: number; from: number; to: number } | null;
+  };
+  nodes: CutNode[];
+  edges: DirectedEdge[];
+  pairs: Pair[];
+}
+
 export interface TeamData {
   teamId: number;
   name: string;
@@ -98,6 +120,7 @@ export interface TeamData {
   nodes: NetworkNode[];
   edges: DirectedEdge[];
   pairs: Pair[];
+  cuts: Record<CutKey, NetworkCut>;
   substitutions: Substitution[];
   shots: {
     count: number;

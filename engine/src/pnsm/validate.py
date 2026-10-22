@@ -43,6 +43,24 @@ def check_match(data: dict, events: list[dict], periods: tuple[int, ...]) -> dic
         check("pairSumEqualsCompleted", sum(p["n"] for p in team["pairs"]) == completed,
               f"{label}: soma dos pares ≠ {completed}")
 
+        cuts = team["cuts"]
+        for key, cut in cuts.items():
+            ids = {n["playerId"] for n in cut["nodes"]}
+            n = cut["completed"]
+            check("cutSumsAdd", sum(e["n"] for e in cut["edges"]) == n and sum(x["passes"] for x in cut["nodes"]) == n
+                  and sum(p["n"] for p in cut["pairs"]) == n, f"{label}/{key}: soma das conexões, nós ou pares ≠ {n}")
+            check("cutEdgesHaveNodes", all(e["from"] in ids and e["to"] in ids for e in cut["edges"]),
+                  f"{label}/{key}: conexão com jogador sem nó")
+            check("cutNotLarger", n <= completed, f"{label}/{key}: recorte com mais passes que a partida inteira")
+        # open play = full minus the set pieces it removed, in both periods
+        check("openPlayAddsUp", cuts["openPlay"]["completed"] + sum(cuts["openPlay"]["removed"].values()) == completed,
+              f"{label}: jogo aberto + bolas paradas ≠ {completed}")
+        check("firstSubOpenAddsUp",
+              cuts["firstSubOpen"]["completed"] + sum(cuts["firstSubOpen"]["removed"].values()) == cuts["firstSub"]["completed"],
+              f"{label}: até a 1ª sub, jogo aberto + bolas paradas ≠ recorte")
+        check("noSubMeansSame", bool(team["substitutions"]) or cuts["firstSub"]["sameAsFull"],
+              f"{label}: sem substituição mas recorte diferente da partida inteira")
+
         team_shots = shots_by_team.get(tid, [])
         check("shotCount", team["shots"]["count"] == len(team_shots), f"{label}: chutes exportados ≠ eventos Shot")
         shot_goals = sum(1 for s in team_shots if s["shot"]["outcome"]["name"] == "Goal")

@@ -219,7 +219,7 @@ Ordenar pares não dirigidos pela soma; exibir os 10 maiores com a separação i
 
 ### 5.5 Substituições
 
-A rede da partida inteira pode juntar jogadores que não estiveram juntos em campo. Exportar a lista de substituições (`minute`, `out`, `in`) e marcar nós como `subbedIn` / `subbedOut` com minuto. A UI mostra o aviso. **Pendente (Etapa 2):** opção "até a 1ª substituição".
+A rede da partida inteira pode juntar jogadores que não estiveram juntos em campo. Exportar a lista de substituições (`minute`, `out`, `in`) e marcar nós como `subbedIn` / `subbedOut` com minuto. A UI mostra o aviso. O recorte "até a 1ª substituição" está em 5.9.
 
 ### 5.6 Com bola × sem bola
 
@@ -255,6 +255,18 @@ Regras já definidas no plano do projeto: um marcador por `Shot`, área proporci
 - **Distância (`distance`):** do ponto do chute ao centro do gol (120, 40), em metros, 1 casa.
 - **Maiores chances (`top`):** índices em `items` dos 5 chutes de maior xG (empate: o mais cedo primeiro); chute sem xG não entra.
 - **Profundidade do campo (`scale.shotsFromX`):** o site desenha o campo de `shotsFromX` até x = 120. Vale 60 (meio campo) e só recua, em passos de 5 jardas, quando algum chute da partida sai de trás do meio (ex.: Pelé, x = 45,9, na semifinal).
+
+
+### 5.9 Recortes da rede (Etapa 2)
+
+Dois filtros combináveis sobre os passes elegíveis de 5.1, dando **4 redes por equipe**: `full`, `firstSub`, `openPlay`, `firstSubOpen`.
+
+- **Até a 1ª substituição (`firstSub`):** ficam os passes com `index` **menor** que o `index` do primeiro evento `Substitution` **da própria equipe** (corte pelo índice, não pelo minuto). Equipe sem substituição: rede igual à `full` (`sameAsFull: true`). Cada equipe tem o seu corte.
+- **Só jogo aberto (`openPlay`):** saem passes com `pass.type` em `{Corner, Free Kick, Throw-in, Goal Kick, Kick Off}`. `Recovery` e `Interception` são jogo aberto e ficam. Exportar quantos saíram por tipo (`removed`).
+- **`firstSubOpen`:** os dois filtros juntos.
+- Nós, conexões e pares são recalculados em cada recorte com as regras de 5.2–5.4; o nó de quem ficou sem passes no recorte desaparece. Posição "sem bola" (5.6) só na `full`.
+- **Destaques (`highlights`), comparando com a `full`:** o jogador cuja posição mais muda (`shift`: distância entre as medianas, em metros, entre jogadores com ≥ 5 passes nos dois) e o de maior queda de passes (`drop`). `null` quando nada muda.
+- Mesma escala (`scale`) da partida inteira em todos os recortes.
 
 ---
 
@@ -319,6 +331,7 @@ Tipos devem existir em `engine` (pydantic/dataclasses) e espelhados em `site/src
 Campos a mais que o export gera (o exemplo acima é o mínimo; a fonte de verdade é `engine/src/pnsm/export.py`):
 
 - `match.stadium`; `scale` = `{maxPasses, maxPair, maxDirected}` da partida (mesma escala para as duas equipes).
+- Por equipe: `cuts` = `{firstSub, openPlay, firstSubOpen}` (5.9), cada um com `completed`, `sameAsFull`, `cutAt` (`{minute, out, in}` ou `null`), `removed` (por `pass.type`, ou `null`), `highlights` (`shift`, `drop`), `nodes`, `edges`, `pairs` (nós sem `def`/`shift`); a rede `full` é a de sempre (`nodes`, `edges`, `pairs`).
 - Por equipe: `teamId`; `passes.excluded.period`; `pairs` = `[{a, b, forward, backward, n}]` ordenados por `n` (`a` é quem passou mais; usado nas linhas não dirigidas e no Top 10, para o site não somar nada); `phase` = `{ballHeight, defHeight, shiftMeters}` (sem o goleiro).
 - Por nó: `positionFrom` (`passes` | `received`, ver 5.2); `def.lowSample` (menos de 5 ações); `shift` em metros (`def.x − ball.x`); `sub` = `{type: "in" | "out", minute, with: playerId}` ou `null`.
 - Por gol: `teamId`, `scorerId`, `passes`, `players`; `touches[].playerId`. O replay começa depois do último toque do adversário com a bola na posse (o `possession` do StatsBomb nem sempre muda quando a bola troca de dono).
