@@ -1,0 +1,428 @@
+.page {
+  padding-top: 32px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+.breadcrumb a {
+  color: var(--text-muted);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.who {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.badge {
+  flex: none;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 3px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.names {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.name {
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.sub {
+  font-size: 15px;
+  color: var(--text-2);
+}
+
+.lead {
+  font-size: 19px;
+  line-height: 1.45;
+  color: var(--text-2);
+  max-width: 880px;
+}
+
+.notice {
+  max-width: 880px;
+  background: var(--surface);
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px 24px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 0;
+}
+
+.stat,
+.statSmall {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.stat .statValue {
+  font-size: 28px;
+  font-weight: 800;
+}
+.statSmall .statValue {
+  font-size: 18px;
+  font-weight: 800;
+}
+.statLabel {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.statSmall .statLabel {
+  font-size: 11px;
+}
+
+.gamesHead {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px 16px;
+}
+
+.h2 {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.segmented {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  background: var(--row);
+  border-radius: 999px;
+}
+.segmented button {
+  min-height: 40px;
+  padding: 0 16px;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-2);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.segmented button[aria-pressed="true"] {
+  background: var(--bg);
+  color: var(--text);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pitchScroll {
+  overflow-x: auto;
+}
+
+.pitchBox {
+  min-width: 480px;
+  border: 1px solid var(--line);
+}
+
+.ghostSwatch {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1.5px dashed var(--text);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr));
+  gap: 16px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--bg);
+  text-align: left;
+  cursor: pointer;
+  color: var(--text);
+  font: inherit;
+  transition: border-color 0.2s ease;
+}
+.card:hover {
+  border-color: var(--text);
+}
+
+.cardHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.cardScore {
+  white-space: nowrap;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.cardOpp {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.cardStats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.cardPartner {
+  font-size: 13px;
+  color: var(--text-2);
+}
+
+.phases {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.phaseRow {
+  display: grid;
+  grid-template-columns: minmax(0, 8rem) minmax(0, 1fr) 56px;
+  gap: 12px;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 6px;
+  border: none;
+  border-bottom: 1px solid var(--row);
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  color: var(--text);
+  font: inherit;
+}
+.phaseRow:hover {
+  background: var(--surface);
+}
+.phaseRow[aria-pressed="true"] {
+  background: var(--row);
+}
+
+.phaseLabel {
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.phaseTrack {
+  position: relative;
+  height: 22px;
+}
+.phaseTrack::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 10px;
+  height: 2px;
+  background: var(--row);
+}
+
+.phaseMid {
+  position: absolute;
+  left: 50%;
+  top: 4px;
+  width: 1px;
+  height: 14px;
+  background: var(--line);
+}
+
+.phaseSpan {
+  position: absolute;
+  top: 10px;
+  height: 2px;
+  opacity: 0.5;
+}
+
+.phaseBall,
+.phaseDef {
+  position: absolute;
+  top: 4px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+.phaseBall {
+  border: 2px solid;
+}
+.phaseDef {
+  border: 1.5px dashed var(--text);
+  background: var(--bg);
+}
+
+.phaseShift {
+  font-size: 14px;
+  font-weight: 700;
+  text-align: right;
+}
+
+.gameCard {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.gameCardHead {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.gameTitle {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.gameStats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.text {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-2);
+}
+
+.chip {
+  font-size: 13px;
+  color: var(--text-2);
+  background: var(--row);
+  border-radius: var(--radius-sm);
+  padding: 8px 10px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line);
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.button:hover {
+  border-color: var(--text);
+}
+
+.with,
+.others {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.asideTitle {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.withList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.listTitle {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-2);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.chips a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px 32px;
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+.footer p:first-child {
+  max-width: 720px;
+}
+
+.credit {
+  text-align: right;
+}

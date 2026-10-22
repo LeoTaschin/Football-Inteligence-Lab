@@ -8,6 +8,7 @@ import { Campaign } from "./routes/Campaign";
 import { Home } from "./routes/Home";
 import { Match } from "./routes/Match";
 import { Methodology } from "./routes/Methodology";
+import { Player } from "./routes/Player";
 import "./styles/global.css";
 
 const router = createBrowserRouter([
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
       { path: "/", element: <Home /> },
       { path: "/pnsm/1970", element: <Campaign /> },
       { path: "/pnsm/1970/:matchId", element: <Match /> },
+      { path: "/pnsm/1970/jogador/:slug", element: <Player /> },
       { path: "/pnsm/metodologia", element: <Methodology /> },
       { path: "*", element: <NotFound /> },
     ],

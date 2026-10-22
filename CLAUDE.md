@@ -390,6 +390,7 @@ Notas dos cartões (`note`) podem ser geradas por regras simples (ex.: "único j
 | `/pnsm/1970` | Campanha 1970 | `collections/wc1970-brazil.json` |
 | `/pnsm/1970/:matchId` | Partida | `matches/{id}.json` |
 | `/pnsm/metodologia` | Metodologia | estático + `index.json` |
+| `/pnsm/1970/jogador/:slug` | Jogador (Etapa 2) | `players/{slug}.json` + `matches/{id}.json` do jogo escolhido |
 
 Links do post do LinkedIn apontam para `/pnsm/1970` ou direto para uma partida.
 
@@ -420,6 +421,12 @@ Links do post do LinkedIn apontam para `/pnsm/1970` ou direto para uma partida.
   4. **Finalizações** — uma equipe por vez (mesmo seletor da Rede), meio campo vertical à esquerda (ataca para cima; recua até `scale.shotsFromX`) e painel à direita. Um ícone por chute conforme o resultado (bola de futebol no gol; luva, trave, bloqueio e seta, de traço fino; selo F/P/E em bola parada) e um halo com área ∝ xG. Filtros Todos / Só jogo aberto / Só gols. Clique num chute → tracejado reto do ponto do chute ao ponto final (`end`), com marcador (rótulo só no bloqueio e quando a bola não chega à linha do gol); painel com xG, parte do corpo, tipo, distância, vista frontal do gol (onde cruzou a linha) e a frase do desfecho (`finish`). "Maiores chances" (`shots.top`). Estado na URL (`?aba=finalizacoes&equipe=2&chute=2-13`).
 - Top 10 combinações de cada equipe.
 - Rodapé com metodologia resumida e atribuição.
+
+**Jogador** (Etapa 2, 5.10)
+- Trilha, número, nome, posição; frase de resumo e faixa de números gerados dos dados exportados; aviso quando há um jogo só.
+- "Jogo a jogo" com visão **Um jogo** (seletor de partida + rede completa com o jogador selecionado, setas e a posição sem bola tracejada; clicar noutro jogador abre a página dele na mesma partida) ou **Todos os jogos** (grade de mini-redes com o jogador em destaque; clicar abre o jogo). "Com bola × sem bola" jogo a jogo.
+- Painel: cartão do jogo, "Com quem ele jogou" (links) e "Outros jogadores" da mesma equipe. URL: `?visao=todos`, `?jogo=6`, `?partida=<id>`.
+- Links para a página: painel do jogador na Partida e "Quem mais passou" na Campanha.
 
 **Metodologia**
 - Índice lateral; seções: A pergunta · Dados (tabela com match_id, tentados, completos) · Quais passes entram · Como a rede é desenhada · Validação · Limitações · Reproduzir (comandos + link do GitHub) · Atribuição.

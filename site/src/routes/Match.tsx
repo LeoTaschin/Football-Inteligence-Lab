@@ -10,7 +10,7 @@ import { TabPanel, Tabs } from "../components/Tabs";
 import { competitionPt, match as copy, goals as goalsCopy, site, tabs as tabsCopy } from "../content/pt";
 import { useCollection, useMatch } from "../lib/data";
 import { formatDate } from "../lib/format";
-import type { CampaignMatch, MatchData, TeamData } from "../types/data";
+import type { CampaignMatch, MatchData, PlayerRef, TeamData } from "../types/data";
 import styles from "./Match.module.css";
 
 const MIN_OPTIONS = [3, 5, 8];
@@ -32,7 +32,8 @@ export function Match() {
   if (!valid) return <NotFound />;
   if (state.status !== "ready") return <Status state={state} />;
   const campaign = collection.status === "ready" ? collection.data.matches : [];
-  return <MatchView key={id} data={state.data} campaign={campaign} />;
+  const players = collection.status === "ready" ? collection.data.players : [];
+  return <MatchView key={id} data={state.data} campaign={campaign} players={players} />;
 }
 
 /** Tab, team, cut, selection, filter, goal and shot live in the URL (?aba=gols&gol=4, ?equipe=2&periodo=1sub&aberto=1,
@@ -91,8 +92,9 @@ function useMatchParams(data: MatchData) {
   };
 }
 
-function MatchView({ data, campaign }: { data: MatchData; campaign: CampaignMatch[] }) {
+function MatchView({ data, campaign, players }: { data: MatchData; campaign: CampaignMatch[]; players: PlayerRef[] }) {
   const params = useMatchParams(data);
+  const slugs = new Map(players.map((p) => [p.playerId, p.slug]));
   const { tab, setTab, goal, setGoal, shot, setShot } = params;
   const { match, teams } = data;
 
@@ -176,6 +178,7 @@ function MatchView({ data, campaign }: { data: MatchData; campaign: CampaignMatc
             selectedId={params.selectedId}
             onSelect={params.toggle}
             onClear={params.clear}
+            slugOf={(pid) => slugs.get(pid)}
           />
         </TabPanel>
       )}

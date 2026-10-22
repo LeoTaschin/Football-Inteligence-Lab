@@ -71,7 +71,10 @@ function CampaignView({ data }: { data: CollectionData }) {
         <div className={styles.numbers}>
           <div className={styles.block}>
             <h3 className={styles.h3}>{copy.passersTitle}</h3>
-            <BarList rows={data.topPassers.map((p) => ({ key: p.playerId, name: p.name, n: p.n }))} color={data.colors.line} />
+            <BarList
+              rows={data.topPassers.map((p) => ({ key: p.playerId, name: p.name, n: p.n, href: `/pnsm/1970/jogador/${p.slug}` }))}
+              color={data.colors.line}
+            />
             <p className={styles.note}>
               {copy.passersNote(
                 n,

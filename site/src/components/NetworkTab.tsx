@@ -25,6 +25,8 @@ interface NetworkTabProps {
   selectedId: number | null;
   onSelect: (playerId: number) => void;
   onClear: () => void;
+  /** playerId → player page slug */
+  slugOf?: (playerId: number) => string | undefined;
 }
 
 /** "Rede de passes": one team at a time, pitch on the left, the network's story on the right. */
@@ -116,7 +118,7 @@ export function NetworkTab(p: NetworkTabProps) {
           </div>
 
           {selected !== null ? (
-            <PlayerPanel team={team} net={net} playerId={selected} onClear={p.onClear} />
+            <PlayerPanel team={team} net={net} playerId={selected} onClear={p.onClear} slug={p.slugOf?.(selected)} />
           ) : (
             <p className={layout.hint}>{missing ? `${copy.notInCut(missing)} ${copy.hint}` : copy.hint}</p>
           )}

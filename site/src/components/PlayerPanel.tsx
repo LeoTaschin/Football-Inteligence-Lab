@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import { match as copy } from "../content/pt";
 import { formatPercent } from "../lib/format";
 import type { TeamData, TeamNetwork } from "../types/data";
@@ -11,9 +13,11 @@ interface PlayerPanelProps {
   net: TeamNetwork;
   playerId: number;
   onClear: () => void;
+  /** player page slug, when the page exists */
+  slug?: string;
 }
 
-export function PlayerPanel({ team, net, playerId, onClear }: PlayerPanelProps) {
+export function PlayerPanel({ team, net, playerId, onClear, slug }: PlayerPanelProps) {
   const byId = new Map(net.nodes.map((n) => [n.playerId, n]));
   const node = byId.get(playerId);
   if (!node) return null;
@@ -59,6 +63,11 @@ export function PlayerPanel({ team, net, playerId, onClear }: PlayerPanelProps) 
         </div>
         {subText && <span className={styles.note}>{subText}</span>}
         {node.positionFrom === "received" && <span className={styles.note}>{copy.panel.fromReceived}</span>}
+        {slug && (
+          <Link className={styles.link} to={`/pnsm/1970/jogador/${slug}`}>
+            {copy.playerLink(node.name)}
+          </Link>
+        )}
       </div>
 
       <div className={styles.list}>

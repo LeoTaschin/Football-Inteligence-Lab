@@ -82,6 +82,8 @@ export const match = {
   hint: "Selecione um jogador em qualquer um dos campos. As setas mostram a direção dos passes: na cor do time, os que ele deu; em cinza-escuro, os que recebeu.",
   hintButton: (name: string) => `Ver a rede do ${name}`,
   clear: "Limpar seleção",
+  ghost: "sem bola",
+  playerLink: (name: string) => `Ver ${name} na campanha →`,
   panel: {
     passes: "passes dados",
     received: "passes recebidos",
@@ -436,4 +438,85 @@ export const network = {
   legendReceived: "passes recebidos",
   captionSelected: (name: string) => `Setas: na cor do time, os passes que ${name} deu; em cinza-escuro, os que recebeu. Mesmo mínimo por dupla.`,
   captionAll: (min: number) => `Cada linha soma os passes de ida e volta da dupla; só aparecem duplas com pelo menos ${min} passes.`,
+};
+
+const STAGE_IN: Record<string, string> = {
+  Final: "na final",
+  Semifinal: "na semifinal",
+  "Quartas de final": "nas quartas de final",
+  "Fase de grupos": "na fase de grupos",
+};
+
+export const player = {
+  breadcrumb: "Campanha 1970",
+  sub: (position: string | null, team: string, games: number) =>
+    [position, team, `${games} ${games === 1 ? "jogo" : "jogos"} na campanha`].filter(Boolean).join(" · "),
+  // lead sentence from the exported numbers only
+  lead: (p: {
+    name: string; article: "o" | "a"; team: string; games: number; teamRank: number; passes: number; share: string | null;
+    to: { name: string; n: number } | null; from: { name: string; n: number } | null; avgShift: number | null;
+    opponent?: { article: "o" | "a"; name: string }; stage?: string; rankInGame?: number;
+  }) => {
+    const of = ofTeam(p.article, p.team);
+    if (p.games === 1 && p.opponent) {
+      const rank = p.rankInGame === 1 ? "o que mais passou no time" : `${p.rankInGame}º do time em passes`;
+      const head = `Jogou contra ${withArticle(p.opponent.article, p.opponent.name)} ${STAGE_IN[p.stage ?? ""] ?? ""}: ${p.passes} passes completos${p.share ? `, ${p.share} dos passes ${of}` : ""}, ${rank}.`;
+      return p.to ? `${head} Passou mais para ${p.to.name} (${p.to.n}).` : head;
+    }
+    const head =
+      p.teamRank === 1
+        ? `Foi quem mais passou na campanha: ${p.passes} passes completos${p.share ? `, ${p.share} dos passes ${of}` : ""}.`
+        : `${p.teamRank}º ${of} em passes na campanha: ${p.passes} passes completos${p.share ? `, ${p.share} dos passes do time nos jogos em que esteve em campo` : ""}.`;
+    const partners =
+      p.to && p.from
+        ? ` ${p.to.name} foi o destino favorito (${p.to.n} passes) e ${p.from.name} quem mais o acionou (${p.from.n}).`
+        : "";
+    const shift =
+      p.avgShift === null || Math.round(p.avgShift) === 0
+        ? ""
+        : ` Entre as ações com bola e sem bola, ${p.avgShift < 0 ? "recuou" : "avançou"} em média ${Math.round(Math.abs(p.avgShift))} m.`;
+    return head + partners + shift;
+  },
+  single: "Uma partida só: os números abaixo são dessa partida, não de uma campanha. Os dados abertos do StatsBomb trazem apenas os jogos do Brasil.",
+  stats: {
+    passes: (rank: number) => `passes completos · ${rank}º do time`,
+    received: "passes recebidos",
+    share: (article: "o" | "a", team: string) => `dos passes ${ofTeam(article, team)}`,
+    topPasser: (games: number) => (games === 1 ? "jogo como quem mais passou" : "jogos como quem mais passou"),
+    shift: "da posição com bola para a sem bola",
+  },
+  gamesTitle: "Jogo a jogo",
+  viewLabel: "Visão",
+  views: { one: "Um jogo", all: "Todos os jogos" },
+  viewNoteOne: (name: string) => `${name} em destaque na rede da partida escolhida. Clique em outro jogador para abrir a página dele.`,
+  viewNoteAll: (name: string) => `A rede de cada partida com ${name} em destaque: as linhas fortes são as duplas dele. Clique num jogo para abri-lo.`,
+  gameLabel: "Partida",
+  gameShort: (stage: string, order: number, opponent: string) =>
+    `${stage === "Final" ? "Final" : stage === "Semifinal" ? "Semi" : stage === "Quartas de final" ? "Quartas" : `Jogo ${order}`} · ${opponent}`,
+  cardKicker: (stage: string, order: number) => (stage === "Fase de grupos" ? `Jogo ${order}` : stage),
+  gameKicker: (stage: string, order: number) => (stage === "Fase de grupos" ? `Jogo ${order} · Fase de grupos` : stage),
+  gameTitle: (team: string, score: [number, number], opponent: string) => `${team} ${score[0]} × ${score[1]} ${opponent}`,
+  gameStats: { passes: "passes dados", received: "recebidos", rank: "no time" },
+  partner: (name: string, n: number) => `Dupla mais usada: ${name} (${n} passes, ida e volta).`,
+  partnerShort: (name: string, n: number) => `Dupla mais usada: ${name} (${n})`,
+  subIn: (minute: number) => `Entrou aos ${minute}′.`,
+  subOut: (minute: number) => `Saiu aos ${minute}′.`,
+  openMatch: "Ver a partida →",
+  openGameAria: (name: string, game: string) => `Ver ${name} em ${game}`,
+  legendGiven: "passes que ele deu",
+  legendReceived: "passes que recebeu",
+  legendGhost: "posição sem bola",
+  phasesTitle: "Com bola × sem bola",
+  phasesHint: "altura no campo, atacando para a direita",
+  phasesNote:
+    "Círculo cheio: mediana de onde completou passes (com bola). Tracejado: mediana das ações defensivas — pressões, recuperações, duelos, interceptações, cortes e bloqueios (sem bola). São posições médias das ações, não a posição real sem a bola.",
+  withTitle: "Com quem ele jogou",
+  withNote: (games: number) => (games === 1 ? "Passes completos na partida, em cada direção." : `Passes completos nos ${games} jogos, em cada direção.`),
+  passedTo: "Passou para",
+  receivedFrom: "Recebeu de",
+  othersTitle: "Outros jogadores",
+  othersNote: "Todo jogador que aparece numa rede da campanha tem página, do Brasil e dos adversários.",
+  footer:
+    "Passes completos com destinatário, 1º e 2º tempos, somando os jogos em que o jogador esteve em campo; a porcentagem é sobre os passes do time nesses jogos. Agregação pelo identificador do jogador no StatsBomb, não pelo nome.",
+  meters: (m: number) => `${m < 0 ? "−" : "+"}${Math.round(Math.abs(m))} m`,
 };

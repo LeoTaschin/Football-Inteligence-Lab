@@ -124,3 +124,21 @@
   width: 14px;
   height: 3px;
 }
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 16px;
+  border-radius: var(--radius-md);
+  background: var(--text);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.link:hover {
+  color: #ffffff;
+  opacity: 0.9;
+}

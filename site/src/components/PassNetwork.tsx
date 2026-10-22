@@ -16,9 +16,11 @@ interface PassNetworkProps {
   minPasses: number;
   selectedId: number | null;
   onSelect: (playerId: number) => void;
+  /** the selected player's "sem bola" position (CLAUDE.md 5.6), drawn as a dashed ghost */
+  ghost?: { x: number; y: number } | null;
 }
 
-export function PassNetwork({ team, net, scale, minPasses, selectedId, onSelect }: PassNetworkProps) {
+export function PassNetwork({ team, net, scale, minPasses, selectedId, onSelect, ghost }: PassNetworkProps) {
   const byId = new Map(net.nodes.map((n) => [n.playerId, n]));
   const radius = (n: CutNode) => nodeRadius(n.passes, scale.maxPasses);
   const visiblePairs = net.pairs.filter((p) => p.n >= minPasses);
@@ -100,6 +102,8 @@ export function PassNetwork({ team, net, scale, minPasses, selectedId, onSelect 
         })}
       </g>
 
+      {hasSel && ghost && <Ghost from={byId.get(selectedId!)!.ball} at={ghost} r={radius(byId.get(selectedId!)!)} />}
+
       <g>
         {net.nodes.map((n) => {
           const r = radius(n);
@@ -160,6 +164,19 @@ export function PassNetwork({ team, net, scale, minPasses, selectedId, onSelect 
         })}
       </g>
     </Pitch>
+  );
+}
+
+/** Dashed circle at the "sem bola" position, joined to the node by a dashed line. */
+function Ghost({ from, at, r }: { from: { x: number; y: number }; at: { x: number; y: number }; r: number }) {
+  return (
+    <g aria-hidden="true" className={styles.ghost}>
+      <line x1={from.x} y1={from.y} x2={at.x} y2={at.y} />
+      <circle cx={at.x} cy={at.y} r={r * PX} />
+      <text x={at.x} y={at.y + (r + 3) * PX} fontSize={11 * PX} textAnchor="middle" dominantBaseline="hanging">
+        {copy.ghost}
+      </text>
+    </g>
   );
 }
 
