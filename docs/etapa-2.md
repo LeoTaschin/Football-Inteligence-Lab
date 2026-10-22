@@ -34,7 +34,7 @@
 
 ## Design
 
-Canvas "F.I.L Passing Network": https://claude.ai/artifact/Xbg6HqKREbgp8iwGkpKdNF — área **"PNSM · Etapa 2"**: `Recortes.dc.html` (rede de passes, uma seleção), `Finalizacoes.dc.html`, `Jogador.dc.html`, `Jogadores.dc.html`, cada um com a versão `-mobile`.
+Canvas de design (privado) "F.I.L Passing Network" — área **"PNSM · Etapa 2"**: `Recortes.dc.html` (rede de passes, uma seleção), `Finalizacoes.dc.html`, `Jogador.dc.html`, `Jogadores.dc.html`, cada um com a versão `-mobile`.
 
 ## Achados (valores conferidos nos testes de regressão)
 

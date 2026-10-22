@@ -5,7 +5,7 @@ Especificação do produto e guia de desenvolvimento. Este arquivo fica na raiz 
 - **Autor:** Leonardo Taschin (FIAP, São Paulo)
 - **Versão:** 22/10/2026
 - **Estado:** Projeto 01 (PNSM) no ar com as Etapas 1 e 2 concluídas (campanha do Brasil na Copa de 1970). **Próximo:** Projeto 02 (modelo de xG próprio), a planejar depois dos estudos do autor — ver `docs/projeto-02-xg.md`.
-- **Design de referência:** canvas "F.I.L Passing Network" no Claude (https://claude.ai/artifact/Xbg6HqKREbgp8iwGkpKdNF), com as telas Home, Campanha 1970, Partida, Metodologia, Post do LinkedIn, Replay do 4º gol e Com bola × sem bola (Etapa 1) e Rede de passes, Finalizações, Jogador e Jogadores no padrão "uma seleção" (Etapa 2). Telas novas são desenhadas e aprovadas no canvas antes do código.
+- **Design de referência:** canvas de design privado "F.I.L Passing Network" no Claude (link fora do repositório), com as telas Home, Campanha 1970, Partida, Metodologia, Post do LinkedIn, Replay do 4º gol e Com bola × sem bola (Etapa 1) e Rede de passes, Finalizações, Jogador e Jogadores no padrão "uma seleção" (Etapa 2). Telas novas são desenhadas e aprovadas no canvas antes do código.
 
 ---
 
