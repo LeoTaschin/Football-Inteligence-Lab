@@ -43,6 +43,7 @@ def build_match(meta: dict, events: list[dict], lineups: list[dict], cfg: Collec
     for team_id, team_name in sides:
         result = transform.eligible_passes(table, team_id, cfg.periods)
         raw.append((team_id, team_name, result, metrics.network_nodes(result.passes)))
+    # one scale for both teams and every cut: the full network is the largest
     # same scale for both teams: fair visual comparison
     max_passes = max(int(nodes.passes.max()) for *_, nodes in raw if not nodes.empty)
 
@@ -90,10 +91,67 @@ def build_match(meta: dict, events: list[dict], lineups: list[dict], cfg: Collec
     return data
 
 
+def _network(passes: pd.DataFrame, nodes: pd.DataFrame, players: dict[int, names.Player],
+             sub_info: dict[int, dict], max_passes: int) -> tuple[list[dict], list[dict], list[dict]]:
+    """Nodes (without the "sem bola" fields), directed edges and pairs of one network."""
+    edges = metrics.directed_edges(passes)
+    pairs = metrics.pair_totals(edges)
+    sides = place_labels([
+        LabelTarget(pid, row.x, row.y, node_radius_px(row.passes, max_passes), players[pid].name)
+        for pid, row in nodes.iterrows()
+    ])
+    node_list = [{
+        "playerId": int(pid),
+        "num": players[pid].num,
+        "name": players[pid].name,
+        "position": players[pid].position,
+        "ball": {"x": _r(row.x), "y": _r(row.y)},
+        "positionFrom": row.position_from,
+        "passes": int(row.passes),
+        "received": int(row.received),
+        "sub": sub_info.get(int(pid)),
+        "label": sides[pid],
+    } for pid, row in nodes.iterrows()]
+    edge_list = [{"from": int(e.from_id), "to": int(e.to_id), "n": int(e.n)} for e in edges.itertuples()]
+    pair_list = [{"a": int(p.first_id), "b": int(p.second_id), "forward": int(p.forward),
+                  "backward": int(p.backward), "n": int(p.n)} for p in pairs.itertuples()]
+    return node_list, edge_list, pair_list
+
+
+def _cuts(events: list[dict], team_id: int, passes: pd.DataFrame, full_nodes: pd.DataFrame,
+          subs: list[metrics.Substitution], players: dict[int, names.Player], sub_info: dict[int, dict],
+          max_passes: int) -> dict:
+    """The three cuts besides the full network (CLAUDE.md 5.9)."""
+    first_sub = transform.first_substitution_index(events, team_id)
+    cuts = transform.network_cuts(passes, first_sub)
+    removed = transform.removed_set_pieces(passes)
+    removed_until_sub = transform.removed_set_pieces(cuts["firstSub"])
+    cut_at = None if not subs else {"minute": subs[0].minute, "out": subs[0].out_id, "in": subs[0].in_id}
+
+    out = {}
+    for key in transform.CUTS[1:]:
+        cut = cuts[key]
+        nodes = metrics.network_nodes(cut)
+        node_list, edge_list, pair_list = _network(cut, nodes, players, sub_info, max_passes)
+        h = metrics.cut_highlights(full_nodes, nodes)
+        out[key] = {
+            "completed": len(cut),
+            "sameAsFull": len(cut) == len(passes),
+            "cutAt": cut_at if key in ("firstSub", "firstSubOpen") else None,
+            "removed": {"openPlay": removed, "firstSubOpen": removed_until_sub}.get(key),
+            "highlights": {
+                "shift": None if h.shift_id is None else {"playerId": h.shift_id, "meters": h.shift_m},
+                "drop": None if h.drop_id is None else {"playerId": h.drop_id, "from": h.drop_from, "to": h.drop_to},
+            },
+            "nodes": node_list,
+            "edges": edge_list,
+            "pairs": pair_list,
+        }
+    return out
+
+
 def _build_team(team_id: int, team_name: str, result: transform.PassFilterResult, nodes: pd.DataFrame,
                 events: list[dict], players: dict[int, names.Player], cfg: CollectionConfig, max_passes: int) -> dict:
-    edges = metrics.directed_edges(result.passes)
-    pairs = metrics.pair_totals(edges)
     actions = transform.defensive_actions_table(events, team_id, cfg.defensive_actions, cfg.periods)
     defensive = metrics.defensive_positions(actions)
     shot_rows = transform.shots_table(events, team_id, cfg.periods)
@@ -106,29 +164,12 @@ def _build_team(team_id: int, team_name: str, result: transform.PassFilterResult
         sub_info[s.out_id] = {"type": "out", "minute": s.minute, "with": s.in_id}
         sub_info[s.in_id] = {"type": "in", "minute": s.minute, "with": s.out_id}
 
-    sides = place_labels([
-        LabelTarget(pid, row.x, row.y, node_radius_px(row.passes, max_passes), players[pid].name)
-        for pid, row in nodes.iterrows()
-    ])
-
-    node_list = []
-    for pid, row in nodes.iterrows():
-        player = players[pid]
+    node_list, edge_list, pair_list = _network(result.passes, nodes, players, sub_info, max_passes)
+    for n in node_list:
+        pid, row = n["playerId"], nodes.loc[n["playerId"]]
         d = defensive.loc[pid] if pid in defensive.index else None
-        node_list.append({
-            "playerId": int(pid),
-            "num": player.num,
-            "name": player.name,
-            "position": player.position,
-            "ball": {"x": _r(row.x), "y": _r(row.y)},
-            "positionFrom": row.position_from,
-            "def": None if d is None else {"x": _r(d.x), "y": _r(d.y), "n": int(d.n), "lowSample": bool(d.n < LOW_DEF_SAMPLE)},
-            "shift": None if d is None else _r((d.x - row.x) * YARDS_TO_METERS, 1),
-            "passes": int(row.passes),
-            "received": int(row.received),
-            "sub": sub_info.get(int(pid)),
-            "label": sides[pid],
-        })
+        n["def"] = None if d is None else {"x": _r(d.x), "y": _r(d.y), "n": int(d.n), "lowSample": bool(d.n < LOW_DEF_SAMPLE)}
+        n["shift"] = None if d is None else _r((d.x - row.x) * YARDS_TO_METERS, 1)
 
     outfield = [n for n in node_list if n["position"] != names.position_pt("Goalkeeper") and n["def"] is not None]
     phase = None
@@ -150,9 +191,9 @@ def _build_team(team_id: int, team_name: str, result: transform.PassFilterResult
                          "noRecipient": result.no_recipient, "noLocation": result.no_location},
         },
         "nodes": node_list,
-        "edges": [{"from": int(e.from_id), "to": int(e.to_id), "n": int(e.n)} for e in edges.itertuples()],
-        "pairs": [{"a": int(p.first_id), "b": int(p.second_id), "forward": int(p.forward),
-                   "backward": int(p.backward), "n": int(p.n)} for p in pairs.itertuples()],
+        "edges": edge_list,
+        "pairs": pair_list,
+        "cuts": _cuts(events, team_id, result.passes, nodes, subs, players, sub_info, max_passes),
         "substitutions": [{"minute": s.minute, "out": s.out_id, "in": s.in_id, "reason": s.reason} for s in subs],
         "shots": {"count": shots.count, "goals": shots.goals, "xg": _r(shots.xg),
                   "xgPerShot": None if shots.mean_xg is None else _r(shots.mean_xg, 3),

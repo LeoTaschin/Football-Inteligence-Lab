@@ -125,6 +125,26 @@ def test_shot_map_reaches_back_for_long_shots(all_matches):
 
 
 @pytest.mark.regression
+def test_final_cuts_match_design(all_matches):
+    brazil, italy = all_matches[-1]["teams"]
+    name = lambda team, pid: next(n["name"] for n in team["nodes"] if n["playerId"] == pid)
+    bc, ic = brazil["cuts"], italy["cuts"]
+
+    assert [bc[k]["completed"] for k in ("firstSub", "openPlay", "firstSubOpen")] == [400, 357, 357]
+    assert bc["firstSub"]["sameAsFull"] and bc["firstSub"]["cutAt"] is None
+    assert bc["openPlay"]["removed"] == {"Corner": 2, "Free Kick": 14, "Throw-in": 13, "Goal Kick": 12, "Kick Off": 2}
+    shift = bc["openPlay"]["highlights"]["shift"]
+    assert name(brazil, shift["playerId"]) == "Rivellino" and shift["meters"] == pytest.approx(11, abs=0.5)
+
+    assert [ic[k]["completed"] for k in ("firstSub", "openPlay", "firstSubOpen")] == [193, 189, 148]
+    assert ic["firstSub"]["cutAt"]["minute"] == 74 and name(italy, ic["firstSub"]["cutAt"]["out"]) == "Bertini"
+    assert {n["name"] for n in ic["firstSub"]["nodes"]}.isdisjoint({"Juliano", "Rivera"})
+    assert ic["openPlay"]["removed"] == {"Corner": 4, "Free Kick": 14, "Throw-in": 14, "Goal Kick": 17, "Kick Off": 5}
+    drop = ic["openPlay"]["highlights"]["drop"]
+    assert (name(italy, drop["playerId"]), drop["from"], drop["to"]) == ("Albertosi", 32, 12)
+
+
+@pytest.mark.regression
 def test_campaign_matches_design(cfg, all_matches):
     design = json.loads((FIXTURES / "campaign_design.json").read_text(encoding="utf-8"))
     c = export.build_collection(cfg, all_matches)

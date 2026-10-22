@@ -127,6 +127,34 @@ SHOT_COLUMNS = [
 ]
 
 
+# pass.type values that are set pieces (CLAUDE.md 5.9); Recovery and Interception are open play
+SET_PIECE_PASS_TYPES = ("Corner", "Free Kick", "Throw-in", "Goal Kick", "Kick Off")
+CUTS = ("full", "firstSub", "openPlay", "firstSubOpen")
+
+
+def first_substitution_index(events: list[dict], team_id: int) -> int | None:
+    """``index`` of the team's first ``Substitution`` event, or ``None`` if it made none."""
+    subs = [e["index"] for e in events if e["type"]["name"] == "Substitution" and e["team"]["id"] == team_id]
+    return min(subs) if subs else None
+
+
+def network_cuts(passes: pd.DataFrame, first_sub_index: int | None) -> dict[str, pd.DataFrame]:
+    """The eligible passes in the four cuts of CLAUDE.md 5.9: period (full / until the 1st sub) × open play.
+
+    The cut is by event ``index``, not by minute: a pass in the same minute as the substitution
+    but before it stays.
+    """
+    until_sub = passes if first_sub_index is None else passes[passes["index"] < first_sub_index]
+    open_play = lambda d: d[~d.pass_type.isin(SET_PIECE_PASS_TYPES)]
+    return {"full": passes, "firstSub": until_sub, "openPlay": open_play(passes), "firstSubOpen": open_play(until_sub)}
+
+
+def removed_set_pieces(passes: pd.DataFrame) -> dict[str, int]:
+    """How many passes "só jogo aberto" removes, by pass.type (every type listed, zeros included)."""
+    counts = passes.pass_type.value_counts()
+    return {t: int(counts.get(t, 0)) for t in SET_PIECE_PASS_TYPES}
+
+
 def shots_table(events: list[dict], team_id: int, periods: tuple[int, ...] = (1, 2)) -> pd.DataFrame:
     """``Shot`` events of ``team_id`` inside ``periods``.
 

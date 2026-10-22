@@ -56,17 +56,17 @@
       "y": 38.65
      },
      "positionFrom": "passes",
+     "passes": 70,
+     "received": 77,
+     "sub": null,
+     "label": "below",
      "def": {
       "x": 37.6,
       "y": 41.8,
       "n": 23,
       "lowSample": false
      },
-     "shift": -25.7,
-     "passes": 70,
-     "received": 77,
-     "sub": null,
-     "label": "below"
+     "shift": -25.7
     },
     {
      "playerId": 39708,
@@ -78,17 +78,17 @@
       "y": 69.3
      },
      "positionFrom": "passes",
+     "passes": 62,
+     "received": 70,
+     "sub": null,
+     "label": "below",
      "def": {
       "x": 23.3,
       "y": 57.9,
       "n": 17,
       "lowSample": false
      },
-     "shift": -34.3,
-     "passes": 62,
-     "received": 70,
-     "sub": null,
-     "label": "below"
+     "shift": -34.3
     },
     {
      "playerId": 397620,
@@ -100,17 +100,17 @@
       "y": 51.65
      },
      "positionFrom": "passes",
+     "passes": 52,
+     "received": 54,
+     "sub": null,
+     "label": "below",
      "def": {
       "x": 38.9,
       "y": 45.85,
       "n": 22,
       "lowSample": false
      },
-     "shift": -24.8,
-     "passes": 52,
-     "received": 54,
-     "sub": null,
-     "label": "below"
+     "shift": -24.8
     },
     {
      "playerId": 397629,
@@ -122,17 +122,17 @@
       "y": 13.8
      },
      "positionFrom": "passes",
+     "passes": 41,
+     "received": 38,
+     "sub": null,
+     "label": "above",
      "def": {
       "x": 37.95,
       "y": 16.3,
       "n": 32,
       "lowSample": false
      },
-     "shift": -15.7,
-     "passes": 41,
-     "received": 38,
-     "sub": null,
-     "label": "above"
+     "shift": -15.7
     },
     {
      "playerId": 397630,
@@ -144,17 +144,17 @@
       "y": 17.3
      },
      "positionFrom": "passes",
+     "passes": 32,
+     "received": 39,
+     "sub": null,
+     "label": "below",
      "def": {
       "x": 39.4,
       "y": 32.0,
       "n": 8,
       "lowSample": false
      },
-     "shift": -21.6,
-     "passes": 32,
-     "received": 39,
-     "sub": null,
-     "label": "below"
+     "shift": -21.6
     },
     {
      "playerId": 397626,
@@ -166,17 +166,17 @@
       "y": 38.5
      },
      "positionFrom": "passes",
+     "passes": 31,
+     "received": 11,
+     "sub": null,
+     "label": "below",
      "def": {
       "x": 6.55,
       "y": 41.3,
       "n": 4,
       "lowSample": true
      },
-     "shift": -0.5,
-     "passes": 31,
-     "received": 11,
-     "sub": null,
-     "label": "below"
+     "shift": -0.5
     },
     {
      "playerId": 397627,
@@ -188,17 +188,17 @@
       "y": 23.7
      },
      "positionFrom": "passes",
+     "passes": 27,
+     "received": 21,
+     "sub": null,
+     "label": "below",
      "def": {
       "x": 19.7,
       "y": 33.95,
       "n": 24,
       "lowSample": false
      },
-     "shift": -11.1,
-     "passes": 27,
-     "received": 21,
-     "sub": null,
-     "label": "below"
+     "shift": -11.1
     },
     {
      "playerId": 39712,
@@ -210,17 +210,17 @@
       "y": 43.9
      },
      "positionFrom": "passes",
+     "passes": 24,
+     "received": 30,
+     "sub": null,
+     "label": "below",
      "def": {
       "x": 84.1,
       "y": 44.6,
       "n": 17,
       "lowSample": false
      },
-     "shift": 5.5,
-     "passes": 24,
-     "received": 30,
-     "sub": null,
-     "label": "below"
+     "shift": 5.5
     },
     {
      "playerId": 397637,
@@ -232,17 +232,17 @@
       "y": 40.0
      },
      "positionFrom": "passes",
+     "passes": 22,
+     "received": 23,
+     "sub": null,
+     "label": "above",
      "def": {
       "x": 57.2,
       "y": 30.8,
       "n": 17,
       "lowSample": false
      },
-     "shift": -20.4,
-     "passes": 22,
-     "received": 23,
-     "sub": null,
-     "label": "above"
+     "shift": -20.4
     },
     {
      "playerId": 397622,
@@ -254,17 +254,17 @@
       "y": 61.1
      },
      "positionFrom": "passes",
+     "passes": 20,
+     "received": 27,
+     "sub": null,
+     "label": "below",
      "def": {
       "x": 81.5,
       "y": 63.5,
       "n": 11,
       "lowSample": false
      },
-     "shift": -7.2,
-     "passes": 20,
-     "received": 27,
-     "sub": null,
-     "label": "below"
+     "shift": -7.2
     },
     {
      "playerId": 397628,
@@ -276,17 +276,17 @@
       "y": 52.8
      },
      "positionFrom": "passes",
+     "passes": 19,
+     "received": 10,
+     "sub": null,
+     "label": "below",
      "def": {
       "x": 24.05,
       "y": 45.5,
       "n": 22,
       "lowSample": false
      },
-     "shift": -9.7,
-     "passes": 19,
-     "received": 10,
-     "sub": null,
-     "label": "below"
+     "shift": -9.7
     }
    ],
    "edges": [
@@ -1068,6 +1068,2858 @@
      "n": 1
     }
    ],
+   "cuts": {
+    "firstSub": {
+     "completed": 400,
+     "sameAsFull": true,
+     "cutAt": null,
+     "removed": null,
+     "highlights": {
+      "shift": null,
+      "drop": null
+     },
+     "nodes": [
+      {
+       "playerId": 397621,
+       "num": 8,
+       "name": "Gérson",
+       "position": "Volante (dir.)",
+       "ball": {
+        "x": 65.7,
+        "y": 38.65
+       },
+       "positionFrom": "passes",
+       "passes": 70,
+       "received": 77,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 39708,
+       "num": 4,
+       "name": "Carlos Alberto",
+       "position": "Lateral-direito",
+       "ball": {
+        "x": 60.8,
+        "y": 69.3
+       },
+       "positionFrom": "passes",
+       "passes": 62,
+       "received": 70,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 397620,
+       "num": 5,
+       "name": "Clodoaldo",
+       "position": "Volante (esq.)",
+       "ball": {
+        "x": 66.0,
+        "y": 51.65
+       },
+       "positionFrom": "passes",
+       "passes": 52,
+       "received": 54,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 397629,
+       "num": 16,
+       "name": "Everaldo",
+       "position": "Lateral-esquerdo",
+       "ball": {
+        "x": 55.1,
+        "y": 13.8
+       },
+       "positionFrom": "passes",
+       "passes": 41,
+       "received": 38,
+       "sub": null,
+       "label": "above"
+      },
+      {
+       "playerId": 397630,
+       "num": 11,
+       "name": "Rivellino",
+       "position": "Meio-campo (esq.)",
+       "ball": {
+        "x": 63.05,
+        "y": 17.3
+       },
+       "positionFrom": "passes",
+       "passes": 32,
+       "received": 39,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 397626,
+       "num": 1,
+       "name": "Félix",
+       "position": "Goleiro",
+       "ball": {
+        "x": 7.1,
+        "y": 38.5
+       },
+       "positionFrom": "passes",
+       "passes": 31,
+       "received": 11,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 397627,
+       "num": 3,
+       "name": "Piazza",
+       "position": "Zagueiro (esq.)",
+       "ball": {
+        "x": 31.8,
+        "y": 23.7
+       },
+       "positionFrom": "passes",
+       "passes": 27,
+       "received": 21,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 39712,
+       "num": 10,
+       "name": "Pelé",
+       "position": "Atacante (dir.)",
+       "ball": {
+        "x": 78.1,
+        "y": 43.9
+       },
+       "positionFrom": "passes",
+       "passes": 24,
+       "received": 30,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 397637,
+       "num": 9,
+       "name": "Tostão",
+       "position": "Atacante (esq.)",
+       "ball": {
+        "x": 79.55,
+        "y": 40.0
+       },
+       "positionFrom": "passes",
+       "passes": 22,
+       "received": 23,
+       "sub": null,
+       "label": "above"
+      },
+      {
+       "playerId": 397622,
+       "num": 7,
+       "name": "Jairzinho",
+       "position": "Meio-campo (dir.)",
+       "ball": {
+        "x": 89.35,
+        "y": 61.1
+       },
+       "positionFrom": "passes",
+       "passes": 20,
+       "received": 27,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 397628,
+       "num": 2,
+       "name": "Brito",
+       "position": "Zagueiro (dir.)",
+       "ball": {
+        "x": 34.7,
+        "y": 52.8
+       },
+       "positionFrom": "passes",
+       "passes": 19,
+       "received": 10,
+       "sub": null,
+       "label": "below"
+      }
+     ],
+     "edges": [
+      {
+       "from": 397621,
+       "to": 39708,
+       "n": 26
+      },
+      {
+       "from": 39708,
+       "to": 397621,
+       "n": 18
+      },
+      {
+       "from": 397620,
+       "to": 397621,
+       "n": 18
+      },
+      {
+       "from": 397620,
+       "to": 39708,
+       "n": 16
+      },
+      {
+       "from": 39708,
+       "to": 397620,
+       "n": 14
+      },
+      {
+       "from": 397629,
+       "to": 397630,
+       "n": 14
+      },
+      {
+       "from": 397621,
+       "to": 397629,
+       "n": 12
+      },
+      {
+       "from": 397626,
+       "to": 39708,
+       "n": 12
+      },
+      {
+       "from": 397621,
+       "to": 397620,
+       "n": 11
+      },
+      {
+       "from": 39708,
+       "to": 397622,
+       "n": 9
+      },
+      {
+       "from": 397629,
+       "to": 397621,
+       "n": 9
+      },
+      {
+       "from": 397630,
+       "to": 397629,
+       "n": 9
+      },
+      {
+       "from": 397626,
+       "to": 397627,
+       "n": 8
+      },
+      {
+       "from": 39708,
+       "to": 39712,
+       "n": 7
+      },
+      {
+       "from": 39708,
+       "to": 397637,
+       "n": 7
+      },
+      {
+       "from": 39712,
+       "to": 397621,
+       "n": 7
+      },
+      {
+       "from": 397627,
+       "to": 397621,
+       "n": 7
+      },
+      {
+       "from": 397629,
+       "to": 397627,
+       "n": 7
+      },
+      {
+       "from": 397630,
+       "to": 397620,
+       "n": 7
+      },
+      {
+       "from": 397630,
+       "to": 397621,
+       "n": 7
+      },
+      {
+       "from": 397620,
+       "to": 397622,
+       "n": 6
+      },
+      {
+       "from": 397621,
+       "to": 397630,
+       "n": 6
+      },
+      {
+       "from": 397622,
+       "to": 39712,
+       "n": 6
+      },
+      {
+       "from": 397627,
+       "to": 397629,
+       "n": 6
+      },
+      {
+       "from": 397637,
+       "to": 39712,
+       "n": 6
+      },
+      {
+       "from": 397621,
+       "to": 39712,
+       "n": 5
+      },
+      {
+       "from": 397622,
+       "to": 39708,
+       "n": 5
+      },
+      {
+       "from": 397626,
+       "to": 397629,
+       "n": 5
+      },
+      {
+       "from": 397629,
+       "to": 397620,
+       "n": 5
+      },
+      {
+       "from": 397637,
+       "to": 397630,
+       "n": 5
+      },
+      {
+       "from": 397620,
+       "to": 39712,
+       "n": 4
+      },
+      {
+       "from": 397620,
+       "to": 397630,
+       "n": 4
+      },
+      {
+       "from": 397622,
+       "to": 397621,
+       "n": 4
+      },
+      {
+       "from": 397626,
+       "to": 397621,
+       "n": 4
+      },
+      {
+       "from": 397627,
+       "to": 397630,
+       "n": 4
+      },
+      {
+       "from": 397628,
+       "to": 39708,
+       "n": 4
+      },
+      {
+       "from": 397628,
+       "to": 397620,
+       "n": 4
+      },
+      {
+       "from": 397637,
+       "to": 397620,
+       "n": 4
+      },
+      {
+       "from": 397637,
+       "to": 397622,
+       "n": 4
+      },
+      {
+       "from": 39708,
+       "to": 397628,
+       "n": 3
+      },
+      {
+       "from": 39712,
+       "to": 39708,
+       "n": 3
+      },
+      {
+       "from": 39712,
+       "to": 397620,
+       "n": 3
+      },
+      {
+       "from": 39712,
+       "to": 397622,
+       "n": 3
+      },
+      {
+       "from": 39712,
+       "to": 397637,
+       "n": 3
+      },
+      {
+       "from": 397621,
+       "to": 397626,
+       "n": 3
+      },
+      {
+       "from": 397621,
+       "to": 397637,
+       "n": 3
+      },
+      {
+       "from": 397622,
+       "to": 397637,
+       "n": 3
+      },
+      {
+       "from": 397627,
+       "to": 397620,
+       "n": 3
+      },
+      {
+       "from": 397627,
+       "to": 397626,
+       "n": 3
+      },
+      {
+       "from": 397628,
+       "to": 397630,
+       "n": 3
+      },
+      {
+       "from": 397629,
+       "to": 397637,
+       "n": 3
+      },
+      {
+       "from": 397630,
+       "to": 39708,
+       "n": 3
+      },
+      {
+       "from": 39708,
+       "to": 397626,
+       "n": 2
+      },
+      {
+       "from": 39712,
+       "to": 397630,
+       "n": 2
+      },
+      {
+       "from": 397620,
+       "to": 397637,
+       "n": 2
+      },
+      {
+       "from": 397621,
+       "to": 397628,
+       "n": 2
+      },
+      {
+       "from": 397622,
+       "to": 397620,
+       "n": 2
+      },
+      {
+       "from": 397627,
+       "to": 397628,
+       "n": 2
+      },
+      {
+       "from": 397628,
+       "to": 397621,
+       "n": 2
+      },
+      {
+       "from": 397628,
+       "to": 397627,
+       "n": 2
+      },
+      {
+       "from": 397628,
+       "to": 397629,
+       "n": 2
+      },
+      {
+       "from": 397629,
+       "to": 397622,
+       "n": 2
+      },
+      {
+       "from": 397630,
+       "to": 397622,
+       "n": 2
+      },
+      {
+       "from": 397630,
+       "to": 397627,
+       "n": 2
+      },
+      {
+       "from": 39708,
+       "to": 397629,
+       "n": 1
+      },
+      {
+       "from": 39708,
+       "to": 397630,
+       "n": 1
+      },
+      {
+       "from": 39712,
+       "to": 397626,
+       "n": 1
+      },
+      {
+       "from": 39712,
+       "to": 397628,
+       "n": 1
+      },
+      {
+       "from": 39712,
+       "to": 397629,
+       "n": 1
+      },
+      {
+       "from": 397620,
+       "to": 397628,
+       "n": 1
+      },
+      {
+       "from": 397620,
+       "to": 397629,
+       "n": 1
+      },
+      {
+       "from": 397621,
+       "to": 397622,
+       "n": 1
+      },
+      {
+       "from": 397621,
+       "to": 397627,
+       "n": 1
+      },
+      {
+       "from": 397626,
+       "to": 397620,
+       "n": 1
+      },
+      {
+       "from": 397626,
+       "to": 397628,
+       "n": 1
+      },
+      {
+       "from": 397627,
+       "to": 39708,
+       "n": 1
+      },
+      {
+       "from": 397627,
+       "to": 39712,
+       "n": 1
+      },
+      {
+       "from": 397628,
+       "to": 397626,
+       "n": 1
+      },
+      {
+       "from": 397628,
+       "to": 397637,
+       "n": 1
+      },
+      {
+       "from": 397629,
+       "to": 397626,
+       "n": 1
+      },
+      {
+       "from": 397630,
+       "to": 39712,
+       "n": 1
+      },
+      {
+       "from": 397630,
+       "to": 397637,
+       "n": 1
+      },
+      {
+       "from": 397637,
+       "to": 397621,
+       "n": 1
+      },
+      {
+       "from": 397637,
+       "to": 397627,
+       "n": 1
+      },
+      {
+       "from": 397637,
+       "to": 397629,
+       "n": 1
+      }
+     ],
+     "pairs": [
+      {
+       "a": 397621,
+       "b": 39708,
+       "forward": 26,
+       "backward": 18,
+       "n": 44
+      },
+      {
+       "a": 397620,
+       "b": 39708,
+       "forward": 16,
+       "backward": 14,
+       "n": 30
+      },
+      {
+       "a": 397620,
+       "b": 397621,
+       "forward": 18,
+       "backward": 11,
+       "n": 29
+      },
+      {
+       "a": 397629,
+       "b": 397630,
+       "forward": 14,
+       "backward": 9,
+       "n": 23
+      },
+      {
+       "a": 397621,
+       "b": 397629,
+       "forward": 12,
+       "backward": 9,
+       "n": 21
+      },
+      {
+       "a": 397626,
+       "b": 39708,
+       "forward": 12,
+       "backward": 2,
+       "n": 14
+      },
+      {
+       "a": 39708,
+       "b": 397622,
+       "forward": 9,
+       "backward": 5,
+       "n": 14
+      },
+      {
+       "a": 397629,
+       "b": 397627,
+       "forward": 7,
+       "backward": 6,
+       "n": 13
+      },
+      {
+       "a": 397630,
+       "b": 397621,
+       "forward": 7,
+       "backward": 6,
+       "n": 13
+      },
+      {
+       "a": 39712,
+       "b": 397621,
+       "forward": 7,
+       "backward": 5,
+       "n": 12
+      },
+      {
+       "a": 397626,
+       "b": 397627,
+       "forward": 8,
+       "backward": 3,
+       "n": 11
+      },
+      {
+       "a": 397630,
+       "b": 397620,
+       "forward": 7,
+       "backward": 4,
+       "n": 11
+      },
+      {
+       "a": 39708,
+       "b": 39712,
+       "forward": 7,
+       "backward": 3,
+       "n": 10
+      },
+      {
+       "a": 397622,
+       "b": 39712,
+       "forward": 6,
+       "backward": 3,
+       "n": 9
+      },
+      {
+       "a": 397637,
+       "b": 39712,
+       "forward": 6,
+       "backward": 3,
+       "n": 9
+      },
+      {
+       "a": 397627,
+       "b": 397621,
+       "forward": 7,
+       "backward": 1,
+       "n": 8
+      },
+      {
+       "a": 397620,
+       "b": 397622,
+       "forward": 6,
+       "backward": 2,
+       "n": 8
+      },
+      {
+       "a": 39708,
+       "b": 397637,
+       "forward": 7,
+       "backward": 0,
+       "n": 7
+      },
+      {
+       "a": 397620,
+       "b": 39712,
+       "forward": 4,
+       "backward": 3,
+       "n": 7
+      },
+      {
+       "a": 397626,
+       "b": 397621,
+       "forward": 4,
+       "backward": 3,
+       "n": 7
+      },
+      {
+       "a": 397628,
+       "b": 39708,
+       "forward": 4,
+       "backward": 3,
+       "n": 7
+      },
+      {
+       "a": 397637,
+       "b": 397622,
+       "forward": 4,
+       "backward": 3,
+       "n": 7
+      },
+      {
+       "a": 397626,
+       "b": 397629,
+       "forward": 5,
+       "backward": 1,
+       "n": 6
+      },
+      {
+       "a": 397629,
+       "b": 397620,
+       "forward": 5,
+       "backward": 1,
+       "n": 6
+      },
+      {
+       "a": 397637,
+       "b": 397630,
+       "forward": 5,
+       "backward": 1,
+       "n": 6
+      },
+      {
+       "a": 397627,
+       "b": 397630,
+       "forward": 4,
+       "backward": 2,
+       "n": 6
+      },
+      {
+       "a": 397637,
+       "b": 397620,
+       "forward": 4,
+       "backward": 2,
+       "n": 6
+      },
+      {
+       "a": 397622,
+       "b": 397621,
+       "forward": 4,
+       "backward": 1,
+       "n": 5
+      },
+      {
+       "a": 397628,
+       "b": 397620,
+       "forward": 4,
+       "backward": 1,
+       "n": 5
+      },
+      {
+       "a": 397621,
+       "b": 397637,
+       "forward": 3,
+       "backward": 1,
+       "n": 4
+      },
+      {
+       "a": 397629,
+       "b": 397637,
+       "forward": 3,
+       "backward": 1,
+       "n": 4
+      },
+      {
+       "a": 397630,
+       "b": 39708,
+       "forward": 3,
+       "backward": 1,
+       "n": 4
+      },
+      {
+       "a": 397621,
+       "b": 397628,
+       "forward": 2,
+       "backward": 2,
+       "n": 4
+      },
+      {
+       "a": 397627,
+       "b": 397628,
+       "forward": 2,
+       "backward": 2,
+       "n": 4
+      },
+      {
+       "a": 397627,
+       "b": 397620,
+       "forward": 3,
+       "backward": 0,
+       "n": 3
+      },
+      {
+       "a": 397628,
+       "b": 397630,
+       "forward": 3,
+       "backward": 0,
+       "n": 3
+      },
+      {
+       "a": 39712,
+       "b": 397630,
+       "forward": 2,
+       "backward": 1,
+       "n": 3
+      },
+      {
+       "a": 397628,
+       "b": 397629,
+       "forward": 2,
+       "backward": 0,
+       "n": 2
+      },
+      {
+       "a": 397629,
+       "b": 397622,
+       "forward": 2,
+       "backward": 0,
+       "n": 2
+      },
+      {
+       "a": 397630,
+       "b": 397622,
+       "forward": 2,
+       "backward": 0,
+       "n": 2
+      },
+      {
+       "a": 397626,
+       "b": 397628,
+       "forward": 1,
+       "backward": 1,
+       "n": 2
+      },
+      {
+       "a": 39708,
+       "b": 397629,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 39712,
+       "b": 397626,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 39712,
+       "b": 397628,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 39712,
+       "b": 397629,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 397626,
+       "b": 397620,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 397627,
+       "b": 39708,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 397627,
+       "b": 39712,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 397628,
+       "b": 397637,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 397637,
+       "b": 397627,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      }
+     ]
+    },
+    "openPlay": {
+     "completed": 357,
+     "sameAsFull": false,
+     "cutAt": null,
+     "removed": {
+      "Corner": 2,
+      "Free Kick": 14,
+      "Throw-in": 13,
+      "Goal Kick": 12,
+      "Kick Off": 2
+     },
+     "highlights": {
+      "shift": {
+       "playerId": 397630,
+       "meters": 11.1
+      },
+      "drop": {
+       "playerId": 397626,
+       "from": 31,
+       "to": 21
+      }
+     },
+     "nodes": [
+      {
+       "playerId": 397621,
+       "num": 8,
+       "name": "Gérson",
+       "position": "Volante (dir.)",
+       "ball": {
+        "x": 65.6,
+        "y": 39.35
+       },
+       "positionFrom": "passes",
+       "passes": 66,
+       "received": 72,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 39708,
+       "num": 4,
+       "name": "Carlos Alberto",
+       "position": "Lateral-direito",
+       "ball": {
+        "x": 64.1,
+        "y": 68.6
+       },
+       "positionFrom": "passes",
+       "passes": 57,
+       "received": 63,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 397620,
+       "num": 5,
+       "name": "Clodoaldo",
+       "position": "Volante (esq.)",
+       "ball": {
+        "x": 66.0,
+        "y": 51.65
+       },
+       "positionFrom": "passes",
+       "passes": 50,
+       "received": 49,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 397629,
+       "num": 16,
+       "name": "Everaldo",
+       "position": "Lateral-esquerdo",
+       "ball": {
+        "x": 52.5,
+        "y": 15.2
+       },
+       "positionFrom": "passes",
+       "passes": 37,
+       "received": 31,
+       "sub": null,
+       "label": "above"
+      },
+      {
+       "playerId": 397630,
+       "num": 11,
+       "name": "Rivellino",
+       "position": "Meio-campo (esq.)",
+       "ball": {
+        "x": 51.1,
+        "y": 19.2
+       },
+       "positionFrom": "passes",
+       "passes": 27,
+       "received": 34,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 397627,
+       "num": 3,
+       "name": "Piazza",
+       "position": "Zagueiro (esq.)",
+       "ball": {
+        "x": 30.25,
+        "y": 23.9
+       },
+       "positionFrom": "passes",
+       "passes": 24,
+       "received": 16,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 39712,
+       "num": 10,
+       "name": "Pelé",
+       "position": "Atacante (dir.)",
+       "ball": {
+        "x": 78.1,
+        "y": 43.6
+       },
+       "positionFrom": "passes",
+       "passes": 21,
+       "received": 24,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 397626,
+       "num": 1,
+       "name": "Félix",
+       "position": "Goleiro",
+       "ball": {
+        "x": 8.6,
+        "y": 39.3
+       },
+       "positionFrom": "passes",
+       "passes": 21,
+       "received": 11,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 397637,
+       "num": 9,
+       "name": "Tostão",
+       "position": "Atacante (esq.)",
+       "ball": {
+        "x": 79.55,
+        "y": 40.6
+       },
+       "positionFrom": "passes",
+       "passes": 20,
+       "received": 22,
+       "sub": null,
+       "label": "above"
+      },
+      {
+       "playerId": 397622,
+       "num": 7,
+       "name": "Jairzinho",
+       "position": "Meio-campo (dir.)",
+       "ball": {
+        "x": 86.4,
+        "y": 59.4
+       },
+       "positionFrom": "passes",
+       "passes": 18,
+       "received": 26,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 397628,
+       "num": 2,
+       "name": "Brito",
+       "position": "Zagueiro (dir.)",
+       "ball": {
+        "x": 39.65,
+        "y": 53.45
+       },
+       "positionFrom": "passes",
+       "passes": 16,
+       "received": 9,
+       "sub": null,
+       "label": "below"
+      }
+     ],
+     "edges": [
+      {
+       "from": 397621,
+       "to": 39708,
+       "n": 24
+      },
+      {
+       "from": 397620,
+       "to": 397621,
+       "n": 18
+      },
+      {
+       "from": 39708,
+       "to": 397621,
+       "n": 16
+      },
+      {
+       "from": 397620,
+       "to": 39708,
+       "n": 15
+      },
+      {
+       "from": 39708,
+       "to": 397620,
+       "n": 13
+      },
+      {
+       "from": 397621,
+       "to": 397629,
+       "n": 12
+      },
+      {
+       "from": 397629,
+       "to": 397630,
+       "n": 12
+      },
+      {
+       "from": 397621,
+       "to": 397620,
+       "n": 11
+      },
+      {
+       "from": 39708,
+       "to": 397622,
+       "n": 9
+      },
+      {
+       "from": 397626,
+       "to": 39708,
+       "n": 9
+      },
+      {
+       "from": 397629,
+       "to": 397621,
+       "n": 9
+      },
+      {
+       "from": 39708,
+       "to": 397637,
+       "n": 7
+      },
+      {
+       "from": 397629,
+       "to": 397627,
+       "n": 7
+      },
+      {
+       "from": 397630,
+       "to": 397621,
+       "n": 7
+      },
+      {
+       "from": 39712,
+       "to": 397621,
+       "n": 6
+      },
+      {
+       "from": 397620,
+       "to": 397622,
+       "n": 6
+      },
+      {
+       "from": 397627,
+       "to": 397629,
+       "n": 6
+      },
+      {
+       "from": 397630,
+       "to": 397629,
+       "n": 6
+      },
+      {
+       "from": 39708,
+       "to": 39712,
+       "n": 5
+      },
+      {
+       "from": 397621,
+       "to": 397630,
+       "n": 5
+      },
+      {
+       "from": 397622,
+       "to": 39708,
+       "n": 5
+      },
+      {
+       "from": 397622,
+       "to": 39712,
+       "n": 5
+      },
+      {
+       "from": 397626,
+       "to": 397627,
+       "n": 5
+      },
+      {
+       "from": 397627,
+       "to": 397621,
+       "n": 5
+      },
+      {
+       "from": 397630,
+       "to": 397620,
+       "n": 5
+      },
+      {
+       "from": 397637,
+       "to": 39712,
+       "n": 5
+      },
+      {
+       "from": 397620,
+       "to": 397630,
+       "n": 4
+      },
+      {
+       "from": 397621,
+       "to": 39712,
+       "n": 4
+      },
+      {
+       "from": 397622,
+       "to": 397621,
+       "n": 4
+      },
+      {
+       "from": 397626,
+       "to": 397621,
+       "n": 4
+      },
+      {
+       "from": 397627,
+       "to": 397630,
+       "n": 4
+      },
+      {
+       "from": 397628,
+       "to": 39708,
+       "n": 4
+      },
+      {
+       "from": 397628,
+       "to": 397620,
+       "n": 4
+      },
+      {
+       "from": 397637,
+       "to": 397620,
+       "n": 4
+      },
+      {
+       "from": 397637,
+       "to": 397622,
+       "n": 4
+      },
+      {
+       "from": 397637,
+       "to": 397630,
+       "n": 4
+      },
+      {
+       "from": 39708,
+       "to": 397628,
+       "n": 3
+      },
+      {
+       "from": 39712,
+       "to": 39708,
+       "n": 3
+      },
+      {
+       "from": 39712,
+       "to": 397620,
+       "n": 3
+      },
+      {
+       "from": 39712,
+       "to": 397637,
+       "n": 3
+      },
+      {
+       "from": 397620,
+       "to": 39712,
+       "n": 3
+      },
+      {
+       "from": 397621,
+       "to": 397626,
+       "n": 3
+      },
+      {
+       "from": 397621,
+       "to": 397637,
+       "n": 3
+      },
+      {
+       "from": 397627,
+       "to": 397620,
+       "n": 3
+      },
+      {
+       "from": 397627,
+       "to": 397626,
+       "n": 3
+      },
+      {
+       "from": 397628,
+       "to": 397630,
+       "n": 3
+      },
+      {
+       "from": 397629,
+       "to": 397620,
+       "n": 3
+      },
+      {
+       "from": 397629,
+       "to": 397637,
+       "n": 3
+      },
+      {
+       "from": 397630,
+       "to": 39708,
+       "n": 3
+      },
+      {
+       "from": 39708,
+       "to": 397626,
+       "n": 2
+      },
+      {
+       "from": 39712,
+       "to": 397622,
+       "n": 2
+      },
+      {
+       "from": 397620,
+       "to": 397637,
+       "n": 2
+      },
+      {
+       "from": 397621,
+       "to": 397628,
+       "n": 2
+      },
+      {
+       "from": 397622,
+       "to": 397620,
+       "n": 2
+      },
+      {
+       "from": 397622,
+       "to": 397637,
+       "n": 2
+      },
+      {
+       "from": 397626,
+       "to": 397629,
+       "n": 2
+      },
+      {
+       "from": 397627,
+       "to": 397628,
+       "n": 2
+      },
+      {
+       "from": 397628,
+       "to": 397621,
+       "n": 2
+      },
+      {
+       "from": 397629,
+       "to": 397622,
+       "n": 2
+      },
+      {
+       "from": 397630,
+       "to": 397622,
+       "n": 2
+      },
+      {
+       "from": 397630,
+       "to": 397627,
+       "n": 2
+      },
+      {
+       "from": 39708,
+       "to": 397629,
+       "n": 1
+      },
+      {
+       "from": 39708,
+       "to": 397630,
+       "n": 1
+      },
+      {
+       "from": 39712,
+       "to": 397626,
+       "n": 1
+      },
+      {
+       "from": 39712,
+       "to": 397628,
+       "n": 1
+      },
+      {
+       "from": 39712,
+       "to": 397629,
+       "n": 1
+      },
+      {
+       "from": 39712,
+       "to": 397630,
+       "n": 1
+      },
+      {
+       "from": 397620,
+       "to": 397628,
+       "n": 1
+      },
+      {
+       "from": 397620,
+       "to": 397629,
+       "n": 1
+      },
+      {
+       "from": 397621,
+       "to": 397622,
+       "n": 1
+      },
+      {
+       "from": 397621,
+       "to": 397627,
+       "n": 1
+      },
+      {
+       "from": 397626,
+       "to": 397620,
+       "n": 1
+      },
+      {
+       "from": 397627,
+       "to": 39712,
+       "n": 1
+      },
+      {
+       "from": 397628,
+       "to": 397626,
+       "n": 1
+      },
+      {
+       "from": 397628,
+       "to": 397629,
+       "n": 1
+      },
+      {
+       "from": 397628,
+       "to": 397637,
+       "n": 1
+      },
+      {
+       "from": 397629,
+       "to": 397626,
+       "n": 1
+      },
+      {
+       "from": 397630,
+       "to": 39712,
+       "n": 1
+      },
+      {
+       "from": 397630,
+       "to": 397637,
+       "n": 1
+      },
+      {
+       "from": 397637,
+       "to": 397621,
+       "n": 1
+      },
+      {
+       "from": 397637,
+       "to": 397627,
+       "n": 1
+      },
+      {
+       "from": 397637,
+       "to": 397629,
+       "n": 1
+      }
+     ],
+     "pairs": [
+      {
+       "a": 397621,
+       "b": 39708,
+       "forward": 24,
+       "backward": 16,
+       "n": 40
+      },
+      {
+       "a": 397620,
+       "b": 397621,
+       "forward": 18,
+       "backward": 11,
+       "n": 29
+      },
+      {
+       "a": 397620,
+       "b": 39708,
+       "forward": 15,
+       "backward": 13,
+       "n": 28
+      },
+      {
+       "a": 397621,
+       "b": 397629,
+       "forward": 12,
+       "backward": 9,
+       "n": 21
+      },
+      {
+       "a": 397629,
+       "b": 397630,
+       "forward": 12,
+       "backward": 6,
+       "n": 18
+      },
+      {
+       "a": 39708,
+       "b": 397622,
+       "forward": 9,
+       "backward": 5,
+       "n": 14
+      },
+      {
+       "a": 397629,
+       "b": 397627,
+       "forward": 7,
+       "backward": 6,
+       "n": 13
+      },
+      {
+       "a": 397630,
+       "b": 397621,
+       "forward": 7,
+       "backward": 5,
+       "n": 12
+      },
+      {
+       "a": 397626,
+       "b": 39708,
+       "forward": 9,
+       "backward": 2,
+       "n": 11
+      },
+      {
+       "a": 39712,
+       "b": 397621,
+       "forward": 6,
+       "backward": 4,
+       "n": 10
+      },
+      {
+       "a": 397630,
+       "b": 397620,
+       "forward": 5,
+       "backward": 4,
+       "n": 9
+      },
+      {
+       "a": 397620,
+       "b": 397622,
+       "forward": 6,
+       "backward": 2,
+       "n": 8
+      },
+      {
+       "a": 39708,
+       "b": 39712,
+       "forward": 5,
+       "backward": 3,
+       "n": 8
+      },
+      {
+       "a": 397626,
+       "b": 397627,
+       "forward": 5,
+       "backward": 3,
+       "n": 8
+      },
+      {
+       "a": 397637,
+       "b": 39712,
+       "forward": 5,
+       "backward": 3,
+       "n": 8
+      },
+      {
+       "a": 39708,
+       "b": 397637,
+       "forward": 7,
+       "backward": 0,
+       "n": 7
+      },
+      {
+       "a": 397622,
+       "b": 39712,
+       "forward": 5,
+       "backward": 2,
+       "n": 7
+      },
+      {
+       "a": 397626,
+       "b": 397621,
+       "forward": 4,
+       "backward": 3,
+       "n": 7
+      },
+      {
+       "a": 397628,
+       "b": 39708,
+       "forward": 4,
+       "backward": 3,
+       "n": 7
+      },
+      {
+       "a": 397627,
+       "b": 397621,
+       "forward": 5,
+       "backward": 1,
+       "n": 6
+      },
+      {
+       "a": 397627,
+       "b": 397630,
+       "forward": 4,
+       "backward": 2,
+       "n": 6
+      },
+      {
+       "a": 397637,
+       "b": 397620,
+       "forward": 4,
+       "backward": 2,
+       "n": 6
+      },
+      {
+       "a": 397637,
+       "b": 397622,
+       "forward": 4,
+       "backward": 2,
+       "n": 6
+      },
+      {
+       "a": 39712,
+       "b": 397620,
+       "forward": 3,
+       "backward": 3,
+       "n": 6
+      },
+      {
+       "a": 397622,
+       "b": 397621,
+       "forward": 4,
+       "backward": 1,
+       "n": 5
+      },
+      {
+       "a": 397628,
+       "b": 397620,
+       "forward": 4,
+       "backward": 1,
+       "n": 5
+      },
+      {
+       "a": 397637,
+       "b": 397630,
+       "forward": 4,
+       "backward": 1,
+       "n": 5
+      },
+      {
+       "a": 397621,
+       "b": 397637,
+       "forward": 3,
+       "backward": 1,
+       "n": 4
+      },
+      {
+       "a": 397629,
+       "b": 397620,
+       "forward": 3,
+       "backward": 1,
+       "n": 4
+      },
+      {
+       "a": 397629,
+       "b": 397637,
+       "forward": 3,
+       "backward": 1,
+       "n": 4
+      },
+      {
+       "a": 397630,
+       "b": 39708,
+       "forward": 3,
+       "backward": 1,
+       "n": 4
+      },
+      {
+       "a": 397621,
+       "b": 397628,
+       "forward": 2,
+       "backward": 2,
+       "n": 4
+      },
+      {
+       "a": 397627,
+       "b": 397620,
+       "forward": 3,
+       "backward": 0,
+       "n": 3
+      },
+      {
+       "a": 397628,
+       "b": 397630,
+       "forward": 3,
+       "backward": 0,
+       "n": 3
+      },
+      {
+       "a": 397626,
+       "b": 397629,
+       "forward": 2,
+       "backward": 1,
+       "n": 3
+      },
+      {
+       "a": 397627,
+       "b": 397628,
+       "forward": 2,
+       "backward": 0,
+       "n": 2
+      },
+      {
+       "a": 397629,
+       "b": 397622,
+       "forward": 2,
+       "backward": 0,
+       "n": 2
+      },
+      {
+       "a": 397630,
+       "b": 397622,
+       "forward": 2,
+       "backward": 0,
+       "n": 2
+      },
+      {
+       "a": 39712,
+       "b": 397630,
+       "forward": 1,
+       "backward": 1,
+       "n": 2
+      },
+      {
+       "a": 39708,
+       "b": 397629,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 39712,
+       "b": 397626,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 39712,
+       "b": 397628,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 39712,
+       "b": 397629,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 397626,
+       "b": 397620,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 397627,
+       "b": 39712,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 397628,
+       "b": 397626,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 397628,
+       "b": 397629,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 397628,
+       "b": 397637,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 397637,
+       "b": 397627,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      }
+     ]
+    },
+    "firstSubOpen": {
+     "completed": 357,
+     "sameAsFull": false,
+     "cutAt": null,
+     "removed": {
+      "Corner": 2,
+      "Free Kick": 14,
+      "Throw-in": 13,
+      "Goal Kick": 12,
+      "Kick Off": 2
+     },
+     "highlights": {
+      "shift": {
+       "playerId": 397630,
+       "meters": 11.1
+      },
+      "drop": {
+       "playerId": 397626,
+       "from": 31,
+       "to": 21
+      }
+     },
+     "nodes": [
+      {
+       "playerId": 397621,
+       "num": 8,
+       "name": "Gérson",
+       "position": "Volante (dir.)",
+       "ball": {
+        "x": 65.6,
+        "y": 39.35
+       },
+       "positionFrom": "passes",
+       "passes": 66,
+       "received": 72,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 39708,
+       "num": 4,
+       "name": "Carlos Alberto",
+       "position": "Lateral-direito",
+       "ball": {
+        "x": 64.1,
+        "y": 68.6
+       },
+       "positionFrom": "passes",
+       "passes": 57,
+       "received": 63,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 397620,
+       "num": 5,
+       "name": "Clodoaldo",
+       "position": "Volante (esq.)",
+       "ball": {
+        "x": 66.0,
+        "y": 51.65
+       },
+       "positionFrom": "passes",
+       "passes": 50,
+       "received": 49,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 397629,
+       "num": 16,
+       "name": "Everaldo",
+       "position": "Lateral-esquerdo",
+       "ball": {
+        "x": 52.5,
+        "y": 15.2
+       },
+       "positionFrom": "passes",
+       "passes": 37,
+       "received": 31,
+       "sub": null,
+       "label": "above"
+      },
+      {
+       "playerId": 397630,
+       "num": 11,
+       "name": "Rivellino",
+       "position": "Meio-campo (esq.)",
+       "ball": {
+        "x": 51.1,
+        "y": 19.2
+       },
+       "positionFrom": "passes",
+       "passes": 27,
+       "received": 34,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 397627,
+       "num": 3,
+       "name": "Piazza",
+       "position": "Zagueiro (esq.)",
+       "ball": {
+        "x": 30.25,
+        "y": 23.9
+       },
+       "positionFrom": "passes",
+       "passes": 24,
+       "received": 16,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 39712,
+       "num": 10,
+       "name": "Pelé",
+       "position": "Atacante (dir.)",
+       "ball": {
+        "x": 78.1,
+        "y": 43.6
+       },
+       "positionFrom": "passes",
+       "passes": 21,
+       "received": 24,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 397626,
+       "num": 1,
+       "name": "Félix",
+       "position": "Goleiro",
+       "ball": {
+        "x": 8.6,
+        "y": 39.3
+       },
+       "positionFrom": "passes",
+       "passes": 21,
+       "received": 11,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 397637,
+       "num": 9,
+       "name": "Tostão",
+       "position": "Atacante (esq.)",
+       "ball": {
+        "x": 79.55,
+        "y": 40.6
+       },
+       "positionFrom": "passes",
+       "passes": 20,
+       "received": 22,
+       "sub": null,
+       "label": "above"
+      },
+      {
+       "playerId": 397622,
+       "num": 7,
+       "name": "Jairzinho",
+       "position": "Meio-campo (dir.)",
+       "ball": {
+        "x": 86.4,
+        "y": 59.4
+       },
+       "positionFrom": "passes",
+       "passes": 18,
+       "received": 26,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 397628,
+       "num": 2,
+       "name": "Brito",
+       "position": "Zagueiro (dir.)",
+       "ball": {
+        "x": 39.65,
+        "y": 53.45
+       },
+       "positionFrom": "passes",
+       "passes": 16,
+       "received": 9,
+       "sub": null,
+       "label": "below"
+      }
+     ],
+     "edges": [
+      {
+       "from": 397621,
+       "to": 39708,
+       "n": 24
+      },
+      {
+       "from": 397620,
+       "to": 397621,
+       "n": 18
+      },
+      {
+       "from": 39708,
+       "to": 397621,
+       "n": 16
+      },
+      {
+       "from": 397620,
+       "to": 39708,
+       "n": 15
+      },
+      {
+       "from": 39708,
+       "to": 397620,
+       "n": 13
+      },
+      {
+       "from": 397621,
+       "to": 397629,
+       "n": 12
+      },
+      {
+       "from": 397629,
+       "to": 397630,
+       "n": 12
+      },
+      {
+       "from": 397621,
+       "to": 397620,
+       "n": 11
+      },
+      {
+       "from": 39708,
+       "to": 397622,
+       "n": 9
+      },
+      {
+       "from": 397626,
+       "to": 39708,
+       "n": 9
+      },
+      {
+       "from": 397629,
+       "to": 397621,
+       "n": 9
+      },
+      {
+       "from": 39708,
+       "to": 397637,
+       "n": 7
+      },
+      {
+       "from": 397629,
+       "to": 397627,
+       "n": 7
+      },
+      {
+       "from": 397630,
+       "to": 397621,
+       "n": 7
+      },
+      {
+       "from": 39712,
+       "to": 397621,
+       "n": 6
+      },
+      {
+       "from": 397620,
+       "to": 397622,
+       "n": 6
+      },
+      {
+       "from": 397627,
+       "to": 397629,
+       "n": 6
+      },
+      {
+       "from": 397630,
+       "to": 397629,
+       "n": 6
+      },
+      {
+       "from": 39708,
+       "to": 39712,
+       "n": 5
+      },
+      {
+       "from": 397621,
+       "to": 397630,
+       "n": 5
+      },
+      {
+       "from": 397622,
+       "to": 39708,
+       "n": 5
+      },
+      {
+       "from": 397622,
+       "to": 39712,
+       "n": 5
+      },
+      {
+       "from": 397626,
+       "to": 397627,
+       "n": 5
+      },
+      {
+       "from": 397627,
+       "to": 397621,
+       "n": 5
+      },
+      {
+       "from": 397630,
+       "to": 397620,
+       "n": 5
+      },
+      {
+       "from": 397637,
+       "to": 39712,
+       "n": 5
+      },
+      {
+       "from": 397620,
+       "to": 397630,
+       "n": 4
+      },
+      {
+       "from": 397621,
+       "to": 39712,
+       "n": 4
+      },
+      {
+       "from": 397622,
+       "to": 397621,
+       "n": 4
+      },
+      {
+       "from": 397626,
+       "to": 397621,
+       "n": 4
+      },
+      {
+       "from": 397627,
+       "to": 397630,
+       "n": 4
+      },
+      {
+       "from": 397628,
+       "to": 39708,
+       "n": 4
+      },
+      {
+       "from": 397628,
+       "to": 397620,
+       "n": 4
+      },
+      {
+       "from": 397637,
+       "to": 397620,
+       "n": 4
+      },
+      {
+       "from": 397637,
+       "to": 397622,
+       "n": 4
+      },
+      {
+       "from": 397637,
+       "to": 397630,
+       "n": 4
+      },
+      {
+       "from": 39708,
+       "to": 397628,
+       "n": 3
+      },
+      {
+       "from": 39712,
+       "to": 39708,
+       "n": 3
+      },
+      {
+       "from": 39712,
+       "to": 397620,
+       "n": 3
+      },
+      {
+       "from": 39712,
+       "to": 397637,
+       "n": 3
+      },
+      {
+       "from": 397620,
+       "to": 39712,
+       "n": 3
+      },
+      {
+       "from": 397621,
+       "to": 397626,
+       "n": 3
+      },
+      {
+       "from": 397621,
+       "to": 397637,
+       "n": 3
+      },
+      {
+       "from": 397627,
+       "to": 397620,
+       "n": 3
+      },
+      {
+       "from": 397627,
+       "to": 397626,
+       "n": 3
+      },
+      {
+       "from": 397628,
+       "to": 397630,
+       "n": 3
+      },
+      {
+       "from": 397629,
+       "to": 397620,
+       "n": 3
+      },
+      {
+       "from": 397629,
+       "to": 397637,
+       "n": 3
+      },
+      {
+       "from": 397630,
+       "to": 39708,
+       "n": 3
+      },
+      {
+       "from": 39708,
+       "to": 397626,
+       "n": 2
+      },
+      {
+       "from": 39712,
+       "to": 397622,
+       "n": 2
+      },
+      {
+       "from": 397620,
+       "to": 397637,
+       "n": 2
+      },
+      {
+       "from": 397621,
+       "to": 397628,
+       "n": 2
+      },
+      {
+       "from": 397622,
+       "to": 397620,
+       "n": 2
+      },
+      {
+       "from": 397622,
+       "to": 397637,
+       "n": 2
+      },
+      {
+       "from": 397626,
+       "to": 397629,
+       "n": 2
+      },
+      {
+       "from": 397627,
+       "to": 397628,
+       "n": 2
+      },
+      {
+       "from": 397628,
+       "to": 397621,
+       "n": 2
+      },
+      {
+       "from": 397629,
+       "to": 397622,
+       "n": 2
+      },
+      {
+       "from": 397630,
+       "to": 397622,
+       "n": 2
+      },
+      {
+       "from": 397630,
+       "to": 397627,
+       "n": 2
+      },
+      {
+       "from": 39708,
+       "to": 397629,
+       "n": 1
+      },
+      {
+       "from": 39708,
+       "to": 397630,
+       "n": 1
+      },
+      {
+       "from": 39712,
+       "to": 397626,
+       "n": 1
+      },
+      {
+       "from": 39712,
+       "to": 397628,
+       "n": 1
+      },
+      {
+       "from": 39712,
+       "to": 397629,
+       "n": 1
+      },
+      {
+       "from": 39712,
+       "to": 397630,
+       "n": 1
+      },
+      {
+       "from": 397620,
+       "to": 397628,
+       "n": 1
+      },
+      {
+       "from": 397620,
+       "to": 397629,
+       "n": 1
+      },
+      {
+       "from": 397621,
+       "to": 397622,
+       "n": 1
+      },
+      {
+       "from": 397621,
+       "to": 397627,
+       "n": 1
+      },
+      {
+       "from": 397626,
+       "to": 397620,
+       "n": 1
+      },
+      {
+       "from": 397627,
+       "to": 39712,
+       "n": 1
+      },
+      {
+       "from": 397628,
+       "to": 397626,
+       "n": 1
+      },
+      {
+       "from": 397628,
+       "to": 397629,
+       "n": 1
+      },
+      {
+       "from": 397628,
+       "to": 397637,
+       "n": 1
+      },
+      {
+       "from": 397629,
+       "to": 397626,
+       "n": 1
+      },
+      {
+       "from": 397630,
+       "to": 39712,
+       "n": 1
+      },
+      {
+       "from": 397630,
+       "to": 397637,
+       "n": 1
+      },
+      {
+       "from": 397637,
+       "to": 397621,
+       "n": 1
+      },
+      {
+       "from": 397637,
+       "to": 397627,
+       "n": 1
+      },
+      {
+       "from": 397637,
+       "to": 397629,
+       "n": 1
+      }
+     ],
+     "pairs": [
+      {
+       "a": 397621,
+       "b": 39708,
+       "forward": 24,
+       "backward": 16,
+       "n": 40
+      },
+      {
+       "a": 397620,
+       "b": 397621,
+       "forward": 18,
+       "backward": 11,
+       "n": 29
+      },
+      {
+       "a": 397620,
+       "b": 39708,
+       "forward": 15,
+       "backward": 13,
+       "n": 28
+      },
+      {
+       "a": 397621,
+       "b": 397629,
+       "forward": 12,
+       "backward": 9,
+       "n": 21
+      },
+      {
+       "a": 397629,
+       "b": 397630,
+       "forward": 12,
+       "backward": 6,
+       "n": 18
+      },
+      {
+       "a": 39708,
+       "b": 397622,
+       "forward": 9,
+       "backward": 5,
+       "n": 14
+      },
+      {
+       "a": 397629,
+       "b": 397627,
+       "forward": 7,
+       "backward": 6,
+       "n": 13
+      },
+      {
+       "a": 397630,
+       "b": 397621,
+       "forward": 7,
+       "backward": 5,
+       "n": 12
+      },
+      {
+       "a": 397626,
+       "b": 39708,
+       "forward": 9,
+       "backward": 2,
+       "n": 11
+      },
+      {
+       "a": 39712,
+       "b": 397621,
+       "forward": 6,
+       "backward": 4,
+       "n": 10
+      },
+      {
+       "a": 397630,
+       "b": 397620,
+       "forward": 5,
+       "backward": 4,
+       "n": 9
+      },
+      {
+       "a": 397620,
+       "b": 397622,
+       "forward": 6,
+       "backward": 2,
+       "n": 8
+      },
+      {
+       "a": 39708,
+       "b": 39712,
+       "forward": 5,
+       "backward": 3,
+       "n": 8
+      },
+      {
+       "a": 397626,
+       "b": 397627,
+       "forward": 5,
+       "backward": 3,
+       "n": 8
+      },
+      {
+       "a": 397637,
+       "b": 39712,
+       "forward": 5,
+       "backward": 3,
+       "n": 8
+      },
+      {
+       "a": 39708,
+       "b": 397637,
+       "forward": 7,
+       "backward": 0,
+       "n": 7
+      },
+      {
+       "a": 397622,
+       "b": 39712,
+       "forward": 5,
+       "backward": 2,
+       "n": 7
+      },
+      {
+       "a": 397626,
+       "b": 397621,
+       "forward": 4,
+       "backward": 3,
+       "n": 7
+      },
+      {
+       "a": 397628,
+       "b": 39708,
+       "forward": 4,
+       "backward": 3,
+       "n": 7
+      },
+      {
+       "a": 397627,
+       "b": 397621,
+       "forward": 5,
+       "backward": 1,
+       "n": 6
+      },
+      {
+       "a": 397627,
+       "b": 397630,
+       "forward": 4,
+       "backward": 2,
+       "n": 6
+      },
+      {
+       "a": 397637,
+       "b": 397620,
+       "forward": 4,
+       "backward": 2,
+       "n": 6
+      },
+      {
+       "a": 397637,
+       "b": 397622,
+       "forward": 4,
+       "backward": 2,
+       "n": 6
+      },
+      {
+       "a": 39712,
+       "b": 397620,
+       "forward": 3,
+       "backward": 3,
+       "n": 6
+      },
+      {
+       "a": 397622,
+       "b": 397621,
+       "forward": 4,
+       "backward": 1,
+       "n": 5
+      },
+      {
+       "a": 397628,
+       "b": 397620,
+       "forward": 4,
+       "backward": 1,
+       "n": 5
+      },
+      {
+       "a": 397637,
+       "b": 397630,
+       "forward": 4,
+       "backward": 1,
+       "n": 5
+      },
+      {
+       "a": 397621,
+       "b": 397637,
+       "forward": 3,
+       "backward": 1,
+       "n": 4
+      },
+      {
+       "a": 397629,
+       "b": 397620,
+       "forward": 3,
+       "backward": 1,
+       "n": 4
+      },
+      {
+       "a": 397629,
+       "b": 397637,
+       "forward": 3,
+       "backward": 1,
+       "n": 4
+      },
+      {
+       "a": 397630,
+       "b": 39708,
+       "forward": 3,
+       "backward": 1,
+       "n": 4
+      },
+      {
+       "a": 397621,
+       "b": 397628,
+       "forward": 2,
+       "backward": 2,
+       "n": 4
+      },
+      {
+       "a": 397627,
+       "b": 397620,
+       "forward": 3,
+       "backward": 0,
+       "n": 3
+      },
+      {
+       "a": 397628,
+       "b": 397630,
+       "forward": 3,
+       "backward": 0,
+       "n": 3
+      },
+      {
+       "a": 397626,
+       "b": 397629,
+       "forward": 2,
+       "backward": 1,
+       "n": 3
+      },
+      {
+       "a": 397627,
+       "b": 397628,
+       "forward": 2,
+       "backward": 0,
+       "n": 2
+      },
+      {
+       "a": 397629,
+       "b": 397622,
+       "forward": 2,
+       "backward": 0,
+       "n": 2
+      },
+      {
+       "a": 397630,
+       "b": 397622,
+       "forward": 2,
+       "backward": 0,
+       "n": 2
+      },
+      {
+       "a": 39712,
+       "b": 397630,
+       "forward": 1,
+       "backward": 1,
+       "n": 2
+      },
+      {
+       "a": 39708,
+       "b": 397629,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 39712,
+       "b": 397626,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 39712,
+       "b": 397628,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 39712,
+       "b": 397629,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 397626,
+       "b": 397620,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 397627,
+       "b": 39712,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 397628,
+       "b": 397626,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 397628,
+       "b": 397629,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 397628,
+       "b": 397637,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 397637,
+       "b": 397627,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      }
+     ]
+    }
+   },
    "substitutions": [],
    "shots": {
     "count": 27,
@@ -1713,17 +4565,17 @@
       "y": 37.35
      },
      "positionFrom": "passes",
+     "passes": 38,
+     "received": 42,
+     "sub": null,
+     "label": "above",
      "def": {
       "x": 40.0,
       "y": 28.9,
       "n": 24,
       "lowSample": false
      },
-     "shift": -27.0,
-     "passes": 38,
-     "received": 42,
-     "sub": null,
-     "label": "above"
+     "shift": -27.0
     },
     {
      "playerId": 397666,
@@ -1735,17 +4587,17 @@
       "y": 32.8
      },
      "positionFrom": "passes",
+     "passes": 33,
+     "received": 24,
+     "sub": null,
+     "label": "below",
      "def": {
       "x": 16.65,
       "y": 32.15,
       "n": 18,
       "lowSample": false
      },
-     "shift": -15.3,
-     "passes": 33,
-     "received": 24,
-     "sub": null,
-     "label": "below"
+     "shift": -15.3
     },
     {
      "playerId": 397665,
@@ -1757,17 +4609,17 @@
       "y": 40.55
      },
      "positionFrom": "passes",
+     "passes": 32,
+     "received": 7,
+     "sub": null,
+     "label": "below",
      "def": {
       "x": 5.25,
       "y": 46.7,
       "n": 6,
       "lowSample": false
      },
-     "shift": -1.6,
-     "passes": 32,
-     "received": 7,
-     "sub": null,
-     "label": "below"
+     "shift": -1.6
     },
     {
      "playerId": 397674,
@@ -1779,17 +4631,17 @@
       "y": 63.6
      },
      "positionFrom": "passes",
+     "passes": 29,
+     "received": 40,
+     "sub": null,
+     "label": "below",
      "def": {
       "x": 56.7,
       "y": 57.85,
       "n": 24,
       "lowSample": false
      },
-     "shift": -6.1,
-     "passes": 29,
-     "received": 40,
-     "sub": null,
-     "label": "below"
+     "shift": -6.1
     },
     {
      "playerId": 397681,
@@ -1801,17 +4653,17 @@
       "y": 44.9
      },
      "positionFrom": "passes",
+     "passes": 25,
+     "received": 28,
+     "sub": null,
+     "label": "below",
      "def": {
       "x": 25.6,
       "y": 32.15,
       "n": 10,
       "lowSample": false
      },
-     "shift": -35.9,
-     "passes": 25,
-     "received": 28,
-     "sub": null,
-     "label": "below"
+     "shift": -35.9
     },
     {
      "playerId": 40095,
@@ -1823,13 +4675,6 @@
       "y": 54.9
      },
      "positionFrom": "passes",
-     "def": {
-      "x": 30.4,
-      "y": 49.9,
-      "n": 19,
-      "lowSample": false
-     },
-     "shift": -12.9,
      "passes": 23,
      "received": 25,
      "sub": {
@@ -1837,7 +4682,14 @@
       "minute": 74,
       "with": 397677
      },
-     "label": "above"
+     "label": "above",
+     "def": {
+      "x": 30.4,
+      "y": 49.9,
+      "n": 19,
+      "lowSample": false
+     },
+     "shift": -12.9
     },
     {
      "playerId": 39714,
@@ -1849,17 +4701,17 @@
       "y": 13.2
      },
      "positionFrom": "passes",
+     "passes": 15,
+     "received": 11,
+     "sub": null,
+     "label": "below",
      "def": {
       "x": 26.55,
       "y": 18.75,
       "n": 20,
       "lowSample": false
      },
-     "shift": -12.8,
-     "passes": 15,
-     "received": 11,
-     "sub": null,
-     "label": "below"
+     "shift": -12.8
     },
     {
      "playerId": 397680,
@@ -1871,17 +4723,17 @@
       "y": 51.9
      },
      "positionFrom": "passes",
+     "passes": 11,
+     "received": 10,
+     "sub": null,
+     "label": "below",
      "def": {
       "x": 16.75,
       "y": 40.15,
       "n": 22,
       "lowSample": false
      },
-     "shift": -10.6,
-     "passes": 11,
-     "received": 10,
-     "sub": null,
-     "label": "below"
+     "shift": -10.6
     },
     {
      "playerId": 39717,
@@ -1893,13 +4745,6 @@
       "y": 36.7
      },
      "positionFrom": "passes",
-     "def": {
-      "x": 89.7,
-      "y": 44.7,
-      "n": 9,
-      "lowSample": false
-     },
-     "shift": 22.0,
      "passes": 10,
      "received": 16,
      "sub": {
@@ -1907,7 +4752,14 @@
       "minute": 83,
       "with": 397676
      },
-     "label": "left"
+     "label": "left",
+     "def": {
+      "x": 89.7,
+      "y": 44.7,
+      "n": 9,
+      "lowSample": false
+     },
+     "shift": 22.0
     },
     {
      "playerId": 397675,
@@ -1919,17 +4771,17 @@
       "y": 38.3
      },
      "positionFrom": "passes",
+     "passes": 9,
+     "received": 22,
+     "sub": null,
+     "label": "below",
      "def": {
       "x": 67.75,
       "y": 34.1,
       "n": 14,
       "lowSample": false
      },
-     "shift": -11.5,
-     "passes": 9,
-     "received": 22,
-     "sub": null,
-     "label": "below"
+     "shift": -11.5
     },
     {
      "playerId": 397677,
@@ -1941,13 +4793,6 @@
       "y": 61.2
      },
      "positionFrom": "passes",
-     "def": {
-      "x": 44.85,
-      "y": 50.15,
-      "n": 10,
-      "lowSample": false
-     },
-     "shift": -14.5,
      "passes": 9,
      "received": 7,
      "sub": {
@@ -1955,7 +4800,14 @@
       "minute": 74,
       "with": 40095
      },
-     "label": "above"
+     "label": "above",
+     "def": {
+      "x": 44.85,
+      "y": 50.15,
+      "n": 10,
+      "lowSample": false
+     },
+     "shift": -14.5
     },
     {
      "playerId": 39715,
@@ -1967,17 +4819,17 @@
       "y": 63.7
      },
      "positionFrom": "passes",
+     "passes": 7,
+     "received": 7,
+     "sub": null,
+     "label": "below",
      "def": {
       "x": 19.1,
       "y": 32.1,
       "n": 18,
       "lowSample": false
      },
-     "shift": -27.4,
-     "passes": 7,
-     "received": 7,
-     "sub": null,
-     "label": "below"
+     "shift": -27.4
     },
     {
      "playerId": 397676,
@@ -1989,13 +4841,6 @@
       "y": 47.05
      },
      "positionFrom": "passes",
-     "def": {
-      "x": 79.5,
-      "y": 55.1,
-      "n": 3,
-      "lowSample": true
-     },
-     "shift": -2.0,
      "passes": 2,
      "received": 4,
      "sub": {
@@ -2003,7 +4848,14 @@
       "minute": 83,
       "with": 39717
      },
-     "label": "below"
+     "label": "below",
+     "def": {
+      "x": 79.5,
+      "y": 55.1,
+      "n": 3,
+      "lowSample": true
+     },
+     "shift": -2.0
     }
    ],
    "edges": [
@@ -2900,6 +5752,2784 @@
      "n": 1
     }
    ],
+   "cuts": {
+    "firstSub": {
+     "completed": 193,
+     "sameAsFull": false,
+     "cutAt": {
+      "minute": 74,
+      "out": 40095,
+      "in": 397677
+     },
+     "removed": null,
+     "highlights": {
+      "shift": {
+       "playerId": 39715,
+       "meters": 7.8
+      },
+      "drop": {
+       "playerId": 397666,
+       "from": 33,
+       "to": 23
+      }
+     },
+     "nodes": [
+      {
+       "playerId": 39732,
+       "num": 15,
+       "name": "Mazzola",
+       "position": "Meia (esq.)",
+       "ball": {
+        "x": 68.4,
+        "y": 34.7
+       },
+       "positionFrom": "passes",
+       "passes": 31,
+       "received": 36,
+       "sub": null,
+       "label": "above"
+      },
+      {
+       "playerId": 397665,
+       "num": 1,
+       "name": "Albertosi",
+       "position": "Goleiro",
+       "ball": {
+        "x": 7.0,
+        "y": 39.75
+       },
+       "positionFrom": "passes",
+       "passes": 28,
+       "received": 7,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 397674,
+       "num": 13,
+       "name": "Domenghini",
+       "position": "Ala-direito",
+       "ball": {
+        "x": 63.0,
+        "y": 66.85
+       },
+       "positionFrom": "passes",
+       "passes": 24,
+       "received": 32,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 40095,
+       "num": 10,
+       "name": "Bertini",
+       "position": "Volante",
+       "ball": {
+        "x": 44.5,
+        "y": 54.9
+       },
+       "positionFrom": "passes",
+       "passes": 23,
+       "received": 25,
+       "sub": {
+        "type": "out",
+        "minute": 74,
+        "with": 397677
+       },
+       "label": "below"
+      },
+      {
+       "playerId": 397666,
+       "num": 5,
+       "name": "Cera",
+       "position": "Zagueiro (esq.)",
+       "ball": {
+        "x": 31.7,
+        "y": 36.3
+       },
+       "positionFrom": "passes",
+       "passes": 23,
+       "received": 18,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 397681,
+       "num": 16,
+       "name": "De Sisti",
+       "position": "Meia (dir.)",
+       "ball": {
+        "x": 67.35,
+        "y": 47.35
+       },
+       "positionFrom": "passes",
+       "passes": 22,
+       "received": 22,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 39714,
+       "num": 3,
+       "name": "Facchetti",
+       "position": "Ala-esquerdo",
+       "ball": {
+        "x": 44.45,
+        "y": 13.8
+       },
+       "positionFrom": "passes",
+       "passes": 12,
+       "received": 10,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 39717,
+       "num": 20,
+       "name": "Boninsegna",
+       "position": "Atacante (dir.)",
+       "ball": {
+        "x": 65.65,
+        "y": 36.7
+       },
+       "positionFrom": "passes",
+       "passes": 10,
+       "received": 14,
+       "sub": {
+        "type": "out",
+        "minute": 83,
+        "with": 397676
+       },
+       "label": "left"
+      },
+      {
+       "playerId": 397680,
+       "num": 8,
+       "name": "Rosato",
+       "position": "Zagueiro",
+       "ball": {
+        "x": 26.75,
+        "y": 56.75
+       },
+       "positionFrom": "passes",
+       "passes": 8,
+       "received": 7,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 397675,
+       "num": 11,
+       "name": "Riva",
+       "position": "Atacante (esq.)",
+       "ball": {
+        "x": 71.85,
+        "y": 39.0
+       },
+       "positionFrom": "passes",
+       "passes": 6,
+       "received": 16,
+       "sub": null,
+       "label": "right"
+      },
+      {
+       "playerId": 39715,
+       "num": 2,
+       "name": "Burgnich",
+       "position": "Zagueiro (dir.)",
+       "ball": {
+        "x": 41.15,
+        "y": 66.8
+       },
+       "positionFrom": "passes",
+       "passes": 6,
+       "received": 6,
+       "sub": null,
+       "label": "below"
+      }
+     ],
+     "edges": [
+      {
+       "from": 397665,
+       "to": 397666,
+       "n": 11
+      },
+      {
+       "from": 39732,
+       "to": 397674,
+       "n": 9
+      },
+      {
+       "from": 40095,
+       "to": 39732,
+       "n": 7
+      },
+      {
+       "from": 40095,
+       "to": 397674,
+       "n": 7
+      },
+      {
+       "from": 397666,
+       "to": 40095,
+       "n": 7
+      },
+      {
+       "from": 397681,
+       "to": 39732,
+       "n": 7
+      },
+      {
+       "from": 39732,
+       "to": 397675,
+       "n": 6
+      },
+      {
+       "from": 397674,
+       "to": 397681,
+       "n": 6
+      },
+      {
+       "from": 39714,
+       "to": 39732,
+       "n": 5
+      },
+      {
+       "from": 39732,
+       "to": 39714,
+       "n": 5
+      },
+      {
+       "from": 397666,
+       "to": 397674,
+       "n": 5
+      },
+      {
+       "from": 397674,
+       "to": 39717,
+       "n": 5
+      },
+      {
+       "from": 397665,
+       "to": 397674,
+       "n": 4
+      },
+      {
+       "from": 397666,
+       "to": 397681,
+       "n": 4
+      },
+      {
+       "from": 397674,
+       "to": 39732,
+       "n": 4
+      },
+      {
+       "from": 397681,
+       "to": 40095,
+       "n": 4
+      },
+      {
+       "from": 39717,
+       "to": 39732,
+       "n": 3
+      },
+      {
+       "from": 39717,
+       "to": 397675,
+       "n": 3
+      },
+      {
+       "from": 39732,
+       "to": 40095,
+       "n": 3
+      },
+      {
+       "from": 39732,
+       "to": 397681,
+       "n": 3
+      },
+      {
+       "from": 40095,
+       "to": 397666,
+       "n": 3
+      },
+      {
+       "from": 397665,
+       "to": 39732,
+       "n": 3
+      },
+      {
+       "from": 397665,
+       "to": 40095,
+       "n": 3
+      },
+      {
+       "from": 397666,
+       "to": 39732,
+       "n": 3
+      },
+      {
+       "from": 397666,
+       "to": 397665,
+       "n": 3
+      },
+      {
+       "from": 397675,
+       "to": 39732,
+       "n": 3
+      },
+      {
+       "from": 397680,
+       "to": 397681,
+       "n": 3
+      },
+      {
+       "from": 397681,
+       "to": 397675,
+       "n": 3
+      },
+      {
+       "from": 39714,
+       "to": 39717,
+       "n": 2
+      },
+      {
+       "from": 39714,
+       "to": 397681,
+       "n": 2
+      },
+      {
+       "from": 39715,
+       "to": 40095,
+       "n": 2
+      },
+      {
+       "from": 39717,
+       "to": 397674,
+       "n": 2
+      },
+      {
+       "from": 39732,
+       "to": 39717,
+       "n": 2
+      },
+      {
+       "from": 39732,
+       "to": 397666,
+       "n": 2
+      },
+      {
+       "from": 40095,
+       "to": 397675,
+       "n": 2
+      },
+      {
+       "from": 397665,
+       "to": 39715,
+       "n": 2
+      },
+      {
+       "from": 397665,
+       "to": 397680,
+       "n": 2
+      },
+      {
+       "from": 397665,
+       "to": 397681,
+       "n": 2
+      },
+      {
+       "from": 397674,
+       "to": 39715,
+       "n": 2
+      },
+      {
+       "from": 397674,
+       "to": 40095,
+       "n": 2
+      },
+      {
+       "from": 397674,
+       "to": 397680,
+       "n": 2
+      },
+      {
+       "from": 397675,
+       "to": 39717,
+       "n": 2
+      },
+      {
+       "from": 397680,
+       "to": 40095,
+       "n": 2
+      },
+      {
+       "from": 397681,
+       "to": 39717,
+       "n": 2
+      },
+      {
+       "from": 397681,
+       "to": 397674,
+       "n": 2
+      },
+      {
+       "from": 397681,
+       "to": 397680,
+       "n": 2
+      },
+      {
+       "from": 39714,
+       "to": 40095,
+       "n": 1
+      },
+      {
+       "from": 39714,
+       "to": 397665,
+       "n": 1
+      },
+      {
+       "from": 39714,
+       "to": 397674,
+       "n": 1
+      },
+      {
+       "from": 39715,
+       "to": 39714,
+       "n": 1
+      },
+      {
+       "from": 39715,
+       "to": 39732,
+       "n": 1
+      },
+      {
+       "from": 39715,
+       "to": 397665,
+       "n": 1
+      },
+      {
+       "from": 39715,
+       "to": 397674,
+       "n": 1
+      },
+      {
+       "from": 39717,
+       "to": 40095,
+       "n": 1
+      },
+      {
+       "from": 39717,
+       "to": 397681,
+       "n": 1
+      },
+      {
+       "from": 39732,
+       "to": 397680,
+       "n": 1
+      },
+      {
+       "from": 40095,
+       "to": 39714,
+       "n": 1
+      },
+      {
+       "from": 40095,
+       "to": 39715,
+       "n": 1
+      },
+      {
+       "from": 40095,
+       "to": 397665,
+       "n": 1
+      },
+      {
+       "from": 40095,
+       "to": 397681,
+       "n": 1
+      },
+      {
+       "from": 397665,
+       "to": 39714,
+       "n": 1
+      },
+      {
+       "from": 397666,
+       "to": 397675,
+       "n": 1
+      },
+      {
+       "from": 397674,
+       "to": 39714,
+       "n": 1
+      },
+      {
+       "from": 397674,
+       "to": 397666,
+       "n": 1
+      },
+      {
+       "from": 397674,
+       "to": 397675,
+       "n": 1
+      },
+      {
+       "from": 397675,
+       "to": 397665,
+       "n": 1
+      },
+      {
+       "from": 397680,
+       "to": 39717,
+       "n": 1
+      },
+      {
+       "from": 397680,
+       "to": 397666,
+       "n": 1
+      },
+      {
+       "from": 397680,
+       "to": 397674,
+       "n": 1
+      },
+      {
+       "from": 397681,
+       "to": 39714,
+       "n": 1
+      },
+      {
+       "from": 397681,
+       "to": 39715,
+       "n": 1
+      }
+     ],
+     "pairs": [
+      {
+       "a": 397665,
+       "b": 397666,
+       "forward": 11,
+       "backward": 3,
+       "n": 14
+      },
+      {
+       "a": 39732,
+       "b": 397674,
+       "forward": 9,
+       "backward": 4,
+       "n": 13
+      },
+      {
+       "a": 40095,
+       "b": 39732,
+       "forward": 7,
+       "backward": 3,
+       "n": 10
+      },
+      {
+       "a": 397666,
+       "b": 40095,
+       "forward": 7,
+       "backward": 3,
+       "n": 10
+      },
+      {
+       "a": 397681,
+       "b": 39732,
+       "forward": 7,
+       "backward": 3,
+       "n": 10
+      },
+      {
+       "a": 39714,
+       "b": 39732,
+       "forward": 5,
+       "backward": 5,
+       "n": 10
+      },
+      {
+       "a": 40095,
+       "b": 397674,
+       "forward": 7,
+       "backward": 2,
+       "n": 9
+      },
+      {
+       "a": 39732,
+       "b": 397675,
+       "forward": 6,
+       "backward": 3,
+       "n": 9
+      },
+      {
+       "a": 397674,
+       "b": 397681,
+       "forward": 6,
+       "backward": 2,
+       "n": 8
+      },
+      {
+       "a": 397674,
+       "b": 39717,
+       "forward": 5,
+       "backward": 2,
+       "n": 7
+      },
+      {
+       "a": 397666,
+       "b": 397674,
+       "forward": 5,
+       "backward": 1,
+       "n": 6
+      },
+      {
+       "a": 397681,
+       "b": 40095,
+       "forward": 4,
+       "backward": 1,
+       "n": 5
+      },
+      {
+       "a": 39717,
+       "b": 39732,
+       "forward": 3,
+       "backward": 2,
+       "n": 5
+      },
+      {
+       "a": 39717,
+       "b": 397675,
+       "forward": 3,
+       "backward": 2,
+       "n": 5
+      },
+      {
+       "a": 397666,
+       "b": 39732,
+       "forward": 3,
+       "backward": 2,
+       "n": 5
+      },
+      {
+       "a": 397680,
+       "b": 397681,
+       "forward": 3,
+       "backward": 2,
+       "n": 5
+      },
+      {
+       "a": 397665,
+       "b": 397674,
+       "forward": 4,
+       "backward": 0,
+       "n": 4
+      },
+      {
+       "a": 397666,
+       "b": 397681,
+       "forward": 4,
+       "backward": 0,
+       "n": 4
+      },
+      {
+       "a": 397665,
+       "b": 40095,
+       "forward": 3,
+       "backward": 1,
+       "n": 4
+      },
+      {
+       "a": 397665,
+       "b": 39732,
+       "forward": 3,
+       "backward": 0,
+       "n": 3
+      },
+      {
+       "a": 397681,
+       "b": 397675,
+       "forward": 3,
+       "backward": 0,
+       "n": 3
+      },
+      {
+       "a": 39714,
+       "b": 397681,
+       "forward": 2,
+       "backward": 1,
+       "n": 3
+      },
+      {
+       "a": 39715,
+       "b": 40095,
+       "forward": 2,
+       "backward": 1,
+       "n": 3
+      },
+      {
+       "a": 397665,
+       "b": 39715,
+       "forward": 2,
+       "backward": 1,
+       "n": 3
+      },
+      {
+       "a": 397674,
+       "b": 39715,
+       "forward": 2,
+       "backward": 1,
+       "n": 3
+      },
+      {
+       "a": 397674,
+       "b": 397680,
+       "forward": 2,
+       "backward": 1,
+       "n": 3
+      },
+      {
+       "a": 397681,
+       "b": 39717,
+       "forward": 2,
+       "backward": 1,
+       "n": 3
+      },
+      {
+       "a": 39714,
+       "b": 39717,
+       "forward": 2,
+       "backward": 0,
+       "n": 2
+      },
+      {
+       "a": 40095,
+       "b": 397675,
+       "forward": 2,
+       "backward": 0,
+       "n": 2
+      },
+      {
+       "a": 397665,
+       "b": 397680,
+       "forward": 2,
+       "backward": 0,
+       "n": 2
+      },
+      {
+       "a": 397665,
+       "b": 397681,
+       "forward": 2,
+       "backward": 0,
+       "n": 2
+      },
+      {
+       "a": 397680,
+       "b": 40095,
+       "forward": 2,
+       "backward": 0,
+       "n": 2
+      },
+      {
+       "a": 39714,
+       "b": 40095,
+       "forward": 1,
+       "backward": 1,
+       "n": 2
+      },
+      {
+       "a": 39714,
+       "b": 397665,
+       "forward": 1,
+       "backward": 1,
+       "n": 2
+      },
+      {
+       "a": 39714,
+       "b": 397674,
+       "forward": 1,
+       "backward": 1,
+       "n": 2
+      },
+      {
+       "a": 39715,
+       "b": 39714,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 39715,
+       "b": 39732,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 39717,
+       "b": 40095,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 39732,
+       "b": 397680,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 397666,
+       "b": 397675,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 397674,
+       "b": 397675,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 397675,
+       "b": 397665,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 397680,
+       "b": 39717,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 397680,
+       "b": 397666,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 397681,
+       "b": 39715,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      }
+     ]
+    },
+    "openPlay": {
+     "completed": 189,
+     "sameAsFull": false,
+     "cutAt": null,
+     "removed": {
+      "Corner": 4,
+      "Free Kick": 14,
+      "Throw-in": 14,
+      "Goal Kick": 17,
+      "Kick Off": 5
+     },
+     "highlights": {
+      "shift": {
+       "playerId": 39715,
+       "meters": 10.3
+      },
+      "drop": {
+       "playerId": 397665,
+       "from": 32,
+       "to": 12
+      }
+     },
+     "nodes": [
+      {
+       "playerId": 39732,
+       "num": 15,
+       "name": "Mazzola",
+       "position": "Meia (esq.)",
+       "ball": {
+        "x": 68.7,
+        "y": 40.0
+       },
+       "positionFrom": "passes",
+       "passes": 33,
+       "received": 32,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 397666,
+       "num": 5,
+       "name": "Cera",
+       "position": "Zagueiro (esq.)",
+       "ball": {
+        "x": 34.0,
+        "y": 32.8
+       },
+       "positionFrom": "passes",
+       "passes": 29,
+       "received": 11,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 397674,
+       "num": 13,
+       "name": "Domenghini",
+       "position": "Ala-direito",
+       "ball": {
+        "x": 57.6,
+        "y": 63.45
+       },
+       "positionFrom": "passes",
+       "passes": 22,
+       "received": 34,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 397681,
+       "num": 16,
+       "name": "De Sisti",
+       "position": "Meia (dir.)",
+       "ball": {
+        "x": 54.7,
+        "y": 46.3
+       },
+       "positionFrom": "passes",
+       "passes": 21,
+       "received": 23,
+       "sub": null,
+       "label": "above"
+      },
+      {
+       "playerId": 40095,
+       "num": 10,
+       "name": "Bertini",
+       "position": "Volante",
+       "ball": {
+        "x": 43.3,
+        "y": 54.0
+       },
+       "positionFrom": "passes",
+       "passes": 21,
+       "received": 20,
+       "sub": {
+        "type": "out",
+        "minute": 74,
+        "with": 397677
+       },
+       "label": "below"
+      },
+      {
+       "playerId": 39714,
+       "num": 3,
+       "name": "Facchetti",
+       "position": "Ala-esquerdo",
+       "ball": {
+        "x": 40.5,
+        "y": 13.2
+       },
+       "positionFrom": "passes",
+       "passes": 13,
+       "received": 7,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 397665,
+       "num": 1,
+       "name": "Albertosi",
+       "position": "Goleiro",
+       "ball": {
+        "x": 8.4,
+        "y": 38.15
+       },
+       "positionFrom": "passes",
+       "passes": 12,
+       "received": 5,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 397680,
+       "num": 8,
+       "name": "Rosato",
+       "position": "Zagueiro",
+       "ball": {
+        "x": 25.2,
+        "y": 51.9
+       },
+       "positionFrom": "passes",
+       "passes": 9,
+       "received": 8,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 397675,
+       "num": 11,
+       "name": "Riva",
+       "position": "Atacante (esq.)",
+       "ball": {
+        "x": 81.6,
+        "y": 37.1
+       },
+       "positionFrom": "passes",
+       "passes": 8,
+       "received": 20,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 39717,
+       "num": 20,
+       "name": "Boninsegna",
+       "position": "Atacante (dir.)",
+       "ball": {
+        "x": 67.4,
+        "y": 35.2
+       },
+       "positionFrom": "passes",
+       "passes": 7,
+       "received": 14,
+       "sub": {
+        "type": "out",
+        "minute": 83,
+        "with": 397676
+       },
+       "label": "above"
+      },
+      {
+       "playerId": 39715,
+       "num": 2,
+       "name": "Burgnich",
+       "position": "Zagueiro (dir.)",
+       "ball": {
+        "x": 52.75,
+        "y": 53.1
+       },
+       "positionFrom": "passes",
+       "passes": 6,
+       "received": 6,
+       "sub": null,
+       "label": "right"
+      },
+      {
+       "playerId": 397677,
+       "num": 18,
+       "name": "Juliano",
+       "position": "Volante",
+       "ball": {
+        "x": 65.45,
+        "y": 56.5
+       },
+       "positionFrom": "passes",
+       "passes": 6,
+       "received": 6,
+       "sub": {
+        "type": "in",
+        "minute": 74,
+        "with": 40095
+       },
+       "label": "right"
+      },
+      {
+       "playerId": 397676,
+       "num": 14,
+       "name": "Rivera",
+       "position": "Atacante (dir.)",
+       "ball": {
+        "x": 81.7,
+        "y": 47.05
+       },
+       "positionFrom": "passes",
+       "passes": 2,
+       "received": 3,
+       "sub": {
+        "type": "in",
+        "minute": 83,
+        "with": 39717
+       },
+       "label": "below"
+      }
+     ],
+     "edges": [
+      {
+       "from": 39732,
+       "to": 397674,
+       "n": 10
+      },
+      {
+       "from": 39732,
+       "to": 397675,
+       "n": 7
+      },
+      {
+       "from": 40095,
+       "to": 39732,
+       "n": 7
+      },
+      {
+       "from": 397666,
+       "to": 40095,
+       "n": 6
+      },
+      {
+       "from": 397666,
+       "to": 397674,
+       "n": 6
+      },
+      {
+       "from": 39714,
+       "to": 39732,
+       "n": 5
+      },
+      {
+       "from": 40095,
+       "to": 397674,
+       "n": 5
+      },
+      {
+       "from": 397674,
+       "to": 397681,
+       "n": 5
+      },
+      {
+       "from": 397681,
+       "to": 39732,
+       "n": 5
+      },
+      {
+       "from": 397666,
+       "to": 39732,
+       "n": 4
+      },
+      {
+       "from": 397666,
+       "to": 397681,
+       "n": 4
+      },
+      {
+       "from": 397674,
+       "to": 39717,
+       "n": 4
+      },
+      {
+       "from": 397674,
+       "to": 39732,
+       "n": 4
+      },
+      {
+       "from": 397681,
+       "to": 397675,
+       "n": 4
+      },
+      {
+       "from": 39717,
+       "to": 397675,
+       "n": 3
+      },
+      {
+       "from": 39732,
+       "to": 39714,
+       "n": 3
+      },
+      {
+       "from": 39732,
+       "to": 40095,
+       "n": 3
+      },
+      {
+       "from": 39732,
+       "to": 397666,
+       "n": 3
+      },
+      {
+       "from": 39732,
+       "to": 397681,
+       "n": 3
+      },
+      {
+       "from": 40095,
+       "to": 397666,
+       "n": 3
+      },
+      {
+       "from": 397665,
+       "to": 397681,
+       "n": 3
+      },
+      {
+       "from": 39714,
+       "to": 39717,
+       "n": 2
+      },
+      {
+       "from": 39714,
+       "to": 397681,
+       "n": 2
+      },
+      {
+       "from": 39715,
+       "to": 40095,
+       "n": 2
+      },
+      {
+       "from": 39715,
+       "to": 397674,
+       "n": 2
+      },
+      {
+       "from": 39717,
+       "to": 397674,
+       "n": 2
+      },
+      {
+       "from": 39732,
+       "to": 39717,
+       "n": 2
+      },
+      {
+       "from": 40095,
+       "to": 397675,
+       "n": 2
+      },
+      {
+       "from": 397665,
+       "to": 39715,
+       "n": 2
+      },
+      {
+       "from": 397665,
+       "to": 39732,
+       "n": 2
+      },
+      {
+       "from": 397665,
+       "to": 397674,
+       "n": 2
+      },
+      {
+       "from": 397666,
+       "to": 397665,
+       "n": 2
+      },
+      {
+       "from": 397666,
+       "to": 397675,
+       "n": 2
+      },
+      {
+       "from": 397666,
+       "to": 397677,
+       "n": 2
+      },
+      {
+       "from": 397666,
+       "to": 397680,
+       "n": 2
+      },
+      {
+       "from": 397674,
+       "to": 40095,
+       "n": 2
+      },
+      {
+       "from": 397674,
+       "to": 397680,
+       "n": 2
+      },
+      {
+       "from": 397675,
+       "to": 39717,
+       "n": 2
+      },
+      {
+       "from": 397675,
+       "to": 39732,
+       "n": 2
+      },
+      {
+       "from": 397677,
+       "to": 397674,
+       "n": 2
+      },
+      {
+       "from": 397680,
+       "to": 40095,
+       "n": 2
+      },
+      {
+       "from": 397680,
+       "to": 397677,
+       "n": 2
+      },
+      {
+       "from": 397680,
+       "to": 397681,
+       "n": 2
+      },
+      {
+       "from": 397681,
+       "to": 39717,
+       "n": 2
+      },
+      {
+       "from": 397681,
+       "to": 40095,
+       "n": 2
+      },
+      {
+       "from": 397681,
+       "to": 397674,
+       "n": 2
+      },
+      {
+       "from": 397681,
+       "to": 397680,
+       "n": 2
+      },
+      {
+       "from": 39714,
+       "to": 40095,
+       "n": 1
+      },
+      {
+       "from": 39714,
+       "to": 397665,
+       "n": 1
+      },
+      {
+       "from": 39714,
+       "to": 397666,
+       "n": 1
+      },
+      {
+       "from": 39714,
+       "to": 397674,
+       "n": 1
+      },
+      {
+       "from": 39715,
+       "to": 39714,
+       "n": 1
+      },
+      {
+       "from": 39715,
+       "to": 39732,
+       "n": 1
+      },
+      {
+       "from": 39717,
+       "to": 39732,
+       "n": 1
+      },
+      {
+       "from": 39717,
+       "to": 40095,
+       "n": 1
+      },
+      {
+       "from": 39732,
+       "to": 397677,
+       "n": 1
+      },
+      {
+       "from": 39732,
+       "to": 397680,
+       "n": 1
+      },
+      {
+       "from": 40095,
+       "to": 39714,
+       "n": 1
+      },
+      {
+       "from": 40095,
+       "to": 39715,
+       "n": 1
+      },
+      {
+       "from": 40095,
+       "to": 397665,
+       "n": 1
+      },
+      {
+       "from": 40095,
+       "to": 397681,
+       "n": 1
+      },
+      {
+       "from": 397665,
+       "to": 40095,
+       "n": 1
+      },
+      {
+       "from": 397665,
+       "to": 397666,
+       "n": 1
+      },
+      {
+       "from": 397665,
+       "to": 397680,
+       "n": 1
+      },
+      {
+       "from": 397666,
+       "to": 39715,
+       "n": 1
+      },
+      {
+       "from": 397674,
+       "to": 39714,
+       "n": 1
+      },
+      {
+       "from": 397674,
+       "to": 39715,
+       "n": 1
+      },
+      {
+       "from": 397674,
+       "to": 397666,
+       "n": 1
+      },
+      {
+       "from": 397674,
+       "to": 397675,
+       "n": 1
+      },
+      {
+       "from": 397674,
+       "to": 397676,
+       "n": 1
+      },
+      {
+       "from": 397675,
+       "to": 397665,
+       "n": 1
+      },
+      {
+       "from": 397675,
+       "to": 397674,
+       "n": 1
+      },
+      {
+       "from": 397675,
+       "to": 397676,
+       "n": 1
+      },
+      {
+       "from": 397675,
+       "to": 397681,
+       "n": 1
+      },
+      {
+       "from": 397676,
+       "to": 397675,
+       "n": 1
+      },
+      {
+       "from": 397676,
+       "to": 397681,
+       "n": 1
+      },
+      {
+       "from": 397677,
+       "to": 39717,
+       "n": 1
+      },
+      {
+       "from": 397677,
+       "to": 39732,
+       "n": 1
+      },
+      {
+       "from": 397677,
+       "to": 397676,
+       "n": 1
+      },
+      {
+       "from": 397677,
+       "to": 397681,
+       "n": 1
+      },
+      {
+       "from": 397680,
+       "to": 39717,
+       "n": 1
+      },
+      {
+       "from": 397680,
+       "to": 397666,
+       "n": 1
+      },
+      {
+       "from": 397680,
+       "to": 397674,
+       "n": 1
+      },
+      {
+       "from": 397681,
+       "to": 39714,
+       "n": 1
+      },
+      {
+       "from": 397681,
+       "to": 39715,
+       "n": 1
+      },
+      {
+       "from": 397681,
+       "to": 397666,
+       "n": 1
+      },
+      {
+       "from": 397681,
+       "to": 397677,
+       "n": 1
+      }
+     ],
+     "pairs": [
+      {
+       "a": 39732,
+       "b": 397674,
+       "forward": 10,
+       "backward": 4,
+       "n": 14
+      },
+      {
+       "a": 40095,
+       "b": 39732,
+       "forward": 7,
+       "backward": 3,
+       "n": 10
+      },
+      {
+       "a": 39732,
+       "b": 397675,
+       "forward": 7,
+       "backward": 2,
+       "n": 9
+      },
+      {
+       "a": 397666,
+       "b": 40095,
+       "forward": 6,
+       "backward": 3,
+       "n": 9
+      },
+      {
+       "a": 39714,
+       "b": 39732,
+       "forward": 5,
+       "backward": 3,
+       "n": 8
+      },
+      {
+       "a": 397681,
+       "b": 39732,
+       "forward": 5,
+       "backward": 3,
+       "n": 8
+      },
+      {
+       "a": 397666,
+       "b": 397674,
+       "forward": 6,
+       "backward": 1,
+       "n": 7
+      },
+      {
+       "a": 40095,
+       "b": 397674,
+       "forward": 5,
+       "backward": 2,
+       "n": 7
+      },
+      {
+       "a": 397674,
+       "b": 397681,
+       "forward": 5,
+       "backward": 2,
+       "n": 7
+      },
+      {
+       "a": 397666,
+       "b": 39732,
+       "forward": 4,
+       "backward": 3,
+       "n": 7
+      },
+      {
+       "a": 397674,
+       "b": 39717,
+       "forward": 4,
+       "backward": 2,
+       "n": 6
+      },
+      {
+       "a": 397666,
+       "b": 397681,
+       "forward": 4,
+       "backward": 1,
+       "n": 5
+      },
+      {
+       "a": 397681,
+       "b": 397675,
+       "forward": 4,
+       "backward": 1,
+       "n": 5
+      },
+      {
+       "a": 39717,
+       "b": 397675,
+       "forward": 3,
+       "backward": 2,
+       "n": 5
+      },
+      {
+       "a": 397680,
+       "b": 397681,
+       "forward": 2,
+       "backward": 2,
+       "n": 4
+      },
+      {
+       "a": 397665,
+       "b": 397681,
+       "forward": 3,
+       "backward": 0,
+       "n": 3
+      },
+      {
+       "a": 39714,
+       "b": 397681,
+       "forward": 2,
+       "backward": 1,
+       "n": 3
+      },
+      {
+       "a": 39715,
+       "b": 40095,
+       "forward": 2,
+       "backward": 1,
+       "n": 3
+      },
+      {
+       "a": 39715,
+       "b": 397674,
+       "forward": 2,
+       "backward": 1,
+       "n": 3
+      },
+      {
+       "a": 39732,
+       "b": 39717,
+       "forward": 2,
+       "backward": 1,
+       "n": 3
+      },
+      {
+       "a": 397666,
+       "b": 397665,
+       "forward": 2,
+       "backward": 1,
+       "n": 3
+      },
+      {
+       "a": 397666,
+       "b": 397680,
+       "forward": 2,
+       "backward": 1,
+       "n": 3
+      },
+      {
+       "a": 397674,
+       "b": 397680,
+       "forward": 2,
+       "backward": 1,
+       "n": 3
+      },
+      {
+       "a": 397681,
+       "b": 40095,
+       "forward": 2,
+       "backward": 1,
+       "n": 3
+      },
+      {
+       "a": 39714,
+       "b": 39717,
+       "forward": 2,
+       "backward": 0,
+       "n": 2
+      },
+      {
+       "a": 40095,
+       "b": 397675,
+       "forward": 2,
+       "backward": 0,
+       "n": 2
+      },
+      {
+       "a": 397665,
+       "b": 39715,
+       "forward": 2,
+       "backward": 0,
+       "n": 2
+      },
+      {
+       "a": 397665,
+       "b": 39732,
+       "forward": 2,
+       "backward": 0,
+       "n": 2
+      },
+      {
+       "a": 397665,
+       "b": 397674,
+       "forward": 2,
+       "backward": 0,
+       "n": 2
+      },
+      {
+       "a": 397666,
+       "b": 397675,
+       "forward": 2,
+       "backward": 0,
+       "n": 2
+      },
+      {
+       "a": 397666,
+       "b": 397677,
+       "forward": 2,
+       "backward": 0,
+       "n": 2
+      },
+      {
+       "a": 397677,
+       "b": 397674,
+       "forward": 2,
+       "backward": 0,
+       "n": 2
+      },
+      {
+       "a": 397680,
+       "b": 40095,
+       "forward": 2,
+       "backward": 0,
+       "n": 2
+      },
+      {
+       "a": 397680,
+       "b": 397677,
+       "forward": 2,
+       "backward": 0,
+       "n": 2
+      },
+      {
+       "a": 397681,
+       "b": 39717,
+       "forward": 2,
+       "backward": 0,
+       "n": 2
+      },
+      {
+       "a": 39714,
+       "b": 40095,
+       "forward": 1,
+       "backward": 1,
+       "n": 2
+      },
+      {
+       "a": 39714,
+       "b": 397674,
+       "forward": 1,
+       "backward": 1,
+       "n": 2
+      },
+      {
+       "a": 39732,
+       "b": 397677,
+       "forward": 1,
+       "backward": 1,
+       "n": 2
+      },
+      {
+       "a": 40095,
+       "b": 397665,
+       "forward": 1,
+       "backward": 1,
+       "n": 2
+      },
+      {
+       "a": 397674,
+       "b": 397675,
+       "forward": 1,
+       "backward": 1,
+       "n": 2
+      },
+      {
+       "a": 397675,
+       "b": 397676,
+       "forward": 1,
+       "backward": 1,
+       "n": 2
+      },
+      {
+       "a": 397677,
+       "b": 397681,
+       "forward": 1,
+       "backward": 1,
+       "n": 2
+      },
+      {
+       "a": 39714,
+       "b": 397665,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 39714,
+       "b": 397666,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 39715,
+       "b": 39714,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 39715,
+       "b": 39732,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 39717,
+       "b": 40095,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 39732,
+       "b": 397680,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 397665,
+       "b": 397680,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 397666,
+       "b": 39715,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 397674,
+       "b": 397676,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 397675,
+       "b": 397665,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 397676,
+       "b": 397681,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 397677,
+       "b": 39717,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 397677,
+       "b": 397676,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 397680,
+       "b": 39717,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 397681,
+       "b": 39715,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      }
+     ]
+    },
+    "firstSubOpen": {
+     "completed": 148,
+     "sameAsFull": false,
+     "cutAt": {
+      "minute": 74,
+      "out": 40095,
+      "in": 397677
+     },
+     "removed": {
+      "Corner": 4,
+      "Free Kick": 12,
+      "Throw-in": 10,
+      "Goal Kick": 15,
+      "Kick Off": 4
+     },
+     "highlights": {
+      "shift": {
+       "playerId": 397674,
+       "meters": 7.7
+      },
+      "drop": {
+       "playerId": 397665,
+       "from": 32,
+       "to": 11
+      }
+     },
+     "nodes": [
+      {
+       "playerId": 39732,
+       "num": 15,
+       "name": "Mazzola",
+       "position": "Meia (esq.)",
+       "ball": {
+        "x": 64.0,
+        "y": 40.0
+       },
+       "positionFrom": "passes",
+       "passes": 27,
+       "received": 27,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 40095,
+       "num": 10,
+       "name": "Bertini",
+       "position": "Volante",
+       "ball": {
+        "x": 43.3,
+        "y": 54.0
+       },
+       "positionFrom": "passes",
+       "passes": 21,
+       "received": 20,
+       "sub": {
+        "type": "out",
+        "minute": 74,
+        "with": 397677
+       },
+       "label": "below"
+      },
+      {
+       "playerId": 397666,
+       "num": 5,
+       "name": "Cera",
+       "position": "Zagueiro (esq.)",
+       "ball": {
+        "x": 29.8,
+        "y": 36.3
+       },
+       "positionFrom": "passes",
+       "passes": 19,
+       "received": 7,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 397674,
+       "num": 13,
+       "name": "Domenghini",
+       "position": "Ala-direito",
+       "ball": {
+        "x": 55.0,
+        "y": 64.35
+       },
+       "positionFrom": "passes",
+       "passes": 18,
+       "received": 26,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 397681,
+       "num": 16,
+       "name": "De Sisti",
+       "position": "Meia (dir.)",
+       "ball": {
+        "x": 65.75,
+        "y": 49.95
+       },
+       "positionFrom": "passes",
+       "passes": 18,
+       "received": 19,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 39714,
+       "num": 3,
+       "name": "Facchetti",
+       "position": "Ala-esquerdo",
+       "ball": {
+        "x": 48.4,
+        "y": 13.2
+       },
+       "positionFrom": "passes",
+       "passes": 11,
+       "received": 7,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 397665,
+       "num": 1,
+       "name": "Albertosi",
+       "position": "Goleiro",
+       "ball": {
+        "x": 8.0,
+        "y": 35.9
+       },
+       "positionFrom": "passes",
+       "passes": 11,
+       "received": 5,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 39717,
+       "num": 20,
+       "name": "Boninsegna",
+       "position": "Atacante (dir.)",
+       "ball": {
+        "x": 67.4,
+        "y": 35.2
+       },
+       "positionFrom": "passes",
+       "passes": 7,
+       "received": 12,
+       "sub": {
+        "type": "out",
+        "minute": 83,
+        "with": 397676
+       },
+       "label": "above"
+      },
+      {
+       "playerId": 397680,
+       "num": 8,
+       "name": "Rosato",
+       "position": "Zagueiro",
+       "ball": {
+        "x": 23.95,
+        "y": 56.75
+       },
+       "positionFrom": "passes",
+       "passes": 6,
+       "received": 6,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 397675,
+       "num": 11,
+       "name": "Riva",
+       "position": "Atacante (esq.)",
+       "ball": {
+        "x": 80.3,
+        "y": 38.3
+       },
+       "positionFrom": "passes",
+       "passes": 5,
+       "received": 14,
+       "sub": null,
+       "label": "below"
+      },
+      {
+       "playerId": 39715,
+       "num": 2,
+       "name": "Burgnich",
+       "position": "Zagueiro (dir.)",
+       "ball": {
+        "x": 56.4,
+        "y": 63.7
+       },
+       "positionFrom": "passes",
+       "passes": 5,
+       "received": 5,
+       "sub": null,
+       "label": "above"
+      }
+     ],
+     "edges": [
+      {
+       "from": 39732,
+       "to": 397674,
+       "n": 9
+      },
+      {
+       "from": 40095,
+       "to": 39732,
+       "n": 7
+      },
+      {
+       "from": 397666,
+       "to": 40095,
+       "n": 6
+      },
+      {
+       "from": 39714,
+       "to": 39732,
+       "n": 5
+      },
+      {
+       "from": 39732,
+       "to": 397675,
+       "n": 5
+      },
+      {
+       "from": 40095,
+       "to": 397674,
+       "n": 5
+      },
+      {
+       "from": 397674,
+       "to": 397681,
+       "n": 5
+      },
+      {
+       "from": 397681,
+       "to": 39732,
+       "n": 5
+      },
+      {
+       "from": 397666,
+       "to": 397674,
+       "n": 4
+      },
+      {
+       "from": 397666,
+       "to": 397681,
+       "n": 4
+      },
+      {
+       "from": 397674,
+       "to": 39717,
+       "n": 4
+      },
+      {
+       "from": 39717,
+       "to": 397675,
+       "n": 3
+      },
+      {
+       "from": 39732,
+       "to": 39714,
+       "n": 3
+      },
+      {
+       "from": 39732,
+       "to": 40095,
+       "n": 3
+      },
+      {
+       "from": 39732,
+       "to": 397681,
+       "n": 3
+      },
+      {
+       "from": 40095,
+       "to": 397666,
+       "n": 3
+      },
+      {
+       "from": 397681,
+       "to": 397675,
+       "n": 3
+      },
+      {
+       "from": 39714,
+       "to": 39717,
+       "n": 2
+      },
+      {
+       "from": 39714,
+       "to": 397681,
+       "n": 2
+      },
+      {
+       "from": 39715,
+       "to": 40095,
+       "n": 2
+      },
+      {
+       "from": 39717,
+       "to": 397674,
+       "n": 2
+      },
+      {
+       "from": 39732,
+       "to": 397666,
+       "n": 2
+      },
+      {
+       "from": 40095,
+       "to": 397675,
+       "n": 2
+      },
+      {
+       "from": 397665,
+       "to": 39715,
+       "n": 2
+      },
+      {
+       "from": 397665,
+       "to": 39732,
+       "n": 2
+      },
+      {
+       "from": 397665,
+       "to": 397674,
+       "n": 2
+      },
+      {
+       "from": 397665,
+       "to": 397681,
+       "n": 2
+      },
+      {
+       "from": 397666,
+       "to": 39732,
+       "n": 2
+      },
+      {
+       "from": 397666,
+       "to": 397665,
+       "n": 2
+      },
+      {
+       "from": 397674,
+       "to": 39732,
+       "n": 2
+      },
+      {
+       "from": 397674,
+       "to": 40095,
+       "n": 2
+      },
+      {
+       "from": 397674,
+       "to": 397680,
+       "n": 2
+      },
+      {
+       "from": 397675,
+       "to": 39717,
+       "n": 2
+      },
+      {
+       "from": 397675,
+       "to": 39732,
+       "n": 2
+      },
+      {
+       "from": 397680,
+       "to": 40095,
+       "n": 2
+      },
+      {
+       "from": 397680,
+       "to": 397681,
+       "n": 2
+      },
+      {
+       "from": 397681,
+       "to": 39717,
+       "n": 2
+      },
+      {
+       "from": 397681,
+       "to": 40095,
+       "n": 2
+      },
+      {
+       "from": 397681,
+       "to": 397674,
+       "n": 2
+      },
+      {
+       "from": 397681,
+       "to": 397680,
+       "n": 2
+      },
+      {
+       "from": 39714,
+       "to": 40095,
+       "n": 1
+      },
+      {
+       "from": 39714,
+       "to": 397665,
+       "n": 1
+      },
+      {
+       "from": 39715,
+       "to": 39714,
+       "n": 1
+      },
+      {
+       "from": 39715,
+       "to": 39732,
+       "n": 1
+      },
+      {
+       "from": 39715,
+       "to": 397674,
+       "n": 1
+      },
+      {
+       "from": 39717,
+       "to": 39732,
+       "n": 1
+      },
+      {
+       "from": 39717,
+       "to": 40095,
+       "n": 1
+      },
+      {
+       "from": 39732,
+       "to": 39717,
+       "n": 1
+      },
+      {
+       "from": 39732,
+       "to": 397680,
+       "n": 1
+      },
+      {
+       "from": 40095,
+       "to": 39714,
+       "n": 1
+      },
+      {
+       "from": 40095,
+       "to": 39715,
+       "n": 1
+      },
+      {
+       "from": 40095,
+       "to": 397665,
+       "n": 1
+      },
+      {
+       "from": 40095,
+       "to": 397681,
+       "n": 1
+      },
+      {
+       "from": 397665,
+       "to": 40095,
+       "n": 1
+      },
+      {
+       "from": 397665,
+       "to": 397666,
+       "n": 1
+      },
+      {
+       "from": 397665,
+       "to": 397680,
+       "n": 1
+      },
+      {
+       "from": 397666,
+       "to": 397675,
+       "n": 1
+      },
+      {
+       "from": 397674,
+       "to": 39714,
+       "n": 1
+      },
+      {
+       "from": 397674,
+       "to": 39715,
+       "n": 1
+      },
+      {
+       "from": 397674,
+       "to": 397666,
+       "n": 1
+      },
+      {
+       "from": 397675,
+       "to": 397665,
+       "n": 1
+      },
+      {
+       "from": 397680,
+       "to": 39717,
+       "n": 1
+      },
+      {
+       "from": 397680,
+       "to": 397674,
+       "n": 1
+      },
+      {
+       "from": 397681,
+       "to": 39714,
+       "n": 1
+      },
+      {
+       "from": 397681,
+       "to": 39715,
+       "n": 1
+      }
+     ],
+     "pairs": [
+      {
+       "a": 39732,
+       "b": 397674,
+       "forward": 9,
+       "backward": 2,
+       "n": 11
+      },
+      {
+       "a": 40095,
+       "b": 39732,
+       "forward": 7,
+       "backward": 3,
+       "n": 10
+      },
+      {
+       "a": 397666,
+       "b": 40095,
+       "forward": 6,
+       "backward": 3,
+       "n": 9
+      },
+      {
+       "a": 39714,
+       "b": 39732,
+       "forward": 5,
+       "backward": 3,
+       "n": 8
+      },
+      {
+       "a": 397681,
+       "b": 39732,
+       "forward": 5,
+       "backward": 3,
+       "n": 8
+      },
+      {
+       "a": 39732,
+       "b": 397675,
+       "forward": 5,
+       "backward": 2,
+       "n": 7
+      },
+      {
+       "a": 40095,
+       "b": 397674,
+       "forward": 5,
+       "backward": 2,
+       "n": 7
+      },
+      {
+       "a": 397674,
+       "b": 397681,
+       "forward": 5,
+       "backward": 2,
+       "n": 7
+      },
+      {
+       "a": 397674,
+       "b": 39717,
+       "forward": 4,
+       "backward": 2,
+       "n": 6
+      },
+      {
+       "a": 397666,
+       "b": 397674,
+       "forward": 4,
+       "backward": 1,
+       "n": 5
+      },
+      {
+       "a": 39717,
+       "b": 397675,
+       "forward": 3,
+       "backward": 2,
+       "n": 5
+      },
+      {
+       "a": 397666,
+       "b": 397681,
+       "forward": 4,
+       "backward": 0,
+       "n": 4
+      },
+      {
+       "a": 39732,
+       "b": 397666,
+       "forward": 2,
+       "backward": 2,
+       "n": 4
+      },
+      {
+       "a": 397680,
+       "b": 397681,
+       "forward": 2,
+       "backward": 2,
+       "n": 4
+      },
+      {
+       "a": 397681,
+       "b": 397675,
+       "forward": 3,
+       "backward": 0,
+       "n": 3
+      },
+      {
+       "a": 39714,
+       "b": 397681,
+       "forward": 2,
+       "backward": 1,
+       "n": 3
+      },
+      {
+       "a": 39715,
+       "b": 40095,
+       "forward": 2,
+       "backward": 1,
+       "n": 3
+      },
+      {
+       "a": 397666,
+       "b": 397665,
+       "forward": 2,
+       "backward": 1,
+       "n": 3
+      },
+      {
+       "a": 397674,
+       "b": 397680,
+       "forward": 2,
+       "backward": 1,
+       "n": 3
+      },
+      {
+       "a": 397681,
+       "b": 40095,
+       "forward": 2,
+       "backward": 1,
+       "n": 3
+      },
+      {
+       "a": 39714,
+       "b": 39717,
+       "forward": 2,
+       "backward": 0,
+       "n": 2
+      },
+      {
+       "a": 40095,
+       "b": 397675,
+       "forward": 2,
+       "backward": 0,
+       "n": 2
+      },
+      {
+       "a": 397665,
+       "b": 39715,
+       "forward": 2,
+       "backward": 0,
+       "n": 2
+      },
+      {
+       "a": 397665,
+       "b": 39732,
+       "forward": 2,
+       "backward": 0,
+       "n": 2
+      },
+      {
+       "a": 397665,
+       "b": 397674,
+       "forward": 2,
+       "backward": 0,
+       "n": 2
+      },
+      {
+       "a": 397665,
+       "b": 397681,
+       "forward": 2,
+       "backward": 0,
+       "n": 2
+      },
+      {
+       "a": 397680,
+       "b": 40095,
+       "forward": 2,
+       "backward": 0,
+       "n": 2
+      },
+      {
+       "a": 397681,
+       "b": 39717,
+       "forward": 2,
+       "backward": 0,
+       "n": 2
+      },
+      {
+       "a": 39714,
+       "b": 40095,
+       "forward": 1,
+       "backward": 1,
+       "n": 2
+      },
+      {
+       "a": 39715,
+       "b": 397674,
+       "forward": 1,
+       "backward": 1,
+       "n": 2
+      },
+      {
+       "a": 39717,
+       "b": 39732,
+       "forward": 1,
+       "backward": 1,
+       "n": 2
+      },
+      {
+       "a": 40095,
+       "b": 397665,
+       "forward": 1,
+       "backward": 1,
+       "n": 2
+      },
+      {
+       "a": 39714,
+       "b": 397665,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 39715,
+       "b": 39714,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 39715,
+       "b": 39732,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 39717,
+       "b": 40095,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 39732,
+       "b": 397680,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 397665,
+       "b": 397680,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 397666,
+       "b": 397675,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 397674,
+       "b": 39714,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 397675,
+       "b": 397665,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 397680,
+       "b": 39717,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      },
+      {
+       "a": 397681,
+       "b": 39715,
+       "forward": 1,
+       "backward": 0,
+       "n": 1
+      }
+     ]
+    }
+   },
    "substitutions": [
     {
      "minute": 74,
@@ -4506,6 +10136,12 @@
   "excludedAddUp": true,
   "edgesHaveNodes": true,
   "pairSumEqualsCompleted": true,
+  "cutSumsAdd": true,
+  "cutEdgesHaveNodes": true,
+  "cutNotLarger": true,
+  "openPlayAddsUp": true,
+  "firstSubOpenAddsUp": true,
+  "noSubMeansSame": true,
   "shotCount": true,
   "shotGoals": true,
   "shotItemsMatchCount": true,
