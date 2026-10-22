@@ -1294,9 +1294,468 @@
     "count": 22,
     "goals": 3,
     "xg": 2.22,
+    "xgPerShot": 0.101,
     "xgCoverage": [
      22,
      22
+    ],
+    "items": [
+     {
+      "period": 1,
+      "minute": 2,
+      "second": 16,
+      "playerId": 397631,
+      "name": "Caju",
+      "num": 18,
+      "x": 100.2,
+      "y": 27.8,
+      "end": [
+       117.4,
+       38.2,
+       0.6
+      ],
+      "outcome": "Saved",
+      "result": "saved",
+      "xg": 0.029,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 1,
+      "minute": 2,
+      "second": 57,
+      "playerId": 397620,
+      "name": "Clodoaldo",
+      "num": 5,
+      "x": 100.1,
+      "y": 59.4,
+      "end": [
+       120.0,
+       42.2,
+       3.9
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.01,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 1,
+      "minute": 4,
+      "second": 58,
+      "playerId": 39712,
+      "name": "Pelé",
+      "num": 10,
+      "x": 98.3,
+      "y": 46.4,
+      "end": [
+       101.3,
+       45.8
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.047,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 1,
+      "minute": 5,
+      "second": 28,
+      "playerId": 397631,
+      "name": "Caju",
+      "num": 18,
+      "x": 91.3,
+      "y": 19.8,
+      "end": [
+       120.0,
+       34.2,
+       0.5
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.006,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 1,
+      "minute": 7,
+      "second": 4,
+      "playerId": 39712,
+      "name": "Pelé",
+      "num": 10,
+      "x": 98.0,
+      "y": 47.0,
+      "end": [
+       119.9,
+       34.8,
+       0.2
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.07,
+      "shotType": "freeKick",
+      "setPiece": true,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 1,
+      "minute": 8,
+      "second": 10,
+      "playerId": 397631,
+      "name": "Caju",
+      "num": 18,
+      "x": 118.4,
+      "y": 27.0,
+      "end": [
+       120.0,
+       40.6,
+       2.8
+      ],
+      "outcome": "Post",
+      "result": "post",
+      "xg": 0.019,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 1,
+      "minute": 9,
+      "second": 51,
+      "playerId": 397629,
+      "name": "Everaldo",
+      "num": 16,
+      "x": 93.5,
+      "y": 28.9,
+      "end": [
+       120.0,
+       44.2,
+       0.5
+      ],
+      "outcome": "Post",
+      "result": "post",
+      "xg": 0.029,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 1,
+      "minute": 11,
+      "second": 56,
+      "playerId": 397631,
+      "name": "Caju",
+      "num": 18,
+      "x": 99.0,
+      "y": 22.4,
+      "end": [
+       109.2,
+       30.5
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.02,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 1,
+      "minute": 15,
+      "second": 50,
+      "playerId": 397631,
+      "name": "Caju",
+      "num": 18,
+      "x": 106.1,
+      "y": 25.5,
+      "end": [
+       108.8,
+       29.1
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.058,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 1,
+      "minute": 16,
+      "second": 41,
+      "playerId": 397620,
+      "name": "Clodoaldo",
+      "num": 5,
+      "x": 97.1,
+      "y": 43.1,
+      "end": [
+       98.3,
+       42.8
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.027,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 1,
+      "minute": 16,
+      "second": 58,
+      "playerId": 397620,
+      "name": "Clodoaldo",
+      "num": 5,
+      "x": 98.4,
+      "y": 20.9,
+      "end": [
+       120.0,
+       42.0,
+       6.4
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.01,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 1,
+      "minute": 18,
+      "second": 54,
+      "playerId": 39712,
+      "name": "Pelé",
+      "num": 10,
+      "x": 99.4,
+      "y": 48.6,
+      "end": [
+       120.0,
+       38.1,
+       1.2
+      ],
+      "outcome": "Goal",
+      "result": "goal",
+      "xg": 0.071,
+      "shotType": "freeKick",
+      "setPiece": true,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 1,
+      "minute": 21,
+      "second": 11,
+      "playerId": 397622,
+      "name": "Jairzinho",
+      "num": 7,
+      "x": 116.0,
+      "y": 35.8,
+      "end": [
+       120.0,
+       43.5,
+       0.2
+      ],
+      "outcome": "Goal",
+      "result": "goal",
+      "xg": 0.477,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 1,
+      "minute": 40,
+      "second": 20,
+      "playerId": 397637,
+      "name": "Tostão",
+      "num": 9,
+      "x": 98.6,
+      "y": 23.1,
+      "end": [
+       120.0,
+       50.2,
+       0.2
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.028,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 1,
+      "minute": 44,
+      "second": 40,
+      "playerId": 397631,
+      "name": "Caju",
+      "num": 18,
+      "x": 83.0,
+      "y": 26.6,
+      "end": [
+       100.4,
+       32.0
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.007,
+      "shotType": "freeKick",
+      "setPiece": true,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 47,
+      "second": 41,
+      "playerId": 39708,
+      "name": "Carlos Alberto",
+      "num": 4,
+      "x": 88.0,
+      "y": 62.7,
+      "end": [
+       120.0,
+       52.4,
+       0.5
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.004,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 52,
+      "second": 19,
+      "playerId": 39712,
+      "name": "Pelé",
+      "num": 10,
+      "x": 99.6,
+      "y": 35.0,
+      "end": [
+       118.8,
+       36.7,
+       1.6
+      ],
+      "outcome": "Saved",
+      "result": "saved",
+      "xg": 0.056,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 59,
+      "second": 48,
+      "playerId": 397631,
+      "name": "Caju",
+      "num": 18,
+      "x": 88.0,
+      "y": 63.2,
+      "end": [
+       120.0,
+       46.9,
+       2.5
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.006,
+      "shotType": "freeKick",
+      "setPiece": true,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 65,
+      "second": 22,
+      "playerId": 39712,
+      "name": "Pelé",
+      "num": 10,
+      "x": 114.3,
+      "y": 38.0,
+      "end": [
+       120.0,
+       37.0,
+       0.2
+      ],
+      "outcome": "Goal",
+      "result": "goal",
+      "xg": 0.631,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 76,
+      "second": 22,
+      "playerId": 39712,
+      "name": "Pelé",
+      "num": 10,
+      "x": 97.3,
+      "y": 36.4,
+      "end": [
+       103.7,
+       36.7
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.083,
+      "shotType": "freeKick",
+      "setPiece": true,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 78,
+      "second": 37,
+      "playerId": 39708,
+      "name": "Carlos Alberto",
+      "num": 4,
+      "x": 118.5,
+      "y": 54.8,
+      "end": [
+       119.6,
+       43.9,
+       0.3
+      ],
+      "outcome": "Saved",
+      "result": "saved",
+      "xg": 0.013,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 88,
+      "second": 16,
+      "playerId": 397637,
+      "name": "Tostão",
+      "num": 9,
+      "x": 112.9,
+      "y": 41.1,
+      "end": [
+       115.8,
+       39.8,
+       0.2
+      ],
+      "outcome": "Saved",
+      "result": "saved",
+      "xg": 0.516,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     }
     ]
    },
    "phase": {
@@ -2558,9 +3017,384 @@
     "count": 18,
     "goals": 2,
     "xg": 1.17,
+    "xgPerShot": 0.065,
     "xgCoverage": [
      18,
      18
+    ],
+    "items": [
+     {
+      "period": 1,
+      "minute": 7,
+      "second": 42,
+      "playerId": 398953,
+      "name": "Nunweiller",
+      "num": 10,
+      "x": 84.4,
+      "y": 47.6,
+      "end": [
+       91.4,
+       46.8
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.006,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 1,
+      "minute": 13,
+      "second": 10,
+      "playerId": 398953,
+      "name": "Nunweiller",
+      "num": 10,
+      "x": 94.0,
+      "y": 21.8,
+      "end": [
+       120.0,
+       33.7,
+       0.2
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.01,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 1,
+      "minute": 22,
+      "second": 46,
+      "playerId": 398955,
+      "name": "Dumitrache",
+      "num": 9,
+      "x": 112.5,
+      "y": 50.2,
+      "end": [
+       120.0,
+       37.2,
+       5.8
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.253,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 1,
+      "minute": 25,
+      "second": 49,
+      "playerId": 398969,
+      "name": "Dinu",
+      "num": 5,
+      "x": 97.3,
+      "y": 35.9,
+      "end": [
+       99.0,
+       36.0
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.035,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 1,
+      "minute": 29,
+      "second": 56,
+      "playerId": 398956,
+      "name": "Neagu",
+      "num": 16,
+      "x": 97.4,
+      "y": 47.1,
+      "end": [
+       114.7,
+       43.5,
+       0.2
+      ],
+      "outcome": "Saved",
+      "result": "saved",
+      "xg": 0.044,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 1,
+      "minute": 33,
+      "second": 35,
+      "playerId": 398955,
+      "name": "Dumitrache",
+      "num": 9,
+      "x": 107.6,
+      "y": 38.2,
+      "end": [
+       120.0,
+       38.3,
+       0.2
+      ],
+      "outcome": "Goal",
+      "result": "goal",
+      "xg": 0.157,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 1,
+      "minute": 34,
+      "second": 37,
+      "playerId": 398968,
+      "name": "Lucescu",
+      "num": 11,
+      "x": 97.5,
+      "y": 26.6,
+      "end": [
+       120.0,
+       30.3,
+       0.2
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.034,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 1,
+      "minute": 37,
+      "second": 49,
+      "playerId": 398956,
+      "name": "Neagu",
+      "num": 16,
+      "x": 108.9,
+      "y": 35.0,
+      "end": [
+       109.6,
+       35.3
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.081,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 1,
+      "minute": 41,
+      "second": 17,
+      "playerId": 398969,
+      "name": "Dinu",
+      "num": 5,
+      "x": 79.5,
+      "y": 40.4,
+      "end": [
+       103.2,
+       43.9
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.006,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 2,
+      "minute": 49,
+      "second": 27,
+      "playerId": 398956,
+      "name": "Neagu",
+      "num": 16,
+      "x": 105.1,
+      "y": 44.5,
+      "end": [
+       120.0,
+       44.9,
+       1.0
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.025,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "head"
+     },
+     {
+      "period": 2,
+      "minute": 50,
+      "second": 47,
+      "playerId": 398953,
+      "name": "Nunweiller",
+      "num": 10,
+      "x": 85.8,
+      "y": 23.7,
+      "end": [
+       90.5,
+       25.5
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.007,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 54,
+      "second": 28,
+      "playerId": 398949,
+      "name": "Satmareanu",
+      "num": 2,
+      "x": 95.0,
+      "y": 59.9,
+      "end": [
+       103.0,
+       54.2
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.008,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 2,
+      "minute": 54,
+      "second": 36,
+      "playerId": 398953,
+      "name": "Nunweiller",
+      "num": 10,
+      "x": 93.2,
+      "y": 28.1,
+      "end": [
+       120.0,
+       52.6,
+       0.5
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.026,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 66,
+      "second": 38,
+      "playerId": 398952,
+      "name": "Dembrovschi",
+      "num": 7,
+      "x": 102.6,
+      "y": 50.0,
+      "end": [
+       120.0,
+       44.7,
+       2.4
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.082,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 72,
+      "second": 11,
+      "playerId": 398969,
+      "name": "Dinu",
+      "num": 5,
+      "x": 83.2,
+      "y": 30.3,
+      "end": [
+       120.0,
+       45.7,
+       6.4
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.007,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 74,
+      "second": 50,
+      "playerId": 398958,
+      "name": "Tataru",
+      "num": 17,
+      "x": 104.5,
+      "y": 64.3,
+      "end": [
+       120.0,
+       45.6,
+       3.8
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.01,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 82,
+      "second": 17,
+      "playerId": 398952,
+      "name": "Dembrovschi",
+      "num": 7,
+      "x": 114.7,
+      "y": 41.3,
+      "end": [
+       120.0,
+       36.6,
+       0.9
+      ],
+      "outcome": "Goal",
+      "result": "goal",
+      "xg": 0.355,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "head"
+     },
+     {
+      "period": 2,
+      "minute": 86,
+      "second": 3,
+      "playerId": 398958,
+      "name": "Tataru",
+      "num": 17,
+      "x": 93.7,
+      "y": 53.8,
+      "end": [
+       117.8,
+       40.0,
+       0.8
+      ],
+      "outcome": "Saved",
+      "result": "saved",
+      "xg": 0.022,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     }
     ]
    },
    "phase": {
@@ -3381,6 +4215,9 @@
   "pairSumEqualsCompleted": true,
   "shotCount": true,
   "shotGoals": true,
+  "shotItemsMatchCount": true,
+  "shotItemsGoals": true,
+  "shotItemsXg": true,
   "scoreMatchesEvents": true,
   "replayOrdered": true,
   "replayEndsWithShot": true,

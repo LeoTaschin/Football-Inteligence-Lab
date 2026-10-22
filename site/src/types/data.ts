@@ -99,8 +99,39 @@ export interface TeamData {
   edges: DirectedEdge[];
   pairs: Pair[];
   substitutions: Substitution[];
-  shots: { count: number; goals: number; xg: number; xgCoverage: [number, number] };
+  shots: {
+    count: number;
+    goals: number;
+    xg: number;
+    /** xG ÷ shots with xG; null when no shot has xG */
+    xgPerShot: number | null;
+    xgCoverage: [number, number];
+    items: Shot[];
+  };
   phase: { ballHeight: number; defHeight: number; shiftMeters: number } | null;
+}
+
+export type ShotResult = "goal" | "saved" | "post" | "blocked" | "off" | "other";
+
+/** One shot in its team's frame (attacking towards x = 120). Missing values are null, never 0. */
+export interface Shot {
+  period: number;
+  minute: number;
+  second: number;
+  playerId: number;
+  name: string;
+  num: number | null;
+  x: number | null;
+  y: number | null;
+  /** end location: [x, y] or [x, y, z] */
+  end: number[] | null;
+  /** original StatsBomb shot.outcome */
+  outcome: string;
+  result: ShotResult;
+  xg: number | null;
+  shotType: "openPlay" | "freeKick" | "penalty" | "corner" | "kickOff" | "other";
+  setPiece: boolean;
+  bodyPart: "rightFoot" | "leftFoot" | "head" | "other";
 }
 
 export interface GoalSegment {

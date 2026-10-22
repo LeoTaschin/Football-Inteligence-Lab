@@ -47,6 +47,14 @@ def check_match(data: dict, events: list[dict], periods: tuple[int, ...]) -> dic
         check("shotCount", team["shots"]["count"] == len(team_shots), f"{label}: chutes exportados ≠ eventos Shot")
         shot_goals = sum(1 for s in team_shots if s["shot"]["outcome"]["name"] == "Goal")
         check("shotGoals", team["shots"]["goals"] == shot_goals, f"{label}: gols ≠ Shot com outcome Goal")
+        items = team["shots"]["items"]
+        check("shotItemsMatchCount", len(items) == team["shots"]["count"], f"{label}: lista de chutes ≠ contagem")
+        check("shotItemsGoals", sum(s["result"] == "goal" for s in items) == shot_goals,
+              f"{label}: chutes marcados como gol ≠ Shot com outcome Goal")
+        with_xg = [s["xg"] for s in items if s["xg"] is not None]
+        check("shotItemsXg", len(with_xg) == team["shots"]["xgCoverage"][0]
+              and abs(sum(with_xg) - team["shots"]["xg"]) < 0.01 * max(1, len(with_xg)),
+              f"{label}: xG da lista ≠ total (ou cobertura)")
 
     score = data["match"]["score"]
     for i, team in enumerate(data["teams"]):

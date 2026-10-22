@@ -92,7 +92,8 @@ def _build_team(team_id: int, team_name: str, result: transform.PassFilterResult
     pairs = metrics.pair_totals(edges)
     actions = transform.defensive_actions_table(events, team_id, cfg.defensive_actions, cfg.periods)
     defensive = metrics.defensive_positions(actions)
-    shots = metrics.shot_summary(transform.shots_table(events, team_id, cfg.periods))
+    shot_rows = transform.shots_table(events, team_id, cfg.periods)
+    shots = metrics.shot_summary(shot_rows)
     subs = metrics.substitutions(events, team_id, cfg.periods)
 
     sub_info: dict[int, dict] = {}
@@ -148,9 +149,37 @@ def _build_team(team_id: int, team_name: str, result: transform.PassFilterResult
         "pairs": [{"a": int(p.first_id), "b": int(p.second_id), "forward": int(p.forward),
                    "backward": int(p.backward), "n": int(p.n)} for p in pairs.itertuples()],
         "substitutions": [{"minute": s.minute, "out": s.out_id, "in": s.in_id, "reason": s.reason} for s in subs],
-        "shots": {"count": shots.count, "goals": shots.goals, "xg": _r(shots.xg), "xgCoverage": [shots.with_xg, shots.count]},
+        "shots": {"count": shots.count, "goals": shots.goals, "xg": _r(shots.xg),
+                  "xgPerShot": None if shots.mean_xg is None else _r(shots.mean_xg, 3),
+                  "xgCoverage": [shots.with_xg, shots.count],
+                  "items": _shot_items(shot_rows, players)},
         "phase": phase,
     }
+
+
+def _opt(v, digits: int = 2) -> float | None:
+    """Round a value that may be missing; missing stays ``None`` (never 0)."""
+    return None if v is None or pd.isna(v) else _r(v, digits)
+
+
+def _shot_items(shot_rows: pd.DataFrame, players: dict[int, names.Player]) -> list[dict]:
+    items = []
+    for s in metrics.shot_list(shot_rows).itertuples():
+        player = players.get(s.player_id)
+        end = [_opt(s.end_x), _opt(s.end_y)] + ([] if pd.isna(s.end_z) else [_opt(s.end_z)])
+        items.append({
+            "period": int(s.period), "minute": int(s.minute), "second": int(s.second),
+            "playerId": int(s.player_id),
+            "name": player.name if player else s.player,
+            "num": player.num if player else None,
+            "x": _opt(s.x), "y": _opt(s.y),
+            "end": None if end[0] is None else end,
+            "outcome": s.outcome, "result": s.result,
+            "xg": _opt(s.xg, 3),
+            "shotType": s.shot_type_code, "setPiece": bool(s.set_piece),
+            "bodyPart": s.body_part_code,
+        })
+    return items
 
 
 # --- collection ---------------------------------------------------------------------

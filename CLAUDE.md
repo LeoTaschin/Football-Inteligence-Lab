@@ -246,6 +246,13 @@ Ignorar eventos do adversário na animação (estão em outro referencial). Text
 
 Regras já definidas no plano do projeto: um marcador por `Shot`, área proporcional a `shot.statsbomb_xg`, xG ausente nunca vira zero, distinguir resultados (`Goal`, `Saved`, `Off T`, `Blocked`, `Wayward`, `Post`, outros), marcar bola parada (`shot.type`). Métricas: chutes, gols, soma de xG, xG médio, cobertura de xG.
 
+- **Quais chutes:** os mesmos de `shots.count`: eventos `Shot` da equipe nos períodos analisados (pênaltis do período 5 fora). Ordem cronológica (`period`, `index`).
+- **Resultado (`result`), para o marcador:** `Goal` → `goal`; `Saved`, `Saved to Post`, `Saved Off Target` → `saved`; `Post` → `post`; `Blocked` → `blocked`; `Off T`, `Wayward` → `off`; qualquer outro → `other`. O nome original do StatsBomb também é exportado (`outcome`).
+- **Bola parada:** `setPiece = shot.type ≠ "Open Play"`; o tipo é exportado em `shotType` (`openPlay`, `freeKick`, `penalty`, `corner`, `kickOff`, `other`).
+- **xG:** `null` quando o StatsBomb não informa (nunca 0). `xgPerShot` = soma de xG ÷ chutes **com** xG (`null` se nenhum tiver).
+- **Sem localização:** o chute continua na contagem com `x`/`y` nulos (o site não desenha e avisa). Nos 6 jogos de 1970 todos têm localização e xG.
+- **Coordenadas:** referencial da própria equipe (ataca para x = 120), como todo o resto.
+
 ---
 
 ## 6. Schema dos JSONs
