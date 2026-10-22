@@ -107,6 +107,8 @@ export interface TeamData {
     xgPerShot: number | null;
     xgCoverage: [number, number];
     items: Shot[];
+    /** indices in `items` of the highest-xG chances, best first */
+    top: number[];
   };
   phase: { ballHeight: number; defHeight: number; shiftMeters: number } | null;
 }
@@ -123,6 +125,8 @@ export interface Shot {
   num: number | null;
   x: number | null;
   y: number | null;
+  /** metres from the centre of the goal */
+  distance: number | null;
   /** end location: [x, y] or [x, y, z] */
   end: number[] | null;
   /** original StatsBomb shot.outcome */
@@ -168,7 +172,13 @@ export interface Goal {
 export interface MatchData {
   match: MatchInfo;
   periods: number[];
-  scale: { maxPasses: number; maxPair: number; maxDirected: number };
+  scale: {
+    maxPasses: number;
+    maxPair: number;
+    maxDirected: number;
+    /** the shot map is drawn from this x up to 120 (60 = half pitch) */
+    shotsFromX: number;
+  };
   teams: [TeamData, TeamData];
   goals: Goal[];
   validation: Record<string, boolean>;

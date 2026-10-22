@@ -109,6 +109,19 @@ def test_final_shot_map_matches_design(all_matches):
     best = max(every, key=lambda s: s["xg"])
     assert (best["name"], best["minute"], best["xg"], best["result"]) == ("Pelé", 46, 0.794, "off")
     assert min(s["x"] for s in every) >= 80  # half a pitch is enough to draw them
+    assert all_matches[-1]["scale"]["shotsFromX"] == 60
+
+    top = [brazil["shots"]["items"][i] for i in brazil["shots"]["top"]]
+    assert [(s["name"], s["xg"]) for s in top] == [("Pelé", 0.794), ("Jairzinho", 0.719), ("Tostão", 0.198),
+                                                   ("Rivellino", 0.172), ("Tostão", 0.09)]
+    carlos = next(s for s in brazil["shots"]["items"] if s["name"] == "Carlos Alberto" and s["result"] == "goal")
+    assert carlos["distance"] == 19.7  # (12.5, 17.5) yd from the goal centre = 21.5 yd
+
+
+@pytest.mark.regression
+def test_shot_map_reaches_back_for_long_shots(all_matches):
+    semi = next(m for m in all_matches if m["match"]["id"] == 3888701)
+    assert semi["scale"]["shotsFromX"] == 40  # Pelé shoots from x = 45.9
 
 
 @pytest.mark.regression

@@ -5,6 +5,7 @@ import { GoalReplay } from "../components/GoalReplay";
 import { PassNetwork } from "../components/PassNetwork";
 import { PhaseMorph } from "../components/PhaseMorph";
 import { PlayerPanel } from "../components/PlayerPanel";
+import { ShotsPanel, type ShotRef } from "../components/ShotsPanel";
 import { NotFound, Status } from "../components/Status";
 import { TabPanel, Tabs } from "../components/Tabs";
 import { competitionPt, match as copy, goals as goalsCopy, site, tabs as tabsCopy } from "../content/pt";
@@ -18,6 +19,7 @@ const TABS = [
   { key: "rede", label: tabsCopy.network },
   { key: "fases", label: tabsCopy.phases },
   { key: "gols", label: tabsCopy.goals },
+  { key: "finalizacoes", label: tabsCopy.shots },
 ] as const;
 type TabKey = (typeof TABS)[number]["key"];
 
@@ -39,7 +41,8 @@ interface Selection {
   playerId: number;
 }
 
-/** Tab, selection, filter and goal live in the URL (?aba=gols&gol=4, ?jogador=397621&min=5) so a post can link straight to them. */
+/** Tab, selection, filter, goal and shot live in the URL (?aba=gols&gol=4, ?jogador=397621&min=5, ?aba=finalizacoes&chute=1-27)
+ *  so a post can link straight to them. */
 function useMatchParams(data: MatchData) {
   const [params, setParams] = useSearchParams();
   const min = Number(params.get("min"));
@@ -51,6 +54,7 @@ function useMatchParams(data: MatchData) {
   const tab: TabKey = TABS.some((t) => t.key === tabParam) ? (tabParam as TabKey) : "rede";
   const goalParam = Number(params.get("gol"));
   const goal = Number.isInteger(goalParam) && goalParam >= 1 && goalParam <= data.goals.length ? goalParam - 1 : 0;
+  const shot = parseShot(params.get("chute"), data) ?? defaultShot(data);
 
   const update = (changes: Record<string, string | null>) =>
     setParams(
@@ -75,11 +79,13 @@ function useMatchParams(data: MatchData) {
     setTab: (k: TabKey) => update({ aba: k === "rede" ? null : k }),
     goal,
     setGoal: (i: number) => update({ gol: String(i + 1) }),
+    shot,
+    setShot: (ref: ShotRef) => update({ chute: `${ref.team + 1}-${ref.index + 1}` }),
   };
 }
 
 function MatchView({ data, campaign }: { data: MatchData; campaign: CampaignMatch[] }) {
-  const { minPasses, selection, setMinPasses, toggle, clear, tab, setTab, goal, setGoal } = useMatchParams(data);
+  const { minPasses, selection, setMinPasses, toggle, clear, tab, setTab, goal, setGoal, shot, setShot } = useMatchParams(data);
   const { match, teams } = data;
 
   const pos = campaign.findIndex((m) => m.id === match.id);
@@ -249,6 +255,12 @@ function MatchView({ data, campaign }: { data: MatchData; campaign: CampaignMatc
         </TabPanel>
       )}
 
+      {tab === "finalizacoes" && (
+        <TabPanel idPrefix="partida" tab="finalizacoes">
+          <ShotsPanel data={data} selected={shot} onSelect={setShot} />
+        </TabPanel>
+      )}
+
       <div className={styles.tables}>
         {teams.map((team) => (
           <CombinationTable key={team.teamId} team={team} maxPair={data.scale.maxPair} />
@@ -278,4 +290,21 @@ function subsNote(team: TeamData): string {
   if (team.substitutions.length === 0) return copy.noSubs;
   const name = (pid: number) => team.nodes.find((n) => n.playerId === pid)?.name ?? String(pid);
   return copy.subsNote(team.substitutions.map((s) => ({ inName: name(s.in), outName: name(s.out), minute: s.minute })));
+}
+
+/** "1-27" → first team, 27th shot (both 1-based in the URL). */
+function parseShot(param: string | null, data: MatchData): ShotRef | null {
+  const m = /^(\d+)-(\d+)$/.exec(param ?? "");
+  if (!m) return null;
+  const team = Number(m[1]) - 1;
+  const index = Number(m[2]) - 1;
+  return data.teams[team]?.shots.items[index] ? { team, index } : null;
+}
+
+/** Without ?chute: the analysed team's last goal, else its biggest chance. */
+function defaultShot(data: MatchData): ShotRef | null {
+  const items = data.teams[0].shots.items;
+  for (let i = items.length - 1; i >= 0; i--) if (items[i].result === "goal") return { team: 0, index: i };
+  const best = data.teams[0].shots.top[0];
+  return best === undefined ? null : { team: 0, index: best };
 }

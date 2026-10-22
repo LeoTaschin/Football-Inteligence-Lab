@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { arrowShape, arrowWidth, labelPlacement, lerp, lineStyle, nodeRadius, PX } from "./geometry";
+import { arrowShape, arrowWidth, labelPlacement, lerp, lineStyle, nodeRadius, PX, shotPoint, shotRadius } from "./geometry";
 
 describe("scales (CLAUDE.md 7.4)", () => {
   it("node radius goes from 7 to 19 px", () => {
@@ -59,5 +59,19 @@ describe("lerp", () => {
   it("clamps t", () => {
     expect(lerp({ x: 0, y: 0 }, { x: 10, y: 20 }, 0.5)).toEqual({ x: 5, y: 10 });
     expect(lerp({ x: 0, y: 0 }, { x: 10, y: 20 }, 2)).toEqual({ x: 10, y: 20 });
+  });
+});
+
+describe("shot map", () => {
+  it("marker area is proportional to xG, with a floor", () => {
+    expect(shotRadius(0.8)).toBe(22);
+    expect(shotRadius(0.2)).toBeCloseTo(11); // a quarter of the xG, half the radius
+    expect(shotRadius(0.001)).toBe(3.5);
+    expect(shotRadius(null)).toBe(3.5); // missing xG is drawn, never as zero xG
+  });
+
+  it("turns the pitch so the team attacks upward", () => {
+    expect(shotPoint(120, 40)).toEqual({ x: 40, y: 0 }); // centre of the goal, top
+    expect(shotPoint(108, 80)).toEqual({ x: 80, y: 12 }); // right touchline on the right
   });
 });

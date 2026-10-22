@@ -3,6 +3,8 @@
   gap: 4px;
   border-bottom: 1px solid var(--border);
   overflow-x: auto;
+  /* the active tab's border overlaps by 1px: without this a vertical scrollbar shows up */
+  overflow-y: hidden;
 }
 
 .tab {

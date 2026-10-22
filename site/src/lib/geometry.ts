@@ -105,3 +105,25 @@ export function lerp(a: XY, b: XY, t: number): XY {
 function round(v: number): number {
   return Math.round(v * 100) / 100;
 }
+
+// --- shot map: vertical half pitch, the team attacks upward ---------------------------
+
+/** Width of the vertical pitch in px on the reference design (80 yd across). */
+export const SHOT_PITCH_PX = 520;
+/** One design pixel in pitch units on the vertical shot map. */
+export const SHOT_PX = PITCH_H / SHOT_PITCH_PX;
+/** xG that fills the largest marker; higher values keep growing with the same rule. */
+export const SHOT_XG_REF = 0.8;
+const SHOT_R_MAX = 22;
+const SHOT_R_MIN = 3.5;
+
+/** Marker radius in px: area proportional to xG (22 px at xG 0.8), never below 3.5 px. Missing xG → smallest marker. */
+export function shotRadius(xg: number | null): number {
+  if (xg === null) return SHOT_R_MIN;
+  return Math.max(SHOT_R_MIN, SHOT_R_MAX * Math.sqrt(Math.max(0, xg) / SHOT_XG_REF));
+}
+
+/** StatsBomb (x, y) → vertical view: the touchline y = 0 on the left, the goal (x = 120) at the top. */
+export function shotPoint(x: number, y: number): XY {
+  return { x: y, y: PITCH_W - x };
+}

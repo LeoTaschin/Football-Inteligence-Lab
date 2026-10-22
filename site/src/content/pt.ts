@@ -115,6 +115,7 @@ export const tabs = {
   network: "Rede de passes",
   phases: "Com bola × sem bola",
   goals: "Gols",
+  shots: "Finalizações",
 };
 
 export const phases = {
@@ -329,4 +330,44 @@ export const methodology = {
   codeLink: "Ver o código no GitHub",
   attribution:
     "Dados: StatsBomb Open Data, usados conforme as condições de atribuição do repositório oficial. Visualizações e análise: Leonardo Taschin.",
+};
+
+export const shots = {
+  summary: (teams: { article: "o" | "a"; name: string; xg: string; count: number; goals: number }[]) =>
+    capitalize(
+      teams
+        .map((t, i) =>
+          i === 0
+            ? `${withArticle(t.article, t.name)} somou ${t.xg} de xG em ${t.count} chutes, e ${t.goals} ${t.goals === 1 ? "virou" : "viraram"} gol`
+            : `${withArticle(t.article, t.name)}, ${t.xg} em ${t.count}, e ${t.goals} ${t.goals === 1 ? "virou" : "viraram"} gol`,
+        )
+        .join("; ") + ".",
+    ),
+  filterLabel: "Filtrar chutes",
+  show: "Mostrar",
+  filters: { all: "Todos os chutes", open: "Só jogo aberto", goals: "Só gols" },
+  legendLabel: "Legenda",
+  legend: { goal: "Gol", saved: "Defendido", post: "Na trave", blocked: "Bloqueado", off: "Para fora", setPiece: "Bola parada" },
+  attackUp: "ataca para cima ↑",
+  pitchLabel: (article: "o" | "a", team: string) => `Finalizações ${ofTeam(article, team)}`,
+  // StatsBomb shot.outcome → text; unknown names fall back to the result group
+  outcome: {
+    Goal: "Gol", Saved: "Defendido", "Saved to Post": "Defendido (na trave)", "Saved Off Target": "Defendido (para fora)",
+    Post: "Na trave", Blocked: "Bloqueado", "Off T": "Para fora", Wayward: "Sem direção",
+  } as Record<string, string>,
+  result: { goal: "Gol", saved: "Defendido", post: "Na trave", blocked: "Bloqueado", off: "Para fora", other: "Outro" },
+  body: { rightFoot: "Pé direito", leftFoot: "Pé esquerdo", head: "Cabeça", other: "Outra" },
+  type: { openPlay: "Jogo aberto", freeKick: "Falta", penalty: "Pênalti", corner: "Escanteio", kickOff: "Saída de bola", other: "Outro" },
+  shotAria: (minute: number, name: string, outcome: string, xg: string) => `${minute}′, ${name}, ${outcome}, xG ${xg}`,
+  stats: { count: "chutes", goals: "gols", xg: "xG total", xgPerShot: "xG por chute", coverage: "com xG" },
+  detail: { xg: "xG da chance", body: "parte do corpo", type: "tipo", distance: "do gol", noXg: "sem xG" },
+  meters: (m: number) => `${Math.round(m)} m`,
+  hint: "Clique num chute, no campo ou na lista de maiores chances, para ver os detalhes.",
+  topTitle: "Maiores chances",
+  topLegend: "ordenadas por xG · clique para destacar no campo",
+  sizeTitle: "Tamanho = xG",
+  sizeNote: "A área do marcador é proporcional ao xG.",
+  noLocation: (n: number) => `${n} ${n === 1 ? "chute sem localização não aparece" : "chutes sem localização não aparecem"} no campo.`,
+  footer:
+    "Um marcador por chute (evento Shot), 1º e 2º tempos, no lugar de onde saiu a finalização. xG do StatsBomb: a chance estimada de gol antes do chute; a soma não é o número de gols que “deveria” ter acontecido. Chute sem xG continua no mapa e entra na cobertura, nunca vira zero. Gols contra não são chutes e não aparecem. Os eventos de 1970 vêm de vídeo da época: localização e xG têm mais incerteza.",
 };

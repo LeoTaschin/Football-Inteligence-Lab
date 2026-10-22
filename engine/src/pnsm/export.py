@@ -7,6 +7,7 @@ stops on the first failure, writing nothing.
 from __future__ import annotations
 
 import json
+import math
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -21,6 +22,8 @@ YARDS_TO_METERS = 0.9144
 LOW_DEF_SAMPLE = 5  # fewer defensive actions than this: the "sem bola" position is flagged
 TOP_PASSERS = 6
 TOP_PAIRS = 5
+TOP_CHANCES = 5
+GOAL_CENTER = (120.0, 40.0)
 SOURCE = "StatsBomb Open Data"
 
 
@@ -78,6 +81,7 @@ def build_match(meta: dict, events: list[dict], lineups: list[dict], cfg: Collec
             "maxPasses": max_passes,
             "maxPair": max((p["n"] for t in teams for p in t["pairs"]), default=1),
             "maxDirected": max((e["n"] for t in teams for e in t["edges"]), default=1),
+            "shotsFromX": _shots_from_x(teams),
         },
         "teams": teams,
         "goals": goals,
@@ -94,6 +98,7 @@ def _build_team(team_id: int, team_name: str, result: transform.PassFilterResult
     defensive = metrics.defensive_positions(actions)
     shot_rows = transform.shots_table(events, team_id, cfg.periods)
     shots = metrics.shot_summary(shot_rows)
+    shot_items = _shot_items(shot_rows, players)
     subs = metrics.substitutions(events, team_id, cfg.periods)
 
     sub_info: dict[int, dict] = {}
@@ -152,7 +157,7 @@ def _build_team(team_id: int, team_name: str, result: transform.PassFilterResult
         "shots": {"count": shots.count, "goals": shots.goals, "xg": _r(shots.xg),
                   "xgPerShot": None if shots.mean_xg is None else _r(shots.mean_xg, 3),
                   "xgCoverage": [shots.with_xg, shots.count],
-                  "items": _shot_items(shot_rows, players)},
+                  "items": shot_items, "top": _top_chances(shot_items)},
         "phase": phase,
     }
 
@@ -160,6 +165,19 @@ def _build_team(team_id: int, team_name: str, result: transform.PassFilterResult
 def _opt(v, digits: int = 2) -> float | None:
     """Round a value that may be missing; missing stays ``None`` (never 0)."""
     return None if v is None or pd.isna(v) else _r(v, digits)
+
+
+def _shots_from_x(teams: list[dict]) -> int:
+    """Where the shot map starts: half way (60), or further back in 5-yard steps if a shot needs it."""
+    xs = [s["x"] for t in teams for s in t["shots"]["items"] if s["x"] is not None]
+    lowest = min(xs, default=60.0) - 2  # room for the marker
+    return int(min(60, (lowest // 5) * 5))
+
+
+def _top_chances(items: list[dict]) -> list[int]:
+    """Indices of the TOP_CHANCES shots with the highest xG; ties keep the earlier shot first."""
+    ranked = sorted((i for i, s in enumerate(items) if s["xg"] is not None), key=lambda i: -items[i]["xg"])
+    return ranked[:TOP_CHANCES]
 
 
 def _shot_items(shot_rows: pd.DataFrame, players: dict[int, names.Player]) -> list[dict]:
@@ -173,6 +191,7 @@ def _shot_items(shot_rows: pd.DataFrame, players: dict[int, names.Player]) -> li
             "name": player.name if player else s.player,
             "num": player.num if player else None,
             "x": _opt(s.x), "y": _opt(s.y),
+            "distance": None if pd.isna(s.x) else _r(math.hypot(GOAL_CENTER[0] - s.x, GOAL_CENTER[1] - s.y) * YARDS_TO_METERS, 1),
             "end": None if end[0] is None else end,
             "outcome": s.outcome, "result": s.result,
             "xg": _opt(s.xg, 3),
