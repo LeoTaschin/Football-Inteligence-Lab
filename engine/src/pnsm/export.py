@@ -392,6 +392,7 @@ def build_files(cfg: CollectionConfig, cache_dir: Path = load.DEFAULT_CACHE_DIR)
     validate.check_players(pages, matches)
     slugs = {p["playerId"]: s for s, p in pages.items()}
     collection["players"] = players.player_list(pages)
+    collection["playerTeams"] = players.team_list(collection["players"], matches, collection["matches"], cfg.team)
     for t in collection["topPassers"]:
         t["slug"] = slugs[t["playerId"]]
     files[Path("collections") / f"{cfg.collection}.json"] = collection

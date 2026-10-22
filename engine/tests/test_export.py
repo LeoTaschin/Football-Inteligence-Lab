@@ -165,6 +165,21 @@ def test_carlos_alberto_page_matches_design(player_pages):
 
 
 @pytest.mark.regression
+def test_players_list_teams(cfg, all_matches, player_pages):
+    from pnsm import players
+    collection = export.build_collection(cfg, all_matches)
+    rows = players.player_list(player_pages)
+    teams = players.team_list(rows, all_matches, collection["matches"], cfg.team)
+    assert [t["team"] for t in teams] == ["Brasil", "Tchecoslováquia", "Inglaterra", "Romênia", "Peru", "Uruguai", "Itália"]
+    brazil, peru = teams[0], teams[4]
+    assert (brazil["players"], brazil["completed"], brazil["match"]) == (16, 2490, None)
+    name = {r["playerId"]: r["name"] for r in rows}
+    assert name[brazil["topPasser"]] == "Carlos Alberto" and name[peru["topReceiver"]] == "Roberto Chale"
+    assert peru["match"]["score"] == [4, 2] and peru["completed"] == 397
+    assert sum(t["players"] for t in teams) == len(rows) == 93
+
+
+@pytest.mark.regression
 def test_opponent_has_a_single_game_page(player_pages):
     p = player_pages["mazzola"]
     assert (p["team"], p["summary"]["games"], p["summary"]["passes"], p["summary"]["share"]) == ("Itália", 1, 38, 15.6)

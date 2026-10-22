@@ -118,8 +118,41 @@ def build_players(matches: list[dict], order: dict[int, tuple[int, str]], min_pa
 
 
 def player_list(pages: dict[str, dict]) -> list[dict]:
-    """Everyone with a page, for links: team by team, most passes first."""
-    rows = [{"playerId": p["playerId"], "slug": p["slug"], "name": p["name"], "num": p["num"], "team": p["team"],
-             "teamName": p["teamName"], "games": p["summary"]["games"], "passes": p["summary"]["passes"]}
+    """Everyone with a page (the players list and the links): team by team, most passes first."""
+    rows = [{"playerId": p["playerId"], "slug": p["slug"], "name": p["name"], "num": p["num"], "position": p["position"],
+             "team": p["team"], "teamName": p["teamName"], "games": p["summary"]["games"],
+             "passes": p["summary"]["passes"], "received": p["summary"]["received"], "share": p["summary"]["share"],
+             # came on as a substitute in at least one match
+             "substitute": any(g["sub"] is not None and g["sub"]["type"] == "in" for g in p["games"])}
             for p in pages.values()]
     return sorted(rows, key=lambda r: (r["teamName"], -r["passes"], r["playerId"]))
+
+
+def team_list(players: list[dict], matches: list[dict], rows: list[dict], team: str) -> list[dict]:
+    """One entry per team of the players list: the analysed team first, then opponents in match order.
+
+    ``rows`` are the collection's match rows (order, stage, score from the analysed team's side).
+    Ties for the top passer / receiver go to the smaller ``playerId``.
+    """
+    colors = {t["name"]: t["colors"] for m in matches for t in m["teams"]}
+    display = {t["name"]: (t["displayName"], t["article"]) for m in matches for t in m["teams"]}
+    by_opp = {r["opponentName"]: r for r in rows}
+    names_in_order = [team] + [r["opponentName"] for r in rows]
+    out = []
+    for name in names_in_order:
+        ps = [p for p in players if p["teamName"] == name]
+        top = lambda key: min(ps, key=lambda p: (-p[key], p["playerId"]))["playerId"]
+        r = by_opp.get(name)
+        out.append({
+            "teamName": name,
+            "team": display[name][0],
+            "article": display[name][1],
+            "colors": colors[name],
+            "players": len(ps),
+            "completed": sum(p["passes"] for p in ps),
+            "topPasser": top("passes"),
+            "topReceiver": top("received"),
+            "allGames": sum(1 for p in ps if p["games"] == len(rows)) if name == team else None,
+            "match": None if r is None else {"id": r["id"], "order": r["order"], "stage": r["stage"], "score": r["score"]},
+        })
+    return out

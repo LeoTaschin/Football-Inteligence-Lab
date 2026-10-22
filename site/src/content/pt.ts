@@ -449,6 +449,7 @@ const STAGE_IN: Record<string, string> = {
 
 export const player = {
   breadcrumb: "Campanha 1970",
+  playersLink: "Jogadores",
   sub: (position: string | null, team: string, games: number) =>
     [position, team, `${games} ${games === 1 ? "jogo" : "jogos"} na campanha`].filter(Boolean).join(" · "),
   // lead sentence from the exported numbers only
@@ -519,4 +520,33 @@ export const player = {
   footer:
     "Passes completos com destinatário, 1º e 2º tempos, somando os jogos em que o jogador esteve em campo; a porcentagem é sobre os passes do time nesses jogos. Agregação pelo identificador do jogador no StatsBomb, não pelo nome.",
   meters: (m: number) => `${m < 0 ? "−" : "+"}${Math.round(Math.abs(m))} m`,
+};
+
+export const playersList = {
+  breadcrumb: "Campanha 1970",
+  title: "Jogadores da campanha",
+  lead: (total: number, own: number, article: "o" | "a", team: string) =>
+    `${total} jogadores têm página: os ${own} ${ofTeam(article, team)} que entraram na rede de passes em algum jogo e os adversários de cada partida. Os adversários aparecem num jogo só, porque os dados abertos trazem apenas os jogos ${ofTeam(article, team)}.`,
+  teamLabel: "Equipe",
+  sortLabel: "Ordenar por",
+  columns: { player: "Jogador", games: "Jogos", passes: "Passes", received: "Receb.", share: "% time" },
+  substitute: "reserva",
+  rowAria: (name: string, passes: number) => `${name}, ${passes} passes completos: abrir a página`,
+  noteOwn: "Clique num jogador para abrir a página dele. “Reserva” marca quem entrou durante algum jogo.",
+  noteOpponent: "Clique num jogador para abrir a página dele. “Reserva” marca quem entrou durante o jogo.",
+  ownKicker: "Campanha 1970",
+  ownTitle: (team: string, games: number) => `${team} · ${games} jogos`,
+  ownText: (players: number, completed: string) => `${players} jogadores e ${completed} passes completos.`,
+  matchKicker: (stage: string, order: number) => (stage === "Fase de grupos" ? `Jogo ${order} · Fase de grupos` : stage),
+  matchTitle: (own: string, score: [number, number], opponent: string) => `${own} ${score[0]} × ${score[1]} ${opponent}`,
+  matchText: (players: number, article: "o" | "a", team: string, completed: number) =>
+    `${players} jogadores ${ofTeam(article, team)} na rede de passes e ${completed} passes completos.`,
+  topPasser: "Quem mais passou",
+  topReceiver: "Quem mais recebeu",
+  allGames: (games: number) => `Jogaram os ${games} jogos`,
+  allGamesValue: (n: number) => `${n} jogadores`,
+  openMatch: "Ver a partida →",
+  footer:
+    "Jogadores com nó na rede de passes de alguma partida (passes completos com destinatário, 1º e 2º tempos). A porcentagem é sobre os passes do time nos jogos em que o jogador esteve em campo.",
+  seeAll: "Ver todos os jogadores →",
 };

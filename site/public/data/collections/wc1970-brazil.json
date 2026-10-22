@@ -2043,930 +2043,1464 @@
    "slug": "carlos-alberto",
    "name": "Carlos Alberto",
    "num": 4,
+   "position": "Lateral-direito",
    "team": "Brasil",
    "teamName": "Brazil",
    "games": 6,
-   "passes": 367
+   "passes": 367,
+   "received": 361,
+   "share": 14.7,
+   "substitute": false
   },
   {
    "playerId": 397620,
    "slug": "clodoaldo",
    "name": "Clodoaldo",
    "num": 5,
+   "position": "Volante (dir.)",
    "team": "Brasil",
    "teamName": "Brazil",
    "games": 6,
-   "passes": 321
+   "passes": 321,
+   "received": 314,
+   "share": 12.9,
+   "substitute": false
   },
   {
    "playerId": 397630,
    "slug": "rivellino",
    "name": "Rivellino",
    "num": 11,
+   "position": "Meio-campo (esq.)",
    "team": "Brasil",
    "teamName": "Brazil",
    "games": 5,
-   "passes": 225
+   "passes": 225,
+   "received": 259,
+   "share": 10.9,
+   "substitute": false
   },
   {
    "playerId": 39712,
    "slug": "pele",
    "name": "Pelé",
    "num": 10,
+   "position": "Atacante (dir.)",
    "team": "Brasil",
    "teamName": "Brazil",
    "games": 6,
-   "passes": 211
+   "passes": 211,
+   "received": 281,
+   "share": 8.5,
+   "substitute": false
   },
   {
    "playerId": 397621,
    "slug": "gerson",
    "name": "Gérson",
    "num": 8,
+   "position": "Volante (esq.)",
    "team": "Brasil",
    "teamName": "Brazil",
    "games": 4,
-   "passes": 195
+   "passes": 195,
+   "received": 197,
+   "share": 11.8,
+   "substitute": false
   },
   {
    "playerId": 397622,
    "slug": "jairzinho",
    "name": "Jairzinho",
    "num": 7,
+   "position": "Meio-campo (dir.)",
    "team": "Brasil",
    "teamName": "Brazil",
    "games": 6,
-   "passes": 193
+   "passes": 193,
+   "received": 280,
+   "share": 7.8,
+   "substitute": false
   },
   {
    "playerId": 397626,
    "slug": "felix",
    "name": "Félix",
    "num": 1,
+   "position": "Goleiro",
    "team": "Brasil",
    "teamName": "Brazil",
    "games": 6,
-   "passes": 188
+   "passes": 188,
+   "received": 75,
+   "share": 7.6,
+   "substitute": false
   },
   {
    "playerId": 397629,
    "slug": "everaldo",
    "name": "Everaldo",
    "num": 16,
+   "position": "Lateral-esquerdo",
    "team": "Brasil",
    "teamName": "Brazil",
    "games": 5,
-   "passes": 185
+   "passes": 185,
+   "received": 158,
+   "share": 9.0,
+   "substitute": false
   },
   {
    "playerId": 397627,
    "slug": "piazza",
    "name": "Piazza",
    "num": 3,
+   "position": "Zagueiro (esq.)",
    "team": "Brasil",
    "teamName": "Brazil",
    "games": 6,
-   "passes": 183
+   "passes": 183,
+   "received": 130,
+   "share": 7.3,
+   "substitute": false
   },
   {
    "playerId": 397637,
    "slug": "tostao",
    "name": "Tostão",
    "num": 9,
+   "position": "Atacante (esq.)",
    "team": "Brasil",
    "teamName": "Brazil",
    "games": 6,
-   "passes": 146
+   "passes": 146,
+   "received": 195,
+   "share": 5.9,
+   "substitute": false
   },
   {
    "playerId": 397628,
    "slug": "brito",
    "name": "Brito",
    "num": 2,
+   "position": "Zagueiro (dir.)",
    "team": "Brasil",
    "teamName": "Brazil",
    "games": 6,
-   "passes": 115
+   "passes": 115,
+   "received": 68,
+   "share": 4.6,
+   "substitute": false
   },
   {
    "playerId": 397631,
    "slug": "caju",
    "name": "Caju",
    "num": 18,
+   "position": "Volante (esq.)",
    "team": "Brasil",
    "teamName": "Brazil",
    "games": 4,
-   "passes": 87
+   "passes": 87,
+   "received": 106,
+   "share": 5.2,
+   "substitute": true
   },
   {
    "playerId": 397632,
    "slug": "marco-antonio",
    "name": "Marco Antônio",
    "num": 6,
+   "position": "Lateral-esquerdo",
    "team": "Brasil",
    "teamName": "Brazil",
    "games": 2,
-   "passes": 48
+   "passes": 48,
+   "received": 38,
+   "share": 5.7,
+   "substitute": true
   },
   {
    "playerId": 397633,
    "slug": "roberto-miranda",
    "name": "Roberto Miranda",
    "num": 13,
+   "position": "Centroavante",
    "team": "Brasil",
    "teamName": "Brazil",
    "games": 2,
-   "passes": 11
+   "passes": 11,
+   "received": 13,
+   "share": 1.3,
+   "substitute": true
   },
   {
    "playerId": 397623,
    "slug": "fontana",
    "name": "Fontana",
    "num": 15,
+   "position": "Zagueiro (esq.)",
    "team": "Brasil",
    "teamName": "Brazil",
    "games": 1,
-   "passes": 9
+   "passes": 9,
+   "received": 7,
+   "share": 2.2,
+   "substitute": false
   },
   {
    "playerId": 397624,
    "slug": "edu",
    "name": "Edu",
    "num": 19,
+   "position": "Volante (dir.)",
    "team": "Brasil",
    "teamName": "Brazil",
    "games": 1,
-   "passes": 6
+   "passes": 6,
+   "received": 8,
+   "share": 1.4,
+   "substitute": true
   },
   {
    "playerId": 397951,
    "slug": "dobias",
    "name": "Dobiaš",
    "num": 2,
+   "position": "Lateral-direito",
    "team": "Tchecoslováquia",
    "teamName": "Czechoslovakia",
    "games": 1,
-   "passes": 60
+   "passes": 60,
+   "received": 56,
+   "share": 16.7,
+   "substitute": false
   },
   {
    "playerId": 397947,
    "slug": "kuna",
    "name": "Kuna",
    "num": 9,
+   "position": "Volante (dir.)",
    "team": "Tchecoslováquia",
    "teamName": "Czechoslovakia",
    "games": 1,
-   "passes": 49
+   "passes": 49,
+   "received": 50,
+   "share": 13.6,
+   "substitute": false
   },
   {
    "playerId": 397946,
    "slug": "hagara",
    "name": "Hagara",
    "num": 4,
+   "position": "Lateral-esquerdo",
    "team": "Tchecoslováquia",
    "teamName": "Czechoslovakia",
    "games": 1,
-   "passes": 41
+   "passes": 41,
+   "received": 31,
+   "share": 11.4,
+   "substitute": false
   },
   {
    "playerId": 397961,
    "slug": "vesely-397961",
    "name": "Veselý",
    "num": 18,
+   "position": "Meio-campo (dir.)",
    "team": "Tchecoslováquia",
    "teamName": "Czechoslovakia",
    "games": 1,
-   "passes": 38
+   "passes": 38,
+   "received": 43,
+   "share": 10.6,
+   "substitute": false
   },
   {
    "playerId": 397952,
    "slug": "viktor",
    "name": "Viktor",
    "num": 1,
+   "position": "Goleiro",
    "team": "Tchecoslováquia",
    "teamName": "Czechoslovakia",
    "games": 1,
-   "passes": 26
+   "passes": 26,
+   "received": 10,
+   "share": 7.2,
+   "substitute": false
   },
   {
    "playerId": 397965,
    "slug": "horvath",
    "name": "Horvath",
    "num": 5,
+   "position": "Zagueiro (dir.)",
    "team": "Tchecoslováquia",
    "teamName": "Czechoslovakia",
    "games": 1,
-   "passes": 26
+   "passes": 26,
+   "received": 17,
+   "share": 7.2,
+   "substitute": false
   },
   {
    "playerId": 397962,
    "slug": "jokl",
    "name": "Jokl",
    "num": 11,
+   "position": "Meio-campo (esq.)",
    "team": "Tchecoslováquia",
    "teamName": "Czechoslovakia",
    "games": 1,
-   "passes": 23
+   "passes": 23,
+   "received": 37,
+   "share": 6.4,
+   "substitute": false
   },
   {
    "playerId": 397960,
    "slug": "hrdlicka",
    "name": "Hrdlicka",
    "num": 16,
+   "position": "Volante (esq.)",
    "team": "Tchecoslováquia",
    "teamName": "Czechoslovakia",
    "games": 1,
-   "passes": 22
+   "passes": 22,
+   "received": 20,
+   "share": 6.1,
+   "substitute": false
   },
   {
    "playerId": 397956,
    "slug": "migas",
    "name": "Migas",
    "num": 3,
+   "position": "Zagueiro (esq.)",
    "team": "Tchecoslováquia",
    "teamName": "Czechoslovakia",
    "games": 1,
-   "passes": 20
+   "passes": 20,
+   "received": 12,
+   "share": 5.6,
+   "substitute": false
   },
   {
    "playerId": 397958,
    "slug": "kvasnak",
    "name": "Kvašňák",
    "num": 6,
+   "position": "Volante (esq.)",
    "team": "Tchecoslováquia",
    "teamName": "Czechoslovakia",
    "games": 1,
-   "passes": 20
+   "passes": 20,
+   "received": 23,
+   "share": 5.6,
+   "substitute": true
   },
   {
    "playerId": 397967,
    "slug": "adamec",
    "name": "Adamec",
    "num": 10,
+   "position": "Atacante (esq.)",
    "team": "Tchecoslováquia",
    "teamName": "Czechoslovakia",
    "games": 1,
-   "passes": 17
+   "passes": 17,
+   "received": 25,
+   "share": 4.7,
+   "substitute": false
   },
   {
    "playerId": 397966,
    "slug": "petras",
    "name": "Petráš",
    "num": 8,
+   "position": "Atacante (dir.)",
    "team": "Tchecoslováquia",
    "teamName": "Czechoslovakia",
    "games": 1,
-   "passes": 13
+   "passes": 13,
+   "received": 30,
+   "share": 3.6,
+   "substitute": false
   },
   {
    "playerId": 397957,
    "slug": "vesely-397957",
    "name": "Vesely",
    "num": 7,
+   "position": "Meio-campo (dir.)",
    "team": "Tchecoslováquia",
    "teamName": "Czechoslovakia",
    "games": 1,
-   "passes": 4
+   "passes": 4,
+   "received": 5,
+   "share": 1.1,
+   "substitute": true
   },
   {
    "playerId": 397886,
    "slug": "alan-mullery",
    "name": "Alan Mullery",
    "num": 4,
+   "position": "Volante",
    "team": "Inglaterra",
    "teamName": "England",
    "games": 1,
-   "passes": 59
+   "passes": 59,
+   "received": 52,
+   "share": 15.1,
+   "substitute": false
   },
   {
    "playerId": 397885,
    "slug": "wright",
    "name": "Wright",
    "num": 14,
+   "position": "Lateral-direito",
    "team": "Inglaterra",
    "teamName": "England",
    "games": 1,
-   "passes": 56
+   "passes": 56,
+   "received": 49,
+   "share": 14.3,
+   "substitute": false
   },
   {
    "playerId": 397882,
    "slug": "moore",
    "name": "Moore",
    "num": 6,
+   "position": "Zagueiro (esq.)",
    "team": "Inglaterra",
    "teamName": "England",
    "games": 1,
-   "passes": 41
+   "passes": 41,
+   "received": 36,
+   "share": 10.5,
+   "substitute": false
   },
   {
    "playerId": 397883,
    "slug": "cooper",
    "name": "Cooper",
    "num": 3,
+   "position": "Lateral-esquerdo",
    "team": "Inglaterra",
    "teamName": "England",
    "games": 1,
-   "passes": 40
+   "passes": 40,
+   "received": 42,
+   "share": 10.2,
+   "substitute": false
   },
   {
    "playerId": 397889,
    "slug": "charlton-9",
    "name": "Charlton 9",
    "num": 9,
+   "position": "Meia-atacante",
    "team": "Inglaterra",
    "teamName": "England",
    "games": 1,
-   "passes": 36
+   "passes": 36,
+   "received": 42,
+   "share": 9.2,
+   "substitute": false
   },
   {
    "playerId": 397888,
    "slug": "martin-peters",
    "name": "Martin Peters",
    "num": 11,
+   "position": "Meia (esq.)",
    "team": "Inglaterra",
    "teamName": "England",
    "games": 1,
-   "passes": 33
+   "passes": 33,
+   "received": 40,
+   "share": 8.4,
+   "substitute": false
   },
   {
    "playerId": 397881,
    "slug": "banks",
    "name": "Banks",
    "num": 1,
+   "position": "Goleiro",
    "team": "Inglaterra",
    "teamName": "England",
    "games": 1,
-   "passes": 32
+   "passes": 32,
+   "received": 11,
+   "share": 8.2,
+   "substitute": false
   },
   {
    "playerId": 397887,
    "slug": "alan-ball",
    "name": "Alan Ball",
    "num": 8,
+   "position": "Meia (dir.)",
    "team": "Inglaterra",
    "teamName": "England",
    "games": 1,
-   "passes": 31
+   "passes": 31,
+   "received": 35,
+   "share": 7.9,
+   "substitute": false
   },
   {
    "playerId": 397891,
    "slug": "geoffrey-hurst",
    "name": "Geoffrey Hurst",
    "num": 10,
+   "position": "Atacante (esq.)",
    "team": "Inglaterra",
    "teamName": "England",
    "games": 1,
-   "passes": 18
+   "passes": 18,
+   "received": 26,
+   "share": 4.6,
+   "substitute": false
   },
   {
    "playerId": 397884,
    "slug": "brian-labone",
    "name": "Brian Labone",
    "num": 5,
+   "position": "Zagueiro (dir.)",
    "team": "Inglaterra",
    "teamName": "England",
    "games": 1,
-   "passes": 17
+   "passes": 17,
+   "received": 11,
+   "share": 4.3,
+   "substitute": false
   },
   {
    "playerId": 397890,
    "slug": "francis-lee",
    "name": "Francis Lee",
    "num": 7,
+   "position": "Atacante (dir.)",
    "team": "Inglaterra",
    "teamName": "England",
    "games": 1,
-   "passes": 13
+   "passes": 13,
+   "received": 26,
+   "share": 3.3,
+   "substitute": false
   },
   {
    "playerId": 397892,
    "slug": "bell",
    "name": "Bell",
    "num": 19,
+   "position": "Meia-atacante",
    "team": "Inglaterra",
    "teamName": "England",
    "games": 1,
-   "passes": 11
+   "passes": 11,
+   "received": 14,
+   "share": 2.8,
+   "substitute": true
   },
   {
    "playerId": 397893,
    "slug": "astle",
    "name": "Astle",
    "num": 22,
+   "position": "Atacante (dir.)",
    "team": "Inglaterra",
    "teamName": "England",
    "games": 1,
-   "passes": 5
+   "passes": 5,
+   "received": 8,
+   "share": 1.3,
+   "substitute": true
   },
   {
    "playerId": 39732,
    "slug": "mazzola",
    "name": "Mazzola",
    "num": 15,
+   "position": "Meia (esq.)",
    "team": "Itália",
    "teamName": "Italy",
    "games": 1,
-   "passes": 38
+   "passes": 38,
+   "received": 42,
+   "share": 15.6,
+   "substitute": false
   },
   {
    "playerId": 397666,
    "slug": "cera",
    "name": "Cera",
    "num": 5,
+   "position": "Zagueiro (esq.)",
    "team": "Itália",
    "teamName": "Italy",
    "games": 1,
-   "passes": 33
+   "passes": 33,
+   "received": 24,
+   "share": 13.6,
+   "substitute": false
   },
   {
    "playerId": 397665,
    "slug": "albertosi",
    "name": "Albertosi",
    "num": 1,
+   "position": "Goleiro",
    "team": "Itália",
    "teamName": "Italy",
    "games": 1,
-   "passes": 32
+   "passes": 32,
+   "received": 7,
+   "share": 13.2,
+   "substitute": false
   },
   {
    "playerId": 397674,
    "slug": "domenghini",
    "name": "Domenghini",
    "num": 13,
+   "position": "Ala-direito",
    "team": "Itália",
    "teamName": "Italy",
    "games": 1,
-   "passes": 29
+   "passes": 29,
+   "received": 40,
+   "share": 11.9,
+   "substitute": false
   },
   {
    "playerId": 397681,
    "slug": "de-sisti",
    "name": "De Sisti",
    "num": 16,
+   "position": "Meia (dir.)",
    "team": "Itália",
    "teamName": "Italy",
    "games": 1,
-   "passes": 25
+   "passes": 25,
+   "received": 28,
+   "share": 10.3,
+   "substitute": false
   },
   {
    "playerId": 40095,
    "slug": "bertini",
    "name": "Bertini",
    "num": 10,
+   "position": "Volante",
    "team": "Itália",
    "teamName": "Italy",
    "games": 1,
-   "passes": 23
+   "passes": 23,
+   "received": 25,
+   "share": 9.5,
+   "substitute": false
   },
   {
    "playerId": 39714,
    "slug": "facchetti",
    "name": "Facchetti",
    "num": 3,
+   "position": "Ala-esquerdo",
    "team": "Itália",
    "teamName": "Italy",
    "games": 1,
-   "passes": 15
+   "passes": 15,
+   "received": 11,
+   "share": 6.2,
+   "substitute": false
   },
   {
    "playerId": 397680,
    "slug": "rosato",
    "name": "Rosato",
    "num": 8,
+   "position": "Zagueiro",
    "team": "Itália",
    "teamName": "Italy",
    "games": 1,
-   "passes": 11
+   "passes": 11,
+   "received": 10,
+   "share": 4.5,
+   "substitute": false
   },
   {
    "playerId": 39717,
    "slug": "boninsegna",
    "name": "Boninsegna",
    "num": 20,
+   "position": "Atacante (dir.)",
    "team": "Itália",
    "teamName": "Italy",
    "games": 1,
-   "passes": 10
+   "passes": 10,
+   "received": 16,
+   "share": 4.1,
+   "substitute": false
   },
   {
    "playerId": 397675,
    "slug": "riva",
    "name": "Riva",
    "num": 11,
+   "position": "Atacante (esq.)",
    "team": "Itália",
    "teamName": "Italy",
    "games": 1,
-   "passes": 9
+   "passes": 9,
+   "received": 22,
+   "share": 3.7,
+   "substitute": false
   },
   {
    "playerId": 397677,
    "slug": "juliano",
    "name": "Juliano",
    "num": 18,
+   "position": "Volante",
    "team": "Itália",
    "teamName": "Italy",
    "games": 1,
-   "passes": 9
+   "passes": 9,
+   "received": 7,
+   "share": 3.7,
+   "substitute": true
   },
   {
    "playerId": 39715,
    "slug": "burgnich",
    "name": "Burgnich",
    "num": 2,
+   "position": "Zagueiro (dir.)",
    "team": "Itália",
    "teamName": "Italy",
    "games": 1,
-   "passes": 7
+   "passes": 7,
+   "received": 7,
+   "share": 2.9,
+   "substitute": false
   },
   {
    "playerId": 397676,
    "slug": "rivera",
    "name": "Rivera",
    "num": 14,
+   "position": "Atacante (dir.)",
    "team": "Itália",
    "teamName": "Italy",
    "games": 1,
-   "passes": 2
+   "passes": 2,
+   "received": 4,
+   "share": 0.8,
+   "substitute": true
   },
   {
    "playerId": 398873,
    "slug": "roberto-chale",
    "name": "Roberto Chale",
    "num": 7,
+   "position": "Volante (dir.)",
    "team": "Peru",
    "teamName": "Peru",
    "games": 1,
-   "passes": 91
+   "passes": 91,
+   "received": 96,
+   "share": 22.9,
+   "substitute": false
   },
   {
    "playerId": 398859,
    "slug": "ramon-mifflin",
    "name": "Ramón Mifflin",
    "num": 6,
+   "position": "Volante (esq.)",
    "team": "Peru",
    "teamName": "Peru",
    "games": 1,
-   "passes": 56
+   "passes": 56,
+   "received": 68,
+   "share": 14.1,
+   "substitute": false
   },
   {
    "playerId": 398854,
    "slug": "campos",
    "name": "Campos",
    "num": 2,
+   "position": "Lateral-direito",
    "team": "Peru",
    "teamName": "Peru",
    "games": 1,
-   "passes": 34
+   "passes": 34,
+   "received": 25,
+   "share": 8.6,
+   "substitute": false
   },
   {
    "playerId": 398856,
    "slug": "nicolas-fuentes",
    "name": "Nicolás Fuentes",
    "num": 5,
+   "position": "Lateral-esquerdo",
    "team": "Peru",
    "teamName": "Peru",
    "games": 1,
-   "passes": 34
+   "passes": 34,
+   "received": 19,
+   "share": 8.6,
+   "substitute": false
   },
   {
    "playerId": 398858,
    "slug": "teofilo-cubillas",
    "name": "Teófilo Cubillas",
    "num": 10,
+   "position": "Atacante (esq.)",
    "team": "Peru",
    "teamName": "Peru",
    "games": 1,
-   "passes": 31
+   "passes": 31,
+   "received": 48,
+   "share": 7.8,
+   "substitute": false
   },
   {
    "playerId": 398862,
    "slug": "gallardo",
    "name": "Gallardo",
    "num": 11,
+   "position": "Meio-campo (esq.)",
    "team": "Peru",
    "teamName": "Peru",
    "games": 1,
-   "passes": 29
+   "passes": 29,
+   "received": 39,
+   "share": 7.3,
+   "substitute": false
   },
   {
    "playerId": 398853,
    "slug": "luis-rubinos",
    "name": "Luis Rubiños",
    "num": 1,
+   "position": "Goleiro",
    "team": "Peru",
    "teamName": "Peru",
    "games": 1,
-   "passes": 26
+   "passes": 26,
+   "received": 3,
+   "share": 6.5,
+   "substitute": false
   },
   {
    "playerId": 397776,
    "slug": "hugo-sotil",
    "name": "Hugo Sotil",
    "num": 20,
+   "position": "Meio-campo (dir.)",
    "team": "Peru",
    "teamName": "Peru",
    "games": 1,
-   "passes": 20
+   "passes": 20,
+   "received": 21,
+   "share": 5.0,
+   "substitute": true
   },
   {
    "playerId": 398855,
    "slug": "hector-chumpitaz",
    "name": "Héctor Chumpitáz",
    "num": 4,
+   "position": "Zagueiro (esq.)",
    "team": "Peru",
    "teamName": "Peru",
    "games": 1,
-   "passes": 18
+   "passes": 18,
+   "received": 12,
+   "share": 4.5,
+   "substitute": false
   },
   {
    "playerId": 398860,
    "slug": "julio-baylon",
    "name": "Julio Baylón",
    "num": 8,
+   "position": "Meio-campo (dir.)",
    "team": "Peru",
    "teamName": "Peru",
    "games": 1,
-   "passes": 18
+   "passes": 18,
+   "received": 22,
+   "share": 4.5,
+   "substitute": false
   },
   {
    "playerId": 398857,
    "slug": "jose-fernandez",
    "name": "José Fernández",
    "num": 14,
+   "position": "Zagueiro (dir.)",
    "team": "Peru",
    "teamName": "Peru",
    "games": 1,
-   "passes": 15
+   "passes": 15,
+   "received": 8,
+   "share": 3.8,
+   "substitute": false
   },
   {
    "playerId": 398861,
    "slug": "pedro-leon",
    "name": "Pedro León",
    "num": 9,
+   "position": "Atacante (dir.)",
    "team": "Peru",
    "teamName": "Peru",
    "games": 1,
-   "passes": 15
+   "passes": 15,
+   "received": 20,
+   "share": 3.8,
+   "substitute": false
   },
   {
    "playerId": 398864,
    "slug": "reyes",
    "name": "Reyes",
    "num": 19,
+   "position": "Meio-campo (dir.)",
    "team": "Peru",
    "teamName": "Peru",
    "games": 1,
-   "passes": 10
+   "passes": 10,
+   "received": 16,
+   "share": 2.5,
+   "substitute": true
   },
   {
    "playerId": 398953,
    "slug": "nunweiller",
    "name": "Nunweiller",
    "num": 10,
+   "position": "Volante (dir.)",
    "team": "Romênia",
    "teamName": "Romania",
    "games": 1,
-   "passes": 51
+   "passes": 51,
+   "received": 56,
+   "share": 16.6,
+   "substitute": false
   },
   {
    "playerId": 398949,
    "slug": "satmareanu",
    "name": "Satmareanu",
    "num": 2,
+   "position": "Lateral-direito",
    "team": "Romênia",
    "teamName": "Romania",
    "games": 1,
-   "passes": 43
+   "passes": 43,
+   "received": 41,
+   "share": 14.0,
+   "substitute": false
   },
   {
    "playerId": 398969,
    "slug": "dinu",
    "name": "Dinu",
    "num": 5,
+   "position": "Volante (esq.)",
    "team": "Romênia",
    "teamName": "Romania",
    "games": 1,
-   "passes": 38
+   "passes": 38,
+   "received": 42,
+   "share": 12.4,
+   "substitute": false
   },
   {
    "playerId": 398952,
    "slug": "dembrovschi",
    "name": "Dembrovschi",
    "num": 7,
+   "position": "Meio-campo (dir.)",
    "team": "Romênia",
    "teamName": "Romania",
    "games": 1,
-   "passes": 37
+   "passes": 37,
+   "received": 44,
+   "share": 12.1,
+   "substitute": false
   },
   {
    "playerId": 398954,
    "slug": "ion-dumitru",
    "name": "Ion Dumitru",
    "num": 15,
+   "position": "Zagueiro (dir.)",
    "team": "Romênia",
    "teamName": "Romania",
    "games": 1,
-   "passes": 33
+   "passes": 33,
+   "received": 28,
+   "share": 10.7,
+   "substitute": false
   },
   {
    "playerId": 398968,
    "slug": "lucescu",
    "name": "Lucescu",
    "num": 11,
+   "position": "Meio-campo (esq.)",
    "team": "Romênia",
    "teamName": "Romania",
    "games": 1,
-   "passes": 19
+   "passes": 19,
+   "received": 24,
+   "share": 6.2,
+   "substitute": false
   },
   {
    "playerId": 398951,
    "slug": "mocanu",
    "name": "Mocanu",
    "num": 4,
+   "position": "Lateral-esquerdo",
    "team": "Romênia",
    "teamName": "Romania",
    "games": 1,
-   "passes": 18
+   "passes": 18,
+   "received": 13,
+   "share": 5.9,
+   "substitute": false
   },
   {
    "playerId": 398950,
    "slug": "lupescu",
    "name": "Lupescu",
    "num": 3,
+   "position": "Zagueiro (esq.)",
    "team": "Romênia",
    "teamName": "Romania",
    "games": 1,
-   "passes": 15
+   "passes": 15,
+   "received": 8,
+   "share": 4.9,
+   "substitute": false
   },
   {
    "playerId": 398955,
    "slug": "dumitrache",
    "name": "Dumitrache",
    "num": 9,
+   "position": "Atacante (esq.)",
    "team": "Romênia",
    "teamName": "Romania",
    "games": 1,
-   "passes": 13
+   "passes": 13,
+   "received": 10,
+   "share": 4.2,
+   "substitute": false
   },
   {
    "playerId": 398956,
    "slug": "neagu",
    "name": "Neagu",
    "num": 16,
+   "position": "Atacante (dir.)",
    "team": "Romênia",
    "teamName": "Romania",
    "games": 1,
-   "passes": 13
+   "passes": 13,
+   "received": 20,
+   "share": 4.2,
+   "substitute": false
   },
   {
    "playerId": 398957,
    "slug": "necula-raducanu",
    "name": "Necula Răducanu",
    "num": 1,
+   "position": "Goleiro",
    "team": "Romênia",
    "teamName": "Romania",
    "games": 1,
-   "passes": 13
+   "passes": 13,
+   "received": 7,
+   "share": 4.2,
+   "substitute": true
   },
   {
    "playerId": 398948,
    "slug": "adamache",
    "name": "Adamache",
    "num": 21,
+   "position": "Goleiro",
    "team": "Romênia",
    "teamName": "Romania",
    "games": 1,
-   "passes": 7
+   "passes": 7,
+   "received": 1,
+   "share": 2.3,
+   "substitute": false
   },
   {
    "playerId": 398958,
    "slug": "tataru",
    "name": "Tataru",
    "num": 17,
+   "position": "Atacante (esq.)",
    "team": "Romênia",
    "teamName": "Romania",
    "games": 1,
-   "passes": 7
+   "passes": 7,
+   "received": 13,
+   "share": 2.3,
+   "substitute": true
   },
   {
    "playerId": 397643,
    "slug": "ubina",
    "name": "Ubiña",
    "num": 4,
+   "position": "Lateral-direito",
    "team": "Uruguai",
    "teamName": "Uruguay",
    "games": 1,
-   "passes": 48
+   "passes": 48,
+   "received": 51,
+   "share": 17.6,
+   "substitute": false
   },
   {
    "playerId": 397644,
    "slug": "mujica",
    "name": "Mujica",
    "num": 6,
+   "position": "Lateral-esquerdo",
    "team": "Uruguai",
    "teamName": "Uruguay",
    "games": 1,
-   "passes": 33
+   "passes": 33,
+   "received": 28,
+   "share": 12.1,
+   "substitute": false
   },
   {
    "playerId": 397639,
    "slug": "iglesias",
    "name": "Iglesias",
    "num": 1,
+   "position": "Goleiro",
    "team": "Uruguai",
    "teamName": "Uruguay",
    "games": 1,
-   "passes": 27
+   "passes": 27,
+   "received": 6,
+   "share": 9.9,
+   "substitute": false
   },
   {
    "playerId": 397660,
    "slug": "ghezzi",
    "name": "Ghezzi",
    "num": 10,
+   "position": "Meia (esq.)",
    "team": "Uruguai",
    "teamName": "Uruguay",
    "games": 1,
-   "passes": 27
+   "passes": 27,
+   "received": 29,
+   "share": 9.9,
+   "substitute": false
   },
   {
    "playerId": 397645,
    "slug": "fontes",
    "name": "Fontes",
    "num": 15,
+   "position": "Centroavante",
    "team": "Uruguai",
    "teamName": "Uruguay",
    "games": 1,
-   "passes": 26
+   "passes": 26,
+   "received": 27,
+   "share": 9.5,
+   "substitute": false
   },
   {
    "playerId": 397640,
    "slug": "castillo",
    "name": "Castillo",
    "num": 5,
+   "position": "Volante",
    "team": "Uruguai",
    "teamName": "Uruguay",
    "games": 1,
-   "passes": 23
+   "passes": 23,
+   "received": 18,
+   "share": 8.4,
+   "substitute": false
   },
   {
    "playerId": 397659,
    "slug": "lagos",
    "name": "Lagos",
    "num": 20,
+   "position": "Meia (dir.)",
    "team": "Uruguai",
    "teamName": "Uruguay",
    "games": 1,
-   "passes": 20
+   "passes": 20,
+   "received": 25,
+   "share": 7.3,
+   "substitute": false
   },
   {
    "playerId": 397655,
    "slug": "araujo",
    "name": "Araújo",
    "num": 11,
+   "position": "Ponta-esquerda",
    "team": "Uruguai",
    "teamName": "Uruguay",
    "games": 1,
-   "passes": 19
+   "passes": 19,
+   "received": 24,
+   "share": 7.0,
+   "substitute": false
   },
   {
    "playerId": 397642,
    "slug": "matosas",
    "name": "Matosas",
    "num": 3,
+   "position": "Zagueiro (esq.)",
    "team": "Uruguai",
    "teamName": "Uruguay",
    "games": 1,
-   "passes": 17
+   "passes": 17,
+   "received": 9,
+   "share": 6.2,
+   "substitute": false
   },
   {
    "playerId": 397641,
    "slug": "weigel",
    "name": "Weigel",
    "num": 2,
+   "position": "Zagueiro (dir.)",
    "team": "Uruguai",
    "teamName": "Uruguay",
    "games": 1,
-   "passes": 16
+   "passes": 16,
+   "received": 11,
+   "share": 5.9,
+   "substitute": false
   },
   {
    "playerId": 397658,
    "slug": "almeida",
    "name": "Almeida",
    "num": 7,
+   "position": "Ponta-direita",
    "team": "Uruguai",
    "teamName": "Uruguay",
    "games": 1,
-   "passes": 15
+   "passes": 15,
+   "received": 44,
+   "share": 5.5,
+   "substitute": false
   },
   {
    "playerId": 397657,
    "slug": "videla",
    "name": "Videla",
    "num": 9,
+   "position": "Meia (esq.)",
    "team": "Uruguai",
    "teamName": "Uruguay",
    "games": 1,
-   "passes": 2
+   "passes": 2,
+   "received": 1,
+   "share": 0.7,
+   "substitute": true
+  }
+ ],
+ "playerTeams": [
+  {
+   "teamName": "Brazil",
+   "team": "Brasil",
+   "article": "o",
+   "colors": {
+    "fill": "#FFD500",
+    "line": "#009C3B",
+    "ink": "#0A0A0B"
+   },
+   "players": 16,
+   "completed": 2490,
+   "topPasser": 39708,
+   "topReceiver": 39708,
+   "allGames": 8,
+   "match": null
+  },
+  {
+   "teamName": "Czechoslovakia",
+   "team": "Tchecoslováquia",
+   "article": "a",
+   "colors": {
+    "fill": "#D7141A",
+    "line": "#D7141A",
+    "ink": "#FFFFFF"
+   },
+   "players": 13,
+   "completed": 359,
+   "topPasser": 397951,
+   "topReceiver": 397951,
+   "allGames": null,
+   "match": {
+    "id": 3888699,
+    "order": 1,
+    "stage": "Fase de grupos",
+    "score": [
+     4,
+     1
+    ]
+   }
+  },
+  {
+   "teamName": "England",
+   "team": "Inglaterra",
+   "article": "a",
+   "colors": {
+    "fill": "#FFFFFF",
+    "line": "#1D2B5C",
+    "ink": "#1D2B5C"
+   },
+   "players": 13,
+   "completed": 392,
+   "topPasser": 397886,
+   "topReceiver": 397886,
+   "allGames": null,
+   "match": {
+    "id": 3888700,
+    "order": 2,
+    "stage": "Fase de grupos",
+    "score": [
+     1,
+     0
+    ]
+   }
+  },
+  {
+   "teamName": "Romania",
+   "team": "Romênia",
+   "article": "a",
+   "colors": {
+    "fill": "#002B7F",
+    "line": "#002B7F",
+    "ink": "#FFFFFF"
+   },
+   "players": 13,
+   "completed": 307,
+   "topPasser": 398953,
+   "topReceiver": 398953,
+   "allGames": null,
+   "match": {
+    "id": 3889217,
+    "order": 3,
+    "stage": "Fase de grupos",
+    "score": [
+     3,
+     2
+    ]
+   }
+  },
+  {
+   "teamName": "Peru",
+   "team": "Peru",
+   "article": "o",
+   "colors": {
+    "fill": "#FFFFFF",
+    "line": "#C8102E",
+    "ink": "#0A0A0B"
+   },
+   "players": 13,
+   "completed": 397,
+   "topPasser": 398873,
+   "topReceiver": 398873,
+   "allGames": null,
+   "match": {
+    "id": 3889218,
+    "order": 4,
+    "stage": "Quartas de final",
+    "score": [
+     4,
+     2
+    ]
+   }
+  },
+  {
+   "teamName": "Uruguay",
+   "team": "Uruguai",
+   "article": "o",
+   "colors": {
+    "fill": "#7BAFD4",
+    "line": "#1F5F99",
+    "ink": "#0A0A0B"
+   },
+   "players": 12,
+   "completed": 273,
+   "topPasser": 397643,
+   "topReceiver": 397643,
+   "allGames": null,
+   "match": {
+    "id": 3888701,
+    "order": 5,
+    "stage": "Semifinal",
+    "score": [
+     3,
+     1
+    ]
+   }
+  },
+  {
+   "teamName": "Italy",
+   "team": "Itália",
+   "article": "a",
+   "colors": {
+    "fill": "#0066CC",
+    "line": "#0066CC",
+    "ink": "#FFFFFF"
+   },
+   "players": 13,
+   "completed": 243,
+   "topPasser": 39732,
+   "topReceiver": 39732,
+   "allGames": null,
+   "match": {
+    "id": 3888702,
+    "order": 6,
+    "stage": "Final",
+    "score": [
+     4,
+     1
+    ]
+   }
   }
  ]
 }
