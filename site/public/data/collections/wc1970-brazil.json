@@ -1931,14 +1931,16 @@
    "name": "Carlos Alberto",
    "n": 367,
    "position": "Lateral-direito",
-   "missed": []
+   "missed": [],
+   "slug": "carlos-alberto"
   },
   {
    "playerId": 397620,
    "name": "Clodoaldo",
    "n": 321,
    "position": "Volante (dir.)",
-   "missed": []
+   "missed": [],
+   "slug": "clodoaldo"
   },
   {
    "playerId": 397630,
@@ -1947,14 +1949,16 @@
    "position": "Meio-campo (esq.)",
    "missed": [
     "Romênia"
-   ]
+   ],
+   "slug": "rivellino"
   },
   {
    "playerId": 39712,
    "name": "Pelé",
    "n": 211,
    "position": "Atacante (dir.)",
-   "missed": []
+   "missed": [],
+   "slug": "pele"
   },
   {
    "playerId": 397621,
@@ -1964,14 +1968,16 @@
    "missed": [
     "Inglaterra",
     "Romênia"
-   ]
+   ],
+   "slug": "gerson"
   },
   {
    "playerId": 397622,
    "name": "Jairzinho",
    "n": 193,
    "position": "Meio-campo (dir.)",
-   "missed": []
+   "missed": [],
+   "slug": "jairzinho"
   }
  ],
  "topPairs": [
@@ -2029,6 +2035,938 @@
     "Rivellino"
    ],
    "n": 87
+  }
+ ],
+ "players": [
+  {
+   "playerId": 39708,
+   "slug": "carlos-alberto",
+   "name": "Carlos Alberto",
+   "num": 4,
+   "team": "Brasil",
+   "teamName": "Brazil",
+   "games": 6,
+   "passes": 367
+  },
+  {
+   "playerId": 397620,
+   "slug": "clodoaldo",
+   "name": "Clodoaldo",
+   "num": 5,
+   "team": "Brasil",
+   "teamName": "Brazil",
+   "games": 6,
+   "passes": 321
+  },
+  {
+   "playerId": 397630,
+   "slug": "rivellino",
+   "name": "Rivellino",
+   "num": 11,
+   "team": "Brasil",
+   "teamName": "Brazil",
+   "games": 5,
+   "passes": 225
+  },
+  {
+   "playerId": 39712,
+   "slug": "pele",
+   "name": "Pelé",
+   "num": 10,
+   "team": "Brasil",
+   "teamName": "Brazil",
+   "games": 6,
+   "passes": 211
+  },
+  {
+   "playerId": 397621,
+   "slug": "gerson",
+   "name": "Gérson",
+   "num": 8,
+   "team": "Brasil",
+   "teamName": "Brazil",
+   "games": 4,
+   "passes": 195
+  },
+  {
+   "playerId": 397622,
+   "slug": "jairzinho",
+   "name": "Jairzinho",
+   "num": 7,
+   "team": "Brasil",
+   "teamName": "Brazil",
+   "games": 6,
+   "passes": 193
+  },
+  {
+   "playerId": 397626,
+   "slug": "felix",
+   "name": "Félix",
+   "num": 1,
+   "team": "Brasil",
+   "teamName": "Brazil",
+   "games": 6,
+   "passes": 188
+  },
+  {
+   "playerId": 397629,
+   "slug": "everaldo",
+   "name": "Everaldo",
+   "num": 16,
+   "team": "Brasil",
+   "teamName": "Brazil",
+   "games": 5,
+   "passes": 185
+  },
+  {
+   "playerId": 397627,
+   "slug": "piazza",
+   "name": "Piazza",
+   "num": 3,
+   "team": "Brasil",
+   "teamName": "Brazil",
+   "games": 6,
+   "passes": 183
+  },
+  {
+   "playerId": 397637,
+   "slug": "tostao",
+   "name": "Tostão",
+   "num": 9,
+   "team": "Brasil",
+   "teamName": "Brazil",
+   "games": 6,
+   "passes": 146
+  },
+  {
+   "playerId": 397628,
+   "slug": "brito",
+   "name": "Brito",
+   "num": 2,
+   "team": "Brasil",
+   "teamName": "Brazil",
+   "games": 6,
+   "passes": 115
+  },
+  {
+   "playerId": 397631,
+   "slug": "caju",
+   "name": "Caju",
+   "num": 18,
+   "team": "Brasil",
+   "teamName": "Brazil",
+   "games": 4,
+   "passes": 87
+  },
+  {
+   "playerId": 397632,
+   "slug": "marco-antonio",
+   "name": "Marco Antônio",
+   "num": 6,
+   "team": "Brasil",
+   "teamName": "Brazil",
+   "games": 2,
+   "passes": 48
+  },
+  {
+   "playerId": 397633,
+   "slug": "roberto-miranda",
+   "name": "Roberto Miranda",
+   "num": 13,
+   "team": "Brasil",
+   "teamName": "Brazil",
+   "games": 2,
+   "passes": 11
+  },
+  {
+   "playerId": 397623,
+   "slug": "fontana",
+   "name": "Fontana",
+   "num": 15,
+   "team": "Brasil",
+   "teamName": "Brazil",
+   "games": 1,
+   "passes": 9
+  },
+  {
+   "playerId": 397624,
+   "slug": "edu",
+   "name": "Edu",
+   "num": 19,
+   "team": "Brasil",
+   "teamName": "Brazil",
+   "games": 1,
+   "passes": 6
+  },
+  {
+   "playerId": 397951,
+   "slug": "dobias",
+   "name": "Dobiaš",
+   "num": 2,
+   "team": "Tchecoslováquia",
+   "teamName": "Czechoslovakia",
+   "games": 1,
+   "passes": 60
+  },
+  {
+   "playerId": 397947,
+   "slug": "kuna",
+   "name": "Kuna",
+   "num": 9,
+   "team": "Tchecoslováquia",
+   "teamName": "Czechoslovakia",
+   "games": 1,
+   "passes": 49
+  },
+  {
+   "playerId": 397946,
+   "slug": "hagara",
+   "name": "Hagara",
+   "num": 4,
+   "team": "Tchecoslováquia",
+   "teamName": "Czechoslovakia",
+   "games": 1,
+   "passes": 41
+  },
+  {
+   "playerId": 397961,
+   "slug": "vesely-397961",
+   "name": "Veselý",
+   "num": 18,
+   "team": "Tchecoslováquia",
+   "teamName": "Czechoslovakia",
+   "games": 1,
+   "passes": 38
+  },
+  {
+   "playerId": 397952,
+   "slug": "viktor",
+   "name": "Viktor",
+   "num": 1,
+   "team": "Tchecoslováquia",
+   "teamName": "Czechoslovakia",
+   "games": 1,
+   "passes": 26
+  },
+  {
+   "playerId": 397965,
+   "slug": "horvath",
+   "name": "Horvath",
+   "num": 5,
+   "team": "Tchecoslováquia",
+   "teamName": "Czechoslovakia",
+   "games": 1,
+   "passes": 26
+  },
+  {
+   "playerId": 397962,
+   "slug": "jokl",
+   "name": "Jokl",
+   "num": 11,
+   "team": "Tchecoslováquia",
+   "teamName": "Czechoslovakia",
+   "games": 1,
+   "passes": 23
+  },
+  {
+   "playerId": 397960,
+   "slug": "hrdlicka",
+   "name": "Hrdlicka",
+   "num": 16,
+   "team": "Tchecoslováquia",
+   "teamName": "Czechoslovakia",
+   "games": 1,
+   "passes": 22
+  },
+  {
+   "playerId": 397956,
+   "slug": "migas",
+   "name": "Migas",
+   "num": 3,
+   "team": "Tchecoslováquia",
+   "teamName": "Czechoslovakia",
+   "games": 1,
+   "passes": 20
+  },
+  {
+   "playerId": 397958,
+   "slug": "kvasnak",
+   "name": "Kvašňák",
+   "num": 6,
+   "team": "Tchecoslováquia",
+   "teamName": "Czechoslovakia",
+   "games": 1,
+   "passes": 20
+  },
+  {
+   "playerId": 397967,
+   "slug": "adamec",
+   "name": "Adamec",
+   "num": 10,
+   "team": "Tchecoslováquia",
+   "teamName": "Czechoslovakia",
+   "games": 1,
+   "passes": 17
+  },
+  {
+   "playerId": 397966,
+   "slug": "petras",
+   "name": "Petráš",
+   "num": 8,
+   "team": "Tchecoslováquia",
+   "teamName": "Czechoslovakia",
+   "games": 1,
+   "passes": 13
+  },
+  {
+   "playerId": 397957,
+   "slug": "vesely-397957",
+   "name": "Vesely",
+   "num": 7,
+   "team": "Tchecoslováquia",
+   "teamName": "Czechoslovakia",
+   "games": 1,
+   "passes": 4
+  },
+  {
+   "playerId": 397886,
+   "slug": "alan-mullery",
+   "name": "Alan Mullery",
+   "num": 4,
+   "team": "Inglaterra",
+   "teamName": "England",
+   "games": 1,
+   "passes": 59
+  },
+  {
+   "playerId": 397885,
+   "slug": "wright",
+   "name": "Wright",
+   "num": 14,
+   "team": "Inglaterra",
+   "teamName": "England",
+   "games": 1,
+   "passes": 56
+  },
+  {
+   "playerId": 397882,
+   "slug": "moore",
+   "name": "Moore",
+   "num": 6,
+   "team": "Inglaterra",
+   "teamName": "England",
+   "games": 1,
+   "passes": 41
+  },
+  {
+   "playerId": 397883,
+   "slug": "cooper",
+   "name": "Cooper",
+   "num": 3,
+   "team": "Inglaterra",
+   "teamName": "England",
+   "games": 1,
+   "passes": 40
+  },
+  {
+   "playerId": 397889,
+   "slug": "charlton-9",
+   "name": "Charlton 9",
+   "num": 9,
+   "team": "Inglaterra",
+   "teamName": "England",
+   "games": 1,
+   "passes": 36
+  },
+  {
+   "playerId": 397888,
+   "slug": "martin-peters",
+   "name": "Martin Peters",
+   "num": 11,
+   "team": "Inglaterra",
+   "teamName": "England",
+   "games": 1,
+   "passes": 33
+  },
+  {
+   "playerId": 397881,
+   "slug": "banks",
+   "name": "Banks",
+   "num": 1,
+   "team": "Inglaterra",
+   "teamName": "England",
+   "games": 1,
+   "passes": 32
+  },
+  {
+   "playerId": 397887,
+   "slug": "alan-ball",
+   "name": "Alan Ball",
+   "num": 8,
+   "team": "Inglaterra",
+   "teamName": "England",
+   "games": 1,
+   "passes": 31
+  },
+  {
+   "playerId": 397891,
+   "slug": "geoffrey-hurst",
+   "name": "Geoffrey Hurst",
+   "num": 10,
+   "team": "Inglaterra",
+   "teamName": "England",
+   "games": 1,
+   "passes": 18
+  },
+  {
+   "playerId": 397884,
+   "slug": "brian-labone",
+   "name": "Brian Labone",
+   "num": 5,
+   "team": "Inglaterra",
+   "teamName": "England",
+   "games": 1,
+   "passes": 17
+  },
+  {
+   "playerId": 397890,
+   "slug": "francis-lee",
+   "name": "Francis Lee",
+   "num": 7,
+   "team": "Inglaterra",
+   "teamName": "England",
+   "games": 1,
+   "passes": 13
+  },
+  {
+   "playerId": 397892,
+   "slug": "bell",
+   "name": "Bell",
+   "num": 19,
+   "team": "Inglaterra",
+   "teamName": "England",
+   "games": 1,
+   "passes": 11
+  },
+  {
+   "playerId": 397893,
+   "slug": "astle",
+   "name": "Astle",
+   "num": 22,
+   "team": "Inglaterra",
+   "teamName": "England",
+   "games": 1,
+   "passes": 5
+  },
+  {
+   "playerId": 39732,
+   "slug": "mazzola",
+   "name": "Mazzola",
+   "num": 15,
+   "team": "Itália",
+   "teamName": "Italy",
+   "games": 1,
+   "passes": 38
+  },
+  {
+   "playerId": 397666,
+   "slug": "cera",
+   "name": "Cera",
+   "num": 5,
+   "team": "Itália",
+   "teamName": "Italy",
+   "games": 1,
+   "passes": 33
+  },
+  {
+   "playerId": 397665,
+   "slug": "albertosi",
+   "name": "Albertosi",
+   "num": 1,
+   "team": "Itália",
+   "teamName": "Italy",
+   "games": 1,
+   "passes": 32
+  },
+  {
+   "playerId": 397674,
+   "slug": "domenghini",
+   "name": "Domenghini",
+   "num": 13,
+   "team": "Itália",
+   "teamName": "Italy",
+   "games": 1,
+   "passes": 29
+  },
+  {
+   "playerId": 397681,
+   "slug": "de-sisti",
+   "name": "De Sisti",
+   "num": 16,
+   "team": "Itália",
+   "teamName": "Italy",
+   "games": 1,
+   "passes": 25
+  },
+  {
+   "playerId": 40095,
+   "slug": "bertini",
+   "name": "Bertini",
+   "num": 10,
+   "team": "Itália",
+   "teamName": "Italy",
+   "games": 1,
+   "passes": 23
+  },
+  {
+   "playerId": 39714,
+   "slug": "facchetti",
+   "name": "Facchetti",
+   "num": 3,
+   "team": "Itália",
+   "teamName": "Italy",
+   "games": 1,
+   "passes": 15
+  },
+  {
+   "playerId": 397680,
+   "slug": "rosato",
+   "name": "Rosato",
+   "num": 8,
+   "team": "Itália",
+   "teamName": "Italy",
+   "games": 1,
+   "passes": 11
+  },
+  {
+   "playerId": 39717,
+   "slug": "boninsegna",
+   "name": "Boninsegna",
+   "num": 20,
+   "team": "Itália",
+   "teamName": "Italy",
+   "games": 1,
+   "passes": 10
+  },
+  {
+   "playerId": 397675,
+   "slug": "riva",
+   "name": "Riva",
+   "num": 11,
+   "team": "Itália",
+   "teamName": "Italy",
+   "games": 1,
+   "passes": 9
+  },
+  {
+   "playerId": 397677,
+   "slug": "juliano",
+   "name": "Juliano",
+   "num": 18,
+   "team": "Itália",
+   "teamName": "Italy",
+   "games": 1,
+   "passes": 9
+  },
+  {
+   "playerId": 39715,
+   "slug": "burgnich",
+   "name": "Burgnich",
+   "num": 2,
+   "team": "Itália",
+   "teamName": "Italy",
+   "games": 1,
+   "passes": 7
+  },
+  {
+   "playerId": 397676,
+   "slug": "rivera",
+   "name": "Rivera",
+   "num": 14,
+   "team": "Itália",
+   "teamName": "Italy",
+   "games": 1,
+   "passes": 2
+  },
+  {
+   "playerId": 398873,
+   "slug": "roberto-chale",
+   "name": "Roberto Chale",
+   "num": 7,
+   "team": "Peru",
+   "teamName": "Peru",
+   "games": 1,
+   "passes": 91
+  },
+  {
+   "playerId": 398859,
+   "slug": "ramon-mifflin",
+   "name": "Ramón Mifflin",
+   "num": 6,
+   "team": "Peru",
+   "teamName": "Peru",
+   "games": 1,
+   "passes": 56
+  },
+  {
+   "playerId": 398854,
+   "slug": "campos",
+   "name": "Campos",
+   "num": 2,
+   "team": "Peru",
+   "teamName": "Peru",
+   "games": 1,
+   "passes": 34
+  },
+  {
+   "playerId": 398856,
+   "slug": "nicolas-fuentes",
+   "name": "Nicolás Fuentes",
+   "num": 5,
+   "team": "Peru",
+   "teamName": "Peru",
+   "games": 1,
+   "passes": 34
+  },
+  {
+   "playerId": 398858,
+   "slug": "teofilo-cubillas",
+   "name": "Teófilo Cubillas",
+   "num": 10,
+   "team": "Peru",
+   "teamName": "Peru",
+   "games": 1,
+   "passes": 31
+  },
+  {
+   "playerId": 398862,
+   "slug": "gallardo",
+   "name": "Gallardo",
+   "num": 11,
+   "team": "Peru",
+   "teamName": "Peru",
+   "games": 1,
+   "passes": 29
+  },
+  {
+   "playerId": 398853,
+   "slug": "luis-rubinos",
+   "name": "Luis Rubiños",
+   "num": 1,
+   "team": "Peru",
+   "teamName": "Peru",
+   "games": 1,
+   "passes": 26
+  },
+  {
+   "playerId": 397776,
+   "slug": "hugo-sotil",
+   "name": "Hugo Sotil",
+   "num": 20,
+   "team": "Peru",
+   "teamName": "Peru",
+   "games": 1,
+   "passes": 20
+  },
+  {
+   "playerId": 398855,
+   "slug": "hector-chumpitaz",
+   "name": "Héctor Chumpitáz",
+   "num": 4,
+   "team": "Peru",
+   "teamName": "Peru",
+   "games": 1,
+   "passes": 18
+  },
+  {
+   "playerId": 398860,
+   "slug": "julio-baylon",
+   "name": "Julio Baylón",
+   "num": 8,
+   "team": "Peru",
+   "teamName": "Peru",
+   "games": 1,
+   "passes": 18
+  },
+  {
+   "playerId": 398857,
+   "slug": "jose-fernandez",
+   "name": "José Fernández",
+   "num": 14,
+   "team": "Peru",
+   "teamName": "Peru",
+   "games": 1,
+   "passes": 15
+  },
+  {
+   "playerId": 398861,
+   "slug": "pedro-leon",
+   "name": "Pedro León",
+   "num": 9,
+   "team": "Peru",
+   "teamName": "Peru",
+   "games": 1,
+   "passes": 15
+  },
+  {
+   "playerId": 398864,
+   "slug": "reyes",
+   "name": "Reyes",
+   "num": 19,
+   "team": "Peru",
+   "teamName": "Peru",
+   "games": 1,
+   "passes": 10
+  },
+  {
+   "playerId": 398953,
+   "slug": "nunweiller",
+   "name": "Nunweiller",
+   "num": 10,
+   "team": "Romênia",
+   "teamName": "Romania",
+   "games": 1,
+   "passes": 51
+  },
+  {
+   "playerId": 398949,
+   "slug": "satmareanu",
+   "name": "Satmareanu",
+   "num": 2,
+   "team": "Romênia",
+   "teamName": "Romania",
+   "games": 1,
+   "passes": 43
+  },
+  {
+   "playerId": 398969,
+   "slug": "dinu",
+   "name": "Dinu",
+   "num": 5,
+   "team": "Romênia",
+   "teamName": "Romania",
+   "games": 1,
+   "passes": 38
+  },
+  {
+   "playerId": 398952,
+   "slug": "dembrovschi",
+   "name": "Dembrovschi",
+   "num": 7,
+   "team": "Romênia",
+   "teamName": "Romania",
+   "games": 1,
+   "passes": 37
+  },
+  {
+   "playerId": 398954,
+   "slug": "ion-dumitru",
+   "name": "Ion Dumitru",
+   "num": 15,
+   "team": "Romênia",
+   "teamName": "Romania",
+   "games": 1,
+   "passes": 33
+  },
+  {
+   "playerId": 398968,
+   "slug": "lucescu",
+   "name": "Lucescu",
+   "num": 11,
+   "team": "Romênia",
+   "teamName": "Romania",
+   "games": 1,
+   "passes": 19
+  },
+  {
+   "playerId": 398951,
+   "slug": "mocanu",
+   "name": "Mocanu",
+   "num": 4,
+   "team": "Romênia",
+   "teamName": "Romania",
+   "games": 1,
+   "passes": 18
+  },
+  {
+   "playerId": 398950,
+   "slug": "lupescu",
+   "name": "Lupescu",
+   "num": 3,
+   "team": "Romênia",
+   "teamName": "Romania",
+   "games": 1,
+   "passes": 15
+  },
+  {
+   "playerId": 398955,
+   "slug": "dumitrache",
+   "name": "Dumitrache",
+   "num": 9,
+   "team": "Romênia",
+   "teamName": "Romania",
+   "games": 1,
+   "passes": 13
+  },
+  {
+   "playerId": 398956,
+   "slug": "neagu",
+   "name": "Neagu",
+   "num": 16,
+   "team": "Romênia",
+   "teamName": "Romania",
+   "games": 1,
+   "passes": 13
+  },
+  {
+   "playerId": 398957,
+   "slug": "necula-raducanu",
+   "name": "Necula Răducanu",
+   "num": 1,
+   "team": "Romênia",
+   "teamName": "Romania",
+   "games": 1,
+   "passes": 13
+  },
+  {
+   "playerId": 398948,
+   "slug": "adamache",
+   "name": "Adamache",
+   "num": 21,
+   "team": "Romênia",
+   "teamName": "Romania",
+   "games": 1,
+   "passes": 7
+  },
+  {
+   "playerId": 398958,
+   "slug": "tataru",
+   "name": "Tataru",
+   "num": 17,
+   "team": "Romênia",
+   "teamName": "Romania",
+   "games": 1,
+   "passes": 7
+  },
+  {
+   "playerId": 397643,
+   "slug": "ubina",
+   "name": "Ubiña",
+   "num": 4,
+   "team": "Uruguai",
+   "teamName": "Uruguay",
+   "games": 1,
+   "passes": 48
+  },
+  {
+   "playerId": 397644,
+   "slug": "mujica",
+   "name": "Mujica",
+   "num": 6,
+   "team": "Uruguai",
+   "teamName": "Uruguay",
+   "games": 1,
+   "passes": 33
+  },
+  {
+   "playerId": 397639,
+   "slug": "iglesias",
+   "name": "Iglesias",
+   "num": 1,
+   "team": "Uruguai",
+   "teamName": "Uruguay",
+   "games": 1,
+   "passes": 27
+  },
+  {
+   "playerId": 397660,
+   "slug": "ghezzi",
+   "name": "Ghezzi",
+   "num": 10,
+   "team": "Uruguai",
+   "teamName": "Uruguay",
+   "games": 1,
+   "passes": 27
+  },
+  {
+   "playerId": 397645,
+   "slug": "fontes",
+   "name": "Fontes",
+   "num": 15,
+   "team": "Uruguai",
+   "teamName": "Uruguay",
+   "games": 1,
+   "passes": 26
+  },
+  {
+   "playerId": 397640,
+   "slug": "castillo",
+   "name": "Castillo",
+   "num": 5,
+   "team": "Uruguai",
+   "teamName": "Uruguay",
+   "games": 1,
+   "passes": 23
+  },
+  {
+   "playerId": 397659,
+   "slug": "lagos",
+   "name": "Lagos",
+   "num": 20,
+   "team": "Uruguai",
+   "teamName": "Uruguay",
+   "games": 1,
+   "passes": 20
+  },
+  {
+   "playerId": 397655,
+   "slug": "araujo",
+   "name": "Araújo",
+   "num": 11,
+   "team": "Uruguai",
+   "teamName": "Uruguay",
+   "games": 1,
+   "passes": 19
+  },
+  {
+   "playerId": 397642,
+   "slug": "matosas",
+   "name": "Matosas",
+   "num": 3,
+   "team": "Uruguai",
+   "teamName": "Uruguay",
+   "games": 1,
+   "passes": 17
+  },
+  {
+   "playerId": 397641,
+   "slug": "weigel",
+   "name": "Weigel",
+   "num": 2,
+   "team": "Uruguai",
+   "teamName": "Uruguay",
+   "games": 1,
+   "passes": 16
+  },
+  {
+   "playerId": 397658,
+   "slug": "almeida",
+   "name": "Almeida",
+   "num": 7,
+   "team": "Uruguai",
+   "teamName": "Uruguay",
+   "games": 1,
+   "passes": 15
+  },
+  {
+   "playerId": 397657,
+   "slug": "videla",
+   "name": "Videla",
+   "num": 9,
+   "team": "Uruguai",
+   "teamName": "Uruguay",
+   "games": 1,
+   "passes": 2
   }
  ]
 }

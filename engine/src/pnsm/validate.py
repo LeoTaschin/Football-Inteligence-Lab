@@ -7,6 +7,29 @@ class ValidationError(Exception):
     pass
 
 
+def check_players(pages: dict[str, dict], matches: list[dict]) -> None:
+    """Player pages add up to the matches they come from (CLAUDE.md 5.10). Raises on failure."""
+    failures = []
+    for slug, p in pages.items():
+        s = p["summary"]
+        if s["passes"] != sum(g["passes"] for g in p["games"]) or s["games"] != len(p["games"]):
+            failures.append(f"{slug}: soma dos jogos ≠ resumo")
+    by_team: dict[int, int] = {}
+    for p in pages.values():
+        by_team[p["teamId"]] = by_team.get(p["teamId"], 0) + p["summary"]["passes"]
+    completed: dict[int, int] = {}
+    for m in matches:
+        for t in m["teams"]:
+            completed[t["teamId"]] = completed.get(t["teamId"], 0) + t["passes"]["completed"]
+    for tid, n in completed.items():
+        if by_team.get(tid, 0) != n:
+            failures.append(f"equipe {tid}: passes dos jogadores ({by_team.get(tid, 0)}) ≠ completos ({n})")
+    if len(pages) != len({p["playerId"] for p in pages.values()}):
+        failures.append("slug repetido")
+    if failures:
+        raise ValidationError("jogadores:\n  " + "\n  ".join(failures))
+
+
 def check_match(data: dict, events: list[dict], periods: tuple[int, ...]) -> dict[str, bool]:
     """Run every check on an exported match. Returns the results; raises if any fails."""
     results: dict[str, bool] = {}

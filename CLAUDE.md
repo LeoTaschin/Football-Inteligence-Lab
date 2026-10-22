@@ -275,6 +275,16 @@ Dois filtros combináveis sobre os passes elegíveis de 5.1, dando **4 redes por
 - **Destaques (`highlights`), comparando com a `full`:** o jogador cuja posição mais muda (`shift`: distância entre as medianas, em metros, entre jogadores com ≥ 5 passes nos dois) e o de maior queda de passes (`drop`). `null` quando nada muda.
 - Mesma escala (`scale`) da partida inteira em todos os recortes.
 
+
+### 5.10 Página do jogador (Etapa 2)
+
+- **Quem tem página:** todo jogador com nó (rede da partida inteira, 5.2) em alguma partida da coleção, das duas equipes. Adversários têm um jogo só (os dados abertos trazem apenas os jogos do Brasil): a página avisa.
+- **Agregação:** sempre por `player_id`, somando as partidas em que o jogador tem nó.
+- **Números da campanha:** passes completos e recebidos (soma dos nós); `share` = passes ÷ passes completos **do time nos jogos em que ele esteve em campo** (um reserva não fica com porcentagem artificialmente baixa); `topPasserGames` = jogos em que foi quem mais passou no time; `teamRank` = posição entre os jogadores da mesma equipe na soma de passes da coleção; `avgShift` = média dos deslocamentos com bola → sem bola (5.6) dos jogos que têm posição sem bola.
+- **Com quem jogou (`to` / `from`):** soma das conexões dirigidas (5.3) dele nas partidas, top 5; empate pelo menor `player_id`.
+- **Por jogo:** passes, recebidos, posição no time (1 + quantos passaram mais), dupla mais usada (par de 5.4 com mais passes que o inclui), substituição, posições com e sem bola e uma mini-rede (nós + pares com o mínimo padrão) para a grade "Todos os jogos".
+- **Endereço:** `slug` do nome de exibição (sem acento, minúsculas, hífens); se dois jogadores derem o mesmo slug, acrescenta-se o `player_id`. Rota `/pnsm/1970/jogador/:slug`.
+
 ---
 
 ## 6. Schema dos JSONs
@@ -341,6 +351,7 @@ Campos a mais que o export gera (o exemplo acima é o mínimo; a fonte de verdad
 - Por equipe: `cuts` = `{firstSub, openPlay, firstSubOpen}` (5.9), cada um com `completed`, `sameAsFull`, `cutAt` (`{minute, out, in}` ou `null`), `removed` (por `pass.type`, ou `null`), `highlights` (`shift`, `drop`), `nodes`, `edges`, `pairs` (nós sem `def`/`shift`); a rede `full` é a de sempre (`nodes`, `edges`, `pairs`).
 - Por equipe: `teamId`; `passes.excluded.period`; `pairs` = `[{a, b, forward, backward, n}]` ordenados por `n` (`a` é quem passou mais; usado nas linhas não dirigidas e no Top 10, para o site não somar nada); `phase` = `{ballHeight, defHeight, shiftMeters}` (sem o goleiro).
 - Por nó: `positionFrom` (`passes` | `received`, ver 5.2); `def.lowSample` (menos de 5 ações); `shift` em metros (`def.x − ball.x`); `sub` = `{type: "in" | "out", minute, with: playerId}` ou `null`.
+- `data/players/{slug}.json` (5.10) e, na coleção, `players` (todos os jogadores com página) e `slug` em `topPassers`.
 - Por gol: `teamId`, `scorerId`, `passes`, `players`; `touches[].playerId`. O replay começa depois do último toque do adversário com a bola na posse (o `possession` do StatsBomb nem sempre muda quando a bola troca de dono).
 - Coordenadas exportadas com 2 casas; o site arredonda para exibir.
 

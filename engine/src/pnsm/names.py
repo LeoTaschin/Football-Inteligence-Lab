@@ -5,6 +5,8 @@ Labels are only text: every aggregation uses ``player_id``.
 
 from __future__ import annotations
 
+import re
+import unicodedata
 from dataclasses import dataclass
 
 # StatsBomb player_name -> display name, for cases the automatic rule gets wrong
@@ -163,3 +165,9 @@ def players_from_lineup(team_lineup: dict) -> dict[int, Player]:
         pid: Player(p.player_id, p.num, f"{p.name} {p.num}", p.position) if seen[p.name] > 1 else p
         for pid, p in players.items()
     }
+
+
+def slug(name: str) -> str:
+    """Display name → URL segment: "Carlos Alberto" → "carlos-alberto", "Pelé" → "pele"."""
+    ascii_name = unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode()
+    return re.sub(r"[^a-z0-9]+", "-", ascii_name.lower()).strip("-")

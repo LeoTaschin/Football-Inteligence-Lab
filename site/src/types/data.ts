@@ -276,6 +276,76 @@ export interface CollectionData {
   };
   scale: { maxPasses: number; maxPair: number };
   matches: CampaignMatch[];
-  topPassers: { playerId: number; name: string; n: number; position: string | null; missed: string[] }[];
+  topPassers: { playerId: number; slug: string; name: string; n: number; position: string | null; missed: string[] }[];
+  /** everyone with a player page, team by team, most passes first */
+  players: PlayerRef[];
   topPairs: { ids: [number, number]; names: [string, string]; n: number }[];
+}
+
+// --- players/{slug}.json (CLAUDE.md 5.10) ------------------------------------------------
+
+export interface PlayerRef {
+  playerId: number;
+  slug: string;
+  name: string;
+  num: number | null;
+  team: string;
+  teamName: string;
+  games: number;
+  passes: number;
+}
+
+export interface PlayerPartner {
+  playerId: number;
+  name: string;
+  slug: string;
+  n: number;
+}
+
+export interface PlayerGame {
+  matchId: number;
+  order: number;
+  stage: string;
+  opponent: string;
+  /** [team, opponent] */
+  score: [number, number];
+  passes: number;
+  received: number;
+  teamCompleted: number;
+  /** 1 = the team's top passer in that match */
+  rank: number;
+  partner: PlayerPartner | null;
+  sub: NetworkNode["sub"];
+  positionFrom: NetworkNode["positionFrom"];
+  ball: NetworkNode["ball"];
+  def: NetworkNode["def"];
+  shift: number | null;
+  mini: MiniNetwork;
+}
+
+export interface PlayerPage {
+  playerId: number;
+  slug: string;
+  name: string;
+  num: number | null;
+  position: string | null;
+  teamId: number;
+  team: string;
+  teamName: string;
+  article: "o" | "a";
+  colors: TeamColors;
+  summary: {
+    games: number;
+    passes: number;
+    received: number;
+    teamCompleted: number;
+    share: number | null;
+    teamRank: number;
+    topPasserGames: number;
+    avgShift: number | null;
+  };
+  to: PlayerPartner[];
+  from: PlayerPartner[];
+  scale: { maxPasses: number; maxPair: number };
+  games: PlayerGame[];
 }

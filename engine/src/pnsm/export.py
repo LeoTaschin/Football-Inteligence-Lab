@@ -13,7 +13,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from pnsm import load, metrics, names, transform, validate
+from pnsm import load, metrics, names, players, transform, validate
 from pnsm.config import CollectionConfig
 from pnsm.labels import LabelTarget, node_radius_px, place_labels
 from pnsm.sequences import goal_sequences
@@ -386,7 +386,16 @@ def build_files(cfg: CollectionConfig, cache_dir: Path = load.DEFAULT_CACHE_DIR)
         matches.append(build_match(meta, load.load_events(match_id, cache_dir), load.load_lineups(match_id, cache_dir), cfg))
 
     files = {Path("matches") / f"{m['match']['id']}.json": m for m in matches}
-    files[Path("collections") / f"{cfg.collection}.json"] = build_collection(cfg, matches)
+    collection = build_collection(cfg, matches)
+    order = {r["id"]: (r["order"], r["stage"]) for r in collection["matches"]}
+    pages = players.build_players(matches, order, cfg.min_pair_passes)
+    validate.check_players(pages, matches)
+    slugs = {p["playerId"]: s for s, p in pages.items()}
+    collection["players"] = players.player_list(pages)
+    for t in collection["topPassers"]:
+        t["slug"] = slugs[t["playerId"]]
+    files[Path("collections") / f"{cfg.collection}.json"] = collection
+    files.update({Path("players") / f"{s}.json": p for s, p in pages.items()})
     files[Path("index.json")] = build_index(cfg, match_ids)
     return files
 
