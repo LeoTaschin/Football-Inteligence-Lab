@@ -2,15 +2,14 @@ import { Link, useParams, useSearchParams } from "react-router-dom";
 
 import { CombinationTable } from "../components/CombinationTable";
 import { GoalReplay } from "../components/GoalReplay";
-import { PassNetwork } from "../components/PassNetwork";
+import { NetworkTab } from "../components/NetworkTab";
 import { PhaseMorph } from "../components/PhaseMorph";
-import { PlayerPanel } from "../components/PlayerPanel";
 import { ShotsPanel, type ShotRef } from "../components/ShotsPanel";
 import { NotFound, Status } from "../components/Status";
 import { TabPanel, Tabs } from "../components/Tabs";
 import { competitionPt, match as copy, goals as goalsCopy, site, tabs as tabsCopy } from "../content/pt";
 import { useCollection, useMatch } from "../lib/data";
-import { formatDate, formatPercent } from "../lib/format";
+import { formatDate } from "../lib/format";
 import type { CampaignMatch, MatchData, TeamData } from "../types/data";
 import styles from "./Match.module.css";
 
@@ -36,20 +35,20 @@ export function Match() {
   return <MatchView key={id} data={state.data} campaign={campaign} />;
 }
 
-interface Selection {
-  team: number; // index in data.teams
-  playerId: number;
-}
-
-/** Tab, selection, filter, goal and shot live in the URL (?aba=gols&gol=4, ?jogador=397621&min=5, ?aba=finalizacoes&chute=1-27)
- *  so a post can link straight to them. */
+/** Tab, team, cut, selection, filter, goal and shot live in the URL (?aba=gols&gol=4, ?equipe=2&periodo=1sub&aberto=1,
+ *  ?jogador=397621&min=5, ?aba=finalizacoes&chute=1-27) so a post can link straight to them. */
 function useMatchParams(data: MatchData) {
   const [params, setParams] = useSearchParams();
   const min = Number(params.get("min"));
   const minPasses = MIN_OPTIONS.includes(min) ? min : MIN_OPTIONS[0];
   const pid = Number(params.get("jogador"));
-  const team = data.teams.findIndex((t) => t.nodes.some((n) => n.playerId === pid));
-  const selection: Selection | null = team >= 0 ? { team, playerId: pid } : null;
+  const playerTeam = data.teams.findIndex((t) => t.nodes.some((n) => n.playerId === pid));
+  const teamParam = Number(params.get("equipe")) - 1;
+  // ?equipe wins; without it, the team of ?jogador; else the analysed team
+  const team = teamParam === 0 || teamParam === 1 ? teamParam : Math.max(playerTeam, 0);
+  const selectedId = playerTeam === team ? pid : null;
+  const untilFirstSub = params.get("periodo") === "1sub";
+  const openPlay = params.get("aberto") === "1";
   const tabParam = params.get("aba");
   const tab: TabKey = TABS.some((t) => t.key === tabParam) ? (tabParam as TabKey) : "rede";
   const goalParam = Number(params.get("gol"));
@@ -71,9 +70,15 @@ function useMatchParams(data: MatchData) {
 
   return {
     minPasses,
-    selection,
     setMinPasses: (m: number) => update({ min: m === MIN_OPTIONS[0] ? null : String(m) }),
-    toggle: (playerId: number) => update({ jogador: selection?.playerId === playerId ? null : String(playerId) }),
+    team,
+    setTeam: (i: number) => update({ equipe: i === 0 ? null : String(i + 1), jogador: null }),
+    untilFirstSub,
+    setUntilFirstSub: (on: boolean) => update({ periodo: on ? "1sub" : null }),
+    openPlay,
+    setOpenPlay: (on: boolean) => update({ aberto: on ? "1" : null }),
+    selectedId,
+    toggle: (playerId: number) => update({ jogador: selectedId === playerId ? null : String(playerId) }),
     clear: () => update({ jogador: null }),
     tab,
     setTab: (k: TabKey) => update({ aba: k === "rede" ? null : k }),
@@ -85,7 +90,8 @@ function useMatchParams(data: MatchData) {
 }
 
 function MatchView({ data, campaign }: { data: MatchData; campaign: CampaignMatch[] }) {
-  const { minPasses, selection, setMinPasses, toggle, clear, tab, setTab, goal, setGoal, shot, setShot } = useMatchParams(data);
+  const params = useMatchParams(data);
+  const { tab, setTab, goal, setGoal, shot, setShot } = params;
   const { match, teams } = data;
 
   const pos = campaign.findIndex((m) => m.id === match.id);
@@ -109,7 +115,6 @@ function MatchView({ data, campaign }: { data: MatchData; campaign: CampaignMatc
         pairN: topPair.n,
       })
     : null;
-  const topPasser = [...focus.nodes].sort((a, b) => b.passes - a.passes)[0];
 
   return (
     <div className={`container ${styles.page}`}>
@@ -156,68 +161,20 @@ function MatchView({ data, campaign }: { data: MatchData; campaign: CampaignMatc
 
       {tab === "rede" && (
         <TabPanel idPrefix="partida" tab="rede">
-          <div className={styles.controls}>
-            <div className={styles.filter} role="group" aria-label={copy.minPasses}>
-              <span>{copy.minPasses}</span>
-              {MIN_OPTIONS.map((m) => (
-                <button key={m} type="button" className="pill" aria-pressed={m === minPasses} onClick={() => setMinPasses(m)}>
-                  {m}+
-                </button>
-              ))}
-            </div>
-            <div className={styles.legend} aria-hidden="true">
-              <span className={styles.legendItem}>
-                <span className={styles.dotBig} />
-                <span className={styles.dotSmall} />
-                {copy.legendSize}
-              </span>
-              <span className={styles.legendItem}>
-                <span className={styles.bar} />
-                {copy.legendWidth}
-              </span>
-            </div>
-          </div>
-
-          <div className={styles.networks}>
-            {teams.map((team, ti) => (
-              <section key={team.teamId} className={styles.team}>
-                <div className={styles.teamHead}>
-                  <h2 className={styles.teamName}>
-                    <span className={styles.teamDot} style={{ background: team.colors.fill, borderColor: team.colors.line }} />
-                    {team.displayName}
-                  </h2>
-                  <span className={styles.teamStats}>
-                    {copy.teamSummary(team.passes.completed, formatPercent(team.passes.completed, team.passes.attempted))}
-                  </span>
-                </div>
-                <div className={styles.pitchScroll}>
-                  <div className={styles.pitchBox}>
-                    <PassNetwork
-                      team={team}
-                      scale={data.scale}
-                      minPasses={minPasses}
-                      selectedId={selection?.team === ti ? selection.playerId : null}
-                      onSelect={toggle}
-                    />
-                  </div>
-                </div>
-                <p className={styles.teamNote}>{subsNote(team)}</p>
-              </section>
-            ))}
-          </div>
-
-          {selection ? (
-            <PlayerPanel team={teams[selection.team]} playerId={selection.playerId} onClear={clear} />
-          ) : (
-            <section className={styles.hint}>
-              <p>{copy.hint}</p>
-              {topPasser && (
-                <button type="button" className="button button--primary button--small" onClick={() => toggle(topPasser.playerId)}>
-                  {copy.hintButton(topPasser.name)}
-                </button>
-              )}
-            </section>
-          )}
+          <NetworkTab
+            data={data}
+            team={params.team}
+            onTeam={params.setTeam}
+            untilFirstSub={params.untilFirstSub}
+            onUntilFirstSub={params.setUntilFirstSub}
+            openPlay={params.openPlay}
+            onOpenPlay={params.setOpenPlay}
+            minPasses={params.minPasses}
+            onMinPasses={params.setMinPasses}
+            selectedId={params.selectedId}
+            onSelect={params.toggle}
+            onClear={params.clear}
+          />
         </TabPanel>
       )}
 
@@ -284,12 +241,6 @@ function MatchView({ data, campaign }: { data: MatchData; campaign: CampaignMatc
       </footer>
     </div>
   );
-}
-
-function subsNote(team: TeamData): string {
-  if (team.substitutions.length === 0) return copy.noSubs;
-  const name = (pid: number) => team.nodes.find((n) => n.playerId === pid)?.name ?? String(pid);
-  return copy.subsNote(team.substitutions.map((s) => ({ inName: name(s.in), outName: name(s.out), minute: s.minute })));
 }
 
 /** "1-27" → first team, 27th shot (both 1-based in the URL). */

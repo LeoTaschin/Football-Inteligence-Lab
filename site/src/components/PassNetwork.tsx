@@ -2,7 +2,7 @@ import type { KeyboardEvent } from "react";
 
 import { match as copy } from "../content/pt";
 import { arrowShape, arrowWidth, labelPlacement, lineStyle, nodeRadius, polygonPoints, PX } from "../lib/geometry";
-import type { MatchData, NetworkNode, TeamData } from "../types/data";
+import type { CutNode, MatchData, TeamData, TeamNetwork } from "../types/data";
 import { Pitch } from "./Pitch";
 import styles from "./PassNetwork.module.css";
 
@@ -10,16 +10,18 @@ const INCOMING = "#52525B";
 
 interface PassNetworkProps {
   team: TeamData;
+  /** the network to draw (full or a cut); colors and names come from `team` */
+  net: TeamNetwork;
   scale: MatchData["scale"];
   minPasses: number;
   selectedId: number | null;
   onSelect: (playerId: number) => void;
 }
 
-export function PassNetwork({ team, scale, minPasses, selectedId, onSelect }: PassNetworkProps) {
-  const byId = new Map(team.nodes.map((n) => [n.playerId, n]));
-  const radius = (n: NetworkNode) => nodeRadius(n.passes, scale.maxPasses);
-  const visiblePairs = team.pairs.filter((p) => p.n >= minPasses);
+export function PassNetwork({ team, net, scale, minPasses, selectedId, onSelect }: PassNetworkProps) {
+  const byId = new Map(net.nodes.map((n) => [n.playerId, n]));
+  const radius = (n: CutNode) => nodeRadius(n.passes, scale.maxPasses);
+  const visiblePairs = net.pairs.filter((p) => p.n >= minPasses);
   const hasSel = selectedId !== null && byId.has(selectedId);
 
   const linked = new Set<number>();
@@ -38,7 +40,7 @@ export function PassNetwork({ team, scale, minPasses, selectedId, onSelect }: Pa
 
   const visiblePairKeys = new Set(visiblePairs.map((p) => key(p.a, p.b)));
   const arrows = hasSel
-    ? team.edges
+    ? net.edges
         .filter((e) => (e.from === selectedId || e.to === selectedId) && visiblePairKeys.has(key(e.from, e.to)))
         // received first, then given on top; thin before thick
         .sort((e, f) => Number(e.from === selectedId) - Number(f.from === selectedId) || e.n - f.n)
@@ -99,7 +101,7 @@ export function PassNetwork({ team, scale, minPasses, selectedId, onSelect }: Pa
       </g>
 
       <g>
-        {team.nodes.map((n) => {
+        {net.nodes.map((n) => {
           const r = radius(n);
           const isSel = n.playerId === selectedId;
           const dim = hasSel && !isSel && !linked.has(n.playerId);

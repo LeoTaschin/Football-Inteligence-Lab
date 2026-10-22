@@ -1,0 +1,279 @@
+.tab {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 12px 24px;
+}
+
+.title {
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 32px;
+  align-items: flex-start;
+}
+
+.main {
+  flex: 999 1 560px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.aside {
+  flex: 1 1 300px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  align-items: center;
+}
+
+.group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.groupLabel {
+  font-size: 14px;
+  color: var(--text-2);
+}
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 10px;
+}
+/* the switch keeps the pill white; the track shows the state */
+.toggle.toggle[aria-pressed="true"] {
+  background: var(--bg);
+  color: var(--text);
+  border-color: var(--text);
+}
+
+.track {
+  position: relative;
+  width: 34px;
+  height: 20px;
+  border-radius: 999px;
+  background: var(--line);
+  transition: background 0.15s ease;
+}
+.toggle[aria-pressed="true"] .track {
+  background: var(--text);
+}
+
+.knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  transition: left 0.15s ease;
+}
+.toggle[aria-pressed="true"] .knob {
+  left: 16px;
+}
+
+/* on phones the pitch keeps a readable size and scrolls sideways */
+.pitchScroll {
+  overflow-x: auto;
+}
+
+.pitchBox {
+  min-width: 480px;
+  border: 1px solid var(--line);
+}
+
+.legend {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  font-size: 13px;
+  color: var(--text-2);
+}
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dotBig,
+.dotSmall {
+  border-radius: 50%;
+  background: var(--line);
+}
+.dotBig {
+  width: 18px;
+  height: 18px;
+}
+.dotSmall {
+  width: 10px;
+  height: 10px;
+}
+
+.bar {
+  width: 28px;
+  height: 5px;
+  border-radius: 3px;
+  background: var(--text-faint);
+}
+
+.caption {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.big {
+  font-size: clamp(36px, 6vw, 44px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.summaryText {
+  font-size: 15px;
+  line-height: 1.45;
+  color: var(--text-2);
+}
+
+.notice {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  background: var(--surface);
+  border-radius: 10px;
+  padding: 12px 14px;
+  color: var(--text-2);
+}
+.notice svg {
+  flex: none;
+  margin-top: 1px;
+}
+.notice p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.hint {
+  border: 1px dashed var(--line);
+  border-radius: var(--radius-lg);
+  padding: 16px 18px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-2);
+}
+
+.pairs {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.pairsHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.pairsHead h3 {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.pairsHead span {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.pairRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 70px 28px;
+  gap: 10px;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 6px;
+  border: none;
+  border-bottom: 1px solid var(--row);
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  color: var(--text);
+  font: inherit;
+}
+.pairRow:hover {
+  background: var(--surface);
+}
+
+.pairNames {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+.pairNames > span:first-child {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pairSplit {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.track2 {
+  height: 8px;
+  background: var(--row);
+  border-radius: 4px;
+}
+.track2 span {
+  display: block;
+  height: 8px;
+  border-radius: 4px;
+}
+
+.pairN {
+  font-size: 14px;
+  font-weight: 700;
+  text-align: right;
+}
