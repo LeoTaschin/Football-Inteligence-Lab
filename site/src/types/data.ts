@@ -279,6 +279,8 @@ export interface CollectionData {
   topPassers: { playerId: number; slug: string; name: string; n: number; position: string | null; missed: string[] }[];
   /** everyone with a player page, team by team, most passes first */
   players: PlayerRef[];
+  /** the teams of the players list: the analysed team first, then opponents in match order */
+  playerTeams: PlayerTeam[];
   topPairs: { ids: [number, number]; names: [string, string]; n: number }[];
 }
 
@@ -293,6 +295,25 @@ export interface PlayerRef {
   teamName: string;
   games: number;
   passes: number;
+  position: string | null;
+  received: number;
+  share: number | null;
+  /** came on as a substitute in at least one match */
+  substitute: boolean;
+}
+
+export interface PlayerTeam {
+  teamName: string;
+  team: string;
+  article: "o" | "a";
+  colors: TeamColors;
+  players: number;
+  completed: number;
+  topPasser: number;
+  topReceiver: number;
+  /** players of the analysed team who played every match (null for opponents) */
+  allGames: number | null;
+  match: { id: number; order: number; stage: string; score: [number, number] } | null;
 }
 
 export interface PlayerPartner {

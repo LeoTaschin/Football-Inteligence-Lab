@@ -351,7 +351,7 @@ Campos a mais que o export gera (o exemplo acima é o mínimo; a fonte de verdad
 - Por equipe: `cuts` = `{firstSub, openPlay, firstSubOpen}` (5.9), cada um com `completed`, `sameAsFull`, `cutAt` (`{minute, out, in}` ou `null`), `removed` (por `pass.type`, ou `null`), `highlights` (`shift`, `drop`), `nodes`, `edges`, `pairs` (nós sem `def`/`shift`); a rede `full` é a de sempre (`nodes`, `edges`, `pairs`).
 - Por equipe: `teamId`; `passes.excluded.period`; `pairs` = `[{a, b, forward, backward, n}]` ordenados por `n` (`a` é quem passou mais; usado nas linhas não dirigidas e no Top 10, para o site não somar nada); `phase` = `{ballHeight, defHeight, shiftMeters}` (sem o goleiro).
 - Por nó: `positionFrom` (`passes` | `received`, ver 5.2); `def.lowSample` (menos de 5 ações); `shift` em metros (`def.x − ball.x`); `sub` = `{type: "in" | "out", minute, with: playerId}` ou `null`.
-- `data/players/{slug}.json` (5.10) e, na coleção, `players` (todos os jogadores com página) e `slug` em `topPassers`.
+- `data/players/{slug}.json` (5.10) e, na coleção, `players` (todos os jogadores com página: posição, jogos, passes, recebidos, `share`, `substitute`), `playerTeams` (uma entrada por equipe da lista: total de passes, quem mais passou e recebeu, jogo) e `slug` em `topPassers`.
 - Por gol: `teamId`, `scorerId`, `passes`, `players`; `touches[].playerId`. O replay começa depois do último toque do adversário com a bola na posse (o `possession` do StatsBomb nem sempre muda quando a bola troca de dono).
 - Coordenadas exportadas com 2 casas; o site arredonda para exibir.
 
@@ -390,6 +390,7 @@ Notas dos cartões (`note`) podem ser geradas por regras simples (ex.: "único j
 | `/pnsm/1970` | Campanha 1970 | `collections/wc1970-brazil.json` |
 | `/pnsm/1970/:matchId` | Partida | `matches/{id}.json` |
 | `/pnsm/metodologia` | Metodologia | estático + `index.json` |
+| `/pnsm/1970/jogadores` | Jogadores (lista, Etapa 2) | `collections/wc1970-brazil.json` (`players`, `playerTeams`) |
 | `/pnsm/1970/jogador/:slug` | Jogador (Etapa 2) | `players/{slug}.json` + `matches/{id}.json` do jogo escolhido |
 
 Links do post do LinkedIn apontam para `/pnsm/1970` ou direto para uma partida.
@@ -421,6 +422,9 @@ Links do post do LinkedIn apontam para `/pnsm/1970` ou direto para uma partida.
   4. **Finalizações** — uma equipe por vez (mesmo seletor da Rede), meio campo vertical à esquerda (ataca para cima; recua até `scale.shotsFromX`) e painel à direita. Um ícone por chute conforme o resultado (bola de futebol no gol; luva, trave, bloqueio e seta, de traço fino; selo F/P/E em bola parada) e um halo com área ∝ xG. Filtros Todos / Só jogo aberto / Só gols. Clique num chute → tracejado reto do ponto do chute ao ponto final (`end`), com marcador (rótulo só no bloqueio e quando a bola não chega à linha do gol); painel com xG, parte do corpo, tipo, distância, vista frontal do gol (onde cruzou a linha) e a frase do desfecho (`finish`). "Maiores chances" (`shots.top`). Estado na URL (`?aba=finalizacoes&equipe=2&chute=2-13`).
 - Top 10 combinações de cada equipe.
 - Rodapé com metodologia resumida e atribuição.
+
+**Jogadores** (Etapa 2)
+- Uma equipe por vez (Brasil e os adversários, na ordem dos jogos). Tabela: número, nome, posição, selo "reserva", jogos, passes, recebidos, % do time; ordena por passes, recebidos ou nome; cada linha abre a página do jogador. Painel: resumo da equipe (ou do jogo), quem mais passou e recebeu, link da partida. URL: `?equipe=peru&ordem=recebidos`. Acesso: "Ver todos os jogadores →" na Campanha.
 
 **Jogador** (Etapa 2, 5.10)
 - Trilha, número, nome, posição; frase de resumo e faixa de números gerados dos dados exportados; aviso quando há um jogo só.

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { formatClock, formatDate, formatDecimal, formatInt, formatPercent } from "./format";
+import { formatClock, formatDate, formatDecimal, formatInt, formatPercent, urlName } from "./format";
 
 describe("format", () => {
   it("uses pt-BR separators", () => {
@@ -18,5 +18,12 @@ describe("format", () => {
   it("formats the replay clock", () => {
     expect(formatClock(7.4)).toBe("0:07");
     expect(formatClock(29.9)).toBe("0:29");
+  });
+});
+
+describe("urlName", () => {
+  it("drops accents and spaces", () => {
+    expect(urlName("Tchecoslováquia")).toBe("tchecoslovaquia");
+    expect(urlName("Romênia")).toBe("romenia");
   });
 });

@@ -4,7 +4,7 @@ import { BarList } from "../components/BarList";
 import { MatchCard } from "../components/MatchCard";
 import { StatStrip, Versus } from "../components/StatStrip";
 import { Status } from "../components/Status";
-import { campaign as copy, competitionPt } from "../content/pt";
+import { campaign as copy, competitionPt, playersList } from "../content/pt";
 import { useCollection } from "../lib/data";
 import { formatDecimal, formatInt, formatPercent } from "../lib/format";
 import type { CollectionData } from "../types/data";
@@ -81,6 +81,9 @@ function CampaignView({ data }: { data: CollectionData }) {
                 data.topPassers.filter((p) => p.missed.length > 0).map((p) => ({ name: p.name, games: p.missed })),
               )}
             </p>
+            <Link className={styles.more} to="/pnsm/1970/jogadores">
+              {playersList.seeAll}
+            </Link>
           </div>
           <div className={styles.block}>
             <h3 className={styles.h3}>{copy.pairsTitle}</h3>

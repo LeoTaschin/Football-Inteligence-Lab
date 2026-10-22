@@ -7,7 +7,7 @@ import { Status } from "../components/Status";
 import layout from "../components/SplitLayout.module.css";
 import { player as copy, site } from "../content/pt";
 import { useCollection, useMatch, usePlayer } from "../lib/data";
-import { formatDecimal } from "../lib/format";
+import { formatDecimal, urlName } from "../lib/format";
 import { networkOf } from "../lib/network";
 import type { PlayerGame, PlayerPage, PlayerRef } from "../types/data";
 import styles from "./Player.module.css";
@@ -65,6 +65,9 @@ function PlayerView({ data, players }: { data: PlayerPage; players: PlayerRef[] 
     <div className={`container ${styles.page}`}>
       <nav aria-label="Trilha" className={styles.breadcrumb}>
         <Link to="/pnsm/1970">{copy.breadcrumb}</Link>
+        <span aria-hidden="true">/</span>
+        {/* the list opens on the player's team */}
+        <Link to={`/pnsm/1970/jogadores?equipe=${urlName(data.team)}`}>{copy.playersLink}</Link>
         <span aria-hidden="true">/</span>
         <span>{data.name}</span>
       </nav>
