@@ -52,3 +52,21 @@
   stroke-linejoin: round;
   vector-effect: non-scaling-stroke;
 }
+
+.ghost line,
+.ghost circle {
+  fill: rgba(255, 255, 255, 0.6);
+  stroke: var(--text);
+  stroke-width: 1.5px;
+  stroke-dasharray: 5 4;
+  vector-effect: non-scaling-stroke;
+}
+.ghost text {
+  fill: var(--text);
+  font-weight: 700;
+  paint-order: stroke;
+  stroke: var(--surface);
+  stroke-width: 3px;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}

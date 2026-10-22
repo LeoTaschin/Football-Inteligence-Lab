@@ -307,6 +307,7 @@ export interface PlayerGame {
   order: number;
   stage: string;
   opponent: string;
+  opponentArticle: "o" | "a";
   /** [team, opponent] */
   score: [number, number];
   passes: number;

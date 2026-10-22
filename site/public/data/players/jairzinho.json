@@ -97,6 +97,7 @@
    "order": 1,
    "stage": "Fase de grupos",
    "opponent": "Tchecoslováquia",
+   "opponentArticle": "a",
    "score": [
     4,
     1
@@ -430,6 +431,7 @@
    "order": 2,
    "stage": "Fase de grupos",
    "opponent": "Inglaterra",
+   "opponentArticle": "a",
    "score": [
     1,
     0
@@ -728,6 +730,7 @@
    "order": 3,
    "stage": "Fase de grupos",
    "opponent": "Romênia",
+   "opponentArticle": "a",
    "score": [
     3,
     2
@@ -1048,6 +1051,7 @@
    "order": 4,
    "stage": "Quartas de final",
    "opponent": "Peru",
+   "opponentArticle": "o",
    "score": [
     4,
     2
@@ -1407,6 +1411,7 @@
    "order": 5,
    "stage": "Semifinal",
    "opponent": "Uruguai",
+   "opponentArticle": "o",
    "score": [
     3,
     1
@@ -1723,6 +1728,7 @@
    "order": 6,
    "stage": "Final",
    "opponent": "Itália",
+   "opponentArticle": "a",
    "score": [
     4,
     1

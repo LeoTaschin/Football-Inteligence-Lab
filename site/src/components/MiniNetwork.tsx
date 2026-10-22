@@ -10,15 +10,20 @@ interface MiniNetworkProps {
   /** px width the sizes are designed for (cards ≈ 340 px, home ≈ 420 px) */
   referenceWidth?: number;
   showNumbers?: boolean;
+  /** one player in focus: his pairs strong, everyone else faded */
+  highlightId?: number;
 }
 
 /** Small non-interactive pass network (campaign cards, home highlight). */
-export function MiniNetwork({ data, colors, scale, referenceWidth = 340, showNumbers = false }: MiniNetworkProps) {
+export function MiniNetwork({ data, colors, scale, referenceWidth = 340, showNumbers = false, highlightId }: MiniNetworkProps) {
   const u = 120 / referenceWidth;
   const byId = new Map(data.nodes.map((n) => [n.playerId, n]));
   const radius = (passes: number) =>
     (showNumbers ? 5 + 9 * Math.sqrt(passes / scale.maxPasses) : 3 + 5 * Math.sqrt(passes / scale.maxPasses)) * u;
-  const edges = [...data.edges].sort((a, b) => a.n - b.n);
+  const focus = highlightId !== undefined;
+  const mine = (e: { a: number; b: number }) => e.a === highlightId || e.b === highlightId;
+  // thin first; with a focus, his pairs on top
+  const edges = [...data.edges].sort((a, b) => Number(focus && mine(a)) - Number(focus && mine(b)) || a.n - b.n);
 
   return (
     <div aria-hidden="true" style={{ border: "1px solid var(--line)" }}>
@@ -35,7 +40,7 @@ export function MiniNetwork({ data, colors, scale, referenceWidth = 340, showNum
               x2={b.x}
               y2={b.y}
               stroke={colors.line}
-              strokeOpacity={style.opacity}
+              strokeOpacity={focus ? (mine(e) ? Math.min(0.9, style.opacity + 0.1) : 0.1) : style.opacity}
               // mini: 1 + 4·n/max px instead of 1 + 8·n/max
               strokeWidth={(1 + (4 * e.n) / scale.maxPair) * u}
               strokeLinecap="round"
@@ -44,8 +49,10 @@ export function MiniNetwork({ data, colors, scale, referenceWidth = 340, showNum
         })}
         {data.nodes.map((n) => {
           const r = radius(n.passes);
+          const isFocus = n.playerId === highlightId;
           return (
-            <g key={n.playerId}>
+            <g key={n.playerId} opacity={focus && !isFocus ? 0.35 : 1}>
+              {isFocus && <circle cx={n.x} cy={n.y} r={r + 3.5 * u} fill="none" stroke="var(--text)" strokeWidth={1.5 * u} />}
               <circle cx={n.x} cy={n.y} r={r + 1.5 * u} fill="var(--surface)" />
               <circle cx={n.x} cy={n.y} r={r} fill={colors.fill} stroke={colors.line} strokeWidth={2 * u} />
               {showNumbers && n.num !== null && (

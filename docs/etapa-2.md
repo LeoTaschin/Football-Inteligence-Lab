@@ -49,7 +49,7 @@ Nenhuma: resolvidas em 22/10/2026 (ver topo).
 - **Shot map:** `transform.shots_table` e `metrics.shot_summary` já existem; falta exportar a lista de chutes (minuto, jogador, x, y, resultado, xG, tipo, parte do corpo) e as regras da seção 5.8 (xG ausente nunca vira zero).
 - **Jogador:** agregar por `player_id` entre as partidas da coleção; nova rota `/pnsm/1970/jogador/:slug`; link a partir do painel da Partida e de "Quem mais passou" na Campanha.
 - **Regras de negócio novas entram primeiro no `CLAUDE.md` (seção 5) e nos testes**, como sempre.
-- Ordem sugerida de branches: ~~`engine/shot-map`~~ (PR #12) → ~~`site/finalizacoes`~~ (PR #13) → ~~`engine/recortes`~~ (PR #14) → ~~`site/recortes`~~ (rede com uma seleção, PR #15) → ~~`site/finalizacoes-v2`~~ (PR #16) → `engine/jogador` → `site/jogador`.
+- Ordem sugerida de branches: ~~`engine/shot-map`~~ (PR #12) → ~~`site/finalizacoes`~~ (PR #13) → ~~`engine/recortes`~~ (PR #14) → ~~`site/recortes`~~ (rede com uma seleção, PR #15) → ~~`site/finalizacoes-v2`~~ (PR #16) → ~~`engine/jogador`~~ (PR #18) → ~~`site/jogador`~~ (PR #19). **Etapa 2 concluída** (sem a lista de jogadores, adiada).
 
 ## Outras pendências que podem entrar junto
 

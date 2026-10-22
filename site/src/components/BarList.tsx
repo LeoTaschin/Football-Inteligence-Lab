@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import styles from "./BarList.module.css";
 
 export interface BarRow {
@@ -7,6 +9,8 @@ export interface BarRow {
   /** optional second line under the name */
   detail?: string;
   rank?: number;
+  /** turns the name into a link (e.g. the player's page) */
+  href?: string;
 }
 
 interface BarListProps {
@@ -26,7 +30,13 @@ export function BarList({ rows, color, max, variant = "compact" }: BarListProps)
         <li key={r.key} className={styles.row}>
           {r.rank !== undefined && <span className={styles.rank}>{r.rank}</span>}
           <span className={styles.names}>
-            <span className={styles.name}>{r.name}</span>
+            {r.href ? (
+              <Link className={styles.name} to={r.href}>
+                {r.name}
+              </Link>
+            ) : (
+              <span className={styles.name}>{r.name}</span>
+            )}
             {r.detail && <span className={styles.detail}>{r.detail}</span>}
           </span>
           <span className={styles.track} aria-hidden="true">

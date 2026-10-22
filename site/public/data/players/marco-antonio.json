@@ -97,6 +97,7 @@
    "order": 3,
    "stage": "Fase de grupos",
    "opponent": "Romênia",
+   "opponentArticle": "a",
    "score": [
     3,
     2
@@ -421,6 +422,7 @@
    "order": 4,
    "stage": "Quartas de final",
    "opponent": "Peru",
+   "opponentArticle": "o",
    "score": [
     4,
     2

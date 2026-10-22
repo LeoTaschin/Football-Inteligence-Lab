@@ -65,6 +65,7 @@ def build_players(matches: list[dict], order: dict[int, tuple[int, str]], min_pa
                     "order": order[mid][0],
                     "stage": order[mid][1],
                     "opponent": opp["displayName"],
+                    "opponentArticle": opp["article"],
                     "score": score,
                     "passes": node["passes"],
                     "received": node["received"],

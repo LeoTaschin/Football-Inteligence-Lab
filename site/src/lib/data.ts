@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import type { CollectionData, IndexData, MatchData } from "../types/data";
+import type { CollectionData, IndexData, MatchData, PlayerPage } from "../types/data";
 
 const cache = new Map<string, Promise<unknown>>();
 
@@ -41,3 +41,4 @@ export const COLLECTION_ID = "wc1970-brazil";
 export const useIndex = () => useJson<IndexData>("index.json");
 export const useCollection = (id: string = COLLECTION_ID) => useJson<CollectionData>(`collections/${id}.json`);
 export const useMatch = (id: number | null) => useJson<MatchData>(id === null ? null : `matches/${id}.json`);
+export const usePlayer = (slug: string | null) => useJson<PlayerPage>(slug === null ? null : `players/${slug}.json`);
