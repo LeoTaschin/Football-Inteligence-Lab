@@ -254,6 +254,13 @@ Regras já definidas no plano do projeto: um marcador por `Shot`, área proporci
 - **Coordenadas:** referencial da própria equipe (ataca para x = 120), como todo o resto.
 - **Distância (`distance`):** do ponto do chute ao centro do gol (120, 40), em metros, 1 casa.
 - **Maiores chances (`top`):** índices em `items` dos 5 chutes de maior xG (empate: o mais cedo primeiro); chute sem xG não entra.
+- **Desfecho (`finish`):** onde a bola terminou, a partir de `shot.end_location` (x, y, z), para o caminho da bola e a frase do cartão. Gol: trave de y = 36 a 44, travessão a z = 2,67 jardas.
+  - `goal` / `saved`: `height` = z em metros (`null` sem z);
+  - `post`: só o tipo;
+  - `blocked`: `blockedAfter` = distância do ponto do chute ao ponto final (o local do bloqueio), em metros;
+  - para fora com z: `over` (entre as traves, por cima), `wide` (fora das traves, abaixo do travessão) ou `overWide` (fora das traves e acima), com `height` e `wideBy` (metros além da trave mais próxima; `null` em `over`);
+  - para fora sem z (a bola não chegou à linha do gol, ex.: `Wayward`): `short`;
+  - qualquer outro: `other`.
 - **Profundidade do campo (`scale.shotsFromX`):** o site desenha o campo de `shotsFromX` até x = 120. Vale 60 (meio campo) e só recua, em passos de 5 jardas, quando algum chute da partida sai de trás do meio (ex.: Pelé, x = 45,9, na semifinal).
 
 

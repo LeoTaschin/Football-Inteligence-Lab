@@ -4189,7 +4189,12 @@
       "xg": 0.862,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "rightFoot"
+      "bodyPart": "rightFoot",
+      "finish": {
+       "kind": "over",
+       "height": 6.0,
+       "wideBy": null
+      }
      },
      {
       "period": 1,
@@ -4210,7 +4215,11 @@
       "xg": 0.038,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "rightFoot"
+      "bodyPart": "rightFoot",
+      "finish": {
+       "kind": "blocked",
+       "blockedAfter": 5.6
+      }
      },
      {
       "period": 1,
@@ -4232,7 +4241,11 @@
       "xg": 0.049,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "leftFoot"
+      "bodyPart": "leftFoot",
+      "finish": {
+       "kind": "saved",
+       "height": 0.2
+      }
      },
      {
       "period": 1,
@@ -4254,7 +4267,12 @@
       "xg": 0.034,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "rightFoot"
+      "bodyPart": "rightFoot",
+      "finish": {
+       "kind": "over",
+       "height": 4.5,
+       "wideBy": null
+      }
      },
      {
       "period": 1,
@@ -4276,7 +4294,12 @@
       "xg": 0.107,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "rightFoot"
+      "bodyPart": "rightFoot",
+      "finish": {
+       "kind": "wide",
+       "height": 1.1,
+       "wideBy": 4.8
+      }
      },
      {
       "period": 1,
@@ -4297,7 +4320,11 @@
       "xg": 0.019,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "leftFoot"
+      "bodyPart": "leftFoot",
+      "finish": {
+       "kind": "blocked",
+       "blockedAfter": 14.2
+      }
      },
      {
       "period": 1,
@@ -4319,7 +4346,12 @@
       "xg": 0.305,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "leftFoot"
+      "bodyPart": "leftFoot",
+      "finish": {
+       "kind": "wide",
+       "height": 0.2,
+       "wideBy": 0.5
+      }
      },
      {
       "period": 1,
@@ -4341,7 +4373,11 @@
       "xg": 0.067,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "leftFoot"
+      "bodyPart": "leftFoot",
+      "finish": {
+       "kind": "saved",
+       "height": 1.1
+      }
      },
      {
       "period": 1,
@@ -4363,7 +4399,12 @@
       "xg": 0.036,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "leftFoot"
+      "bodyPart": "leftFoot",
+      "finish": {
+       "kind": "over",
+       "height": 6.1,
+       "wideBy": null
+      }
      },
      {
       "period": 1,
@@ -4385,7 +4426,11 @@
       "xg": 0.093,
       "shotType": "freeKick",
       "setPiece": true,
-      "bodyPart": "leftFoot"
+      "bodyPart": "leftFoot",
+      "finish": {
+       "kind": "goal",
+       "height": 0.5
+      }
      },
      {
       "period": 1,
@@ -4407,7 +4452,12 @@
       "xg": 0.141,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "rightFoot"
+      "bodyPart": "rightFoot",
+      "finish": {
+       "kind": "wide",
+       "height": 0.3,
+       "wideBy": 8.3
+      }
      },
      {
       "period": 1,
@@ -4429,7 +4479,11 @@
       "xg": 0.142,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "leftFoot"
+      "bodyPart": "leftFoot",
+      "finish": {
+       "kind": "saved",
+       "height": 1.8
+      }
      },
      {
       "period": 1,
@@ -4451,7 +4505,12 @@
       "xg": 0.023,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "leftFoot"
+      "bodyPart": "leftFoot",
+      "finish": {
+       "kind": "overWide",
+       "height": 5.9,
+       "wideBy": 4.8
+      }
      },
      {
       "period": 1,
@@ -4473,7 +4532,12 @@
       "xg": 0.006,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "leftFoot"
+      "bodyPart": "leftFoot",
+      "finish": {
+       "kind": "wide",
+       "height": 0.2,
+       "wideBy": 5.9
+      }
      },
      {
       "period": 1,
@@ -4495,7 +4559,12 @@
       "xg": 0.004,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "rightFoot"
+      "bodyPart": "rightFoot",
+      "finish": {
+       "kind": "wide",
+       "height": 1.5,
+       "wideBy": 1.3
+      }
      },
      {
       "period": 2,
@@ -4516,7 +4585,11 @@
       "xg": 0.01,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "rightFoot"
+      "bodyPart": "rightFoot",
+      "finish": {
+       "kind": "blocked",
+       "blockedAfter": 7.4
+      }
      },
      {
       "period": 2,
@@ -4538,7 +4611,10 @@
       "xg": 0.034,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "leftFoot"
+      "bodyPart": "leftFoot",
+      "finish": {
+       "kind": "post"
+      }
      },
      {
       "period": 2,
@@ -4560,7 +4636,12 @@
       "xg": 0.014,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "leftFoot"
+      "bodyPart": "leftFoot",
+      "finish": {
+       "kind": "wide",
+       "height": 1.4,
+       "wideBy": 2.0
+      }
      },
      {
       "period": 2,
@@ -4582,7 +4663,11 @@
       "xg": 0.058,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "leftFoot"
+      "bodyPart": "leftFoot",
+      "finish": {
+       "kind": "saved",
+       "height": 0.2
+      }
      },
      {
       "period": 2,
@@ -4603,7 +4688,11 @@
       "xg": 0.027,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "leftFoot"
+      "bodyPart": "leftFoot",
+      "finish": {
+       "kind": "blocked",
+       "blockedAfter": 7.9
+      }
      },
      {
       "period": 2,
@@ -4625,7 +4714,12 @@
       "xg": 0.031,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "rightFoot"
+      "bodyPart": "rightFoot",
+      "finish": {
+       "kind": "overWide",
+       "height": 3.2,
+       "wideBy": 1.0
+      }
      },
      {
       "period": 2,
@@ -4647,7 +4741,12 @@
       "xg": 0.39,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "leftFoot"
+      "bodyPart": "leftFoot",
+      "finish": {
+       "kind": "wide",
+       "height": 0.2,
+       "wideBy": 5.1
+      }
      },
      {
       "period": 2,
@@ -4669,7 +4768,11 @@
       "xg": 0.184,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "rightFoot"
+      "bodyPart": "rightFoot",
+      "finish": {
+       "kind": "goal",
+       "height": 1.2
+      }
      },
      {
       "period": 2,
@@ -4691,7 +4794,11 @@
       "xg": 0.96,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "rightFoot"
+      "bodyPart": "rightFoot",
+      "finish": {
+       "kind": "goal",
+       "height": 0.8
+      }
      },
      {
       "period": 2,
@@ -4712,7 +4819,11 @@
       "xg": 0.019,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "leftFoot"
+      "bodyPart": "leftFoot",
+      "finish": {
+       "kind": "blocked",
+       "blockedAfter": 2.3
+      }
      },
      {
       "period": 2,
@@ -4734,7 +4845,11 @@
       "xg": 0.006,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "leftFoot"
+      "bodyPart": "leftFoot",
+      "finish": {
+       "kind": "saved",
+       "height": 2.0
+      }
      },
      {
       "period": 2,
@@ -4756,7 +4871,11 @@
       "xg": 0.031,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "leftFoot"
+      "bodyPart": "leftFoot",
+      "finish": {
+       "kind": "saved",
+       "height": 0.7
+      }
      },
      {
       "period": 2,
@@ -4778,7 +4897,11 @@
       "xg": 0.076,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "rightFoot"
+      "bodyPart": "rightFoot",
+      "finish": {
+       "kind": "goal",
+       "height": 0.2
+      }
      },
      {
       "period": 2,
@@ -4800,7 +4923,11 @@
       "xg": 0.048,
       "shotType": "freeKick",
       "setPiece": true,
-      "bodyPart": "leftFoot"
+      "bodyPart": "leftFoot",
+      "finish": {
+       "kind": "saved",
+       "height": 1.0
+      }
      }
     ],
     "top": [
@@ -8845,7 +8972,11 @@
       "xg": 0.02,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "rightFoot"
+      "bodyPart": "rightFoot",
+      "finish": {
+       "kind": "blocked",
+       "blockedAfter": 2.8
+      }
      },
      {
       "period": 1,
@@ -8867,7 +8998,12 @@
       "xg": 0.013,
       "shotType": "freeKick",
       "setPiece": true,
-      "bodyPart": "leftFoot"
+      "bodyPart": "leftFoot",
+      "finish": {
+       "kind": "wide",
+       "height": 0.3,
+       "wideBy": 2.8
+      }
      },
      {
       "period": 1,
@@ -8889,7 +9025,11 @@
       "xg": 0.006,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "leftFoot"
+      "bodyPart": "leftFoot",
+      "finish": {
+       "kind": "saved",
+       "height": 1.2
+      }
      },
      {
       "period": 1,
@@ -8911,7 +9051,12 @@
       "xg": 0.227,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "leftFoot"
+      "bodyPart": "leftFoot",
+      "finish": {
+       "kind": "over",
+       "height": 5.1,
+       "wideBy": null
+      }
      },
      {
       "period": 1,
@@ -8933,7 +9078,11 @@
       "xg": 0.386,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "leftFoot"
+      "bodyPart": "leftFoot",
+      "finish": {
+       "kind": "goal",
+       "height": 1.4
+      }
      },
      {
       "period": 1,
@@ -8955,7 +9104,12 @@
       "xg": 0.007,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "rightFoot"
+      "bodyPart": "rightFoot",
+      "finish": {
+       "kind": "over",
+       "height": 5.9,
+       "wideBy": null
+      }
      },
      {
       "period": 1,
@@ -8977,7 +9131,12 @@
       "xg": 0.067,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "rightFoot"
+      "bodyPart": "rightFoot",
+      "finish": {
+       "kind": "overWide",
+       "height": 6.7,
+       "wideBy": 0.9
+      }
      },
      {
       "period": 1,
@@ -8999,7 +9158,12 @@
       "xg": 0.289,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "rightFoot"
+      "bodyPart": "rightFoot",
+      "finish": {
+       "kind": "over",
+       "height": 6.4,
+       "wideBy": null
+      }
      },
      {
       "period": 1,
@@ -9021,7 +9185,12 @@
       "xg": 0.026,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "leftFoot"
+      "bodyPart": "leftFoot",
+      "finish": {
+       "kind": "wide",
+       "height": 0.2,
+       "wideBy": 2.6
+      }
      },
      {
       "period": 1,
@@ -9043,7 +9212,12 @@
       "xg": 0.009,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "leftFoot"
+      "bodyPart": "leftFoot",
+      "finish": {
+       "kind": "overWide",
+       "height": 5.1,
+       "wideBy": 4.2
+      }
      },
      {
       "period": 1,
@@ -9065,7 +9239,12 @@
       "xg": 0.018,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "rightFoot"
+      "bodyPart": "rightFoot",
+      "finish": {
+       "kind": "wide",
+       "height": 0.4,
+       "wideBy": 5.6
+      }
      },
      {
       "period": 1,
@@ -9086,7 +9265,11 @@
       "xg": 0.022,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "rightFoot"
+      "bodyPart": "rightFoot",
+      "finish": {
+       "kind": "blocked",
+       "blockedAfter": 9.0
+      }
      },
      {
       "period": 1,
@@ -9108,7 +9291,12 @@
       "xg": 0.013,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "rightFoot"
+      "bodyPart": "rightFoot",
+      "finish": {
+       "kind": "wide",
+       "height": 1.6,
+       "wideBy": 1.0
+      }
      },
      {
       "period": 2,
@@ -9129,7 +9317,11 @@
       "xg": 0.224,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "rightFoot"
+      "bodyPart": "rightFoot",
+      "finish": {
+       "kind": "blocked",
+       "blockedAfter": 5.9
+      }
      },
      {
       "period": 2,
@@ -9151,7 +9343,11 @@
       "xg": 0.09,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "rightFoot"
+      "bodyPart": "rightFoot",
+      "finish": {
+       "kind": "saved",
+       "height": 1.1
+      }
      },
      {
       "period": 2,
@@ -9173,7 +9369,11 @@
       "xg": 0.006,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "leftFoot"
+      "bodyPart": "leftFoot",
+      "finish": {
+       "kind": "saved",
+       "height": 0.5
+      }
      },
      {
       "period": 2,
@@ -9195,7 +9395,11 @@
       "xg": 0.022,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "leftFoot"
+      "bodyPart": "leftFoot",
+      "finish": {
+       "kind": "saved",
+       "height": 0.4
+      }
      },
      {
       "period": 2,
@@ -9217,7 +9421,12 @@
       "xg": 0.053,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "leftFoot"
+      "bodyPart": "leftFoot",
+      "finish": {
+       "kind": "over",
+       "height": 6.0,
+       "wideBy": null
+      }
      },
      {
       "period": 2,
@@ -9239,7 +9448,11 @@
       "xg": 0.026,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "rightFoot"
+      "bodyPart": "rightFoot",
+      "finish": {
+       "kind": "saved",
+       "height": 0.4
+      }
      },
      {
       "period": 2,
@@ -9260,7 +9473,10 @@
       "xg": 0.037,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "leftFoot"
+      "bodyPart": "leftFoot",
+      "finish": {
+       "kind": "short"
+      }
      },
      {
       "period": 2,
@@ -9282,7 +9498,12 @@
       "xg": 0.474,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "leftFoot"
+      "bodyPart": "leftFoot",
+      "finish": {
+       "kind": "over",
+       "height": 4.7,
+       "wideBy": null
+      }
      },
      {
       "period": 2,
@@ -9304,7 +9525,12 @@
       "xg": 0.005,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "rightFoot"
+      "bodyPart": "rightFoot",
+      "finish": {
+       "kind": "overWide",
+       "height": 3.5,
+       "wideBy": 1.8
+      }
      },
      {
       "period": 2,
@@ -9326,7 +9552,11 @@
       "xg": 0.012,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "rightFoot"
+      "bodyPart": "rightFoot",
+      "finish": {
+       "kind": "saved",
+       "height": 0.5
+      }
      },
      {
       "period": 2,
@@ -9348,7 +9578,12 @@
       "xg": 0.121,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "head"
+      "bodyPart": "head",
+      "finish": {
+       "kind": "overWide",
+       "height": 3.9,
+       "wideBy": 3.7
+      }
      },
      {
       "period": 2,
@@ -9369,7 +9604,11 @@
       "xg": 0.038,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "leftFoot"
+      "bodyPart": "leftFoot",
+      "finish": {
+       "kind": "blocked",
+       "blockedAfter": 11.0
+      }
      },
      {
       "period": 2,
@@ -9390,7 +9629,11 @@
       "xg": 0.051,
       "shotType": "freeKick",
       "setPiece": true,
-      "bodyPart": "rightFoot"
+      "bodyPart": "rightFoot",
+      "finish": {
+       "kind": "blocked",
+       "blockedAfter": 6.8
+      }
      },
      {
       "period": 2,
@@ -9412,7 +9655,12 @@
       "xg": 0.005,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "leftFoot"
+      "bodyPart": "leftFoot",
+      "finish": {
+       "kind": "over",
+       "height": 5.1,
+       "wideBy": null
+      }
      },
      {
       "period": 2,
@@ -9434,7 +9682,12 @@
       "xg": 0.02,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "rightFoot"
+      "bodyPart": "rightFoot",
+      "finish": {
+       "kind": "wide",
+       "height": 1.2,
+       "wideBy": 2.4
+      }
      },
      {
       "period": 2,
@@ -9455,7 +9708,11 @@
       "xg": 0.034,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "head"
+      "bodyPart": "head",
+      "finish": {
+       "kind": "blocked",
+       "blockedAfter": 0.8
+      }
      },
      {
       "period": 2,
@@ -9476,7 +9733,11 @@
       "xg": 0.005,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "leftFoot"
+      "bodyPart": "leftFoot",
+      "finish": {
+       "kind": "blocked",
+       "blockedAfter": 24.2
+      }
      },
      {
       "period": 2,
@@ -9498,7 +9759,12 @@
       "xg": 0.078,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "head"
+      "bodyPart": "head",
+      "finish": {
+       "kind": "wide",
+       "height": 1.2,
+       "wideBy": 3.2
+      }
      },
      {
       "period": 2,
@@ -9520,7 +9786,12 @@
       "xg": 0.012,
       "shotType": "openPlay",
       "setPiece": false,
-      "bodyPart": "rightFoot"
+      "bodyPart": "rightFoot",
+      "finish": {
+       "kind": "over",
+       "height": 3.3,
+       "wideBy": null
+      }
      }
     ],
     "top": [

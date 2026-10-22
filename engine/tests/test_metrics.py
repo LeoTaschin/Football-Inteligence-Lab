@@ -121,6 +121,21 @@ def test_shot_list_is_chronological_and_keeps_missing_xg():
     assert math.isnan(shots.xg.iloc[0])
 
 
+@pytest.mark.parametrize("result, end, expected", [
+    ("goal", (120, 40, 0.5), {"kind": "goal", "height": 0.5}),
+    ("saved", (118, 39, None), {"kind": "saved", "height": None}),
+    ("post", (120, 44, 1), {"kind": "post"}),
+    ("blocked", (106, 40, None), {"kind": "blocked", "blockedAfter": 5.5}),  # 6 yd after the shot at x = 100
+    ("off", (120, 40, 7.1), {"kind": "over", "height": 6.5, "wideBy": None}),
+    ("off", (120, 56.1, 4.4), {"kind": "overWide", "height": 4.0, "wideBy": 11.1}),
+    ("off", (120, 33.3, 0.2), {"kind": "wide", "height": 0.2, "wideBy": 2.5}),
+    ("off", (110.6, 45.6, None), {"kind": "short"}),  # wayward: never reached the goal line
+    ("other", (120, 40, 1), {"kind": "other"}),
+])
+def test_shot_finish(result, end, expected):
+    assert metrics.shot_finish(result, 100, 40, *end) == expected
+
+
 # --- cuts (CLAUDE.md 5.9) -------------------------------------------------------------
 
 def test_first_sub_cut_is_by_event_index():
