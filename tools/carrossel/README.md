@@ -29,3 +29,16 @@ Story do Instagram (1080×1920): título, rede de passes, movimentação com bol
 Saída em `engine/outputs/carrossel/` (fora do git): `slide_1.png` … `slide_7.png`, `mapas_da_final.png` (todos os mapas da final numa imagem) e `carrossel_PNSM.pdf` (para o post em carrossel).
 
 Os textos dos slides em `compose.py` citam números da final e da campanha; se os dados mudarem, confira-os com o site.
+
+## Carrossel da Etapa 2
+
+Seis slides (finalizações, só jogo aberto, Itália até a 1ª substituição, página do jogador e chamada para o site), com o site rodando localmente como acima:
+
+```bash
+.venv-carrossel/bin/python tools/carrossel/capture_etapa2.py http://localhost:5179 engine/outputs/carrossel/raw2
+.venv-carrossel/bin/python tools/carrossel/compose_etapa2.py engine/outputs/carrossel/raw2 engine/.cache/fonts engine/outputs/carrossel
+```
+
+Saída: `etapa2_slide_1.png` … `etapa2_slide_6.png` e `carrossel_PNSM_etapa2.pdf`. Os desenhos comuns aos dois carrosséis (cabeçalho, rodapé, quebra de texto) ficam em `layout.py`.
+
+> `capture.py` (Etapa 1) supõe as duas redes lado a lado da tela antiga da Partida; desde a Etapa 2 a rede mostra uma equipe por vez, então ele precisa ser atualizado antes de regerar o carrossel da Etapa 1.
