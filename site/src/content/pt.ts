@@ -374,7 +374,8 @@ export const shots = {
       default: return "";
     }
   },
-  endLabel: { goal: "gol", saved: "defesa", post: "trave", blocked: "bloqueio", over: "linha de fundo", wide: "linha de fundo", overWide: "linha de fundo", short: "parou aqui", other: "" } as Record<ShotFinish["kind"], string>,
+  // label at the end of the ball's path; on the goal line the detail card already says what happened
+  endLabel: { goal: "", saved: "", post: "", blocked: "bloqueio", over: "", wide: "", overWide: "", short: "parou aqui", other: "" } as Record<ShotFinish["kind"], string>,
   frameCaption: "Onde a bola cruzou a linha do gol, vista de trás de quem chutou.",
   hint: "Clique num chute para ver de onde ele saiu, o caminho da bola (tracejado) e onde ela parou: na linha do gol, no bloqueio ou fora.",
   topTitle: "Maiores chances",

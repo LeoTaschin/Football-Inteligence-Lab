@@ -10,7 +10,7 @@ import styles from "./ShotMap.module.css";
 /** room above the goal line for icons right on it (pitch units) */
 const TOP_MARGIN = 4;
 /** icon size in px on the 520 px reference pitch */
-const ICON_PX = 24;
+const ICON_PX = 18;
 const BLOCKED = "#52525B";
 
 interface ShotIconProps {
@@ -20,48 +20,67 @@ interface ShotIconProps {
   badge: string | null;
 }
 
-/** Outcome glyph on a 24×24 grid, centred on (12, 12): ball (goal), glove (save), post, block sign, arrow out (miss). */
+// classic football (goal icon) on the 24×24 grid: a dark pentagon in the centre and, in line with
+// each of its corners, a seam out to a dark pentagon cut by the rim
+const BALL_R = 10.5;
+const polar = (r: number, deg: number) => {
+  const a = (deg * Math.PI) / 180;
+  return `${(12 + r * Math.cos(a)).toFixed(2)},${(12 + r * Math.sin(a)).toFixed(2)}`;
+};
+const CORNERS = [0, 1, 2, 3, 4].map((k) => -90 + 72 * k);
+const BALL_PENTAGON = CORNERS.map((d) => polar(4.3, d)).join(" ");
+const BALL_SEAMS = CORNERS.map((d) => `M${polar(4.3, d)}L${polar(7.4, d)}`).join("");
+const BALL_PATCHES = CORNERS.map(
+  (d) => `M${polar(BALL_R, d - 21)}L${polar(7.4, d - 11)}L${polar(7.4, d + 11)}L${polar(BALL_R, d + 21)}A${BALL_R} ${BALL_R} 0 0 0 ${polar(BALL_R, d - 21)}Z`,
+);
+
+/** Outcome glyph on a 24×24 grid, centred on (12, 12): football (goal), glove (save), post, block sign, arrow out (miss). */
 export function ShotIcon({ result, color, badge }: ShotIconProps) {
+  const ring = result === "blocked" ? "#71717A" : color;
   return (
     <g>
       {result === "goal" ? (
         <>
-          <circle cx="12" cy="12" r="10.5" fill={color} stroke="var(--text)" strokeWidth="1.5" />
-          <path d="M12 7.2l4.5 3.3-1.7 5.3H8.9L7.2 10.5z" fill="#FFFFFF" />
-          <path d="M12 7.2V3.6M16.5 10.5l3.4-1.2M14.8 15.8l2.1 2.9M8.9 15.8l-2.1 2.9M7.2 10.5L3.8 9.3" stroke="#FFFFFF" strokeWidth="1.2" fill="none" />
+          <circle cx="12" cy="12" r={BALL_R} fill="#FFFFFF" />
+          <polygon points={BALL_PENTAGON} fill="var(--text)" />
+          {BALL_PATCHES.map((d) => (
+            <path key={d} d={d} fill="var(--text)" />
+          ))}
+          <path d={BALL_SEAMS} stroke="var(--text)" strokeWidth="0.9" fill="none" />
+          <circle cx="12" cy="12" r={BALL_R} fill="none" stroke="var(--text)" strokeWidth="1.2" />
         </>
       ) : (
-        <circle cx="12" cy="12" r="11" fill="#FFFFFF" stroke={result === "blocked" ? "#71717A" : color} strokeWidth="1.5" />
+        <circle cx="12" cy="12" r="11" fill="#FFFFFF" stroke={ring} strokeWidth="1" />
       )}
       {result === "saved" && (
         <path
           d="M8.2 12.6V8.4a1.1 1.1 0 0 1 2.2 0v3.4M10.4 11.6V7.1a1.1 1.1 0 0 1 2.2 0v4.5M12.6 11.6V7.6a1.1 1.1 0 0 1 2.2 0v4.3M14.8 11.2V9.4a1.1 1.1 0 0 1 2.2 0v3.8a4.6 4.6 0 0 1-4.6 4.6h-.9a4.3 4.3 0 0 1-3.6-1.9l-1.8-2.8a1 1 0 0 1 1.7-1.1l.4.6"
           fill="none"
           stroke={color}
-          strokeWidth="1.5"
+          strokeWidth="1.1"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
       )}
       {result === "post" && (
         <>
-          <path d="M6 17.5V7h12v10.5" fill="none" stroke="var(--text)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-          <circle cx="16" cy="10.2" r="2.1" fill={color} />
+          <path d="M6.5 17V7.5h11V17" fill="none" stroke="var(--text)" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
+          <circle cx="15.6" cy="10.4" r="1.9" fill={color} />
         </>
       )}
       {result === "blocked" && (
         <>
-          <circle cx="12" cy="12" r="6" fill="none" stroke={BLOCKED} strokeWidth="1.8" />
-          <path d="M7.8 7.8l8.4 8.4" stroke={BLOCKED} strokeWidth="1.8" strokeLinecap="round" />
+          <circle cx="12" cy="12" r="5.5" fill="none" stroke={BLOCKED} strokeWidth="1.3" />
+          <path d="M8.1 8.1l7.8 7.8" stroke={BLOCKED} strokeWidth="1.3" strokeLinecap="round" />
         </>
       )}
       {(result === "off" || result === "other") && (
-        <path d="M8 16L16 8M10 8h6v6" fill="none" stroke={color} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M8.5 15.5L15.5 8.5M10.5 8.5h5v5" fill="none" stroke={color} strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
       )}
       {badge && (
         <>
-          <circle cx="21" cy="3" r="6.5" fill="var(--text)" stroke="#FFFFFF" strokeWidth="1.5" />
-          <text x="21" y="3" fill="#FFFFFF" fontSize="8" fontWeight="800" textAnchor="middle" dominantBaseline="central">
+          <circle cx="21" cy="3.5" r="5.5" fill="var(--text)" stroke="#FFFFFF" strokeWidth="1" />
+          <text x="21" y="3.5" fill="#FFFFFF" fontSize="7" fontWeight="700" textAnchor="middle" dominantBaseline="central">
             {badge}
           </text>
         </>
