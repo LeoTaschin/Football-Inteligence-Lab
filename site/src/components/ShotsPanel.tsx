@@ -67,7 +67,7 @@ export function ShotsPanel({ data, team: ti, onTeam, selected, onSelect }: Shots
           <ul className={layout.legend} aria-label={copy.legendLabel}>
             {LEGEND.map((r) => (
               <li key={r}>
-                <ShotIconSvg size={22} result={r} color={NEUTRAL} badge={null} />
+                <ShotIconSvg size={18} result={r} color={NEUTRAL} badge={null} />
                 {copy.legend[r]}
               </li>
             ))}
@@ -133,7 +133,7 @@ function ShotDetail({ team, shot, outcome }: { team: TeamData; shot: Shot; outco
   return (
     <section className={styles.detail} aria-live="polite">
       <div className={styles.detailHead}>
-        <ShotIconSvg size={34} result={shot.result} color={team.colors.line} badge={shot.setPiece ? (copy.badge[shot.shotType] ?? null) : null} />
+        <ShotIconSvg size={30} result={shot.result} color={team.colors.line} badge={shot.setPiece ? (copy.badge[shot.shotType] ?? null) : null} />
         <div className={styles.detailWho}>
           <span className="eyebrow">{`${team.displayName} · ${shot.minute}′ · ${outcome}`}</span>
           <span className={styles.detailName}>{shot.name}</span>
