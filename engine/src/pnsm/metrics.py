@@ -85,6 +85,32 @@ def shot_summary(shots: pd.DataFrame) -> ShotSummary:
     )
 
 
+# StatsBomb shot.outcome → marker group on the shot map (CLAUDE.md 5.8)
+SHOT_RESULTS = {
+    "Goal": "goal",
+    "Saved": "saved", "Saved to Post": "saved", "Saved Off Target": "saved",
+    "Post": "post",
+    "Blocked": "blocked",
+    "Off T": "off", "Wayward": "off",
+}
+SHOT_TYPES = {"Open Play": "openPlay", "Free Kick": "freeKick", "Penalty": "penalty",
+              "Corner": "corner", "Kick Off": "kickOff"}
+BODY_PARTS = {"Right Foot": "rightFoot", "Left Foot": "leftFoot", "Head": "head"}
+
+
+def shot_list(shots: pd.DataFrame) -> pd.DataFrame:
+    """The shots in chronological order, with ``result``, ``shot_type_code``, ``set_piece`` and ``body_part_code``.
+
+    Every row of ``shots`` stays: missing xG or location is kept as missing.
+    """
+    out = shots.sort_values(["period", "index"]).copy()
+    out["result"] = out.outcome.map(lambda o: SHOT_RESULTS.get(o, "other"))
+    out["shot_type_code"] = out.shot_type.map(lambda t: SHOT_TYPES.get(t, "other"))
+    out["set_piece"] = out.shot_type != "Open Play"
+    out["body_part_code"] = out.body_part.map(lambda b: BODY_PARTS.get(b, "other"))
+    return out
+
+
 @dataclass(frozen=True)
 class Substitution:
     minute: int

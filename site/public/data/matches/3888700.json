@@ -1126,9 +1126,427 @@
     "count": 20,
     "goals": 1,
     "xg": 0.87,
+    "xgPerShot": 0.043,
     "xgCoverage": [
      20,
      20
+    ],
+    "items": [
+     {
+      "period": 1,
+      "minute": 9,
+      "second": 27,
+      "playerId": 39712,
+      "name": "Pelé",
+      "num": 10,
+      "x": 111.1,
+      "y": 36.7,
+      "end": [
+       118.9,
+       37.0,
+       1.0
+      ],
+      "outcome": "Saved",
+      "result": "saved",
+      "xg": 0.094,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "head"
+     },
+     {
+      "period": 1,
+      "minute": 13,
+      "second": 32,
+      "playerId": 397631,
+      "name": "Caju",
+      "num": 18,
+      "x": 108.9,
+      "y": 19.3,
+      "end": [
+       120.0,
+       35.1,
+       3.2
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.007,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 1,
+      "minute": 16,
+      "second": 40,
+      "playerId": 397631,
+      "name": "Caju",
+      "num": 18,
+      "x": 90.9,
+      "y": 31.4,
+      "end": [
+       120.0,
+       30.6,
+       0.2
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.028,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 1,
+      "minute": 21,
+      "second": 26,
+      "playerId": 397629,
+      "name": "Everaldo",
+      "num": 16,
+      "x": 96.7,
+      "y": 20.8,
+      "end": [
+       120.0,
+       35.1,
+       4.5
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.01,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 1,
+      "minute": 23,
+      "second": 58,
+      "playerId": 39712,
+      "name": "Pelé",
+      "num": 10,
+      "x": 93.7,
+      "y": 36.2,
+      "end": [
+       120.0,
+       29.9,
+       0.3
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.024,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 1,
+      "minute": 27,
+      "second": 26,
+      "playerId": 39708,
+      "name": "Carlos Alberto",
+      "num": 4,
+      "x": 92.9,
+      "y": 55.1,
+      "end": [
+       97.9,
+       52.9
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.015,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 1,
+      "minute": 38,
+      "second": 57,
+      "playerId": 397630,
+      "name": "Rivellino",
+      "num": 11,
+      "x": 95.5,
+      "y": 47.8,
+      "end": [
+       96.7,
+       47.4
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.03,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 1,
+      "minute": 40,
+      "second": 27,
+      "playerId": 397630,
+      "name": "Rivellino",
+      "num": 11,
+      "x": 101.7,
+      "y": 64.3,
+      "end": [
+       109.2,
+       52.7
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.008,
+      "shotType": "freeKick",
+      "setPiece": true,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 2,
+      "minute": 50,
+      "second": 45,
+      "playerId": 397631,
+      "name": "Caju",
+      "num": 18,
+      "x": 98.8,
+      "y": 18.3,
+      "end": [
+       117.5,
+       40.0,
+       0.2
+      ],
+      "outcome": "Saved",
+      "result": "saved",
+      "xg": 0.012,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 51,
+      "second": 12,
+      "playerId": 397622,
+      "name": "Jairzinho",
+      "num": 7,
+      "x": 118.0,
+      "y": 61.9,
+      "end": [
+       120.0,
+       45.2,
+       4.3
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.007,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 53,
+      "second": 52,
+      "playerId": 397637,
+      "name": "Tostão",
+      "num": 9,
+      "x": 96.5,
+      "y": 40.3,
+      "end": [
+       120.0,
+       31.5,
+       2.1
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.048,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 2,
+      "minute": 55,
+      "second": 57,
+      "playerId": 397620,
+      "name": "Clodoaldo",
+      "num": 5,
+      "x": 97.3,
+      "y": 56.1,
+      "end": [
+       120.0,
+       42.0,
+       6.1
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.024,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 58,
+      "second": 10,
+      "playerId": 397630,
+      "name": "Rivellino",
+      "num": 11,
+      "x": 101.0,
+      "y": 49.9,
+      "end": [
+       117.4,
+       42.1,
+       1.8
+      ],
+      "outcome": "Saved",
+      "result": "saved",
+      "xg": 0.091,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 2,
+      "minute": 59,
+      "second": 1,
+      "playerId": 397637,
+      "name": "Tostão",
+      "num": 9,
+      "x": 98.0,
+      "y": 34.6,
+      "end": [
+       100.1,
+       35.0
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.042,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 2,
+      "minute": 59,
+      "second": 18,
+      "playerId": 397622,
+      "name": "Jairzinho",
+      "num": 7,
+      "x": 112.5,
+      "y": 46.8,
+      "end": [
+       120.0,
+       37.0,
+       2.0
+      ],
+      "outcome": "Goal",
+      "result": "goal",
+      "xg": 0.264,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 61,
+      "second": 30,
+      "playerId": 397622,
+      "name": "Jairzinho",
+      "num": 7,
+      "x": 110.5,
+      "y": 54.5,
+      "end": [
+       120.0,
+       39.8,
+       5.6
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.045,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 77,
+      "second": 49,
+      "playerId": 397631,
+      "name": "Caju",
+      "num": 18,
+      "x": 109.2,
+      "y": 21.4,
+      "end": [
+       110.3,
+       80.0
+      ],
+      "outcome": "Wayward",
+      "result": "off",
+      "xg": 0.013,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 79,
+      "second": 43,
+      "playerId": 397631,
+      "name": "Caju",
+      "num": 18,
+      "x": 98.8,
+      "y": 28.9,
+      "end": [
+       115.6,
+       40.1,
+       0.2
+      ],
+      "outcome": "Saved",
+      "result": "saved",
+      "xg": 0.039,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 84,
+      "second": 14,
+      "playerId": 397633,
+      "name": "Roberto Miranda",
+      "num": 13,
+      "x": 97.2,
+      "y": 25.9,
+      "end": [
+       117.9,
+       36.0,
+       0.2
+      ],
+      "outcome": "Saved",
+      "result": "saved",
+      "xg": 0.026,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 89,
+      "second": 44,
+      "playerId": 39712,
+      "name": "Pelé",
+      "num": 10,
+      "x": 98.2,
+      "y": 48.4,
+      "end": [
+       120.0,
+       37.5,
+       3.4
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.04,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     }
     ]
    },
    "phase": {
@@ -2498,9 +2916,447 @@
     "count": 21,
     "goals": 0,
     "xg": 1.54,
+    "xgPerShot": 0.073,
     "xgCoverage": [
      21,
      21
+    ],
+    "items": [
+     {
+      "period": 1,
+      "minute": 1,
+      "second": 9,
+      "playerId": 397888,
+      "name": "Martin Peters",
+      "num": 11,
+      "x": 87.5,
+      "y": 30.0,
+      "end": [
+       117.7,
+       40.6,
+       0.4
+      ],
+      "outcome": "Saved",
+      "result": "saved",
+      "xg": 0.017,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 1,
+      "minute": 4,
+      "second": 43,
+      "playerId": 397891,
+      "name": "Geoffrey Hurst",
+      "num": 10,
+      "x": 109.9,
+      "y": 46.2,
+      "end": [
+       120.0,
+       51.8,
+       1.0
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.051,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "head"
+     },
+     {
+      "period": 1,
+      "minute": 6,
+      "second": 52,
+      "playerId": 397888,
+      "name": "Martin Peters",
+      "num": 11,
+      "x": 97.4,
+      "y": 29.3,
+      "end": [
+       100.2,
+       28.9
+      ],
+      "outcome": "Wayward",
+      "result": "off",
+      "xg": 0.033,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 1,
+      "minute": 18,
+      "second": 38,
+      "playerId": 397889,
+      "name": "Charlton 9",
+      "num": 9,
+      "x": 87.4,
+      "y": 38.9,
+      "end": [
+       120.0,
+       34.8,
+       6.7
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.019,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 1,
+      "minute": 20,
+      "second": 55,
+      "playerId": 397890,
+      "name": "Francis Lee",
+      "num": 7,
+      "x": 100.9,
+      "y": 28.4,
+      "end": [
+       103.3,
+       30.1
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.031,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 1,
+      "minute": 22,
+      "second": 25,
+      "playerId": 397888,
+      "name": "Martin Peters",
+      "num": 11,
+      "x": 105.4,
+      "y": 32.9,
+      "end": [
+       120.0,
+       41.3,
+       4.6
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.044,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "head"
+     },
+     {
+      "period": 1,
+      "minute": 30,
+      "second": 50,
+      "playerId": 397890,
+      "name": "Francis Lee",
+      "num": 7,
+      "x": 112.4,
+      "y": 42.2,
+      "end": [
+       118.0,
+       41.4,
+       0.9
+      ],
+      "outcome": "Saved",
+      "result": "saved",
+      "xg": 0.261,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "head"
+     },
+     {
+      "period": 1,
+      "minute": 34,
+      "second": 55,
+      "playerId": 397888,
+      "name": "Martin Peters",
+      "num": 11,
+      "x": 92.9,
+      "y": 33.1,
+      "end": [
+       100.8,
+       35.4
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.05,
+      "shotType": "freeKick",
+      "setPiece": true,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 1,
+      "minute": 35,
+      "second": 21,
+      "playerId": 397891,
+      "name": "Geoffrey Hurst",
+      "num": 10,
+      "x": 100.8,
+      "y": 54.4,
+      "end": [
+       114.8,
+       33.2
+      ],
+      "outcome": "Wayward",
+      "result": "off",
+      "xg": 0.041,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 1,
+      "minute": 41,
+      "second": 42,
+      "playerId": 397889,
+      "name": "Charlton 9",
+      "num": 9,
+      "x": 96.9,
+      "y": 29.2,
+      "end": [
+       120.0,
+       45.6,
+       0.4
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.027,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 2,
+      "minute": 48,
+      "second": 26,
+      "playerId": 397890,
+      "name": "Francis Lee",
+      "num": 7,
+      "x": 96.3,
+      "y": 37.4,
+      "end": [
+       115.7,
+       37.9,
+       0.6
+      ],
+      "outcome": "Saved",
+      "result": "saved",
+      "xg": 0.069,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 56,
+      "second": 37,
+      "playerId": 397889,
+      "name": "Charlton 9",
+      "num": 9,
+      "x": 95.9,
+      "y": 40.6,
+      "end": [
+       120.0,
+       43.3,
+       5.3
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.059,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 60,
+      "second": 54,
+      "playerId": 397889,
+      "name": "Charlton 9",
+      "num": 9,
+      "x": 103.7,
+      "y": 41.6,
+      "end": [
+       120.0,
+       35.5,
+       2.1
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.178,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 2,
+      "minute": 65,
+      "second": 10,
+      "playerId": 397893,
+      "name": "Astle",
+      "num": 22,
+      "x": 105.4,
+      "y": 38.9,
+      "end": [
+       120.0,
+       45.7,
+       0.2
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.317,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 2,
+      "minute": 67,
+      "second": 12,
+      "playerId": 397883,
+      "name": "Cooper",
+      "num": 3,
+      "x": 89.1,
+      "y": 17.8,
+      "end": [
+       116.3,
+       36.9,
+       2.0
+      ],
+      "outcome": "Saved",
+      "result": "saved",
+      "xg": 0.007,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 2,
+      "minute": 74,
+      "second": 32,
+      "playerId": 397892,
+      "name": "Bell",
+      "num": 19,
+      "x": 98.1,
+      "y": 46.0,
+      "end": [
+       120.0,
+       45.2,
+       6.6
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.029,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 75,
+      "second": 52,
+      "playerId": 397886,
+      "name": "Alan Mullery",
+      "num": 4,
+      "x": 103.8,
+      "y": 45.2,
+      "end": [
+       104.7,
+       45.0
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.077,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 76,
+      "second": 51,
+      "playerId": 397887,
+      "name": "Alan Ball",
+      "num": 8,
+      "x": 104.2,
+      "y": 27.2,
+      "end": [
+       120.0,
+       42.6,
+       2.8
+      ],
+      "outcome": "Post",
+      "result": "post",
+      "xg": 0.063,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 82,
+      "second": 30,
+      "playerId": 397887,
+      "name": "Alan Ball",
+      "num": 8,
+      "x": 100.9,
+      "y": 46.5,
+      "end": [
+       120.0,
+       42.7,
+       4.1
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.094,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 86,
+      "second": 13,
+      "playerId": 397887,
+      "name": "Alan Ball",
+      "num": 8,
+      "x": 99.8,
+      "y": 39.3,
+      "end": [
+       100.9,
+       39.4
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.045,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 89,
+      "second": 10,
+      "playerId": 397892,
+      "name": "Bell",
+      "num": 19,
+      "x": 90.9,
+      "y": 36.7,
+      "end": [
+       118.3,
+       42.4,
+       0.2
+      ],
+      "outcome": "Saved",
+      "result": "saved",
+      "xg": 0.027,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     }
     ]
    },
    "phase": {
@@ -3022,6 +3878,9 @@
   "pairSumEqualsCompleted": true,
   "shotCount": true,
   "shotGoals": true,
+  "shotItemsMatchCount": true,
+  "shotItemsGoals": true,
+  "shotItemsXg": true,
   "scoreMatchesEvents": true,
   "replayOrdered": true,
   "replayEndsWithShot": true,

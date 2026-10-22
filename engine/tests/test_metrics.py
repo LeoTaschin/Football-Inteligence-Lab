@@ -97,6 +97,30 @@ def test_shootout_shots_are_excluded():
     assert len(shots) == 1
 
 
+def test_shot_results_group_statsbomb_outcomes():
+    outcomes = ["Goal", "Saved", "Saved to Post", "Saved Off Target", "Post", "Blocked", "Off T", "Wayward", "Something New"]
+    shots = metrics.shot_list(transform.shots_table([make_shot(0.1, o) for o in outcomes], BRAZIL))
+    assert list(shots.result) == ["goal", "saved", "saved", "saved", "post", "blocked", "off", "off", "other"]
+    assert list(shots.outcome) == outcomes  # the original name is kept
+
+
+def test_set_piece_comes_from_shot_type():
+    events = [make_shot(0.1), make_shot(0.2)]
+    events[0]["shot"]["type"] = {"id": 87, "name": "Open Play"}
+    events[1]["shot"]["type"] = {"id": 62, "name": "Free Kick"}
+    shots = metrics.shot_list(transform.shots_table(events, BRAZIL))
+    assert list(shots.set_piece) == [False, True]
+    assert list(shots.shot_type_code) == ["openPlay", "freeKick"]
+
+
+def test_shot_list_is_chronological_and_keeps_missing_xg():
+    late, early = make_shot(0.3), make_shot(None)
+    late["index"], early["index"] = 50, 10
+    shots = metrics.shot_list(transform.shots_table([late, early], BRAZIL))
+    assert list(shots["index"]) == [10, 50]
+    assert math.isnan(shots.xg.iloc[0])
+
+
 # --- substitutions -------------------------------------------------------------------
 
 def test_substitute_with_few_passes_keeps_node():

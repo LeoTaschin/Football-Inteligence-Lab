@@ -1310,9 +1310,633 @@
     "count": 30,
     "goals": 4,
     "xg": 3.66,
+    "xgPerShot": 0.122,
     "xgCoverage": [
      30,
      30
+    ],
+    "items": [
+     {
+      "period": 1,
+      "minute": 3,
+      "second": 36,
+      "playerId": 39712,
+      "name": "Pelé",
+      "num": 10,
+      "x": 106.3,
+      "y": 42.0,
+      "end": [
+       120.0,
+       44.0,
+       0.2
+      ],
+      "outcome": "Post",
+      "result": "post",
+      "xg": 0.412,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 1,
+      "minute": 3,
+      "second": 40,
+      "playerId": 397637,
+      "name": "Tostão",
+      "num": 9,
+      "x": 113.4,
+      "y": 33.9,
+      "end": [
+       120.0,
+       34.7,
+       4.3
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.237,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 1,
+      "minute": 6,
+      "second": 35,
+      "playerId": 397630,
+      "name": "Rivellino",
+      "num": 11,
+      "x": 100.5,
+      "y": 42.9,
+      "end": [
+       105.6,
+       42.6
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.103,
+      "shotType": "freeKick",
+      "setPiece": true,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 1,
+      "minute": 7,
+      "second": 2,
+      "playerId": 39708,
+      "name": "Carlos Alberto",
+      "num": 4,
+      "x": 113.5,
+      "y": 36.8,
+      "end": [
+       114.4,
+       80.0
+      ],
+      "outcome": "Wayward",
+      "result": "off",
+      "xg": 0.146,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "head"
+     },
+     {
+      "period": 1,
+      "minute": 9,
+      "second": 32,
+      "playerId": 397630,
+      "name": "Rivellino",
+      "num": 11,
+      "x": 95.8,
+      "y": 25.8,
+      "end": [
+       117.7,
+       40.3,
+       0.6
+      ],
+      "outcome": "Saved",
+      "result": "saved",
+      "xg": 0.024,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 1,
+      "minute": 10,
+      "second": 24,
+      "playerId": 397630,
+      "name": "Rivellino",
+      "num": 11,
+      "x": 102.2,
+      "y": 22.9,
+      "end": [
+       120.0,
+       43.8,
+       0.2
+      ],
+      "outcome": "Goal",
+      "result": "goal",
+      "xg": 0.03,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 1,
+      "minute": 12,
+      "second": 42,
+      "playerId": 39712,
+      "name": "Pelé",
+      "num": 10,
+      "x": 101.5,
+      "y": 35.1,
+      "end": [
+       108.1,
+       35.9
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.104,
+      "shotType": "freeKick",
+      "setPiece": true,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 1,
+      "minute": 15,
+      "second": 2,
+      "playerId": 397637,
+      "name": "Tostão",
+      "num": 9,
+      "x": 117.1,
+      "y": 21.8,
+      "end": [
+       120.0,
+       41.5,
+       0.4
+      ],
+      "outcome": "Goal",
+      "result": "goal",
+      "xg": 0.011,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 1,
+      "minute": 24,
+      "second": 51,
+      "playerId": 39712,
+      "name": "Pelé",
+      "num": 10,
+      "x": 103.1,
+      "y": 29.3,
+      "end": [
+       120.0,
+       45.7,
+       4.3
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.055,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 1,
+      "minute": 27,
+      "second": 53,
+      "playerId": 39712,
+      "name": "Pelé",
+      "num": 10,
+      "x": 63.1,
+      "y": 41.8,
+      "end": [
+       120.0,
+       41.5,
+       4.9
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.003,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 1,
+      "minute": 30,
+      "second": 24,
+      "playerId": 397620,
+      "name": "Clodoaldo",
+      "num": 5,
+      "x": 89.6,
+      "y": 57.3,
+      "end": [
+       120.0,
+       45.2,
+       2.7
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.007,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 1,
+      "minute": 34,
+      "second": 24,
+      "playerId": 397637,
+      "name": "Tostão",
+      "num": 9,
+      "x": 106.6,
+      "y": 45.8,
+      "end": [
+       114.8,
+       44.0,
+       0.2
+      ],
+      "outcome": "Saved",
+      "result": "saved",
+      "xg": 0.255,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 1,
+      "minute": 36,
+      "second": 16,
+      "playerId": 39712,
+      "name": "Pelé",
+      "num": 10,
+      "x": 95.0,
+      "y": 40.1,
+      "end": [
+       117.4,
+       40.6,
+       1.6
+      ],
+      "outcome": "Saved to Post",
+      "result": "saved",
+      "xg": 0.038,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 1,
+      "minute": 44,
+      "second": 16,
+      "playerId": 397630,
+      "name": "Rivellino",
+      "num": 11,
+      "x": 105.1,
+      "y": 24.8,
+      "end": [
+       114.6,
+       36.9,
+       0.2
+      ],
+      "outcome": "Saved",
+      "result": "saved",
+      "xg": 0.06,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 1,
+      "minute": 45,
+      "second": 26,
+      "playerId": 39712,
+      "name": "Pelé",
+      "num": 10,
+      "x": 92.2,
+      "y": 40.6,
+      "end": [
+       120.0,
+       37.3,
+       5.6
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.028,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 47,
+      "second": 37,
+      "playerId": 397630,
+      "name": "Rivellino",
+      "num": 11,
+      "x": 99.3,
+      "y": 52.3,
+      "end": [
+       118.7,
+       40.2,
+       0.3
+      ],
+      "outcome": "Saved",
+      "result": "saved",
+      "xg": 0.065,
+      "shotType": "freeKick",
+      "setPiece": true,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 2,
+      "minute": 49,
+      "second": 16,
+      "playerId": 397622,
+      "name": "Jairzinho",
+      "num": 7,
+      "x": 108.8,
+      "y": 47.2,
+      "end": [
+       120.0,
+       35.1,
+       0.2
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.092,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 50,
+      "second": 3,
+      "playerId": 39708,
+      "name": "Carlos Alberto",
+      "num": 4,
+      "x": 105.9,
+      "y": 56.9,
+      "end": [
+       106.8,
+       55.8
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.019,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 50,
+      "second": 5,
+      "playerId": 39708,
+      "name": "Carlos Alberto",
+      "num": 4,
+      "x": 113.9,
+      "y": 52.7,
+      "end": [
+       117.8,
+       44.4,
+       0.2
+      ],
+      "outcome": "Saved",
+      "result": "saved",
+      "xg": 0.073,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 51,
+      "second": 2,
+      "playerId": 397637,
+      "name": "Tostão",
+      "num": 9,
+      "x": 115.7,
+      "y": 40.3,
+      "end": [
+       120.0,
+       39.3,
+       2.4
+      ],
+      "outcome": "Goal",
+      "result": "goal",
+      "xg": 0.866,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 2,
+      "minute": 58,
+      "second": 12,
+      "playerId": 397621,
+      "name": "Gérson",
+      "num": 8,
+      "x": 88.3,
+      "y": 36.0,
+      "end": [
+       90.7,
+       36.3
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.014,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 2,
+      "minute": 65,
+      "second": 12,
+      "playerId": 39708,
+      "name": "Carlos Alberto",
+      "num": 4,
+      "x": 110.8,
+      "y": 51.8,
+      "end": [
+       120.0,
+       46.2,
+       0.3
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.087,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 67,
+      "second": 23,
+      "playerId": 39712,
+      "name": "Pelé",
+      "num": 10,
+      "x": 103.3,
+      "y": 44.4,
+      "end": [
+       106.0,
+       43.7
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.073,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 73,
+      "second": 3,
+      "playerId": 397631,
+      "name": "Caju",
+      "num": 18,
+      "x": 99.5,
+      "y": 27.9,
+      "end": [
+       118.9,
+       37.0,
+       2.3
+      ],
+      "outcome": "Saved",
+      "result": "saved",
+      "xg": 0.063,
+      "shotType": "freeKick",
+      "setPiece": true,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 75,
+      "second": 0,
+      "playerId": 397622,
+      "name": "Jairzinho",
+      "num": 7,
+      "x": 118.7,
+      "y": 32.8,
+      "end": [
+       120.0,
+       39.9,
+       0.6
+      ],
+      "outcome": "Goal",
+      "result": "goal",
+      "xg": 0.235,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 81,
+      "second": 13,
+      "playerId": 39712,
+      "name": "Pelé",
+      "num": 10,
+      "x": 101.8,
+      "y": 47.7,
+      "end": [
+       110.9,
+       44.9
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.082,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 2,
+      "minute": 81,
+      "second": 44,
+      "playerId": 397637,
+      "name": "Tostão",
+      "num": 9,
+      "x": 109.5,
+      "y": 42.5,
+      "end": [
+       111.6,
+       42.0
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.195,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 86,
+      "second": 29,
+      "playerId": 397633,
+      "name": "Roberto Miranda",
+      "num": 13,
+      "x": 113.8,
+      "y": 61.1,
+      "end": [
+       119.4,
+       44.7,
+       0.5
+      ],
+      "outcome": "Saved",
+      "result": "saved",
+      "xg": 0.009,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 88,
+      "second": 23,
+      "playerId": 397630,
+      "name": "Rivellino",
+      "num": 11,
+      "x": 107.7,
+      "y": 45.9,
+      "end": [
+       116.6,
+       41.7,
+       1.1
+      ],
+      "outcome": "Saved",
+      "result": "saved",
+      "xg": 0.206,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 89,
+      "second": 36,
+      "playerId": 397637,
+      "name": "Tostão",
+      "num": 9,
+      "x": 97.9,
+      "y": 46.3,
+      "end": [
+       98.9,
+       46.0
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.062,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     }
     ]
    },
    "phase": {
@@ -2521,9 +3145,406 @@
     "count": 19,
     "goals": 2,
     "xg": 0.92,
+    "xgPerShot": 0.049,
     "xgCoverage": [
      19,
      19
+    ],
+    "items": [
+     {
+      "period": 1,
+      "minute": 8,
+      "second": 47,
+      "playerId": 398859,
+      "name": "Ramón Mifflin",
+      "num": 6,
+      "x": 91.5,
+      "y": 43.0,
+      "end": [
+       93.9,
+       42.9
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.017,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 1,
+      "minute": 11,
+      "second": 14,
+      "playerId": 398873,
+      "name": "Roberto Chale",
+      "num": 7,
+      "x": 86.2,
+      "y": 20.4,
+      "end": [
+       89.9,
+       22.3
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.005,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 1,
+      "minute": 21,
+      "second": 15,
+      "playerId": 398858,
+      "name": "Teófilo Cubillas",
+      "num": 10,
+      "x": 103.6,
+      "y": 38.2,
+      "end": [
+       112.1,
+       38.6,
+       0.5
+      ],
+      "outcome": "Saved",
+      "result": "saved",
+      "xg": 0.428,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 1,
+      "minute": 23,
+      "second": 45,
+      "playerId": 398862,
+      "name": "Gallardo",
+      "num": 11,
+      "x": 91.2,
+      "y": 31.6,
+      "end": [
+       93.4,
+       32.3
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.016,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 1,
+      "minute": 27,
+      "second": 21,
+      "playerId": 398862,
+      "name": "Gallardo",
+      "num": 11,
+      "x": 118.0,
+      "y": 19.6,
+      "end": [
+       120.0,
+       41.6,
+       1.0
+      ],
+      "outcome": "Goal",
+      "result": "goal",
+      "xg": 0.011,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 1,
+      "minute": 33,
+      "second": 40,
+      "playerId": 398862,
+      "name": "Gallardo",
+      "num": 11,
+      "x": 92.5,
+      "y": 20.8,
+      "end": [
+       120.0,
+       46.2,
+       6.4
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.007,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 1,
+      "minute": 37,
+      "second": 1,
+      "playerId": 398860,
+      "name": "Julio Baylón",
+      "num": 8,
+      "x": 87.5,
+      "y": 46.9,
+      "end": [
+       120.0,
+       42.5,
+       5.3
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.021,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 1,
+      "minute": 39,
+      "second": 12,
+      "playerId": 398859,
+      "name": "Ramón Mifflin",
+      "num": 6,
+      "x": 93.4,
+      "y": 38.2,
+      "end": [
+       120.0,
+       47.3,
+       0.5
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.025,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 1,
+      "minute": 41,
+      "second": 57,
+      "playerId": 398858,
+      "name": "Teófilo Cubillas",
+      "num": 10,
+      "x": 105.1,
+      "y": 39.4,
+      "end": [
+       120.0,
+       42.9,
+       4.4
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.082,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 54,
+      "second": 55,
+      "playerId": 398862,
+      "name": "Gallardo",
+      "num": 11,
+      "x": 94.9,
+      "y": 21.9,
+      "end": [
+       119.1,
+       39.0,
+       2.0
+      ],
+      "outcome": "Saved",
+      "result": "saved",
+      "xg": 0.009,
+      "shotType": "freeKick",
+      "setPiece": true,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 56,
+      "second": 32,
+      "playerId": 398859,
+      "name": "Ramón Mifflin",
+      "num": 6,
+      "x": 94.5,
+      "y": 52.2,
+      "end": [
+       120.0,
+       38.0,
+       7.1
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.022,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 2,
+      "minute": 58,
+      "second": 53,
+      "playerId": 398862,
+      "name": "Gallardo",
+      "num": 11,
+      "x": 98.3,
+      "y": 12.7,
+      "end": [
+       120.0,
+       49.2,
+       5.8
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.006,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 68,
+      "second": 27,
+      "playerId": 398862,
+      "name": "Gallardo",
+      "num": 11,
+      "x": 94.7,
+      "y": 29.7,
+      "end": [
+       119.0,
+       38.0,
+       0.5
+      ],
+      "outcome": "Saved",
+      "result": "saved",
+      "xg": 0.045,
+      "shotType": "freeKick",
+      "setPiece": true,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 69,
+      "second": 3,
+      "playerId": 398858,
+      "name": "Teófilo Cubillas",
+      "num": 10,
+      "x": 102.7,
+      "y": 35.4,
+      "end": [
+       120.0,
+       38.5,
+       0.3
+      ],
+      "outcome": "Goal",
+      "result": "goal",
+      "xg": 0.056,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 76,
+      "second": 13,
+      "playerId": 398873,
+      "name": "Roberto Chale",
+      "num": 7,
+      "x": 82.8,
+      "y": 44.5,
+      "end": [
+       118.9,
+       43.2,
+       0.6
+      ],
+      "outcome": "Saved",
+      "result": "saved",
+      "xg": 0.006,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 78,
+      "second": 2,
+      "playerId": 398854,
+      "name": "Campos",
+      "num": 2,
+      "x": 104.0,
+      "y": 59.6,
+      "end": [
+       119.3,
+       43.8,
+       0.3
+      ],
+      "outcome": "Saved",
+      "result": "saved",
+      "xg": 0.009,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 82,
+      "second": 41,
+      "playerId": 398858,
+      "name": "Teófilo Cubillas",
+      "num": 10,
+      "x": 91.5,
+      "y": 38.3,
+      "end": [
+       101.6,
+       38.0
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.025,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 82,
+      "second": 42,
+      "playerId": 398873,
+      "name": "Roberto Chale",
+      "num": 7,
+      "x": 94.8,
+      "y": 39.0,
+      "end": [
+       101.3,
+       39.6
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.031,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 84,
+      "second": 56,
+      "playerId": 398858,
+      "name": "Teófilo Cubillas",
+      "num": 10,
+      "x": 103.7,
+      "y": 32.4,
+      "end": [
+       118.4,
+       36.5,
+       1.3
+      ],
+      "outcome": "Saved",
+      "result": "saved",
+      "xg": 0.101,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     }
     ]
    },
    "phase": {
@@ -3789,6 +4810,9 @@
   "pairSumEqualsCompleted": true,
   "shotCount": true,
   "shotGoals": true,
+  "shotItemsMatchCount": true,
+  "shotItemsGoals": true,
+  "shotItemsXg": true,
   "scoreMatchesEvents": true,
   "replayOrdered": true,
   "replayEndsWithShot": true,

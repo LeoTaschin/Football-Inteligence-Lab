@@ -1072,9 +1072,573 @@
     "count": 27,
     "goals": 4,
     "xg": 2.77,
+    "xgPerShot": 0.103,
     "xgCoverage": [
      27,
      27
+    ],
+    "items": [
+     {
+      "period": 1,
+      "minute": 3,
+      "second": 38,
+      "playerId": 397630,
+      "name": "Rivellino",
+      "num": 11,
+      "x": 94.9,
+      "y": 60.4,
+      "end": [
+       118.2,
+       39.7,
+       0.4
+      ],
+      "outcome": "Saved",
+      "result": "saved",
+      "xg": 0.009,
+      "shotType": "freeKick",
+      "setPiece": true,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 1,
+      "minute": 4,
+      "second": 33,
+      "playerId": 397629,
+      "name": "Everaldo",
+      "num": 16,
+      "x": 103.0,
+      "y": 22.1,
+      "end": [
+       119.1,
+       36.0,
+       0.6
+      ],
+      "outcome": "Saved",
+      "result": "saved",
+      "xg": 0.022,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 1,
+      "minute": 5,
+      "second": 42,
+      "playerId": 397630,
+      "name": "Rivellino",
+      "num": 11,
+      "x": 94.4,
+      "y": 40.8,
+      "end": [
+       120.0,
+       37.3,
+       7.1
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.069,
+      "shotType": "freeKick",
+      "setPiece": true,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 1,
+      "minute": 17,
+      "second": 59,
+      "playerId": 39712,
+      "name": "Pelé",
+      "num": 10,
+      "x": 111.8,
+      "y": 45.0,
+      "end": [
+       120.0,
+       43.3,
+       1.0
+      ],
+      "outcome": "Goal",
+      "result": "goal",
+      "xg": 0.058,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "head"
+     },
+     {
+      "period": 1,
+      "minute": 19,
+      "second": 14,
+      "playerId": 39708,
+      "name": "Carlos Alberto",
+      "num": 4,
+      "x": 108.0,
+      "y": 64.5,
+      "end": [
+       120.0,
+       56.1,
+       4.4
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.005,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 1,
+      "minute": 27,
+      "second": 39,
+      "playerId": 397630,
+      "name": "Rivellino",
+      "num": 11,
+      "x": 81.3,
+      "y": 42.6,
+      "end": [
+       120.0,
+       37.9,
+       7.8
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.007,
+      "shotType": "freeKick",
+      "setPiece": true,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 1,
+      "minute": 32,
+      "second": 30,
+      "playerId": 397629,
+      "name": "Everaldo",
+      "num": 16,
+      "x": 84.7,
+      "y": 21.1,
+      "end": [
+       103.4,
+       32.5
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.006,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 1,
+      "minute": 33,
+      "second": 48,
+      "playerId": 397637,
+      "name": "Tostão",
+      "num": 9,
+      "x": 108.7,
+      "y": 51.3,
+      "end": [
+       110.6,
+       45.6
+      ],
+      "outcome": "Wayward",
+      "result": "off",
+      "xg": 0.09,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 1,
+      "minute": 34,
+      "second": 22,
+      "playerId": 397630,
+      "name": "Rivellino",
+      "num": 11,
+      "x": 97.6,
+      "y": 51.7,
+      "end": [
+       120.0,
+       33.8,
+       4.2
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.032,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 1,
+      "minute": 42,
+      "second": 9,
+      "playerId": 397621,
+      "name": "Gérson",
+      "num": 8,
+      "x": 91.9,
+      "y": 37.7,
+      "end": [
+       120.0,
+       33.3,
+       0.2
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.03,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 2,
+      "minute": 46,
+      "second": 50,
+      "playerId": 39712,
+      "name": "Pelé",
+      "num": 10,
+      "x": 117.4,
+      "y": 35.4,
+      "end": [
+       120.0,
+       34.0,
+       0.4
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.794,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 2,
+      "minute": 51,
+      "second": 8,
+      "playerId": 397621,
+      "name": "Gérson",
+      "num": 8,
+      "x": 87.0,
+      "y": 46.4,
+      "end": [
+       119.2,
+       43.0,
+       1.6
+      ],
+      "outcome": "Saved",
+      "result": "saved",
+      "xg": 0.023,
+      "shotType": "freeKick",
+      "setPiece": true,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 2,
+      "minute": 52,
+      "second": 47,
+      "playerId": 397621,
+      "name": "Gérson",
+      "num": 8,
+      "x": 103.5,
+      "y": 45.8,
+      "end": [
+       110.0,
+       43.8
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.074,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 2,
+      "minute": 55,
+      "second": 38,
+      "playerId": 397630,
+      "name": "Rivellino",
+      "num": 11,
+      "x": 98.3,
+      "y": 33.1,
+      "end": [
+       120.0,
+       33.6,
+       6.7
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.06,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 2,
+      "minute": 57,
+      "second": 30,
+      "playerId": 39712,
+      "name": "Pelé",
+      "num": 10,
+      "x": 91.6,
+      "y": 31.3,
+      "end": [
+       120.0,
+       48.1,
+       7.6
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.034,
+      "shotType": "freeKick",
+      "setPiece": true,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 59,
+      "second": 19,
+      "playerId": 397630,
+      "name": "Rivellino",
+      "num": 11,
+      "x": 96.3,
+      "y": 36.2,
+      "end": [
+       120.0,
+       42.5,
+       2.9
+      ],
+      "outcome": "Post",
+      "result": "post",
+      "xg": 0.039,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 62,
+      "second": 27,
+      "playerId": 397630,
+      "name": "Rivellino",
+      "num": 11,
+      "x": 99.8,
+      "y": 45.9,
+      "end": [
+       107.3,
+       45.0
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.081,
+      "shotType": "freeKick",
+      "setPiece": true,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 2,
+      "minute": 62,
+      "second": 30,
+      "playerId": 397621,
+      "name": "Gérson",
+      "num": 8,
+      "x": 95.3,
+      "y": 39.4,
+      "end": [
+       101.0,
+       39.5
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.032,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 2,
+      "minute": 64,
+      "second": 38,
+      "playerId": 397637,
+      "name": "Tostão",
+      "num": 9,
+      "x": 115.5,
+      "y": 35.1,
+      "end": [
+       120.0,
+       29.0,
+       1.1
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.198,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "head"
+     },
+     {
+      "period": 2,
+      "minute": 65,
+      "second": 36,
+      "playerId": 397621,
+      "name": "Gérson",
+      "num": 8,
+      "x": 99.6,
+      "y": 31.8,
+      "end": [
+       120.0,
+       43.0,
+       0.9
+      ],
+      "outcome": "Goal",
+      "result": "goal",
+      "xg": 0.069,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 2,
+      "minute": 68,
+      "second": 53,
+      "playerId": 397621,
+      "name": "Gérson",
+      "num": 8,
+      "x": 82.9,
+      "y": 35.1,
+      "end": [
+       120.0,
+       37.4,
+       7.2
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.006,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 2,
+      "minute": 70,
+      "second": 24,
+      "playerId": 397622,
+      "name": "Jairzinho",
+      "num": 7,
+      "x": 118.1,
+      "y": 38.4,
+      "end": [
+       120.0,
+       36.8,
+       0.2
+      ],
+      "outcome": "Goal",
+      "result": "goal",
+      "xg": 0.719,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 72,
+      "second": 3,
+      "playerId": 397620,
+      "name": "Clodoaldo",
+      "num": 5,
+      "x": 95.7,
+      "y": 26.2,
+      "end": [
+       99.5,
+       28.8
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.024,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 72,
+      "second": 16,
+      "playerId": 397621,
+      "name": "Gérson",
+      "num": 8,
+      "x": 100.1,
+      "y": 31.6,
+      "end": [
+       117.5,
+       38.8,
+       1.5
+      ],
+      "outcome": "Saved",
+      "result": "saved",
+      "xg": 0.066,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 2,
+      "minute": 75,
+      "second": 13,
+      "playerId": 39712,
+      "name": "Pelé",
+      "num": 10,
+      "x": 94.9,
+      "y": 25.5,
+      "end": [
+       120.0,
+       46.0,
+       7.4
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.022,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 77,
+      "second": 42,
+      "playerId": 397630,
+      "name": "Rivellino",
+      "num": 11,
+      "x": 105.6,
+      "y": 31.4,
+      "end": [
+       120.0,
+       32.5,
+       0.0
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.172,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 2,
+      "minute": 86,
+      "second": 28,
+      "playerId": 39708,
+      "name": "Carlos Alberto",
+      "num": 4,
+      "x": 107.5,
+      "y": 57.5,
+      "end": [
+       120.0,
+       37.0,
+       0.5
+      ],
+      "outcome": "Goal",
+      "result": "goal",
+      "xg": 0.028,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     }
     ]
    },
    "phase": {
@@ -2319,9 +2883,551 @@
     "count": 26,
     "goals": 1,
     "xg": 1.64,
+    "xgPerShot": 0.063,
     "xgCoverage": [
      26,
      26
+    ],
+    "items": [
+     {
+      "period": 1,
+      "minute": 1,
+      "second": 37,
+      "playerId": 397675,
+      "name": "Riva",
+      "num": 11,
+      "x": 86.1,
+      "y": 43.8,
+      "end": [
+       118.3,
+       41.0,
+       2.0
+      ],
+      "outcome": "Saved",
+      "result": "saved",
+      "xg": 0.015,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 1,
+      "minute": 6,
+      "second": 30,
+      "playerId": 39732,
+      "name": "Mazzola",
+      "num": 15,
+      "x": 97.9,
+      "y": 25.2,
+      "end": [
+       118.2,
+       36.7,
+       1.3
+      ],
+      "outcome": "Saved",
+      "result": "saved",
+      "xg": 0.026,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 1,
+      "minute": 11,
+      "second": 31,
+      "playerId": 397675,
+      "name": "Riva",
+      "num": 11,
+      "x": 111.8,
+      "y": 19.4,
+      "end": [
+       118.5,
+       37.6,
+       0.2
+      ],
+      "outcome": "Saved",
+      "result": "saved",
+      "xg": 0.01,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 1,
+      "minute": 14,
+      "second": 55,
+      "playerId": 39732,
+      "name": "Mazzola",
+      "num": 15,
+      "x": 102.9,
+      "y": 25.7,
+      "end": [
+       106.3,
+       28.8
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.03,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 1,
+      "minute": 15,
+      "second": 41,
+      "playerId": 397675,
+      "name": "Riva",
+      "num": 11,
+      "x": 110.3,
+      "y": 45.7,
+      "end": [
+       120.0,
+       43.0,
+       3.6
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.109,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "head"
+     },
+     {
+      "period": 1,
+      "minute": 18,
+      "second": 46,
+      "playerId": 397674,
+      "name": "Domenghini",
+      "num": 13,
+      "x": 108.6,
+      "y": 60.7,
+      "end": [
+       119.1,
+       43.6,
+       0.2
+      ],
+      "outcome": "Saved",
+      "result": "saved",
+      "xg": 0.007,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 1,
+      "minute": 25,
+      "second": 49,
+      "playerId": 397674,
+      "name": "Domenghini",
+      "num": 13,
+      "x": 80.0,
+      "y": 36.8,
+      "end": [
+       85.9,
+       37.0
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.006,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 1,
+      "minute": 29,
+      "second": 26,
+      "playerId": 397675,
+      "name": "Riva",
+      "num": 11,
+      "x": 95.8,
+      "y": 41.4,
+      "end": [
+       105.0,
+       39.8
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.038,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 1,
+      "minute": 29,
+      "second": 29,
+      "playerId": 397674,
+      "name": "Domenghini",
+      "num": 13,
+      "x": 98.7,
+      "y": 44.8,
+      "end": [
+       120.0,
+       46.0,
+       2.4
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.045,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 1,
+      "minute": 30,
+      "second": 43,
+      "playerId": 39717,
+      "name": "Boninsegna",
+      "num": 20,
+      "x": 94.3,
+      "y": 40.0,
+      "end": [
+       120.0,
+       46.4,
+       0.2
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.045,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 1,
+      "minute": 31,
+      "second": 25,
+      "playerId": 39732,
+      "name": "Mazzola",
+      "num": 15,
+      "x": 111.3,
+      "y": 25.2,
+      "end": [
+       112.0,
+       26.3
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.019,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 1,
+      "minute": 35,
+      "second": 8,
+      "playerId": 397675,
+      "name": "Riva",
+      "num": 11,
+      "x": 83.5,
+      "y": 34.7,
+      "end": [
+       120.0,
+       48.4,
+       0.2
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.007,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 1,
+      "minute": 36,
+      "second": 59,
+      "playerId": 39717,
+      "name": "Boninsegna",
+      "num": 20,
+      "x": 99.8,
+      "y": 33.7,
+      "end": [
+       120.0,
+       41.1,
+       0.2
+      ],
+      "outcome": "Goal",
+      "result": "goal",
+      "xg": 0.718,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 1,
+      "minute": 43,
+      "second": 4,
+      "playerId": 397674,
+      "name": "Domenghini",
+      "num": 13,
+      "x": 92.7,
+      "y": 49.3,
+      "end": [
+       116.8,
+       40.4,
+       1.5
+      ],
+      "outcome": "Saved",
+      "result": "saved",
+      "xg": 0.034,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 2,
+      "minute": 53,
+      "second": 6,
+      "playerId": 397674,
+      "name": "Domenghini",
+      "num": 13,
+      "x": 105.4,
+      "y": 56.0,
+      "end": [
+       108.0,
+       52.7
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.037,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 53,
+      "second": 29,
+      "playerId": 39715,
+      "name": "Burgnich",
+      "num": 2,
+      "x": 106.4,
+      "y": 35.6,
+      "end": [
+       120.0,
+       46.2,
+       1.4
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.035,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "head"
+     },
+     {
+      "period": 2,
+      "minute": 56,
+      "second": 6,
+      "playerId": 39732,
+      "name": "Mazzola",
+      "num": 15,
+      "x": 102.8,
+      "y": 53.0,
+      "end": [
+       120.0,
+       39.3,
+       6.4
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.055,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 63,
+      "second": 23,
+      "playerId": 397675,
+      "name": "Riva",
+      "num": 11,
+      "x": 117.4,
+      "y": 47.7,
+      "end": [
+       117.9,
+       46.7
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.07,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "head"
+     },
+     {
+      "period": 2,
+      "minute": 63,
+      "second": 52,
+      "playerId": 39732,
+      "name": "Mazzola",
+      "num": 15,
+      "x": 106.8,
+      "y": 44.8,
+      "end": [
+       118.4,
+       37.8,
+       1.4
+      ],
+      "outcome": "Saved",
+      "result": "saved",
+      "xg": 0.043,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "head"
+     },
+     {
+      "period": 2,
+      "minute": 66,
+      "second": 48,
+      "playerId": 397674,
+      "name": "Domenghini",
+      "num": 13,
+      "x": 106.3,
+      "y": 78.0,
+      "end": [
+       120.0,
+       51.6,
+       1.0
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.008,
+      "shotType": "freeKick",
+      "setPiece": true,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 78,
+      "second": 23,
+      "playerId": 39717,
+      "name": "Boninsegna",
+      "num": 20,
+      "x": 99.2,
+      "y": 43.2,
+      "end": [
+       115.0,
+       39.6,
+       0.2
+      ],
+      "outcome": "Saved",
+      "result": "saved",
+      "xg": 0.084,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 2,
+      "minute": 80,
+      "second": 12,
+      "playerId": 397674,
+      "name": "Domenghini",
+      "num": 13,
+      "x": 104.4,
+      "y": 31.7,
+      "end": [
+       105.7,
+       32.3
+      ],
+      "outcome": "Blocked",
+      "result": "blocked",
+      "xg": 0.056,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 2,
+      "minute": 80,
+      "second": 15,
+      "playerId": 397674,
+      "name": "Domenghini",
+      "num": 13,
+      "x": 109.1,
+      "y": 19.9,
+      "end": [
+       120.0,
+       34.9,
+       6.0
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.008,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "leftFoot"
+     },
+     {
+      "period": 2,
+      "minute": 85,
+      "second": 6,
+      "playerId": 397674,
+      "name": "Domenghini",
+      "num": 13,
+      "x": 103.2,
+      "y": 29.3,
+      "end": [
+       120.0,
+       32.4,
+       0.0
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.068,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 87,
+      "second": 40,
+      "playerId": 397676,
+      "name": "Rivera",
+      "num": 14,
+      "x": 91.7,
+      "y": 49.4,
+      "end": [
+       117.1,
+       39.1,
+       0.0
+      ],
+      "outcome": "Saved",
+      "result": "saved",
+      "xg": 0.025,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     },
+     {
+      "period": 2,
+      "minute": 90,
+      "second": 5,
+      "playerId": 397677,
+      "name": "Juliano",
+      "num": 18,
+      "x": 99.6,
+      "y": 51.0,
+      "end": [
+       120.0,
+       46.4,
+       5.3
+      ],
+      "outcome": "Off T",
+      "result": "off",
+      "xg": 0.039,
+      "shotType": "openPlay",
+      "setPiece": false,
+      "bodyPart": "rightFoot"
+     }
     ]
    },
    "phase": {
@@ -3334,6 +4440,9 @@
   "pairSumEqualsCompleted": true,
   "shotCount": true,
   "shotGoals": true,
+  "shotItemsMatchCount": true,
+  "shotItemsGoals": true,
+  "shotItemsXg": true,
   "scoreMatchesEvents": true,
   "replayOrdered": true,
   "replayEndsWithShot": true,

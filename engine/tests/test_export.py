@@ -98,6 +98,20 @@ def test_replay_starts_after_opponent_touch(all_matches):
 
 
 @pytest.mark.regression
+def test_final_shot_map_matches_design(all_matches):
+    brazil, italy = all_matches[-1]["teams"]
+    assert (brazil["shots"]["count"], len(brazil["shots"]["items"]), italy["shots"]["count"]) == (27, 27, 26)
+
+    goals = {s["name"]: s["xg"] for s in brazil["shots"]["items"] if s["result"] == "goal"}
+    assert goals == {"Pelé": 0.058, "Gérson": 0.069, "Jairzinho": 0.719, "Carlos Alberto": 0.028}
+
+    every = brazil["shots"]["items"] + italy["shots"]["items"]
+    best = max(every, key=lambda s: s["xg"])
+    assert (best["name"], best["minute"], best["xg"], best["result"]) == ("Pelé", 46, 0.794, "off")
+    assert min(s["x"] for s in every) >= 80  # half a pitch is enough to draw them
+
+
+@pytest.mark.regression
 def test_campaign_matches_design(cfg, all_matches):
     design = json.loads((FIXTURES / "campaign_design.json").read_text(encoding="utf-8"))
     c = export.build_collection(cfg, all_matches)
