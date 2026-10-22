@@ -1,6 +1,13 @@
-# Etapa 2 — Aprofundar (em pausa)
+# Etapa 2 — Aprofundar (em andamento)
 
-**Status (21/10/2026):** design proposto, **nenhuma decisão tomada e nenhum código escrito**. Pausado para publicar o post da Etapa 1 primeiro. Ao retomar, comece pelas [decisões em aberto](#decisões-em-aberto).
+**Status (22/10/2026):** retomada. As 4 decisões foram tomadas (ver [Decisões](#decisões-22102026)); a implementação começa pela branch `engine/shot-map`.
+
+## Decisões (22/10/2026)
+
+1. **Recortes: filtro combinável.** Período (*partida inteira* / *até a 1ª substituição*) × *só jogo aberto* (liga/desliga) = **4 redes por equipe** em cada partida. O design de 3 botões exclusivos precisa ser ajustado para um seletor + um interruptor.
+2. **Finalizações: meio campo vertical por equipe**, como no design.
+3. **Página do jogador: Brasil e adversários.** Todo jogador com nó em alguma partida da coleção ganha página; adversários terão um único jogo (a página mostra só o que existe, com aviso de amostra pequena).
+4. **Post: sem imagem do shot map por enquanto.**
 
 ## Design
 
@@ -33,10 +40,7 @@ Todos os números do design vêm do engine (dados reais), nenhum foi escrito à 
 
 ## Decisões em aberto
 
-1. **Recortes:** três botões exclusivos (como no design) ou "só jogo aberto" como filtro combinável com os outros dois (4 redes por partida)?
-2. **Finalizações:** meio campo vertical por equipe (design) ou campo inteiro horizontal com as duas equipes atacando em sentidos opostos?
-3. **Página do jogador:** para todos os jogadores do Brasil ou só com um mínimo de jogos/passes? (E para os adversários?)
-4. **Post:** gerar uma segunda imagem do post com o shot map?
+Nenhuma: resolvidas em 22/10/2026 (ver topo).
 
 ## Notas técnicas para a implementação
 
