@@ -252,6 +252,9 @@ Regras já definidas no plano do projeto: um marcador por `Shot`, área proporci
 - **xG:** `null` quando o StatsBomb não informa (nunca 0). `xgPerShot` = soma de xG ÷ chutes **com** xG (`null` se nenhum tiver).
 - **Sem localização:** o chute continua na contagem com `x`/`y` nulos (o site não desenha e avisa). Nos 6 jogos de 1970 todos têm localização e xG.
 - **Coordenadas:** referencial da própria equipe (ataca para x = 120), como todo o resto.
+- **Distância (`distance`):** do ponto do chute ao centro do gol (120, 40), em metros, 1 casa.
+- **Maiores chances (`top`):** índices em `items` dos 5 chutes de maior xG (empate: o mais cedo primeiro); chute sem xG não entra.
+- **Profundidade do campo (`scale.shotsFromX`):** o site desenha o campo de `shotsFromX` até x = 120. Vale 60 (meio campo) e só recua, em passos de 5 jardas, quando algum chute da partida sai de trás do meio (ex.: Pelé, x = 45,9, na semifinal).
 
 ---
 
@@ -379,10 +382,11 @@ Links do post do LinkedIn apontam para `/pnsm/1970` ou direto para uma partida.
 - Breadcrumb + navegação jogo anterior/seguinte.
 - Cabeçalho: fase, data, estádio (quando disponível), placar, achado gerado.
 - Barra de controles: mínimo de passes (3+, 5+, 8+) + legenda.
-- **Abas** (Etapa 1: as três):
+- **Abas** (Etapa 1: as três primeiras; Etapa 2: Finalizações):
   1. **Rede de passes** — dois campos horizontais lado a lado (cada equipe ataca para a direita), linhas não dirigidas; clique num jogador → setas dirigidas, demais esmaecidos, painel do jogador (passes dados, recebidos, % do time, top 5 "passou para" e "recebeu de", aviso de substituição).
   2. **Com bola × sem bola** — animação entre as duas formações (ver 5.6), botões Com bola / Sem bola / Animar, linha da altura média, painel com deslocamentos.
   3. **Gols** — lista dos gols da partida; selecionar um abre o replay (ver 5.7) com play/pause, recomeçar, velocidade 0,5×/1×/2×, linha do tempo arrastável e lista de passos clicável.
+  4. **Finalizações** — meio campo vertical por equipe (ataca para cima; recua até `scale.shotsFromX`), área ∝ xG, marcador por resultado, bola parada em quadrado; filtros Todos / Só jogo aberto / Só gols; números por equipe; detalhe do chute (xG, parte do corpo, tipo, distância); "Maiores chances" (`shots.top`). Chute selecionado na URL (`?aba=finalizacoes&chute=1-27`).
 - Top 10 combinações de cada equipe.
 - Rodapé com metodologia resumida e atribuição.
 
