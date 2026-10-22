@@ -42,3 +42,14 @@ Seis slides (finalizações, só jogo aberto, Itália até a 1ª substituição,
 Saída: `etapa2_slide_1.png` … `etapa2_slide_6.png` e `carrossel_PNSM_etapa2.pdf`. Os desenhos comuns aos dois carrosséis (cabeçalho, rodapé, quebra de texto) ficam em `layout.py`.
 
 > `capture.py` (Etapa 1) supõe as duas redes lado a lado da tela antiga da Partida; desde a Etapa 2 a rede mostra uma equipe por vez, então ele precisa ser atualizado antes de regerar o carrossel da Etapa 1.
+
+## Instagram: o xG da campanha
+
+Carrossel de 7 slides (1080×1350) sobre os 19 gols com 14,75 de xG. Os gráficos são desenhados a partir dos JSONs do motor (`site/public/data`); o mapa de chutes da final vem da captura do site (`shots_goal.png`, gerado por `capture_etapa2.py`):
+
+```bash
+.venv-carrossel/bin/python tools/carrossel/instagram_xg.py site/public/data engine/outputs/carrossel/raw2 \
+    engine/.cache/fonts engine/outputs/carrossel/instagram
+```
+
+Cores: verde `#009C3B` (gol improvável, xG < 10%) e cinza `#8A8A93` (chance mais clara), par validado para daltonismo e contraste; toda barra e todo ponto têm rótulo ou legenda.
