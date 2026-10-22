@@ -10,6 +10,8 @@ from dataclasses import dataclass
 
 import pandas as pd
 
+YARDS_TO_METERS = 0.9144
+
 
 def network_nodes(passes: pd.DataFrame) -> pd.DataFrame:
     """One row per player (index ``player_id``) with ``x``, ``y``, ``passes``, ``received``, ``position_from``.
@@ -57,7 +59,6 @@ def pair_totals(edges: pd.DataFrame) -> pd.DataFrame:
     return pairs.sort_values(["n", "forward", "first_id", "second_id"], ascending=[False, False, True, True]).reset_index(drop=True)
 
 
-YARDS_TO_METERS = 0.9144
 MIN_PASSES_FOR_SHIFT = 5  # a median from fewer passes moves too easily to be a finding
 
 
@@ -147,6 +148,32 @@ def shot_list(shots: pd.DataFrame) -> pd.DataFrame:
     out["set_piece"] = out.shot_type != "Open Play"
     out["body_part_code"] = out.body_part.map(lambda b: BODY_PARTS.get(b, "other"))
     return out
+
+
+GOAL_POSTS = (36.0, 44.0)  # y of the posts, yards
+CROSSBAR = 2.67  # height of the bar, yards
+
+
+def shot_finish(result: str, x: float, y: float, end_x: float | None, end_y: float | None, end_z: float | None) -> dict:
+    """Where the ball ended (CLAUDE.md 5.8, "Desfecho"), in metres, from ``shot.end_location``."""
+    m = lambda yd: round(yd * YARDS_TO_METERS, 1)
+    height = None if end_z is None or pd.isna(end_z) else m(end_z)
+    if result in ("goal", "saved"):
+        return {"kind": result, "height": height}
+    if result == "post":
+        return {"kind": "post"}
+    if result == "blocked":
+        reached = end_x is not None and not pd.isna(end_x)
+        return {"kind": "blocked", "blockedAfter": m(((end_x - x) ** 2 + (end_y - y) ** 2) ** 0.5) if reached else None}
+    if result == "off":
+        if height is None:
+            return {"kind": "short"}
+        low, high = GOAL_POSTS
+        if low <= end_y <= high:
+            return {"kind": "over", "height": height, "wideBy": None}
+        wide_by = m(low - end_y if end_y < low else end_y - high)
+        return {"kind": "overWide" if end_z > CROSSBAR else "wide", "height": height, "wideBy": wide_by}
+    return {"kind": "other"}
 
 
 @dataclass(frozen=True)

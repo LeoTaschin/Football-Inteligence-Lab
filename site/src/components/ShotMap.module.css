@@ -1,6 +1,13 @@
-/* the centre circle and markers stop at the pitch box */
+/* the centre circle and icons stop at the pitch box */
 .map {
   overflow: hidden;
+}
+
+.halo {
+  stroke-width: 1px;
+  vector-effect: non-scaling-stroke;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
 }
 
 .shot {
@@ -16,11 +23,12 @@
 .shot:hover .hit,
 .shot:focus-visible .hit {
   fill: none;
-  stroke: var(--text);
+  stroke: var(--text-faint);
   stroke-width: 2px;
   vector-effect: non-scaling-stroke;
 }
 .shot:focus-visible .hit {
+  stroke: var(--text);
   stroke-dasharray: 3 2;
 }
 
@@ -29,6 +37,39 @@
   stroke: var(--text);
   stroke-width: 2px;
   vector-effect: non-scaling-stroke;
+}
+
+.path,
+.pathLine {
+  pointer-events: none;
+}
+
+.pathLine {
+  stroke-width: 2px;
+  stroke-dasharray: 6 4;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.pathEnd {
+  stroke-width: 2px;
+  vector-effect: non-scaling-stroke;
+}
+
+.pathLabel {
+  fill: #ffffff;
+  font-weight: 700;
+  paint-order: stroke;
+  stroke: var(--text);
+  stroke-width: 4px;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.iconSvg {
+  display: block;
+  flex: none;
+  overflow: visible;
 }
 
 .spot {

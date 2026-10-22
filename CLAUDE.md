@@ -254,6 +254,13 @@ Regras já definidas no plano do projeto: um marcador por `Shot`, área proporci
 - **Coordenadas:** referencial da própria equipe (ataca para x = 120), como todo o resto.
 - **Distância (`distance`):** do ponto do chute ao centro do gol (120, 40), em metros, 1 casa.
 - **Maiores chances (`top`):** índices em `items` dos 5 chutes de maior xG (empate: o mais cedo primeiro); chute sem xG não entra.
+- **Desfecho (`finish`):** onde a bola terminou, a partir de `shot.end_location` (x, y, z), para o caminho da bola e a frase do cartão. Gol: trave de y = 36 a 44, travessão a z = 2,67 jardas.
+  - `goal` / `saved`: `height` = z em metros (`null` sem z);
+  - `post`: só o tipo;
+  - `blocked`: `blockedAfter` = distância do ponto do chute ao ponto final (o local do bloqueio), em metros;
+  - para fora com z: `over` (entre as traves, por cima), `wide` (fora das traves, abaixo do travessão) ou `overWide` (fora das traves e acima), com `height` e `wideBy` (metros além da trave mais próxima; `null` em `over`);
+  - para fora sem z (a bola não chegou à linha do gol, ex.: `Wayward`): `short`;
+  - qualquer outro: `other`.
 - **Profundidade do campo (`scale.shotsFromX`):** o site desenha o campo de `shotsFromX` até x = 120. Vale 60 (meio campo) e só recua, em passos de 5 jardas, quando algum chute da partida sai de trás do meio (ex.: Pelé, x = 45,9, na semifinal).
 
 
@@ -399,7 +406,7 @@ Links do post do LinkedIn apontam para `/pnsm/1970` ou direto para uma partida.
   1. **Rede de passes** — uma equipe por vez (seletor Brasil / adversário), campo horizontal à esquerda e painel à direita (Etapa 2). Controles: período (*Partida inteira* / *Até a 1ª substituição*) × interruptor *Só jogo aberto* (5.9) e mínimo por dupla. Linhas não dirigidas; clique num jogador → setas dirigidas, demais esmaecidos. Painel: total de passes do recorte, aviso do recorte (gerado dos fatos exportados), cartão do jogador (passes dados, recebidos, % do time, top 5 "passou para" e "recebeu de", aviso de substituição) e "Duplas mais usadas" (top 5, clicáveis). Estado na URL (`?equipe=2&periodo=1sub&aberto=1&jogador=…&min=5`).
   2. **Com bola × sem bola** — animação entre as duas formações (ver 5.6), botões Com bola / Sem bola / Animar, linha da altura média, painel com deslocamentos.
   3. **Gols** — lista dos gols da partida; selecionar um abre o replay (ver 5.7) com play/pause, recomeçar, velocidade 0,5×/1×/2×, linha do tempo arrastável e lista de passos clicável.
-  4. **Finalizações** — meio campo vertical por equipe (ataca para cima; recua até `scale.shotsFromX`), área ∝ xG, marcador por resultado, bola parada em quadrado; filtros Todos / Só jogo aberto / Só gols; números por equipe; detalhe do chute (xG, parte do corpo, tipo, distância); "Maiores chances" (`shots.top`). Chute selecionado na URL (`?aba=finalizacoes&chute=1-27`).
+  4. **Finalizações** — uma equipe por vez (mesmo seletor da Rede), meio campo vertical à esquerda (ataca para cima; recua até `scale.shotsFromX`) e painel à direita. Um ícone por chute conforme o resultado (gol, defendido, trave, bloqueado, para fora; selo F/P/E em bola parada) e um halo com área ∝ xG. Filtros Todos / Só jogo aberto / Só gols. Clique num chute → tracejado reto do ponto do chute ao ponto final (`end`), com marcador e rótulo; painel com xG, parte do corpo, tipo, distância, vista frontal do gol (onde cruzou a linha) e a frase do desfecho (`finish`). "Maiores chances" (`shots.top`). Estado na URL (`?aba=finalizacoes&equipe=2&chute=2-13`).
 - Top 10 combinações de cada equipe.
 - Rodapé com metodologia resumida e atribuição.
 

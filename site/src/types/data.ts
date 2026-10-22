@@ -167,7 +167,18 @@ export interface Shot {
   shotType: "openPlay" | "freeKick" | "penalty" | "corner" | "kickOff" | "other";
   setPiece: boolean;
   bodyPart: "rightFoot" | "leftFoot" | "head" | "other";
+  /** where the ball ended (CLAUDE.md 5.8), metres */
+  finish: ShotFinish;
 }
+
+export type ShotFinish =
+  | { kind: "goal" | "saved"; height: number | null }
+  | { kind: "post" }
+  | { kind: "blocked"; blockedAfter: number | null }
+  | { kind: "over"; height: number; wideBy: null }
+  | { kind: "wide" | "overWide"; height: number; wideBy: number }
+  | { kind: "short" }
+  | { kind: "other" };
 
 export interface GoalSegment {
   t: number;

@@ -238,6 +238,8 @@ def _shot_items(shot_rows: pd.DataFrame, players: dict[int, names.Player]) -> li
             "xg": _opt(s.xg, 3),
             "shotType": s.shot_type_code, "setPiece": bool(s.set_piece),
             "bodyPart": s.body_part_code,
+            "finish": metrics.shot_finish(s.result, s.x, s.y, None if pd.isna(s.end_x) else s.end_x,
+                                          None if pd.isna(s.end_y) else s.end_y, None if pd.isna(s.end_z) else s.end_z),
         })
     return items
 

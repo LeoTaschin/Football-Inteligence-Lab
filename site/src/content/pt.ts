@@ -1,3 +1,5 @@
+import type { ShotFinish } from "../types/data";
+
 // Interface copy (pt-BR). Every user-visible string lives here so an English
 // version only needs a second file with the same shape.
 
@@ -333,22 +335,16 @@ export const methodology = {
 };
 
 export const shots = {
-  summary: (teams: { article: "o" | "a"; name: string; xg: string; count: number; goals: number }[]) =>
-    capitalize(
-      teams
-        .map((t, i) =>
-          i === 0
-            ? `${withArticle(t.article, t.name)} somou ${t.xg} de xG em ${t.count} chutes, e ${t.goals} ${t.goals === 1 ? "virou" : "viraram"} gol`
-            : `${withArticle(t.article, t.name)}, ${t.xg} em ${t.count}, e ${t.goals} ${t.goals === 1 ? "virou" : "viraram"} gol`,
-        )
-        .join("; ") + ".",
-    ),
+  title: (article: "o" | "a", team: string) => `Finalizações ${ofTeam(article, team)}`,
+  teamLabel: "Equipe",
   filterLabel: "Filtrar chutes",
   show: "Mostrar",
-  filters: { all: "Todos os chutes", open: "Só jogo aberto", goals: "Só gols" },
+  filters: { all: "Todos", open: "Só jogo aberto", goals: "Só gols" },
   legendLabel: "Legenda",
-  legend: { goal: "Gol", saved: "Defendido", post: "Na trave", blocked: "Bloqueado", off: "Para fora", setPiece: "Bola parada" },
-  attackUp: "ataca para cima ↑",
+  legend: { goal: "Gol", saved: "Defendido", post: "Na trave", blocked: "Bloqueado", off: "Para fora", setPiece: "Bola parada", halo: "Halo = xG (área proporcional)" },
+  // badge on set-piece icons
+  badge: { freeKick: "F", penalty: "P", corner: "E", kickOff: "S" } as Record<string, string>,
+  attackUp: (article: "o" | "a", team: string) => `ATAQUE ${ofTeam(article, team).toUpperCase()} ↑`,
   pitchLabel: (article: "o" | "a", team: string) => `Finalizações ${ofTeam(article, team)}`,
   // StatsBomb shot.outcome → text; unknown names fall back to the result group
   outcome: {
@@ -359,17 +355,32 @@ export const shots = {
   body: { rightFoot: "Pé direito", leftFoot: "Pé esquerdo", head: "Cabeça", other: "Outra" },
   type: { openPlay: "Jogo aberto", freeKick: "Falta", penalty: "Pênalti", corner: "Escanteio", kickOff: "Saída de bola", other: "Outro" },
   shotAria: (minute: number, name: string, outcome: string, xg: string) => `${minute}′, ${name}, ${outcome}, xG ${xg}`,
-  stats: { count: "chutes", goals: "gols", xg: "xG total", xgPerShot: "xG por chute", coverage: "com xG" },
-  detail: { xg: "xG da chance", body: "parte do corpo", type: "tipo", distance: "do gol", noXg: "sem xG" },
+  summaryXg: (xg: string) => `${xg} xG`,
+  summary: (p: { count: number; goals: number; perShot: string | null; withXg: number }) =>
+    `em ${p.count} chutes; ${p.goals} ${p.goals === 1 ? "virou" : "viraram"} gol.${p.perShot ? ` ${p.perShot} de xG por chute,` : ""} ${p.withXg}/${p.count} com xG.`,
+  detail: { xg: "xG", body: "parte do corpo", type: "tipo", distance: "do gol", noXg: "sem xG" },
   meters: (m: number) => `${Math.round(m)} m`,
-  hint: "Clique num chute, no campo ou na lista de maiores chances, para ver os detalhes.",
+  // where the ball ended (engine `finish`); numbers already in metres
+  finish: (f: ShotFinish, dec: (n: number) => string): string => {
+    switch (f.kind) {
+      case "goal": return f.height === null ? "Gol." : `Entrou a ${dec(f.height)} m do chão.`;
+      case "saved": return f.height === null ? "O goleiro defendeu." : `O goleiro defendeu a ${dec(f.height)} m do chão.`;
+      case "post": return "Bateu na trave.";
+      case "blocked": return f.blockedAfter === null ? "Bloqueado." : `Bloqueado a ${Math.round(f.blockedAfter)} m de onde saiu o chute.`;
+      case "over": return `Por cima do travessão, a ${dec(f.height)} m do chão.`;
+      case "overWide": return `Por cima e ao lado: ${dec(f.wideBy)} m para fora da trave, a ${dec(f.height)} m do chão.`;
+      case "wide": return `Ao lado: ${dec(f.wideBy)} m para fora da trave.`;
+      case "short": return "Sem direção: a bola não chegou à linha do gol.";
+      default: return "";
+    }
+  },
+  endLabel: { goal: "gol", saved: "defesa", post: "trave", blocked: "bloqueio", over: "linha de fundo", wide: "linha de fundo", overWide: "linha de fundo", short: "parou aqui", other: "" } as Record<ShotFinish["kind"], string>,
+  frameCaption: "Onde a bola cruzou a linha do gol, vista de trás de quem chutou.",
+  hint: "Clique num chute para ver de onde ele saiu, o caminho da bola (tracejado) e onde ela parou: na linha do gol, no bloqueio ou fora.",
   topTitle: "Maiores chances",
-  topLegend: "ordenadas por xG · clique para destacar no campo",
-  sizeTitle: "Tamanho = xG",
-  sizeNote: "A área do marcador é proporcional ao xG.",
   noLocation: (n: number) => `${n} ${n === 1 ? "chute sem localização não aparece" : "chutes sem localização não aparecem"} no campo.`,
   footer:
-    "Um marcador por chute (evento Shot), 1º e 2º tempos, no lugar de onde saiu a finalização. xG do StatsBomb: a chance estimada de gol antes do chute; a soma não é o número de gols que “deveria” ter acontecido. Chute sem xG continua no mapa e entra na cobertura, nunca vira zero. Gols contra não são chutes e não aparecem. Os eventos de 1970 vêm de vídeo da época: localização e xG têm mais incerteza.",
+    "Um ícone por chute (evento Shot), 1º e 2º tempos, no lugar de onde saiu a finalização; o ícone mostra o resultado e o halo, a chance (xG do StatsBomb, área proporcional). O tracejado liga o ponto do chute ao ponto final registrado: a linha do gol, o lugar do bloqueio ou onde a bola parou; é uma linha reta, não a curva real da bola. Chute sem xG continua no mapa, nunca vira zero. Gols contra não são chutes e não aparecem. Os eventos de 1970 vêm de vídeo da época: localização e xG têm mais incerteza.",
 };
 
 // "Só jogo aberto": what was removed, by StatsBomb pass.type, most first
