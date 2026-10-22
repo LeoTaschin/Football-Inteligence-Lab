@@ -42,6 +42,7 @@ with sync_playwright() as p:
     page = browser.new_page(viewport={"width": 1280, "height": 1000}, device_scale_factor=2)
 
     tab(page, f"{FINAL}?aba=finalizacoes&chute={PELE_46}", "shots")
+    tab(page, f"{FINAL}?aba=finalizacoes", "shots_goal")  # default: Carlos Alberto's goal selected
     tab(page, f"{FINAL}?aberto=1&jogador={RIVELLINO}", "open_play")
     tab(page, f"{FINAL}?equipe=2&periodo=1sub", "italy_first_sub")
 
