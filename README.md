@@ -4,9 +4,16 @@
 
 Projetos de dados aplicados ao futebol, por [Leonardo Taschin](https://br.linkedin.com/in/leonardo-taschin). Cada projeto parte de uma pergunta de futebol, usa dados reais, documenta método e limitações e termina numa ferramenta interativa.
 
-**Projeto 01 · PNSM (Passing Network + Shot Map):** como o Brasil de 1970 trocava a bola. Redes de passes dos seis jogos da campanha do tri, com seleção de jogador, posições com e sem bola e replay dos gols.
+**Projeto 01 · PNSM (Passing Network + Shot Map):** como o Brasil de 1970 trocava a bola e finalizava. Nos seis jogos da campanha do tri:
 
-> *EN: A football analytics portfolio. Project 01 builds interactive pass networks, on/off-ball shapes and goal replays for Brazil's 1970 World Cup run from StatsBomb Open Data.*
+- **Rede de passes**, uma equipe por vez, com seleção de jogador e recortes (partida inteira ou até a 1ª substituição, com ou sem bola parada);
+- **Finalizações**: cada chute com o resultado, o xG, o caminho da bola e onde ela cruzou a linha do gol;
+- **Com bola × sem bola** e **replay dos gols** passe a passe;
+- **Jogadores**: uma página para cada um dos 93 (Brasil e adversários) e a lista por equipe.
+
+**Próximo:** Projeto 02, um modelo de xG próprio.
+
+> *EN: A football analytics portfolio. Project 01 builds interactive pass networks (with cuts), shot maps, on/off-ball shapes, goal replays and player pages for Brazil's 1970 World Cup run from StatsBomb Open Data. Next: a home-made xG model.*
 
 ## Como funciona
 

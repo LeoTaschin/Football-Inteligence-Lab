@@ -3,9 +3,9 @@
 Especificação do produto e guia de desenvolvimento. Este arquivo fica na raiz do repositório para o Claude Code ler automaticamente.
 
 - **Autor:** Leonardo Taschin (FIAP, São Paulo)
-- **Versão:** 21/10/2026
-- **Escopo atual:** Etapa 1 — colocar no ar o Projeto 01 (PNSM) com a campanha do Brasil na Copa de 1970
-- **Design de referência:** canvas "F.I.L Passing Network" no Claude (https://claude.ai/artifact/Xbg6HqKREbgp8iwGkpKdNF), com as telas Home, Campanha 1970, Partida, Metodologia, Post do LinkedIn, Replay do 4º gol e Com bola × sem bola
+- **Versão:** 22/10/2026
+- **Estado:** Projeto 01 (PNSM) no ar com as Etapas 1 e 2 concluídas (campanha do Brasil na Copa de 1970). **Próximo:** Projeto 02 (modelo de xG próprio), a planejar depois dos estudos do autor — ver `docs/projeto-02-xg.md`.
+- **Design de referência:** canvas "F.I.L Passing Network" no Claude (https://claude.ai/artifact/Xbg6HqKREbgp8iwGkpKdNF), com as telas Home, Campanha 1970, Partida, Metodologia, Post do LinkedIn, Replay do 4º gol e Com bola × sem bola (Etapa 1) e Rede de passes, Finalizações, Jogador e Jogadores no padrão "uma seleção" (Etapa 2). Telas novas são desenhadas e aprovadas no canvas antes do código.
 
 ---
 
@@ -24,14 +24,14 @@ Posicionamento: Engenharia de Software + Data Science + IA + Futebol. O diferenc
 
 | # | Projeto | Status |
 |---|---------|--------|
-| 01 | PNSM — Passing Network + Shot Map | **Em desenvolvimento (este repositório)** |
-| 02 | Expected Goals (xG) | Em breve |
+| 01 | PNSM — Passing Network + Shot Map | **No ar** (Etapas 1 e 2; este repositório) |
+| 02 | Expected Goals (xG) | **Próximo** — planejamento após os estudos (`docs/projeto-02-xg.md`) |
 | 03 | Expected Threat (xT) + progressão | Em breve |
 | 04 | Player Similarity & Replacement Engine | Em breve |
 | 05 | Tracking + Pitch Control | Em breve |
 | 06 | AI Video Football Analysis | Em breve |
 
-O site é a casa de todos eles. Na Etapa 1 só o 01 está ativo; os outros aparecem na Home como "Em breve".
+O site é a casa de todos eles. Hoje só o 01 está ativo; os outros aparecem na Home como "Em breve".
 
 ---
 
@@ -83,6 +83,7 @@ fil/
 │   │   ├── transform.py       # tabelas tipadas de passes, chutes, ações defensivas
 │   │   ├── metrics.py         # nós, conexões, combinações, totais, fases
 │   │   ├── sequences.py       # sequências de gols para o replay
+│   │   ├── players.py         # páginas de jogador (5.10)
 │   │   ├── labels.py          # posicionamento automático de rótulos
 │   │   ├── validate.py        # checagens de consistência
 │   │   ├── export.py          # escreve os JSONs do site
@@ -104,8 +105,10 @@ fil/
 │       ├── lib/               # geometria, formatação
 │       ├── styles/tokens.css
 │       └── types/data.ts      # tipos espelhando o schema JSON
-├── docs/etapa-2.md          # estado da Etapa 2: design, achados, decisões em aberto
-├── tools/carrossel/         # imagens do LinkedIn a partir das telas do site (Playwright + Pillow)
+├── docs/
+│   ├── etapa-2.md           # Etapa 2: decisões, entregas e o que mudou
+│   └── projeto-02-xg.md     # ponto de partida do Projeto 02 (xG próprio)
+├── tools/carrossel/         # imagens de divulgação (LinkedIn, Instagram) a partir das telas e dos JSONs (Playwright + Pillow)
 └── .github/workflows/
     └── ci.yml                 # testes do engine, dados em dia, testes e build do site
 ```
@@ -592,7 +595,7 @@ output_dir: ../../site/public/data  # relative to this file
 
 ## 10. Roadmap do produto
 
-### Etapa 1 — PNSM no ar (atual)
+### Etapa 1 — PNSM no ar (concluída)
 
 1. **Engine: dados e regras** — `load`, `transform`, `metrics` para uma partida; testes unitários. *Pronto quando:* os valores de regressão da final batem.
 2. **Engine: export** — JSON da Partida e da Campanha, `validate`, rótulos automáticos. *Pronto quando:* os 6 jogos exportam sem falha de validação.
@@ -603,11 +606,15 @@ output_dir: ../../site/public/data  # relative to this file
 7. **Post** — gerador do PNG 1080×1350.
 8. **Deploy** — GitHub Actions (`ci.yml`: testes do engine → `pnsm check` → testes e build do site, em todo PR) + Vercel (publica a `main`) + domínio.
 
-### Etapa 2 — Aprofundar (em pausa: design proposto, decisões em aberto — ver `docs/etapa-2.md`)
-- Shot map na Partida (aba "Finalizações").
-- Opção "até a 1ª substituição".
-- Página do jogador na campanha.
-- Filtro "só jogo aberto".
+### Etapa 2 — Aprofundar (concluída em 22/10/2026, PRs #12–#22 — detalhes em `docs/etapa-2.md`)
+- Shot map na Partida (aba "Finalizações"): ícone por resultado, xG como halo, caminho da bola e vista do gol.
+- Recortes da rede: período (partida inteira / até a 1ª substituição) × só jogo aberto.
+- Rede e Finalizações no padrão "uma seleção": uma equipe por vez, campo à esquerda, painel à direita.
+- Página do jogador (Brasil e adversários) e lista de jogadores.
+- Divulgação: carrossel do LinkedIn e carrossel do Instagram sobre o xG da campanha (`tools/carrossel/`).
+
+### Projeto 02 — Expected Goals próprio (próximo)
+- Começa depois dos estudos de xG do autor; nada decidido. Ponto de partida, o que reaproveitar e perguntas em aberto: `docs/projeto-02-xg.md`.
 
 ### Etapa 3 — Catálogo aberto
 - Seletor competição → temporada → partida para todo o StatsBomb Open Data.
@@ -626,9 +633,12 @@ output_dir: ../../site/public/data  # relative to this file
 - [ ] Conferir condições de uso/atribuição do StatsBomb Open Data para publicar dados derivados e o nome da marca.
 - [ ] Datas das partidas: usar `match_date` do StatsBomb, mas conferir com fontes históricas antes de exibir (há divergência possível de um dia em jogos de 1970).
 - [ ] Estádio: disponível em `matches/{c}/{s}.json` (`stadium.name`) quando houver.
-- [ ] Rede "até a 1ª substituição" (Itália na final tem dois substitutos sobrepostos a titulares).
+- [x] Rede "até a 1ª substituição" (Etapa 2, 5.9).
 - [ ] Nós quase sobrepostos (ex.: Mazzola e Boninsegna na final): avaliar deslocamento mínimo visual sem alterar o dado exportado.
 - [ ] Dados de 1970 foram registrados a partir de vídeo histórico: manter a ressalva na Metodologia.
+- [ ] Metodologia: acrescentar as regras da Etapa 2 (finalizações, recortes, jogador) à página `/pnsm/metodologia`.
+- [ ] `tools/carrossel/capture.py` (carrossel da Etapa 1) supõe as duas redes lado a lado; atualizar antes de regerar aquele carrossel.
+- [ ] Versão celular das Finalizações e da página do jogador: conferida só no desktop.
 
 ---
 

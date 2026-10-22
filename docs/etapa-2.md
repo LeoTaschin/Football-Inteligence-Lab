@@ -1,27 +1,42 @@
-# Etapa 2 — Aprofundar (em andamento)
+# Etapa 2 — Aprofundar (concluída)
 
-**Status (22/10/2026):** retomada. As 4 decisões foram tomadas (ver [Decisões](#decisões-22102026)); a implementação começa pela branch `engine/shot-map`.
+**Status (22/10/2026):** concluída e no ar. PRs #12 a #22. Próximo passo do F.I.L: Projeto 02 (`docs/projeto-02-xg.md`).
 
 ## Decisões (22/10/2026)
 
-1. **Recortes: filtro combinável.** Período (*partida inteira* / *até a 1ª substituição*) × *só jogo aberto* (liga/desliga) = **4 redes por equipe** em cada partida. O design de 3 botões exclusivos precisa ser ajustado para um seletor + um interruptor.
-2. **Finalizações: meio campo vertical por equipe**, como no design.
-3. **Página do jogador: Brasil e adversários.** Todo jogador com nó em alguma partida da coleção ganha página; adversários terão um único jogo (a página mostra só o que existe, com aviso de amostra pequena).
-4. **Post: sem imagem do shot map por enquanto.**
+1. **Recortes: filtro combinável.** Período (*partida inteira* / *até a 1ª substituição*) × *só jogo aberto* (liga/desliga) = 4 redes por equipe.
+2. **Finalizações: meio campo vertical por equipe.**
+3. **Página do jogador: Brasil e adversários.** Adversários têm um jogo só, com aviso.
+4. **Post: sem imagem do shot map** no gerador do engine (a divulgação usou capturas do site).
+
+## O que mudou no caminho
+
+- **Padrão "uma seleção"** (pedido depois da primeira versão das Finalizações): Rede de passes, Finalizações, Jogador e Jogadores mostram uma equipe por vez, campo à esquerda e painel à direita, como "Com bola × sem bola". Cada tela foi redesenhada e aprovada no canvas antes do código.
+- **Finalizações v2:** ícone por resultado (bola de futebol no gol, luva, trave, bloqueio, seta), traço fino, xG como halo de área proporcional, tracejado do ponto do chute ao ponto final, vista frontal do gol e a frase do desfecho (`finish`, gerada pelo motor). Rótulo na ponta só para "bloqueio" e "parou aqui".
+- **Jogador:** duas visões, "Um jogo" (rede completa, setas e posição sem bola) e "Todos os jogos" (grade de mini-redes).
+- **Lista de jogadores:** inicialmente adiada, entrou no PR #20.
+
+## Entregas
+
+| PR | Entrega |
+|---|---|
+| #12 | Motor: lista de chutes (`shots.items`), regras de 5.8 |
+| #13 | Site: aba Finalizações (v1) |
+| #14 | Motor: os 4 recortes da rede (5.9) |
+| #15 | Site: Rede de passes com uma seleção e os recortes |
+| #16 | Motor: desfecho do chute (`finish`); site: Finalizações v2 |
+| #17 | Ícones mais limpos, bola de futebol no gol |
+| #18 | Motor: páginas de jogador (5.10) |
+| #19 | Site: página do jogador |
+| #20 | Motor + site: lista de jogadores |
+| #21 | Carrossel do LinkedIn da Etapa 2 |
+| #22 | Carrossel do Instagram sobre o xG da campanha |
 
 ## Design
 
-Canvas "F.I.L Passing Network": https://claude.ai/artifact/Xbg6HqKREbgp8iwGkpKdNF — área **"PNSM · Etapa 2 — Aprofundar (proposta)"**, à direita das telas da Etapa 1.
+Canvas "F.I.L Passing Network": https://claude.ai/artifact/Xbg6HqKREbgp8iwGkpKdNF — área **"PNSM · Etapa 2"**: `Recortes.dc.html` (rede de passes, uma seleção), `Finalizacoes.dc.html`, `Jogador.dc.html`, `Jogadores.dc.html`, cada um com a versão `-mobile`.
 
-| Artboard | Item | O que mostra |
-|---|---|---|
-| `Recortes.dc.html` (+ `-mobile`) | 1ª substituição + só jogo aberto | Seletor *Partida inteira / Até a 1ª substituição / Só jogo aberto*, aviso explicando cada recorte com números, tabela "O que muda neste recorte", painel do jogador com link para a página dele |
-| `Finalizacoes.dc.html` (+ `-mobile`) | Shot map | Nova aba "Finalizações": meio campo vertical por equipe, área ∝ xG, marcador por resultado (gol, defendido, trave, bloqueado, para fora), falta = quadrado; filtros, detalhe do chute, números por equipe, "Maiores chances" |
-| `Jogador.dc.html` (+ `-mobile`) | Página do jogador | Carlos Alberto como exemplo: resumo, jogo a jogo com mini-redes, "Com quem ele jogou", com bola × sem bola por jogo, outros jogadores |
-
-Todos os números do design vêm do engine (dados reais), nenhum foi escrito à mão.
-
-## Achados que o design já usa (valores conferidos)
+## Achados (valores conferidos nos testes de regressão)
 
 **Recortes (final):**
 - Itália até a 1ª substituição (Bertini, 74′): **193** dos 243 passes. Brasil não substituiu: 400 nos dois recortes.
@@ -38,22 +53,22 @@ Todos os números do design vêm do engine (dados reais), nenhum foi escrito à 
 - Passou mais para Jairzinho (108); recebeu mais de Clodoaldo (82).
 - Recuo médio com bola → sem bola: 26 m; na final, 34 m.
 
-## Decisões em aberto
+**Campanha (finalizações, usados nos posts):**
+- 19 gols com 14,75 de xG em 151 chutes (+4,25 acima do esperado); 9 dos 19 gols com xG < 0,10, 8 deles chutados a 15 m ou mais.
+- Jairzinho: 7 gols, um em cada jogo, xG médio 45%, 9 m do gol em média. Os 9 improváveis: xG médio 5,8%, 18 m.
+- Inglaterra: único jogo com menos xG que o adversário (0,87 × 1,54), vitória por 1 × 0.
 
-Nenhuma: resolvidas em 22/10/2026 (ver topo).
+## Divulgação
 
-## Notas técnicas para a implementação
+- **LinkedIn** (publicado): post sobre o xG da campanha, "Pela estatística, o Brasil de 1970 deveria ter feito 15 gols. Fez 19." Carrossel da Etapa 2 em `tools/carrossel/compose_etapa2.py`.
+- **Instagram:** carrossel de 7 slides com a mesma história (`tools/carrossel/instagram_xg.py`) e legenda curta com "link na bio".
 
-- **Só jogo aberto:** tirar passes com `pass.type` em `{Corner, Free Kick, Throw-in, Goal Kick, Kick Off}`. `Recovery` e `Interception` também aparecem em `pass.type`, mas são jogo aberto e ficam.
-- **Até a 1ª substituição:** cortar pelo `index` do evento `Substitution` (não pelo minuto). Equipe sem substituição: rede igual à partida inteira, com aviso. Substituição muito cedo: avisar amostra pequena.
-- **Shot map:** `transform.shots_table` e `metrics.shot_summary` já existem; falta exportar a lista de chutes (minuto, jogador, x, y, resultado, xG, tipo, parte do corpo) e as regras da seção 5.8 (xG ausente nunca vira zero).
-- **Jogador:** agregar por `player_id` entre as partidas da coleção; nova rota `/pnsm/1970/jogador/:slug`; link a partir do painel da Partida e de "Quem mais passou" na Campanha.
-- **Regras de negócio novas entram primeiro no `CLAUDE.md` (seção 5) e nos testes**, como sempre.
-- Ordem sugerida de branches: ~~`engine/shot-map`~~ (PR #12) → ~~`site/finalizacoes`~~ (PR #13) → ~~`engine/recortes`~~ (PR #14) → ~~`site/recortes`~~ (rede com uma seleção, PR #15) → ~~`site/finalizacoes-v2`~~ (PR #16) → ~~`engine/jogador`~~ (PR #18) → ~~`site/jogador`~~ (PR #19). **Etapa 2 concluída.** Lista de jogadores em PR #20.
+## Pendências que ficaram
 
-## Outras pendências que podem entrar junto
-
-- Nós quase sobrepostos (Pelé/Tostão, Mazzola/Boninsegna).
+- Metodologia do site ainda descreve só as regras da Etapa 1.
+- Versão celular das Finalizações e da página do jogador conferida só no desktop.
+- Nós quase sobrepostos (Pelé/Tostão, Mazzola/Boninsegna, Rivellino/Everaldo).
 - Conferir as datas de 1970 com fontes históricas.
-- Ler as condições de uso e de marca do StatsBomb Open Data antes de divulgar mais.
-- Apagar o projeto duplicado na Vercel (`football-inteligence-lab-6lhg`).
+- Ler as condições de uso e de marca do StatsBomb Open Data.
+- Apagar o projeto duplicado na Vercel (`football-intelligence-lab-6lhg`).
+- `tools/carrossel/capture.py` (Etapa 1) desatualizado para a rede de uma seleção.
