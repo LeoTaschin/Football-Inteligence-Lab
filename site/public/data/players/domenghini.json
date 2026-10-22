@@ -1,0 +1,396 @@
+{
+ "playerId": 397674,
+ "slug": "domenghini",
+ "name": "Domenghini",
+ "num": 13,
+ "position": "Ala-direito",
+ "teamId": 914,
+ "team": "Itália",
+ "teamName": "Italy",
+ "article": "a",
+ "colors": {
+  "fill": "#0066CC",
+  "line": "#0066CC",
+  "ink": "#FFFFFF"
+ },
+ "summary": {
+  "games": 1,
+  "passes": 29,
+  "received": 40,
+  "teamCompleted": 243,
+  "share": 11.9,
+  "teamRank": 4,
+  "topPasserGames": 0,
+  "avgShift": -6.1
+ },
+ "to": [
+  {
+   "playerId": 39732,
+   "name": "Mazzola",
+   "slug": "mazzola",
+   "n": 6
+  },
+  {
+   "playerId": 397681,
+   "name": "De Sisti",
+   "slug": "de-sisti",
+   "n": 6
+  },
+  {
+   "playerId": 39717,
+   "name": "Boninsegna",
+   "slug": "boninsegna",
+   "n": 5
+  },
+  {
+   "playerId": 39714,
+   "name": "Facchetti",
+   "slug": "facchetti",
+   "n": 2
+  },
+  {
+   "playerId": 39715,
+   "name": "Burgnich",
+   "slug": "burgnich",
+   "n": 2
+  }
+ ],
+ "from": [
+  {
+   "playerId": 39732,
+   "name": "Mazzola",
+   "slug": "mazzola",
+   "n": 10
+  },
+  {
+   "playerId": 40095,
+   "name": "Bertini",
+   "slug": "bertini",
+   "n": 7
+  },
+  {
+   "playerId": 397666,
+   "name": "Cera",
+   "slug": "cera",
+   "n": 7
+  },
+  {
+   "playerId": 397665,
+   "name": "Albertosi",
+   "slug": "albertosi",
+   "n": 4
+  },
+  {
+   "playerId": 39714,
+   "name": "Facchetti",
+   "slug": "facchetti",
+   "n": 2
+  }
+ ],
+ "scale": {
+  "maxPasses": 91,
+  "maxPair": 48
+ },
+ "games": [
+  {
+   "matchId": 3888702,
+   "order": 6,
+   "stage": "Final",
+   "opponent": "Brasil",
+   "score": [
+    1,
+    4
+   ],
+   "passes": 29,
+   "received": 40,
+   "teamCompleted": 243,
+   "rank": 4,
+   "partner": {
+    "playerId": 39732,
+    "name": "Mazzola",
+    "slug": "mazzola",
+    "n": 16
+   },
+   "sub": null,
+   "positionFrom": "passes",
+   "ball": {
+    "x": 63.4,
+    "y": 63.6
+   },
+   "def": {
+    "x": 56.7,
+    "y": 57.85,
+    "n": 24,
+    "lowSample": false
+   },
+   "shift": -6.1,
+   "mini": {
+    "nodes": [
+     {
+      "playerId": 39732,
+      "num": 15,
+      "x": 69.55,
+      "y": 37.35,
+      "passes": 38
+     },
+     {
+      "playerId": 397666,
+      "num": 5,
+      "x": 33.4,
+      "y": 32.8,
+      "passes": 33
+     },
+     {
+      "playerId": 397665,
+      "num": 1,
+      "x": 7.0,
+      "y": 40.55,
+      "passes": 32
+     },
+     {
+      "playerId": 397674,
+      "num": 13,
+      "x": 63.4,
+      "y": 63.6,
+      "passes": 29
+     },
+     {
+      "playerId": 397681,
+      "num": 16,
+      "x": 64.9,
+      "y": 44.9,
+      "passes": 25
+     },
+     {
+      "playerId": 40095,
+      "num": 10,
+      "x": 44.5,
+      "y": 54.9,
+      "passes": 23
+     },
+     {
+      "playerId": 39714,
+      "num": 3,
+      "x": 40.5,
+      "y": 13.2,
+      "passes": 15
+     },
+     {
+      "playerId": 397680,
+      "num": 8,
+      "x": 28.3,
+      "y": 51.9,
+      "passes": 11
+     },
+     {
+      "playerId": 39717,
+      "num": 20,
+      "x": 65.65,
+      "y": 36.7,
+      "passes": 10
+     },
+     {
+      "playerId": 397675,
+      "num": 11,
+      "x": 80.3,
+      "y": 38.3,
+      "passes": 9
+     },
+     {
+      "playerId": 397677,
+      "num": 18,
+      "x": 60.7,
+      "y": 61.2,
+      "passes": 9
+     },
+     {
+      "playerId": 39715,
+      "num": 2,
+      "x": 49.1,
+      "y": 63.7,
+      "passes": 7
+     },
+     {
+      "playerId": 397676,
+      "num": 14,
+      "x": 81.7,
+      "y": 47.05,
+      "passes": 2
+     }
+    ],
+    "edges": [
+     {
+      "a": 39732,
+      "b": 397674,
+      "n": 16
+     },
+     {
+      "a": 397665,
+      "b": 397666,
+      "n": 15
+     },
+     {
+      "a": 39732,
+      "b": 397675,
+      "n": 11
+     },
+     {
+      "a": 40095,
+      "b": 39732,
+      "n": 10
+     },
+     {
+      "a": 397666,
+      "b": 40095,
+      "n": 10
+     },
+     {
+      "a": 397681,
+      "b": 39732,
+      "n": 10
+     },
+     {
+      "a": 39714,
+      "b": 39732,
+      "n": 10
+     },
+     {
+      "a": 40095,
+      "b": 397674,
+      "n": 9
+     },
+     {
+      "a": 397666,
+      "b": 397674,
+      "n": 8
+     },
+     {
+      "a": 397674,
+      "b": 397681,
+      "n": 8
+     },
+     {
+      "a": 397666,
+      "b": 39732,
+      "n": 8
+     },
+     {
+      "a": 397674,
+      "b": 39717,
+      "n": 7
+     },
+     {
+      "a": 39717,
+      "b": 39732,
+      "n": 6
+     },
+     {
+      "a": 397666,
+      "b": 397681,
+      "n": 5
+     },
+     {
+      "a": 397681,
+      "b": 40095,
+      "n": 5
+     },
+     {
+      "a": 397681,
+      "b": 397675,
+      "n": 5
+     },
+     {
+      "a": 39717,
+      "b": 397675,
+      "n": 5
+     },
+     {
+      "a": 397680,
+      "b": 397681,
+      "n": 5
+     },
+     {
+      "a": 397665,
+      "b": 397674,
+      "n": 4
+     },
+     {
+      "a": 397665,
+      "b": 397681,
+      "n": 4
+     },
+     {
+      "a": 397665,
+      "b": 40095,
+      "n": 4
+     },
+     {
+      "a": 39714,
+      "b": 397674,
+      "n": 4
+     },
+     {
+      "a": 39715,
+      "b": 397674,
+      "n": 4
+     },
+     {
+      "a": 397666,
+      "b": 397680,
+      "n": 4
+     },
+     {
+      "a": 397665,
+      "b": 39732,
+      "n": 3
+     },
+     {
+      "a": 39714,
+      "b": 397681,
+      "n": 3
+     },
+     {
+      "a": 39715,
+      "b": 40095,
+      "n": 3
+     },
+     {
+      "a": 397665,
+      "b": 39715,
+      "n": 3
+     },
+     {
+      "a": 397666,
+      "b": 397677,
+      "n": 3
+     },
+     {
+      "a": 397674,
+      "b": 397675,
+      "n": 3
+     },
+     {
+      "a": 397674,
+      "b": 397680,
+      "n": 3
+     },
+     {
+      "a": 397677,
+      "b": 39732,
+      "n": 3
+     },
+     {
+      "a": 397677,
+      "b": 397681,
+      "n": 3
+     },
+     {
+      "a": 397681,
+      "b": 39717,
+      "n": 3
+     }
+    ]
+   }
+  }
+ ]
+}

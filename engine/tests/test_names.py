@@ -2,7 +2,7 @@ import pytest
 
 from conftest import FINAL
 from pnsm import load
-from pnsm.names import display_name, players_from_lineup, position_pt, surname
+from pnsm.names import display_name, players_from_lineup, position_pt, slug, surname
 
 
 def test_surname_keeps_particles():
@@ -40,3 +40,10 @@ def test_final_display_names():
     assert {"Pelé", "Rivellino", "Tostão", "Piazza", "Carlos Alberto", "Gérson", "Everaldo"} <= names
     names = {p.name for p in players_from_lineup(italy).values()}
     assert {"De Sisti", "Mazzola", "Albertosi", "Boninsegna", "Rivera", "Juliano"} <= names
+
+
+def test_slug_drops_accents_and_spaces():
+    assert slug("Carlos Alberto") == "carlos-alberto"
+    assert slug("Pelé") == "pele"
+    assert slug("Gérson") == "gerson"
+    assert slug("De Sisti") == "de-sisti"

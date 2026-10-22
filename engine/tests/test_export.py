@@ -144,6 +144,33 @@ def test_final_cuts_match_design(all_matches):
     assert (name(italy, drop["playerId"]), drop["from"], drop["to"]) == ("Albertosi", 32, 12)
 
 
+@pytest.fixture(scope="module")
+def player_pages(cfg, all_matches):
+    from pnsm import players
+    collection = export.build_collection(cfg, all_matches)
+    order = {r["id"]: (r["order"], r["stage"]) for r in collection["matches"]}
+    return players.build_players(all_matches, order, cfg.min_pair_passes)
+
+
+@pytest.mark.regression
+def test_carlos_alberto_page_matches_design(player_pages):
+    p = player_pages["carlos-alberto"]
+    s = p["summary"]
+    assert (s["games"], s["passes"], s["received"], s["share"]) == (6, 367, 361, 14.7)
+    assert (s["teamRank"], s["topPasserGames"], round(s["avgShift"])) == (1, 3, -26)
+    assert (p["to"][0]["name"], p["to"][0]["n"]) == ("Jairzinho", 108)
+    assert (p["from"][0]["name"], p["from"][0]["n"]) == ("Clodoaldo", 82)
+    final = p["games"][-1]
+    assert (final["opponent"], final["passes"], final["rank"], final["partner"]["name"], final["partner"]["n"]) == ("Itália", 62, 2, "Gérson", 44)
+
+
+@pytest.mark.regression
+def test_opponent_has_a_single_game_page(player_pages):
+    p = player_pages["mazzola"]
+    assert (p["team"], p["summary"]["games"], p["summary"]["passes"], p["summary"]["share"]) == ("Itália", 1, 38, 15.6)
+    assert p["games"][0]["opponent"] == "Brasil" and p["games"][0]["score"] == [1, 4]
+
+
 @pytest.mark.regression
 def test_campaign_matches_design(cfg, all_matches):
     design = json.loads((FIXTURES / "campaign_design.json").read_text(encoding="utf-8"))

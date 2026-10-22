@@ -1,0 +1,401 @@
+{
+ "playerId": 398969,
+ "slug": "dinu",
+ "name": "Dinu",
+ "num": 5,
+ "position": "Volante (esq.)",
+ "teamId": 905,
+ "team": "Romênia",
+ "teamName": "Romania",
+ "article": "a",
+ "colors": {
+  "fill": "#002B7F",
+  "line": "#002B7F",
+  "ink": "#FFFFFF"
+ },
+ "summary": {
+  "games": 1,
+  "passes": 38,
+  "received": 42,
+  "teamCompleted": 307,
+  "share": 12.4,
+  "teamRank": 3,
+  "topPasserGames": 0,
+  "avgShift": -18.8
+ },
+ "to": [
+  {
+   "playerId": 398953,
+   "name": "Nunweiller",
+   "slug": "nunweiller",
+   "n": 16
+  },
+  {
+   "playerId": 398949,
+   "name": "Satmareanu",
+   "slug": "satmareanu",
+   "n": 5
+  },
+  {
+   "playerId": 398951,
+   "name": "Mocanu",
+   "slug": "mocanu",
+   "n": 4
+  },
+  {
+   "playerId": 398952,
+   "name": "Dembrovschi",
+   "slug": "dembrovschi",
+   "n": 4
+  },
+  {
+   "playerId": 398954,
+   "name": "Ion Dumitru",
+   "slug": "ion-dumitru",
+   "n": 3
+  }
+ ],
+ "from": [
+  {
+   "playerId": 398953,
+   "name": "Nunweiller",
+   "slug": "nunweiller",
+   "n": 9
+  },
+  {
+   "playerId": 398949,
+   "name": "Satmareanu",
+   "slug": "satmareanu",
+   "n": 8
+  },
+  {
+   "playerId": 398954,
+   "name": "Ion Dumitru",
+   "slug": "ion-dumitru",
+   "n": 8
+  },
+  {
+   "playerId": 398951,
+   "name": "Mocanu",
+   "slug": "mocanu",
+   "n": 5
+  },
+  {
+   "playerId": 398952,
+   "name": "Dembrovschi",
+   "slug": "dembrovschi",
+   "n": 5
+  }
+ ],
+ "scale": {
+  "maxPasses": 91,
+  "maxPair": 48
+ },
+ "games": [
+  {
+   "matchId": 3889217,
+   "order": 3,
+   "stage": "Fase de grupos",
+   "opponent": "Brasil",
+   "score": [
+    2,
+    3
+   ],
+   "passes": 38,
+   "received": 42,
+   "teamCompleted": 307,
+   "rank": 3,
+   "partner": {
+    "playerId": 398953,
+    "name": "Nunweiller",
+    "slug": "nunweiller",
+    "n": 25
+   },
+   "sub": null,
+   "positionFrom": "passes",
+   "ball": {
+    "x": 58.0,
+    "y": 35.7
+   },
+   "def": {
+    "x": 37.4,
+    "y": 32.85,
+    "n": 46,
+    "lowSample": false
+   },
+   "shift": -18.8,
+   "mini": {
+    "nodes": [
+     {
+      "playerId": 398953,
+      "num": 10,
+      "x": 63.4,
+      "y": 35.0,
+      "passes": 51
+     },
+     {
+      "playerId": 398949,
+      "num": 2,
+      "x": 63.2,
+      "y": 65.6,
+      "passes": 43
+     },
+     {
+      "playerId": 398969,
+      "num": 5,
+      "x": 58.0,
+      "y": 35.7,
+      "passes": 38
+     },
+     {
+      "playerId": 398952,
+      "num": 7,
+      "x": 67.8,
+      "y": 48.9,
+      "passes": 37
+     },
+     {
+      "playerId": 398954,
+      "num": 15,
+      "x": 49.0,
+      "y": 57.2,
+      "passes": 33
+     },
+     {
+      "playerId": 398968,
+      "num": 11,
+      "x": 73.4,
+      "y": 25.3,
+      "passes": 19
+     },
+     {
+      "playerId": 398951,
+      "num": 4,
+      "x": 43.7,
+      "y": 14.3,
+      "passes": 18
+     },
+     {
+      "playerId": 398950,
+      "num": 3,
+      "x": 28.5,
+      "y": 41.4,
+      "passes": 15
+     },
+     {
+      "playerId": 398956,
+      "num": 16,
+      "x": 68.9,
+      "y": 55.4,
+      "passes": 13
+     },
+     {
+      "playerId": 398955,
+      "num": 9,
+      "x": 72.8,
+      "y": 40.0,
+      "passes": 13
+     },
+     {
+      "playerId": 398957,
+      "num": 1,
+      "x": 6.0,
+      "y": 36.4,
+      "passes": 13
+     },
+     {
+      "playerId": 398958,
+      "num": 17,
+      "x": 55.5,
+      "y": 55.4,
+      "passes": 7
+     },
+     {
+      "playerId": 398948,
+      "num": 21,
+      "x": 7.0,
+      "y": 44.1,
+      "passes": 7
+     }
+    ],
+    "edges": [
+     {
+      "a": 398969,
+      "b": 398953,
+      "n": 25
+     },
+     {
+      "a": 398953,
+      "b": 398952,
+      "n": 20
+     },
+     {
+      "a": 398949,
+      "b": 398952,
+      "n": 17
+     },
+     {
+      "a": 398954,
+      "b": 398949,
+      "n": 17
+     },
+     {
+      "a": 398953,
+      "b": 398968,
+      "n": 14
+     },
+     {
+      "a": 398949,
+      "b": 398969,
+      "n": 13
+     },
+     {
+      "a": 398953,
+      "b": 398954,
+      "n": 13
+     },
+     {
+      "a": 398953,
+      "b": 398949,
+      "n": 13
+     },
+     {
+      "a": 398954,
+      "b": 398969,
+      "n": 11
+     },
+     {
+      "a": 398952,
+      "b": 398968,
+      "n": 9
+     },
+     {
+      "a": 398951,
+      "b": 398969,
+      "n": 9
+     },
+     {
+      "a": 398952,
+      "b": 398969,
+      "n": 9
+     },
+     {
+      "a": 398952,
+      "b": 398956,
+      "n": 8
+     },
+     {
+      "a": 398955,
+      "b": 398952,
+      "n": 8
+     },
+     {
+      "a": 398953,
+      "b": 398956,
+      "n": 7
+     },
+     {
+      "a": 398968,
+      "b": 398958,
+      "n": 6
+     },
+     {
+      "a": 398949,
+      "b": 398958,
+      "n": 6
+     },
+     {
+      "a": 398950,
+      "b": 398957,
+      "n": 6
+     },
+     {
+      "a": 398949,
+      "b": 398956,
+      "n": 5
+     },
+     {
+      "a": 398956,
+      "b": 398955,
+      "n": 5
+     },
+     {
+      "a": 398957,
+      "b": 398949,
+      "n": 5
+     },
+     {
+      "a": 398950,
+      "b": 398953,
+      "n": 4
+     },
+     {
+      "a": 398951,
+      "b": 398953,
+      "n": 4
+     },
+     {
+      "a": 398955,
+      "b": 398968,
+      "n": 4
+     },
+     {
+      "a": 398951,
+      "b": 398954,
+      "n": 4
+     },
+     {
+      "a": 398952,
+      "b": 398954,
+      "n": 4
+     },
+     {
+      "a": 398953,
+      "b": 398955,
+      "n": 4
+     },
+     {
+      "a": 398948,
+      "b": 398949,
+      "n": 3
+     },
+     {
+      "a": 398968,
+      "b": 398969,
+      "n": 3
+     },
+     {
+      "a": 398950,
+      "b": 398951,
+      "n": 3
+     },
+     {
+      "a": 398951,
+      "b": 398952,
+      "n": 3
+     },
+     {
+      "a": 398954,
+      "b": 398950,
+      "n": 3
+     },
+     {
+      "a": 398957,
+      "b": 398954,
+      "n": 3
+     },
+     {
+      "a": 398969,
+      "b": 398956,
+      "n": 3
+     },
+     {
+      "a": 398969,
+      "b": 398958,
+      "n": 3
+     }
+    ]
+   }
+  }
+ ]
+}
