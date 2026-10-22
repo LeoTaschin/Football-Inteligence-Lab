@@ -1,6 +1,6 @@
 import { match as copy } from "../content/pt";
 import { formatPercent } from "../lib/format";
-import type { TeamData } from "../types/data";
+import type { TeamData, TeamNetwork } from "../types/data";
 import { BarList } from "./BarList";
 import styles from "./PlayerPanel.module.css";
 
@@ -8,22 +8,24 @@ const TOP = 5;
 
 interface PlayerPanelProps {
   team: TeamData;
+  net: TeamNetwork;
   playerId: number;
   onClear: () => void;
 }
 
-export function PlayerPanel({ team, playerId, onClear }: PlayerPanelProps) {
-  const byId = new Map(team.nodes.map((n) => [n.playerId, n]));
+export function PlayerPanel({ team, net, playerId, onClear }: PlayerPanelProps) {
+  const byId = new Map(net.nodes.map((n) => [n.playerId, n]));
   const node = byId.get(playerId);
   if (!node) return null;
 
   // edges come sorted by n (most used first) from the engine
-  const out = team.edges.filter((e) => e.from === playerId).slice(0, TOP);
-  const inc = team.edges.filter((e) => e.to === playerId).slice(0, TOP);
+  const out = net.edges.filter((e) => e.from === playerId).slice(0, TOP);
+  const inc = net.edges.filter((e) => e.to === playerId).slice(0, TOP);
+  const nameOf = (pid: number) => team.nodes.find((n) => n.playerId === pid)?.name ?? "";
   const subText = node.sub
     ? node.sub.type === "out"
-      ? copy.panel.subOut(node.sub.minute, byId.get(node.sub.with)?.name ?? "")
-      : copy.panel.subIn(node.sub.minute, byId.get(node.sub.with)?.name ?? "")
+      ? copy.panel.subOut(node.sub.minute, nameOf(node.sub.with))
+      : copy.panel.subIn(node.sub.minute, nameOf(node.sub.with))
     : null;
 
   return (
@@ -53,7 +55,7 @@ export function PlayerPanel({ team, playerId, onClear }: PlayerPanelProps) {
         <div className={styles.stats}>
           <Stat value={node.passes} label={copy.panel.passes} />
           <Stat value={node.received} label={copy.panel.received} />
-          <Stat value={formatPercent(node.passes, team.passes.completed)} label={copy.panel.share} />
+          <Stat value={formatPercent(node.passes, net.completed)} label={copy.panel.share} />
         </div>
         {subText && <span className={styles.note}>{subText}</span>}
         {node.positionFrom === "received" && <span className={styles.note}>{copy.panel.fromReceived}</span>}

@@ -84,6 +84,14 @@ export interface Substitution {
   reason: string | null;
 }
 
+/** The network drawn on the pitch: the full one or a cut. */
+export interface TeamNetwork {
+  completed: number;
+  nodes: CutNode[];
+  edges: DirectedEdge[];
+  pairs: Pair[];
+}
+
 export type CutKey = "firstSub" | "openPlay" | "firstSubOpen";
 
 /** A node of a cut: same as the full network's, without the "sem bola" fields. */

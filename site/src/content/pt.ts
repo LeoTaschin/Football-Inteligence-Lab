@@ -371,3 +371,57 @@ export const shots = {
   footer:
     "Um marcador por chute (evento Shot), 1º e 2º tempos, no lugar de onde saiu a finalização. xG do StatsBomb: a chance estimada de gol antes do chute; a soma não é o número de gols que “deveria” ter acontecido. Chute sem xG continua no mapa e entra na cobertura, nunca vira zero. Gols contra não são chutes e não aparecem. Os eventos de 1970 vêm de vídeo da época: localização e xG têm mais incerteza.",
 };
+
+// "Só jogo aberto": what was removed, by StatsBomb pass.type, most first
+const SET_PIECE: Record<string, [string, string]> = {
+  "Free Kick": ["falta", "faltas"],
+  "Throw-in": ["lateral", "laterais"],
+  "Goal Kick": ["tiro de meta", "tiros de meta"],
+  Corner: ["escanteio", "escanteios"],
+  "Kick Off": ["saída de bola", "saídas de bola"],
+};
+function removedList(removed: Record<string, number>): string {
+  return listPt(
+    Object.entries(removed)
+      .filter(([, n]) => n > 0)
+      .sort((a, b) => b[1] - a[1])
+      .map(([type, n]) => `${n} ${SET_PIECE[type]?.[n === 1 ? 0 : 1] ?? type}`),
+  );
+}
+
+export const network = {
+  title: (article: "o" | "a", team: string) => `A rede de passes ${ofTeam(article, team)}`,
+  teamLabel: "Equipe",
+  periodLabel: "Período",
+  periods: { full: "Partida inteira", firstSub: "Até a 1ª substituição" },
+  openPlay: "Só jogo aberto",
+  summaryFull: (attempted: number, accuracy: string) => `passes completos de ${attempted} tentados (${accuracy} de acerto).`,
+  summaryCut: (diff: number, full: number) =>
+    diff === 0 ? "passes completos neste recorte, os mesmos da partida inteira." : `passes completos neste recorte, ${diff} a menos que na partida inteira (${full}).`,
+  // notices: one per cut, from the exported facts only
+  full: (subsLine: string | null) =>
+    subsLine ? `A rede junta jogadores que não estiveram juntos em campo: ${subsLine}` : "Sem substituições: os 11 jogadores estiveram juntos em campo os 90 minutos.",
+  firstSub: (p: { article: "o" | "a"; team: string; same: boolean; minute?: number; out?: string; n: number; full: number }) =>
+    p.same
+      ? `${capitalize(withArticle(p.article, p.team))} não fez substituições: a rede é a mesma da partida inteira.`
+      : `Até os ${p.minute}′, quando ${p.out} saiu: ficam ${p.n} dos ${p.full} passes, só entre os jogadores que estavam juntos em campo.`,
+  openPlayNotice: (removed: Record<string, number>) => {
+    const total = Object.values(removed).reduce((a, b) => a + b, 0);
+    return total === 0 ? "Nenhum passe de bola parada nesta partida." : `Sem bolas paradas saem ${total} passes: ${removedList(removed)}.`;
+  },
+  firstSubOpen: (p: { same: boolean; minute?: number; n: number; full: number; removed: number }) =>
+    p.same
+      ? `Sem substituições, este recorte é igual a “só jogo aberto”: saem ${p.removed} passes de bola parada.`
+      : `Até os ${p.minute}′ e sem bolas paradas: ficam ${p.n} dos ${p.full} passes.`,
+  shift: (name: string, meters: number) => `${name} é quem mais muda de lugar: ${Math.round(meters)} m.`,
+  drop: (name: string, from: number, to: number) => `${name} é quem mais perde passes: de ${from} para ${to}.`,
+  hint: "Clique num jogador para ver para quem ele passou e de quem recebeu. As setas mostram a direção: na cor do time, os passes que ele deu; em cinza-escuro, os que recebeu.",
+  notInCut: (name: string) => `${name} não tem passes neste recorte.`,
+  pairsTitle: "Duplas mais usadas",
+  pairsLegend: "→ ida · ← volta",
+  pairsAria: (a: string, b: string, n: number) => `${a} e ${b}, ${n} passes: selecionar ${a}`,
+  legendGiven: "passes dados",
+  legendReceived: "passes recebidos",
+  captionSelected: (name: string) => `Setas: na cor do time, os passes que ${name} deu; em cinza-escuro, os que recebeu. Mesmo mínimo por dupla.`,
+  captionAll: (min: number) => `Cada linha soma os passes de ida e volta da dupla; só aparecem duplas com pelo menos ${min} passes.`,
+};
